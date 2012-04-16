@@ -1,0 +1,95 @@
+.background-fade {
+
+	-o-transition:background-color 100ms linear;
+     -webkit-transition:background-color 100ms linear;
+}
+strong {
+
+	font-family: @bold-font;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.hover-fade {
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: color 0.5s;
+
+}
+.turn {
+
+	transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg); /* IE 9 */
+	-webkit-transform: rotate(-10deg); /* Safari and Chrome */
+	-o-transform: rotate(-10deg); /* Opera */
+	-moz-transform: rotate(-10deg); /* Firefox */
+
+}
+.opaque(@level) {
+
+  @ie_level: @level * 100;
+  
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=@ie_level);
+
+  /* Netscape */
+  -moz-opacity: @level;
+
+  /* Safari 1.x */
+  -khtml-opacity: @level;
+
+  /* Good browsers */
+  opacity: @level;
+  
+}
+
+.gradient(@start, @end) {
+	/* IE10 */ 
+	background-image: -ms-linear-gradient(bottom, @start 0%, @end 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(bottom, @start 0%, @end 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(bottom, @start 0%, @end 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @end));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(bottom, @start 0%, @end 100%);
+	/* Proposed W3C Markup */ 
+	background-image: linear-gradient(bottom, @start 0%, @end 100%);
+}
+
+
+.border-bottom{
+	border-bottom: solid 1px #b28f55;
+}
+
+.border(@color:#000000) {
+	border: solid 1px @color;
+}
+
+.radius-full(@radius: 5px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.radius-half(@radius: 5px){
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-topright: @radius;
+	border-top-left-radius: @radius;
+	border-top-right-radius: @radius;
+}
+
+.radius-anhalf(@radius: 5px){
+	-webkit-border-bottom-left-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-bottom-left-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
