@@ -24,7 +24,10 @@ $(document).ready(function() {
 		console.log($(window).height());
 	});
 	
-	
+	$("#slider img").adipoli({
+    	'startEffect' : 'transparent',
+    	'hoverEffect' : 'foldLeft'
+	});
 	
 	$(".movie-wrapper span").hover(function() {
 	

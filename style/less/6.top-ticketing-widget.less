@@ -2,7 +2,6 @@ header {
 
 	width: 100%;
 	position: relative;
-	border: 1px solid #fff;
 }
 
 #ticket-bar {
@@ -11,21 +10,12 @@ header {
 	position: absolute;
 	top: 10px;
 	left: 0px;
-	width: 960px;
 	height: 53px;
-	
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0, rgb(250,1,1)),
-		color-stop(1, rgb(138,25,31))
-	);
-	
+		
 	span {
 	
-		width: 225px;
-		margin: 3px 30px 0px 0px;
+		width: 250px;
+		margin: 3px 50px 0px 0px;
 		float: left;
 		
 		label {
@@ -37,9 +27,10 @@ header {
 		input[type=text] {
 			display: block;
 			.radius-full(5px);
-			width: 190px;
-			padding: 4px 5px;
-			border: 1px solid #fff;
+			width: 100%;
+			padding: 3px 5px;
+			border: 1px solid @light-grey;
+			font-size: 13px;
 		}
 		&:first-child {
 		
@@ -59,10 +50,10 @@ header {
 		height: 70px;
 	}
 	a.btn {
-		z-index: 9999;
+		z-index: 5000;
 		position: absolute;
 		top: -2px;
-		right: 15px;	
+		right: 20px;	
 		margin-top: 15px;
 	}
 
@@ -71,25 +62,33 @@ header {
 #cine-buzz {
 	.gradient(@dark-red, #ff0000);
 	position: absolute;
-	top: 8px;
-	right: 0px;
-	width: 225px;
-	height: 55px;
+	top: 10px;
+	width: 235px;
+	height: 53px;
+	cursor: pointer;
 	
 	img {
 		
 		position: absolute;
 		left: 10px;
-		top: 10px;
+		top: 14px;
 		
 	}
 	p {
-		
+		color: #fff;
+		font-size: 13px;
 		position: absolute;
 		text-transform: uppercase;
-		left: 100px;
-		top: 40px;
+		left: 115px;
+		top: 19px;
 	
+	}
+	span {
+	
+		position: absolute;
+		right: 8px;
+		top: 23px;
+		.arrow-down(5px,#fff);
 	}
 }
 

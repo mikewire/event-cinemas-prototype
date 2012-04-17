@@ -1,41 +1,42 @@
 <? include("includes/header.php") ?>
   
   <div id="wrapper">
-		  <header>
-		
-		  	<div id="ticket-bar">
-		  		<span>
-					<label><strong>Where</strong> would you like to go?</label>
-					<input type="text" id="where" placeholder="Select a cinema">
-				</span>
-				
-				<span>
-					<label><strong>What</strong> would you like to see?</label>
-					<input type="text" id="what" placeholder="Any Movie">
-				</span>
-				
-				<span>
-					<label><strong>When</strong> would you like to see it?</label>
-					<input type="text" id="when" placeholder="Today">
-				</span>
-				<a class="btn" href="ticketing1.php">Find times and book</a>
-				
-				<div class="ticket-img"></div>
-			</div>
-			
-			<div id="cine-buzz">
-				<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" width="94" height="26" />		
-				<p>Sign up | Login <span></span></p>
-			</div>
-
-			
-		  </header>
-
+	 
 	  <div id="main" role="main" class="home">
 <!-- 	  <a id="home-call-to-action" class="btn" href="ticketing1.php">Find times and book</a> -->
 		
+	  <header>
+	
+	  	<div id="ticket-bar">
+	  		<span>
+				<label><strong>Where</strong> would you like to go?</label>
+				<input type="text" id="where" placeholder="Select a cinema">
+			</span>
+			
+			<span>
+				<label><strong>What</strong> would you like to see?</label>
+				<input type="text" id="what" placeholder="Any Movie">
+			</span>
+			
+			<span>
+				<label><strong>When</strong> would you like to see it?</label>
+				<input type="text" id="when" placeholder="Today">
+			</span>
+			<a class="btn" href="ticketing1.php">Find times and book</a>
+			
+			<div class="ticket-img"></div>
+		</div>
 		
-		  <? include("includes/top-ticketing-bar-drop-downs.php") ?>
+		<div id="cine-buzz">
+			<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" width="94" height="26" />		
+			<p>Sign up | Login</p>
+			<span></span>
+		</div>
+
+		
+	  </header>
+	  <? include("includes/top-ticketing-bar-drop-downs.php") ?>
+		
 
 	
 		  <nav>
@@ -139,7 +140,7 @@
 	  	  <!-- end home items -->
 	  	  
 	  </div> <!-- end main -->
-	  <div id="background-wrap"><img src="img/snow-white.jpg" alt="snow-white" /></div>
+	  <div id="background-wrap"><img src="img/good-deeds.jpg" alt="snow-white" /></div>
 
   </div>
 <? include("includes/footer.php") ?>

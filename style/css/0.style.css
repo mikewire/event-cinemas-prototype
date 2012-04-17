@@ -1,3 +1,4 @@
+@import "adipoli.css";
 article,
 aside,
 details,
@@ -10,7 +11,9 @@ nav,
 section {
   display: block;
 }
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -47,7 +50,8 @@ a {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 blockquote {
@@ -91,14 +95,16 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -110,14 +116,16 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 0px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -159,11 +167,13 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
-table button, table input {
+table button,
+table input {
   *overflow: auto;
 }
 button,
@@ -173,7 +183,8 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -185,7 +196,8 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -194,7 +206,8 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -204,7 +217,8 @@ table {
 td {
   vertical-align: top;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
@@ -239,7 +253,8 @@ p {
   font-weight: light;
   font-style: normal;
 }
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -325,7 +340,6 @@ strong {
 header {
   width: 100%;
   position: relative;
-  border: 1px solid #fff;
 }
 #ticket-bar {
   /* IE10 */
@@ -344,13 +358,11 @@ header {
   position: absolute;
   top: 10px;
   left: 0px;
-  width: 960px;
   height: 53px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fa0101), color-stop(1, #8a191f));
 }
 #ticket-bar span {
-  width: 225px;
-  margin: 3px 30px 0px 0px;
+  width: 250px;
+  margin: 3px 50px 0px 0px;
   float: left;
 }
 #ticket-bar span label {
@@ -363,9 +375,10 @@ header {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 190px;
-  padding: 4px 5px;
-  border: 1px solid #fff;
+  width: 100%;
+  padding: 3px 5px;
+  border: 1px solid #dfdfdf;
+  font-size: 13px;
 }
 #ticket-bar span:first-child {
   margin-left: 10px;
@@ -380,10 +393,10 @@ header {
   height: 70px;
 }
 #ticket-bar a.btn {
-  z-index: 9999;
+  z-index: 5000;
   position: absolute;
   top: -2px;
-  right: 15px;
+  right: 20px;
   margin-top: 15px;
 }
 #cine-buzz {
@@ -400,21 +413,34 @@ header {
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #88191e 0%, #ff0000 100%);
   position: absolute;
-  top: 8px;
-  right: 0px;
-  width: 225px;
-  height: 55px;
+  top: 10px;
+  width: 235px;
+  height: 53px;
+  cursor: pointer;
 }
 #cine-buzz img {
   position: absolute;
   left: 10px;
-  top: 10px;
+  top: 14px;
 }
 #cine-buzz p {
+  color: #fff;
+  font-size: 13px;
   position: absolute;
   text-transform: uppercase;
-  left: 100px;
-  top: 40px;
+  left: 115px;
+  top: 19px;
+}
+#cine-buzz span {
+  position: absolute;
+  right: 8px;
+  top: 23px;
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
 }
 .when-blowout {
   display: none;
@@ -913,14 +939,14 @@ nav ul li.active a {
 }
 #premium-cinema-box {
   width: 320px;
-  height: 143px;
+  height: 119px;
   position: relative;
   float: left;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #fff;
 }
 #premium-cinema-box .items {
   position: absolute;
-  top: 40px;
+  top: 32px;
   left: 10px;
   z-index: 100;
 }
@@ -944,7 +970,7 @@ nav ul li.active a {
 
   opacity: 0.8;
   position: absolute;
-  bottom: 20px;
+  bottom: 1px;
   left: 2px;
   height: 30px;
   width: 288px;
@@ -952,7 +978,7 @@ nav ul li.active a {
 }
 #premium-cinema-box .items a .title {
   text-transform: uppercase;
-  bottom: 24px;
+  bottom: 5px;
   left: 0px;
   width: 100%;
   display: block;
@@ -966,10 +992,11 @@ nav ul li.active a {
 }
 #premium-cinema-box .items a p {
   margin-top: 2px;
+  display: none;
 }
 #slider {
-  height: 143px;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #fff;
+  height: 119px;
   position: relative;
   overflow: hidden;
   float: left;
@@ -977,7 +1004,7 @@ nav ul li.active a {
 }
 #slider .items {
   position: absolute;
-  top: 40px;
+  top: 32px;
   left: 10px;
   width: 10000px;
   z-index: 100;
@@ -988,23 +1015,20 @@ nav ul li.active a {
   margin-right: 10px;
 }
 #slider .items a img {
-  border: 1px solid #dfdfdf;
   margin: 0;
-}
-#slider .items a.active img {
-  border: 1px solid red;
 }
 #slider .items a p {
   margin-top: 2px;
+  display: none;
 }
 #ads {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 #ads .ad {
   margin-left: 20px;
   float: left;
-  height: 90px;
+  height: 70px;
   background: #000;
   border: 1px solid #dfdfdf;
   /* IE 8 */
@@ -1087,7 +1111,8 @@ footer {
     filter: none !important;
     -ms-filter: none !important;
   }
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -1096,17 +1121,21 @@ footer {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -1115,31 +1144,41 @@ footer {
   @page  {
     margin: 0.5cm;
   }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1023px) {
   #main {
     left: 5px;
   }
-  .home .home-items {
-    width: 900px;
+  #ticket-bar {
+    width: 730px;
   }
-  .home #slider {
-    width: 514px;
+  #ticket-bar span {
+    width: 155px;
+    margin-right: 20px;
   }
-  .home .ad {
-    width: 272px;
+  #ticket-bar span label {
+    font-size: 12px;
   }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  #main {
-    left: 5px;
+  #ticket-bar a.btn {
+    font-size: 12px;
+    right: 8px;
+  }
+  #cine-buzz {
+    left: 740px;
+    width: 130px;
+  }
+  #cine-buzz p {
+    display: none;
   }
   .home .home-items {
     width: 900px;
@@ -1155,6 +1194,20 @@ footer {
   #main {
     left: 5px;
   }
+  #ticket-bar {
+    width: 770px;
+  }
+  #ticket-bar span {
+    width: 160px;
+    margin-right: 20px;
+  }
+  #ticket-bar a.btn {
+    font-size: 13px;
+    right: 8px;
+  }
+  #cine-buzz {
+    left: 780px;
+  }
   .home .home-items {
     width: 1060px;
   }
@@ -1166,6 +1219,15 @@ footer {
   }
 }
 @media all and (min-width: 1230px) and (max-width: 1399px) {
+  #ticket-bar {
+    width: 960px;
+  }
+  #ticket-bar span {
+    width: 200px;
+  }
+  #cine-buzz {
+    left: 970px;
+  }
   .home .home-items {
     width: 1200px;
   }
@@ -1177,6 +1239,12 @@ footer {
   }
 }
 @media all and (min-width: 1400px) {
+  #ticket-bar {
+    width: 1120px;
+  }
+  #cine-buzz {
+    left: 1130px;
+  }
   .home .home-items {
     width: 1400px;
   }
@@ -1197,7 +1265,7 @@ footer {
 }
 @media all and (min-height: 800px) and (max-height: 914px) {
   .home-items {
-    top: 600px;
+    top: 800px;
   }
   footer {
     top: 950px;
@@ -1205,7 +1273,7 @@ footer {
 }
 @media all and (max-height: 799px) {
   .home-items {
-    top: 500px;
+    top: 560px;
   }
   footer {
     top: 850px;
