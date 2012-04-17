@@ -19,7 +19,13 @@ $(document).ready(function() {
 		{
 		}				
 */
-		
+	$(window).resize(function() {	
+		//console.log($("#background-wrap img").width());
+		console.log($(window).height());
+	});
+	
+	
+	
 	$(".movie-wrapper span").hover(function() {
 	
 		$(".hover",this).show();
