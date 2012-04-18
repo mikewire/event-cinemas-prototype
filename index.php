@@ -22,7 +22,7 @@
 				<label><strong>When</strong> would you like to see it?</label>
 				<input type="text" id="when" placeholder="Today">
 			</span>
-			<a class="btn" href="ticketing1.php">Find times and book</a>
+			<a class="btn blue" href="#">Find times and book</a>
 			
 			<div class="ticket-img"></div>
 		</div>
@@ -65,8 +65,8 @@
 		  			<li><a href="#">Coming soon</a></li>
 		  			<li><a href="#">Advanced tickets</a></li>
 		  		</ul>
-		  		<span class="arrow-left"></span>
-		  		<span class="arrow-right"></span>
+		  		<span class="arrow-left">&#8249;</span>
+		  		<span class="arrow-right">&#8250;</span>
 		  		<div class="items">
 		  		
 		  			<a href="#" class="active">

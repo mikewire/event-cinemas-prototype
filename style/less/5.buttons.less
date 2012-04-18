@@ -2,21 +2,11 @@
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 14px;
-	color: #000000;
-	padding: 7px 14px;
+	padding: 9px 14px 5px 14px;
 	font-family: @bold-font;
-	background: -moz-linear-gradient(
-		top,
-		#dbf2fc 0%,
-		#4cc8f2);
-	background: -webkit-gradient(
-		linear, left top, left bottom, 
-		from(#dbf2fc),
-		to(#4cc8f2));
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	border: 1px solid #76cfed;
 	-moz-box-shadow:
 		0px 1px 3px rgba(000,000,000,0.5),
 		inset 0px 0px 2px rgba(255,255,255,1);
@@ -26,6 +16,27 @@
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,0.4),
 		0px 1px 0px rgba(255,255,255,0.3);
+}
+.blue {
+  background: #4cc8f2;
+  border: 1px solid #76cfed;
+  color: #000;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  
+  .hover-fade; 
+  background-image: -webkit-linear-gradient(top, rgba(76, 200, 242, 0), rgba(219, 242, 252, 0.6));
+  background-image: -moz-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: -o-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: -ms-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  
+}
+.blue:hover {
+
+	background-color: #a6e4ff;
+
 }
 .btn-grey {
 	cursor: pointer;

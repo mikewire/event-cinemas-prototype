@@ -273,8 +273,11 @@ a {
   clear: both;
 }
 .background-fade {
-  -o-transition: background-color 100ms linear;
   -webkit-transition: background-color 100ms linear;
+  -moz-transition: background-color 100ms linear;
+  -o-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 strong {
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
@@ -282,8 +285,11 @@ strong {
   font-size: 13px;
 }
 .hover-fade {
-  -webkit-transition: all 0.5s;
-  -moz-transition: color 0.5s;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
 }
 .turn {
   transform: rotate(-10deg);
@@ -307,18 +313,35 @@ strong {
   cursor: pointer;
   text-transform: uppercase;
   font-size: 14px;
-  color: #000000;
-  padding: 7px 14px;
+  padding: 9px 14px 5px 14px;
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
-  background: -moz-linear-gradient(top, #dbf2fc 0%, #4cc8f2);
-  background: -webkit-gradient(linear, left top, left bottom, from(#dbf2fc), to(#4cc8f2));
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 1px solid #76cfed;
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px #ffffff;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
+}
+.blue {
+  background: #4cc8f2;
+  border: 1px solid #76cfed;
+  color: #000;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+  background-image: -webkit-linear-gradient(top, rgba(76, 200, 242, 0), rgba(219, 242, 252, 0.6));
+  background-image: -moz-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: -o-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: -ms-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+  background-image: linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0));
+}
+.blue:hover {
+  background-color: #a6e4ff;
 }
 .btn-grey {
   cursor: pointer;
@@ -397,7 +420,7 @@ header {
   position: absolute;
   top: -2px;
   right: 20px;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 #cine-buzz {
   /* IE10 */
@@ -1002,6 +1025,40 @@ nav ul li.active a {
   float: left;
   margin-right: 25px;
 }
+#slider .arrow-left,
+#slider .arrow-right {
+  border: 1px solid #fff;
+  padding: 10px 4px;
+  display: block;
+  background: #000;
+  /* IE 8 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
+  /* IE 5-7 */
+
+  filter: alpha(opacity=80);
+  /* Netscape */
+
+  -moz-opacity: 0.8;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0.8;
+  /* Good browsers */
+
+  opacity: 0.8;
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  z-index: 2000;
+  font-size: 18px;
+  cursor: pointer;
+}
+#slider .arrow-left {
+  left: 0px;
+}
+#slider .arrow-right {
+  right: 0px;
+}
 #slider .items {
   position: absolute;
   top: 32px;
@@ -1012,10 +1069,13 @@ nav ul li.active a {
 #slider .items a {
   display: block;
   float: left;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 #slider .items a img {
   margin: 0;
+}
+#slider .items a.active img {
+  border: 1px solid red;
 }
 #slider .items a p {
   margin-top: 2px;
@@ -1023,7 +1083,7 @@ nav ul li.active a {
 }
 #ads {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 #ads .ad {
   margin-left: 20px;
@@ -1195,10 +1255,10 @@ footer {
     left: 5px;
   }
   #ticket-bar {
-    width: 770px;
+    width: 890px;
   }
   #ticket-bar span {
-    width: 160px;
+    width: 200px;
     margin-right: 20px;
   }
   #ticket-bar a.btn {
@@ -1206,7 +1266,11 @@ footer {
     right: 8px;
   }
   #cine-buzz {
-    left: 780px;
+    left: 900px;
+    width: 130px;
+  }
+  #cine-buzz p {
+    display: none;
   }
   .home .home-items {
     width: 1060px;
@@ -1257,7 +1321,7 @@ footer {
 }
 @media all and (min-height: 915px) {
   .home-items {
-    top: 660px;
+    top: 670px;
   }
   footer {
     top: 980px;
@@ -1273,7 +1337,7 @@ footer {
 }
 @media all and (max-height: 799px) {
   .home-items {
-    top: 560px;
+    top: 590px;
   }
   footer {
     top: 850px;

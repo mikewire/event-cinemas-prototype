@@ -24,10 +24,16 @@ $(document).ready(function() {
 		console.log($(window).height());
 	});
 	
-	$("#slider img").adipoli({
+/*
+	$("#slider a img").adipoli({
     	'startEffect' : 'transparent',
     	'hoverEffect' : 'foldLeft'
 	});
+	$("#slider a.active img").adipoli({
+    	'startEffect' : '',
+    	'hoverEffect' : ''
+	});
+*/
 	
 	$(".movie-wrapper span").hover(function() {
 	
