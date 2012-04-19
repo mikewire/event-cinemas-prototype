@@ -1073,6 +1073,7 @@ nav ul li.active a {
 }
 #slider .items a img {
   margin: 0;
+  border: 1px solid #000;
 }
 #slider .items a.active img {
   border: 1px solid red;

@@ -1,40 +1,41 @@
-/* Author:
+var timer;
 
-*/
+function homeSlider() {
+	
+	$("#slider a.active").removeClass("active").next().addClass("active");
+	$("#background-wrap img").fadeOut(500, function() {
+	
+		$("#background-wrap img").attr("src","img/"+$("#slider a.active img").attr("main-img"));
+	});
+	
+	$("#background-wrap img").fadeIn(1000);
+}
+
+
 $(document).ready(function() {
 
-/*
-	if(geo_position_js.init()){
-			geo_position_js.getCurrentPosition(success_callback,error_callback,{enableHighAccuracy:true});
-		}
-		else{
-			alert("Functionality not available");
-		}
-	
-	function success_callback(p)
-		{
-		}
-		
-		function error_callback(p)
-		{
-		}				
-*/
+	timer = setInterval(homeSlider, 10000);
+
 	$(window).resize(function() {	
 		//console.log($("#background-wrap img").width());
 		console.log($(window).height());
 	});
+		
+	$("#slider a").click(function() {
 	
-/*
-	$("#slider a img").adipoli({
-    	'startEffect' : 'transparent',
-    	'hoverEffect' : 'foldLeft'
-	});
-	$("#slider a.active img").adipoli({
-    	'startEffect' : '',
-    	'hoverEffect' : ''
-	});
-*/
-	
+		$("#slider").find("a.active").removeClass("active");
+		$(this).addClass("active");
+		$("#background-wrap img").fadeOut(500, function() {
+		
+			$("#background-wrap img").attr("src","img/"+$("#slider a.active img").attr("main-img"));
+			
+		});
+		$("#background-wrap img").fadeIn(1000);
+		clearInterval(timer);
+		timer = setInterval(homeSlider, 10000);
+	});	
+		
+		
 	$(".movie-wrapper span").hover(function() {
 	
 		$(".hover",this).show();

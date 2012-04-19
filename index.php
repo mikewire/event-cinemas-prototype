@@ -70,35 +70,39 @@
 		  		<div class="items">
 		  		
 		  			<a href="#" class="active">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
+		  				<p>The Hangover</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
 		  				<p>The Hangover</p>
 		  			</a>
 		  			
