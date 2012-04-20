@@ -68,13 +68,6 @@ $(document).ready(function() {
 		
 	});
 	
-	$("#main").click(function() {
-	
-		$(".when-blowout").hide(); 
-		$(".what-blowout").hide(); 
-		$(".where-blowout").hide(); 
-	
-	});
 	$(".what-blowout span").click(function() {
 	
 		$("#what").val($("p",this).text());
