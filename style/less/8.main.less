@@ -1,22 +1,45 @@
 #wrapper {
 
 	position: relative;
-	width: 100%;
-	max-width: 1450px;
 	margin: 0px auto;
+	height: 100%;
 
-	#background-wrap img {
+	.call-to-action {
+		z-index: 9000;
+		position: absolute; 
+		display: block;
+		
+		.grey {
+			clear: both;
+			float: right;
+			width: 180px;
+			margin: 20px 0px 0px 0px;
+		}
+		.blue {
+			clear: both;
+			float: right;
+			width: 180px;		
+			margin: 12px 0px 0px 0px;
+		
+		}
+	}	
+	
+}
+	#background-wrap {
 		position: absolute;
-		z-index: -1;
+		top: 0px;
+		left: 0px;
 		width: 100%;
+				
+		img#skin {
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			margin-top: 0px;
+		}
+
 	}
-}
 
-
-#main {
-	position: absolute;
-	left: 30px;
-}
 
 
 

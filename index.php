@@ -3,7 +3,6 @@
   <div id="wrapper">
 	 
 	  <div id="main" role="main" class="home">
-<!-- 	  <a id="home-call-to-action" class="btn" href="ticketing1.php">Find times and book</a> -->
 		
 	  <header>
 	
@@ -70,44 +69,57 @@
 		  		<div class="items">
 		  		
 		  			<a href="#" class="active">
-		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Promotheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Promotheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>		  			
+		  			<a href="#">
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="the-vow.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Promotheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="snow-white.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hangover-thumb.jpg" main-img="good-deeds.jpg" alt="hangover-thumb" width="156" height="79" />
-		  				<p>The Hangover</p>
-		  			</a>
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>		  			
 		  			
-		  		
-		  		
+		  			<a href="#">
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Promotheus</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>		  			
+		  			
+		  			
+		  					  		
 		  		</div>
 		  		
 		  	</div>
@@ -144,7 +156,20 @@
 	  	  <!-- end home items -->
 	  	  
 	  </div> <!-- end main -->
-	  <div id="background-wrap"><img src="img/good-deeds.jpg" alt="snow-white" /></div>
+	  
+	  	<div class="call-to-action">
+			<img src="img/hp_bck/batman-title.png" />
+			<div class="clearfix"></div>
+			<a class="btn grey" href="#">More details</a>
+			<a class="btn blue" href="#">Advanced tickets</a>
+		</div>	  
 
   </div>
+	  <div id="background-wrap">
+	  
+	  	<img id="skin" src="img/hp_bck/batman-skin.jpg" />
+
+
+	  </div>
+
 <? include("includes/footer.php") ?>

@@ -1,14 +1,29 @@
 var timer;
 
+function changeSkin() {
+	
+	$(".call-to-action").fadeOut(200);
+	
+	$("#skin").fadeOut(200, function() {
+	
+		$("#skin").attr("src","img/hp_bck/"+$("#slider a.active img").attr("skin"));
+	});
+	
+	$("#skin").fadeIn(600, function() {
+	
+	
+		$(".call-to-action img").attr("src","img/hp_bck/"+$("#slider a.active img").attr("skin-title"));
+		$(".call-to-action .btn.blue").text($("#slider a.active img").attr("btn-title"));
+
+		$(".call-to-action").fadeIn(300);
+	});
+
+}
 function homeSlider() {
 	
 	$("#slider a.active").removeClass("active").next().addClass("active");
-	$("#background-wrap img").fadeOut(500, function() {
+	changeSkin();
 	
-		$("#background-wrap img").attr("src","img/"+$("#slider a.active img").attr("main-img"));
-	});
-	
-	$("#background-wrap img").fadeIn(1000);
 }
 
 
@@ -16,21 +31,19 @@ $(document).ready(function() {
 
 	timer = setInterval(homeSlider, 10000);
 
-	$(window).resize(function() {	
-		//console.log($("#background-wrap img").width());
-		console.log($(window).height());
-	});
-		
+/*
+	$("#slider img").adipoli({
+	
+	 'startEffect' : 'grayscale',
+     'hoverEffect' : 'foldLeft'
+	
+	});	
+*/
 	$("#slider a").click(function() {
 	
 		$("#slider").find("a.active").removeClass("active");
 		$(this).addClass("active");
-		$("#background-wrap img").fadeOut(500, function() {
-		
-			$("#background-wrap img").attr("src","img/"+$("#slider a.active img").attr("main-img"));
-			
-		});
-		$("#background-wrap img").fadeIn(1000);
+		changeSkin();
 		clearInterval(timer);
 		timer = setInterval(homeSlider, 10000);
 	});	
