@@ -63,7 +63,7 @@
 	height: 119px;
 	position: relative;
 	float: left;
-	border: 1px solid #333;				
+	border: 1px solid @dark-grey;				
 
 	.items {
 	
@@ -109,7 +109,7 @@
 }
 #slider {
 
-	border: 1px solid #333;				
+	border: 1px solid @dark-grey;				
 	height: 119px;
 	position: relative;
 	overflow: hidden;
@@ -148,7 +148,7 @@
 			float: left;
 			margin-right: 10px;
 			position: relative;
-			border: 1px solid #333;		
+			border: 1px solid @dark-grey;		
 			width: 156px;
 			height: 80px;
 			overflow: hidden;
@@ -191,19 +191,27 @@
 
 	width: 100%;
 	margin-top: 10px;
+	
 	.ad {
 	
-		margin-left: 20px;
+		margin-left: 10px;
 		float: left;
-		height: 70px;
+		height: 100px;
+		overflow: hidden;
 		background: #000;
-		border: 1px solid @light-grey;
+		border: 1px solid @dark-grey;
 		.opaque(0.8);
 		
 		&:first-child {
 		
 			margin-left: 0px;
 		}
+		img {
+		
+			width: 100%;
+		}
 		
 	}
+
+	
 }

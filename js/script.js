@@ -59,11 +59,10 @@ $(document).ready(function() {
 		
 	});
 	
-	$("#where").focus(function() { 
-	
+	$("#where").click(function() { 
+		$(this).addClass("active");
+		$(".arrow-down",this).css("border-top", "6px solid #dfdfdf");
 		$(".where-blowout").show(); 
-		$(".what-blowout").hide(); 
-		$(".when-blowout").hide(); 
 		
 	});
 	$("#what").focus(function() { 

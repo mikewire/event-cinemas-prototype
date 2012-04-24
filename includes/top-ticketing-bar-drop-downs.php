@@ -148,12 +148,6 @@
   
   	<div class="where-blowout">
   		
-  		<span class="arrow-up"></span>
-  		<span class="head">Select multiple cinemas to compare times</span>
-  		<div class="geo">
-  			<a class="btn-grey">Suggest cinemas near me</a>
-  		</div>
-  		<p>or select your cinema(s) below</p>
   		<ul class="states">
   			<li class="active">NSW</li> |
   			<li>ACT</li> |
@@ -258,7 +252,7 @@
 		
 		<span class="head">
 			<div style="float: left;">
-				<a class="btn" id="done" style="font-size: 14px;padding: 2px 10px;">Done</a>
+				<a class="btn blue" id="done" style="font-size: 14px;padding: 2px 10px;">Done</a>
 			</div>
 			<div style="float: right">
 				<input type="checkbox" checked="checked">

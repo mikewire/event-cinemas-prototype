@@ -11,9 +11,7 @@ nav,
 section {
   display: block;
 }
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -50,8 +48,7 @@ a {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b,
-strong {
+b, strong {
   font-weight: bold;
 }
 blockquote {
@@ -95,16 +92,14 @@ pre {
 q {
   quotes: none;
 }
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -116,16 +111,14 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul,
-ol {
+ul, ol {
   margin: 1em 0;
   padding: 0 0 0 0px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul,
-nav ol {
+nav ul, nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -167,13 +160,11 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button,
-input {
+button, input {
   line-height: normal;
   *overflow: visible;
 }
-table button,
-table input {
+table button, table input {
   *overflow: auto;
 }
 button,
@@ -183,8 +174,7 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -196,8 +186,7 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -206,8 +195,7 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid,
-textarea:invalid {
+input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -217,8 +205,7 @@ table {
 td {
   vertical-align: top;
 }
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
@@ -253,8 +240,7 @@ p {
   font-weight: light;
   font-style: normal;
 }
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -305,6 +291,11 @@ strong {
   -moz-transform: rotate(-10deg);
   /* Firefox */
 
+}
+.shadow {
+  -webkit-box-shadow: 3px 3px 0px 0px #000;
+  -moz-box-shadow: 0px 0px 4px 0px #000;
+  box-shadow: 1px 3px 4px 0px #000;
 }
 .border-bottom {
   border-bottom: solid 1px #b28f55;
@@ -397,7 +388,7 @@ header {
   display: block;
   margin-bottom: 2px;
 }
-#ticket-bar span input[type=text] {
+#ticket-bar span div {
   display: block;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -405,8 +396,38 @@ header {
   width: 100%;
   padding: 3px 5px;
   border: 1px solid #dfdfdf;
-  font-size: 13px;
   z-index: 9000;
+  background: #fff;
+  color: #5d5d5d;
+  position: relative;
+  cursor: pointer;
+}
+#ticket-bar span div .arrow-down {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333333;
+}
+#ticket-bar span div.active {
+  -webkit-box-shadow: 3px 3px 0px 0px #000;
+  -moz-box-shadow: 0px 0px 4px 0px #000;
+  box-shadow: 1px 3px 4px 0px #000;
+  background: #333333;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #333333;
+  color: #fff;
 }
 #ticket-bar span:first-child {
   margin-left: 10px;
@@ -589,11 +610,14 @@ header {
   font-size: 14px;
 }
 .where-blowout {
+  -webkit-box-shadow: 3px 3px 0px 0px #000;
+  -moz-box-shadow: 0px 0px 4px 0px #000;
+  box-shadow: 1px 3px 4px 0px #000;
   display: none;
-  z-index: 7000;
+  z-index: 9000;
   position: absolute;
-  top: 162px;
-  left: 30px;
+  top: 57px;
+  left: 10px;
   width: 360px;
   background-color: #000;
 }
@@ -631,9 +655,9 @@ header {
 .where-blowout ul {
   color: white;
   list-style: none;
-  background-color: #222;
+  background-color: #333333;
   margin: 0px;
-  padding: 5px 10px;
+  padding: 10px 5px 10px 5px;
 }
 .where-blowout ul li {
   padding: 0px 3px;
@@ -997,7 +1021,7 @@ nav ul li.active a {
   height: 119px;
   position: relative;
   float: left;
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 #premium-cinema-box .items {
   position: absolute;
@@ -1050,15 +1074,14 @@ nav ul li.active a {
   display: none;
 }
 #slider {
-  border: 1px solid #333;
+  border: 1px solid #333333;
   height: 119px;
   position: relative;
   overflow: hidden;
   float: left;
   margin-right: 25px;
 }
-#slider .arrow-left,
-#slider .arrow-right {
+#slider .arrow-left, #slider .arrow-right {
   border: 1px solid #fff;
   padding: 5px 4px;
   display: block;
@@ -1103,7 +1126,7 @@ nav ul li.active a {
   float: left;
   margin-right: 10px;
   position: relative;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   width: 156px;
   height: 80px;
   overflow: hidden;
@@ -1134,8 +1157,7 @@ nav ul li.active a {
 #slider .items a.active {
   border: 1px solid #fff;
 }
-#slider .items a.active p,
-#slider .items a.active img {
+#slider .items a.active p, #slider .items a.active img {
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -1199,11 +1221,12 @@ nav ul li.active a {
   margin-top: 10px;
 }
 #ads .ad {
-  margin-left: 20px;
+  margin-left: 10px;
   float: left;
-  height: 70px;
+  height: 100px;
+  overflow: hidden;
   background: #000;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #333333;
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -1222,6 +1245,9 @@ nav ul li.active a {
 }
 #ads .ad:first-child {
   margin-left: 0px;
+}
+#ads .ad img {
+  width: 100%;
 }
 footer {
   height: 36px;
@@ -1284,8 +1310,7 @@ footer {
     filter: none !important;
     -ms-filter: none !important;
   }
-  a,
-  a:visited {
+  a, a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -1294,21 +1319,17 @@ footer {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  tr, img {
     page-break-inside: avoid;
   }
   img {
@@ -1317,18 +1338,15 @@ footer {
   @page  {
     margin: 0.5cm;
   }
-  p,
-  h2,
-  h3 {
+  p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid;
   }
 }
-@media all and (max-width: 1259px) {
+@media all and (max-width: 1260px) {
   #ticket-bar {
     width: 860px;
   }
@@ -1350,10 +1368,17 @@ footer {
     width: 1000px;
   }
   .home #slider {
-    width: 650px;
+    width: 670px;
+    margin-right: 5px;
   }
-  .home .ad {
-    width: 272px;
+  .home #slider a {
+    margin-right: 8px;
+  }
+  .home .ad.full {
+    width: 240px;
+  }
+  .home .ad.half {
+    width: 240px;
   }
   #wrapper {
     width: 1000px;
@@ -1363,7 +1388,7 @@ footer {
     top: 160px;
   }
 }
-@media all and (min-width: 1260px) and (max-width: 1399px) {
+@media all and (min-width: 1260px) and (max-width: 1400px) {
   #ticket-bar {
     width: 960px;
   }
@@ -1379,8 +1404,11 @@ footer {
   .home #slider {
     width: 850px;
   }
-  .home .ad {
+  .home .ad.full {
     width: 384px;
+  }
+  .home .ad.half {
+    width: 197px;
   }
   #wrapper {
     width: 1200px;
@@ -1403,8 +1431,11 @@ footer {
   .home #slider {
     width: 1015px;
   }
-  .home .ad {
+  .home .ad.full {
     width: 440px;
+  }
+  .home .ad.half {
+    width: 223px;
   }
   #wrapper {
     width: 1366px;
@@ -1414,17 +1445,17 @@ footer {
     top: 180px;
   }
 }
-@media all and (max-height: 799px) {
+@media all and (max-height: 745px) {
   .home-items {
-    top: 590px;
+    top: 500px;
   }
   footer {
     top: 850px;
   }
 }
-@media all and (min-height: 800px) and (max-height: 914px) {
+@media all and (min-height: 745px) and (max-height: 914px) {
   .home-items {
-    top: 650px;
+    top: 590px;
   }
   footer {
     top: 950px;
@@ -1432,7 +1463,7 @@ footer {
 }
 @media all and (min-height: 915px) {
   .home-items {
-    top: 700px;
+    top: 680px;
   }
   footer {
     top: 980px;

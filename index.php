@@ -9,7 +9,7 @@
 	  	<div id="ticket-bar">
 	  		<span>
 				<label><strong>Where</strong> would you like to go?</label>
-				<input type="text" id="where" placeholder="Select a cinema">
+				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
 			</span>
 			
 			<span>
@@ -147,9 +147,11 @@
 		  	
 		  	<div id="ads">
 		  	
-		  		<div class="ad"></div>
-		  		<div class="ad"></div>
-		  		<div class="ad"></div>
+		  		<div class="ad half"><img src="img/AHL-02-ad-spaces-1.jpg" alt="AHL-02-ad-spaces-1" /></div>
+		  		<div class="ad full"><img src="img/sample-ad.jpg" alt="sample-ad" /></div>
+		  		<div class="ad full"><img src="img/sample-ad.jpg" alt="sample-ad" /></div>
+		  		<div class="ad half"><img src="img/AHL-02-ad-spaces-2.jpg" alt="AHL-02-ad-spaces-2" /></div>
+
 		  		<div class="clearfix"></div>
 		  	</div>
 		  </div>
