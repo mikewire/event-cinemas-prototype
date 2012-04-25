@@ -48,11 +48,13 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+			  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">
@@ -65,12 +67,16 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Albert Nobbs</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+			  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Albert Nobbs</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
 		  			</div>
+		  			
+		  			
 		  			<div class="select">
 						<input type="checkbox">
 	  					<label>Select movie</label>
@@ -83,29 +89,13 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">A few best men</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
-		  			</div>
-		  			<div class="select">
-						<input type="checkbox">
-	  					<label>Select movie</label>
-		  			</div>
-		  			
-		  		</span>
-	  		
-	  		</li>
-
-	  		<li>
-		  		<span>
-		  			
-		  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">John Carter</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+			  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+		  					<p class="title">A few best men</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">
@@ -119,45 +109,13 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Journey 2</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
-		  			</div>
-		  			<div class="select">
-						<input type="checkbox">
-	  					<label>Select movie</label>
-		  			</div>
-		  			
-		  		</span>
-	  		
-	  		</li>
-	  		<li>
-		  		<span>
-		  			
-		  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Hugo</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
-		  			</div>
-		  			<div class="select">
-						<input type="checkbox">
-	  					<label>Select movie</label>
-		  			</div>
-		  			
-		  		</span>
-	  		
-	  		</li>
-	  		<li>
-		  		<span>
-		  			
-		  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 2</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+		  				<img src="img/movie3.png" alt="movie1" width="105" height="150" />
+		  				<div class="hover">
+		  					<p class="title">John Carter</p>
+		  					<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">
@@ -171,11 +129,115 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 3</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+		  				<img src="img/movie4.png" alt="movie1" width="105" height="150" />
+		  				<div class="hover">
+		  					<p class="title">Journey 2</p>
+		  					<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
+					</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Hugo</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 2</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 3</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 4</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 5</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">
@@ -189,47 +251,13 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 4</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
-		  			</div>
-		  			<div class="select">
-						<input type="checkbox">
-	  					<label>Select movie</label>
-		  			</div>
-		  			
-		  		</span>
-	  		
-	  		</li>
-
-	  		<li>
-		  		<span>
-		  			
-		  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 5</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
-		  			</div>
-		  			<div class="select">
-						<input type="checkbox">
-	  					<label>Select movie</label>
-		  			</div>
-		  			
-		  		</span>
-	  		
-	  		</li>
-
-	  		<li>
-		  		<span>
-		  			
-		  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 6</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+			  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 6</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">
@@ -242,11 +270,13 @@
 	  		<li>
 		  		<span>
 		  			
-		  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-		  			<div class="hover">
-		  				<p class="title">Snow White and the Huntsman 7</p>
-		  				<a href="movie-detail.php">&#8250; more details</a>
-		  				<a href="#">&#8250; view trailer</a>		  				
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 7</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
 		  			</div>
 		  			<div class="select">
 						<input type="checkbox">

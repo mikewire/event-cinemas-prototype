@@ -74,6 +74,18 @@ $(document).ready(function() {
 		
 	});
 
+	$("#wrapper").click(function() {
+		console.log("here");
+		$("#where").removeClass("active");
+		$(".where-blowout").hide(); 
+		$("#what").removeClass("active");
+		$(".what-blowout").hide(); 
+		$("#when").removeClass("active");
+		$(".when-blowout").hide(); 
+		
+	});
+
+
 /*======================= where would you like to go ============================
 
 todo:

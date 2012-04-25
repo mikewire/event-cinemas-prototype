@@ -164,12 +164,11 @@
 			<a class="btn blue" href="#">Advanced tickets</a>
 		</div>	  
 
+ </div>
+  <div id="background-wrap">
+  
+  	<img id="skin" src="img/hp_bck/batman-skin.jpg" />
+
   </div>
-	  <div id="background-wrap">
-	  
-	  	<img id="skin" src="img/hp_bck/batman-skin.jpg" />
-
-
-	  </div>
 
 <? include("includes/footer.php") ?>

@@ -1,7 +1,7 @@
 header {
 
-	width: 100%;
 	position: relative;
+	margin: 0px auto;
 }
 
 #ticket-bar {
@@ -328,13 +328,57 @@ ul.head {
 			width: 105px;
 			height: 195px;
 			cursor: pointer;
-			overflow: hidden;
+
 			
-			img {
-				position: absolute; 
+			.image-wrapper {
+			
+				height: 150px;
+				width: 100%;
+				overflow: hidden;				
+				position: absolute;
 				top: 0px;
-				.opaque(0.8);
-				.hover-fade(0.5s);
+				
+				img {
+					position: absolute; 
+					top: 0px;
+					z-index: 500;
+					.opaque(0.8);
+					.hover-fade(0.5s);
+				}
+				.hover {
+					z-index: 1000;
+					position: absolute;				
+					background-color: black;
+					width: 90px;
+					padding: 5px;
+					bottom: -100px;
+					left: 0px;
+					.opaque(0.9);
+					padding-left: 10px;
+					
+					p {
+						padding: 0px; 
+						margin: 0px 0px 2px 0px;
+						color: white;
+						font-size: 12px;
+		
+		
+					}
+					a {
+						color: red;
+						display: block;
+						font-size: 12px;
+						margin-bottom: 2px;
+					}
+					
+					.icons {
+					
+						position: absolute;
+						bottom: 30px;
+						left: -15px;
+					}
+				}
+				
 			}
 			&.active {
 			
@@ -356,40 +400,6 @@ ul.head {
 				}
 			}
 			
-			.hover {
-				//display: none;
-				z-index: 1000;
-				position: absolute;				
-				background-color: black;
-				width: 90px;
-				padding: 5px;
-				top: -100px;
-				left: 0px;
-				.opaque(0.9);
-				padding-left: 10px;
-				
-				p {
-					padding: 0px; 
-					margin: 0px 0px 2px 0px;
-					color: white;
-					font-size: 12px;
-	
-	
-				}
-				a {
-					color: red;
-					display: block;
-					font-size: 12px;
-					margin-bottom: 2px;
-				}
-				
-				.icons {
-				
-					position: absolute;
-					bottom: 30px;
-					left: -15px;
-				}
-			}
 			.select {
 			
 				position: absolute;
@@ -409,7 +419,7 @@ ul.head {
 				
 				.hover {
 					.hover-fade(0.2s);
-					top: 0px;
+					bottom: 0px;
 				}
 
 				.select { 

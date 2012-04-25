@@ -14,10 +14,6 @@
 </head>
 <body>
   
-  <div id="wrapper">
-	 
-	  <div id="main" role="main" class="home">
-		
 	  <header>
 	
 	  	<div id="ticket-bar">
@@ -45,7 +41,8 @@
 			<p>Sign up | Login</p>
 			<span></span>
 		</div>
-
+<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  
 		
 	  </header>
-<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  
+  <div id="wrapper">
+	  <div id="main" role="main" class="home">

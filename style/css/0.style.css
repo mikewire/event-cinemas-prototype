@@ -382,8 +382,8 @@ strong {
   box-shadow: 0px 1px 6px 1px #333333;
 }
 header {
-  width: 100%;
   position: relative;
+  margin: 0px auto;
 }
 #ticket-bar {
   /* IE10 */
@@ -679,11 +679,18 @@ ul.head li.active a {
   width: 105px;
   height: 195px;
   cursor: pointer;
-  overflow: hidden;
 }
-.what-blowout ul.movie-overview li span img {
+.what-blowout ul.movie-overview li span .image-wrapper {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
   position: absolute;
   top: 0px;
+}
+.what-blowout ul.movie-overview li span .image-wrapper img {
+  position: absolute;
+  top: 0px;
+  z-index: 500;
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -704,6 +711,48 @@ ul.head li.active a {
   -o-transition: All 0.5s ease;
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
+}
+.what-blowout ul.movie-overview li span .image-wrapper .hover {
+  z-index: 1000;
+  position: absolute;
+  background-color: black;
+  width: 90px;
+  padding: 5px;
+  bottom: -100px;
+  left: 0px;
+  /* IE 8 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
+  /* IE 5-7 */
+
+  filter: alpha(opacity=80);
+  /* Netscape */
+
+  -moz-opacity: 0.9;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0.9;
+  /* Good browsers */
+
+  opacity: 0.9;
+  padding-left: 10px;
+}
+.what-blowout ul.movie-overview li span .image-wrapper .hover p {
+  padding: 0px;
+  margin: 0px 0px 2px 0px;
+  color: white;
+  font-size: 12px;
+}
+.what-blowout ul.movie-overview li span .image-wrapper .hover a {
+  color: red;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.what-blowout ul.movie-overview li span .image-wrapper .hover .icons {
+  position: absolute;
+  bottom: 30px;
+  left: -15px;
 }
 .what-blowout ul.movie-overview li span.active .select {
   background: #dfdfdf;
@@ -734,48 +783,6 @@ ul.head li.active a {
   transition: All 0s ease;
   color: #333333;
 }
-.what-blowout ul.movie-overview li span .hover {
-  z-index: 1000;
-  position: absolute;
-  background-color: black;
-  width: 90px;
-  padding: 5px;
-  top: -100px;
-  left: 0px;
-  /* IE 8 */
-
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
-  /* IE 5-7 */
-
-  filter: alpha(opacity=80);
-  /* Netscape */
-
-  -moz-opacity: 0.9;
-  /* Safari 1.x */
-
-  -khtml-opacity: 0.9;
-  /* Good browsers */
-
-  opacity: 0.9;
-  padding-left: 10px;
-}
-.what-blowout ul.movie-overview li span .hover p {
-  padding: 0px;
-  margin: 0px 0px 2px 0px;
-  color: white;
-  font-size: 12px;
-}
-.what-blowout ul.movie-overview li span .hover a {
-  color: red;
-  display: block;
-  font-size: 12px;
-  margin-bottom: 2px;
-}
-.what-blowout ul.movie-overview li span .hover .icons {
-  position: absolute;
-  bottom: 30px;
-  left: -15px;
-}
 .what-blowout ul.movie-overview li span .select {
   position: absolute;
   bottom: 5px;
@@ -796,7 +803,7 @@ ul.head li.active a {
   -o-transition: All 0.2s ease;
   -ms-transition: All 0.2s ease;
   transition: All 0.2s ease;
-  top: 0px;
+  bottom: 0px;
 }
 .what-blowout ul.movie-overview li span:hover .select {
   -webkit-transition: All 0.5s ease;
@@ -1603,7 +1610,7 @@ footer {
   .home .ad.half {
     width: 240px;
   }
-  #wrapper {
+  #wrapper, header {
     width: 1000px;
   }
   .call-to-action {
@@ -1639,7 +1646,7 @@ footer {
   .home .ad.half {
     width: 197px;
   }
-  #wrapper {
+  #wrapper, header {
     width: 1200px;
   }
   .call-to-action {
@@ -1666,7 +1673,7 @@ footer {
   .home .ad.half {
     width: 223px;
   }
-  #wrapper {
+  #wrapper, header {
     width: 1366px;
   }
   .call-to-action {
