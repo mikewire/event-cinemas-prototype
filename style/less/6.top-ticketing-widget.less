@@ -47,11 +47,12 @@ header {
 				border-left: 6px solid transparent;
 				border-right: 6px solid transparent;
 				border-top: 6px solid @dark-grey;
-			
+				
+	
 			}
 			&.active {
 			
-				.shadow;
+				.shadow(1px, 3px, 4px, 0px, #000);
 				background: @dark-grey;
 				.radius-full(0px);
 				.radius-half(5px);
@@ -59,10 +60,21 @@ header {
 				border: 1px solid @dark-grey;
 				color: #fff;
 				
+				.arrow-down {
+					border-top: 6px solid @light-grey; 
+				}
+			}
+			.star {
+			
+				width: 17px;
+				height: 16px;
+				background: url(../../img/star.png);
+				float: left;
+				margin-right: 5px;
 			}
 
 		}
-		
+
 		&:first-child {
 		
 			margin-left: 10px;
@@ -122,26 +134,91 @@ header {
 		.arrow-down(5px,#fff);
 	}
 }
+.explain {
+
+	color: #fff;
+	margin: 0px 0px 20px 10px;
+	
+	.double-tick {
+	
+		float: left;
+		margin-right: 5px;
+		
+	}
+
+}
+.bottom {
+	background-color: @dark-grey;
+	height: 25px;	
+	font-size: 18px;
+	margin-top: 10px;
+	padding: 5px 0px 5px 0px;
+	color: white;
+	
+	.btn {
+	
+		width: 50px;
+		font-size: 11px;
+		padding-top: 5px;
+		float: left;
+		margin-left: 10px;
+		
+	}
+	.remember-selection {
+	
+		float: right;
+		width: 200px;
+		margin: 2px 15px 0px 0px;
+	}
+}
+ul.head {
+	font-size: 16px;
+	color: white;
+	padding: 10px 0px 0px 10px;
+	background-color: @dark-grey;
+	height: 25px;
+	display: block;
+	list-style: none;
+	margin: 0px;
+	
+	li {
+		&:after {
+		
+			content: "|";
+			color: #fff;
+			margin-left: 10px;
+		}
+		&:last-child {
+
+			&:after {
+			
+				content: "";
+				color: #fff;
+				margin-left: 10px;
+			}
+		
+		
+		}
+		display: block;
+		float: left;
+		margin-right: 10px;
+		
+		&.active a {
+		
+			color: red;
+		}
+	}
+}
 
 .when-blowout {
+	.shadow(1px, 3px, 4px, 0px, #000);
 	display: none;
 	z-index: 7000;
 	position: absolute;
-	top: 302px;
-	left: 550px;
-	width: 200px;
-	background-color: #000;
-	
-	.arrow-up {
-		position: absolute;
-		top: -10px;
-		left: 10px;
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid #000;
-	}
+	top: 57px;
+	left: 510px;
+	width: 213px;
+	background-color: @dark-grey;
 	
 	ul {
 	
@@ -153,93 +230,157 @@ header {
 			color: white;
 			display: block;
 			border-bottom: 1px solid #ccc;
-			padding: 5px 10px;
+			padding: 5px 8px;
 			cursor: pointer;
 			
+			&.active {
+			
+				background-color: @light-grey;
+				color: @dark-grey
+				
+			}
 			&:hover {
 				
-				background-color: #333;
+				background-color: @light-grey;
+				color: @dark-grey
+			}
+			&:last-child {
+				border-bottom: none;
+			
 			}
 		}
 	}	
+	p {
+	
+		color: @light-grey;
+		padding: 0px 0px 10px 5px;
+		margin-top: 10px;
+		font-style:italic;
+		font-family: @thin-font;
+	}
 
 }
 
 .what-blowout {
+	.shadow(1px, 3px, 4px, 0px, #000);
 	display: none;
 	z-index: 7000;
 	position: absolute;
-	top: 62px;
-	left: 270px;
+	top: 57px;
+	left: 260px;
 	width: 730px;
 	background-color: #000;
 	
-	.arrow-up {
-		position: absolute;
-		top: -10px;
-		left: 50px;
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid #222;
-	}
 
-	.head {
-		font-size: 18px;
-		color: white;
-		padding: 10px 10px 0px 10px;
-		background-color: #222;
-		height: 30px;
-		display: block;
-	}
-	.filters {
+	ul.filters {
 		
 		width: 710px;
 		height: 25px;
-		background: url(../../img/movie-blowout-filters.png) no-repeat;
-		margin: 10px;
+		list-style: none;
+		margin-left: 10px;
 		
+		li {
+		
+			display: block;
+			float: left;
+			margin-right: 30px;
+			input {
+				
+				float: left;
+				margin: 5px 5px 0px 0px;
+				
+			}
+			label {
+				text-indent: -9999px;
+				float: left;
+			}
+			&.for-family {
+			
+				label {
+				
+					text-indent: 0px;
+					color: #fff;
+					font-size: 16px;
+				}
+			}
+		}
 	}
-	ul {
+	ul.movie-overview {
 	
 		list-style: none;
 		margin: 10px 0px 0px 10px;
 		padding: 0px;
-		width: 700px;
+		width: 720px;
+		height: 400px;
+		overflow: auto;
+		
 		li {
 		
 			display: inline;
 			margin-right: 10px;	
 				
 		}
+		
 		li span {
-			cursor: pointer;
+			//cursor: pointer;
 			position: relative;	
 			display: inline-block;
 			width: 105px;
-			height: 190px;
-
+			height: 195px;
+			cursor: pointer;
+			overflow: hidden;
+			
 			img {
 				position: absolute; 
 				top: 0px;
+				.opaque(0.8);
+				.hover-fade(0.5s);
 			}
+			&.active {
+			
+				.select {
+					background: @light-grey;
+					color: @dark-grey;
+				}
+				
+				img {
+				
+					.opaque(1);
+				}	
+						
+				&:hover {
+					.select {
+						.hover-fade(0s);
+						color: @dark-grey;
+					}
+				}
+			}
+			
 			.hover {
-				display: none;
+				//display: none;
 				z-index: 1000;
 				position: absolute;				
 				background-color: black;
-				width: 85px;
-				height: 130px;
+				width: 90px;
 				padding: 5px;
-				top: 5px;
-				left: 5px;
-				opacity: .8;
-				a {
+				top: -100px;
+				left: 0px;
+				.opaque(0.9);
+				padding-left: 10px;
 				
+				p {
+					padding: 0px; 
+					margin: 0px 0px 2px 0px;
+					color: white;
+					font-size: 12px;
+	
+	
+				}
+				a {
+					color: red;
 					display: block;
-					font-size: 14px;
-					margin-bottom: 5px;
+					font-size: 12px;
+					margin-bottom: 2px;
 				}
 				
 				.icons {
@@ -249,15 +390,38 @@ header {
 					left: -15px;
 				}
 			}
-			p {
+			.select {
+			
 				position: absolute;
-				top: 155px;
-				padding: 0px; 
-				margin: 0px 0px 20px 0px;
-				color: white;
+				bottom: 5px;
+				width: 102px;
+				color: @light-grey;
 				font-size: 14px;
+				text-align: center;
+				padding: 5px 0px 5px 0px;
+				background: #000;
+				border: 1px solid @dark-grey;
+				.radius-full(5px);
+				
+			}
+			
+			&:hover {
+				
+				.hover {
+					.hover-fade(0.2s);
+					top: 0px;
+				}
 
-
+				.select { 
+					.hover-fade(0.5s);	
+					color: #fff;
+					border: 1px solid #fff;
+				}
+				
+				img {
+				
+					.opaque(1);
+				}
 			}
 			
 		}
@@ -267,66 +431,22 @@ header {
 
 }
 .where-blowout {
-	.shadow;
+	.shadow(1px, 3px, 4px, 0px, #000);
 	display: none;
 	z-index: 9000;
 	position: absolute;
 	top: 57px;
 	left: 10px;
-	width: 360px;
+	width: 435px;
 	background-color: #000;
 	
 	
-	.arrow-up {
-		position: absolute;
-		top: -10px;
-		left: 40px;
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid #222;
-	}
-	
-	.head {
-		font-size: 18px;
-		color: white;
-		padding: 6px 10px 0px 10px;
-		background-color: #222;
-		height: 30px;
-		display: block;
-	}
-	.geo {
-		padding-left: 10px;
-		margin: 20px 0px 0px 0px;
-		height: 20px;
-		
-		.btn {
-		
-			font-size: 11px;
-		}
-	}
 	p {
 		border-top: 1px solid #ccc;
 		color: white;
 		padding: 10px 0px 0px 10px;
 	}
-	ul {
-		color: white;
-		list-style: none;
-		background-color: @dark-grey;
-		margin: 0px;
-		padding: 10px 5px 10px 5px;
-		li {
-			padding: 0px 3px;
-			color: white;		
-			display: inline;
-		}
-		li.active {
-			
-			color: red;
-		}
-	}
+
 	.columns {
 	
 		color: white;
@@ -334,13 +454,25 @@ header {
 		margin-bottom: 20px;
 		.column {
 		
-			width: 150px;
+			width: 200px;
 			float: left;
 
-			margin-left: 10px;
+			margin: 0px 10px 0px 5px;
+			
 			span {
-				margin-top: 3px;
+				cursor: pointer;
+				margin: 3px 0px 8px 0px;
+				background: @dark-grey;
+				padding: 5px 8px;
+				.radius-full(5px);
 				display: block;
+				
+				&.active {
+				
+					background: @light-grey;
+					color: @dark-grey;
+				}
+
 			}
 		}
 	

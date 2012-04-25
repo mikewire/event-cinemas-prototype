@@ -18,15 +18,15 @@
 }
 .blue {
   text-transform: uppercase;
-  background: #4cc8f2;
+  background: #a6e4ff;
   border: 1px solid #76cfed;
   color: #000;
   overflow: hidden;
   display: block;
   text-align: center;
   
-  .hover-fade; 
-  background-image: -webkit-linear-gradient(top, rgba(76, 200, 242, 0), rgba(219, 242, 252, 0.6));
+  .hover-fade(0.2s); 
+  background-image: -webkit-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
   background-image: -moz-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
   background-image: -o-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
   background-image: -ms-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
@@ -36,6 +36,7 @@
 .blue:hover {
 
 	background-color: #a6e4ff;
+	.shadow(0px, 1px, 4px, 1px, #333);
 
 }
 .grey {
@@ -46,7 +47,7 @@
   display: block;
   text-align: center;
   
-  .hover-fade; 
+  .hover-fade(0.2s); 
   background-image: -webkit-linear-gradient(top, rgba(223, 241, 249, 0), rgba(170, 173, 176, 0.6) );
   background-image: -moz-linear-gradient(top, rgba(223, 241, 249, 0), rgba(170, 173, 176, 0.6));
   background-image: -o-linear-gradient(top, rgba(223, 241, 249, 0), rgba(170, 173, 176, 0.6));
@@ -56,6 +57,6 @@
 }
 .grey:hover {
 
-	background-color: #fff;
-
+	.shadow(0px, 1px, 6px, 1px, #333);
+	
 }

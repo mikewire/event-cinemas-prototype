@@ -65,12 +65,37 @@
 	float: left;
 	border: 1px solid @dark-grey;				
 
+	.top {
+	
+		
+		li {
+		
+			padding: 4px 5px;
+			a {
+			
+				.opaque(0.4);			
+			}
+		
+		}
+		li.active {
+		
+			a {
+			
+				.opaque(1);
+			}
+		}
+
+		
+
+
+	}
 	.items {
 	
 		position: absolute;
-		top: 32px;
+		top: 33px;
 		left: 10px;
 		z-index: 100;
+		
 		a {
 			display: block;
 			.opaque-strip {
@@ -85,18 +110,19 @@
 			
 			}
 			.title {
-			
+				font-family: @thin-font;
 				text-transform: uppercase;
 				bottom: 5px;
 				left: 0px;
 				width: 100%;
 				display: block;
 				text-align: center;
-				font-size: 18px;
+				font-size: 16px;
 				position: absolute;
+				
 			}
 			img {
-				border: 1px solid @light-grey;
+				border: 1px solid @dark-grey;
 				margin:0;
 			}
 			p {
@@ -156,7 +182,7 @@
 			img {
 				margin:0;
 				.opaque(0.8);
-				.hover-fade;
+				.hover-fade(0.5s);
 			}
 			&.active {
 			

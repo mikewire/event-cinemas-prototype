@@ -1,33 +1,63 @@
   	<div class="when-blowout">
   		
-  		<span class="arrow-up"></span>
   		<ul>
-  			<li>Today</li>
-  			<li>Tomorrow</li>
+  			<li class="active">Today</li>
+  			<li>Tomorrow March 20</li>
   			<li>Wednesday March 21</li>  			
   			<li>Thursday March 22</li>  			
   			<li>Friday March 23</li>  			
   			<li>Saturday March 24</li>  			  			  		
   			<li>Sunday March 25</li>  			  			  		
   			<li>Monday March 26</li>  			  			  		
-  			<li>More dates &raquo;</li>  			  			  		
   		
   		</ul>  
+  		<p>You can always change the date later.</p>
   	</div>
   	<div class="what-blowout">
   		
-  		<span class="arrow-up"></span>
-  		<span class="head">Now showing</span>
-  		<div class="filters"></div>
+  		<ul class="head">
   		
-  		<ul>
+  			<li class="active"><a>Now showing</a></li>
+	  		<li><a>Advanced tickets</a></li>
+	  		<li><a>Alternate content</a></li>
+  		
+  		</ul>
+  		<ul class="filters">
+  			<li>
+  				<input name="goldclass-filter" id="goldclass-filter" type="checkbox">
+  				<label for="goldclass-filter" class="goldclass-logo">Gold Class</label>
+  			</li>
+ 			<li>
+  				<input name="vmax-filter" id="vmax-filter" type="checkbox">
+  				<label for="vmax-filter" class="vmax-logo">Vmax</label>
+  			</li>
+ 			<li>
+  				<input name="three-d-filter" id="three-d-filter" type="checkbox">
+  				<label for="three-d-filter" class="three-d-logo">3D</label>
+  			</li>
+ 			<li class="for-family">
+  				<input name="family-filter" id="family-filter" type="checkbox">
+  				<label for="family-filter">Family</label>
+  			</li>
+  		
+  		</ul>
+  		<div class="clearfix"></div>
+  		<div class="explain"><span class="double-tick"></span>Select multiple movies to compare times</div>
+  		<ul class="movie-overview">
 	  	
 	  		<li>
 		  		<span>
 		  			
 		  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-		  			<p>Snow White and the Huntsman</p>
-		  			
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  		</span>
 	  		
 	  		</li>
@@ -36,7 +66,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-		  			<p>Albert Noss</p>
+		  			<div class="hover">
+		  				<p class="title">Albert Nobbs</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -46,7 +84,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-		  			<p>A Few best men</p>
+		  			<div class="hover">
+		  				<p class="title">A few best men</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -56,7 +102,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-		  			<p>John Carter</p>
+		  			<div class="hover">
+		  				<p class="title">John Carter</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -66,7 +120,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-		  			<p>Journey 2</p>
+		  			<div class="hover">
+		  				<p class="title">Journey 2</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -75,7 +137,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-		  			<p>Hugo</p>
+		  			<div class="hover">
+		  				<p class="title">Hugo</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -84,7 +154,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-		  			<p>Snow White and the Huntsman</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 2</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -94,7 +172,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-		  			<p>Albert Noss</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 3</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -104,7 +190,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-		  			<p>A Few best men</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 4</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -114,7 +208,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-		  			<p>John Carter</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 5</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -124,7 +226,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-		  			<p>Journey 2</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 6</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -133,7 +243,15 @@
 		  		<span>
 		  			
 		  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-		  			<p>Hugo</p>
+		  			<div class="hover">
+		  				<p class="title">Snow White and the Huntsman 7</p>
+		  				<a href="movie-detail.php">&#8250; more details</a>
+		  				<a href="#">&#8250; view trailer</a>		  				
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
 		  			
 		  		</span>
 	  		
@@ -143,20 +261,22 @@
 
 
 		</ul>
-
+		<div class="bottom">
+			<a class="btn blue done">Done</a>
+		</div>
 	</div>
   
   	<div class="where-blowout">
   		
-  		<ul class="states">
-  			<li class="active">NSW</li> |
-  			<li>ACT</li> |
-  			<li>NT</li> |
-  			<li>QLD</li> |
-  			<li>SA</li> |
-  			<li>VIC</li> | 			  			  			  			  		
-  			<li>WA</li> | 			  			  			  			  		
-  			<li>NZ</li>  			  			  			  			  		  			  		
+  		<ul class="head">
+  			<li class="active"><a>NSW</a></li>
+  			<li><a>ACT</a></li>
+  			<li><a>NT</a></li>
+  			<li><a>QLD</a></li>
+  			<li><a>SA</a></li>
+  			<li><a>VIC</a></li>		  			  			  			  		
+  			<li><a>WA</a></li>  
+			  			  			  			  		
   		</ul>
   		<div class="columns">
 	  		<div class="column">
@@ -250,14 +370,12 @@
 			<div class="clearfix"></div>
 		</div>  
 		
-		<span class="head">
-			<div style="float: left;">
-				<a class="btn blue" id="done" style="font-size: 14px;padding: 2px 10px;">Done</a>
-			</div>
-			<div style="float: right">
+		<div class="bottom">
+			<a class="btn blue done">Done</a>
+			<div class="remember-selection">
 				<input type="checkbox" checked="checked">
 	  			<label>Remember my selection</label>
 	  		</div>
-		</span>
+		</div>
 			
   	</div>

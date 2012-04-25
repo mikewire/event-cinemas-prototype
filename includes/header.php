@@ -14,5 +14,38 @@
 </head>
 <body>
   
-                                        
-                                 
+  <div id="wrapper">
+	 
+	  <div id="main" role="main" class="home">
+		
+	  <header>
+	
+	  	<div id="ticket-bar">
+	  		<span>
+				<label><strong>Where</strong> would you like to go?</label>
+				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
+			</span>
+			
+			<span>
+				<label><strong>What</strong> would you like to see?</label>
+				<div id="what">Any movie now showing <em class="arrow-down"></em></div>
+			</span>
+			
+			<span>
+				<label><strong>When</strong> would you like to see it?</label>
+				<div id="when">Today <em class="arrow-down"></em></div>
+			</span>
+			<a class="btn blue" href="#">Find times and book</a>
+			
+			<div class="ticket-img"></div>
+		</div>
+		
+		<div id="cine-buzz">
+			<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" width="94" height="26" />		
+			<p>Sign up | Login</p>
+			<span></span>
+		</div>
+
+		
+	  </header>
+<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  

@@ -18,20 +18,14 @@
   -ms-transition: background-color 100ms linear;
   transition: background-color 100ms linear;
 }
-strong {
 
-	font-family: @bold-font;
-	font-weight: normal;
-	font-size: 13px;
-}
+.hover-fade(@speed) {
 
-.hover-fade {
-
-  -webkit-transition: All 0.5s ease;
-  -moz-transition: All 0.5s ease;
-  -o-transition: All 0.5s ease;
-  -ms-transition: All 0.5s ease;
-  transition: All 0.5s ease;
+  -webkit-transition: All @speed ease;
+  -moz-transition: All @speed ease;
+  -o-transition: All @speed ease;
+  -ms-transition: All @speed ease;
+  transition: All @speed ease;
 }
 .turn {
 
@@ -42,12 +36,12 @@ strong {
 	-moz-transform: rotate(-10deg); /* Firefox */
 
 }
-.shadow {
+.shadow(@top, @left, @blur, @strength, @color) {
 
 
-  -webkit-box-shadow: 3px 3px 0px 0px #000;
-     -moz-box-shadow: 0px 0px 4px 0px #000;
-          box-shadow: 1px 3px 4px 0px #000;
+  -webkit-box-shadow: @top @left @blur @strength @color;
+     -moz-box-shadow: @top @left @blur @strength @color;
+          box-shadow: @top @left @blur @strength @color;
 
 }
 .opaque(@level) {
