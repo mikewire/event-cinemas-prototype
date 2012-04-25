@@ -1,6 +1,11 @@
 var timer;
 var preferred_cinemas = new Array();
 var selected_movies = new Array();
+var items_shown = 0;
+var items_total = 0;
+var slide_amount = 0;
+var total_slides = 0;
+var current_slide = 1;
 
 function changeSkin() {
 	
@@ -24,6 +29,8 @@ function changeSkin() {
 function homeSlider() {
 	
 	$("#slider a.active").removeClass("active").next().addClass("active");
+	console.log($("#slider a.active").nextAll().length);
+	console.log($("#slider a.active").prevAll().length);
 	changeSkin();
 	
 }
@@ -44,8 +51,75 @@ function removeByElement(arrayName,arrayElement) {
   
 $(document).ready(function() {
 
-	timer = setInterval(homeSlider, 10000);
+	
 
+	if ($("#slider").length > 0) {
+	
+		// set slider to 10s for each slide
+		timer = setInterval(homeSlider, 10000);
+		
+		// calculate how many items are shown, based on the width of the slider (varies depending on screen res.)
+		items_shown = $("#slider").width() / $(".items a").width();
+		
+		// check how many items there are in total
+		items_total = $("#slider .items a").length;
+		
+		//calculate by how much the items div should slide left
+	    slide_amount = ((Math.floor(items_shown) * 158) + (Math.floor(items_shown))*10);
+	    
+	    // calculates how many slides
+	    total_slides = Math.ceil(items_total / Math.floor(items_shown));
+
+		
+		$("#slider a").click(function() {
+		
+			$("#slider").find("a.active").removeClass("active");
+			$(this).addClass("active");
+			changeSkin();
+			clearInterval(timer);
+			timer = setInterval(homeSlider, 10000);
+		});	
+
+		$("#slider .arrow-right").click(function() {
+			
+	
+			
+			$("#slider .items").animate({"left":"-="+slide_amount}, 300, function() {
+			
+				current_slide = current_slide + 1;
+				console.log(current_slide);
+				console.log(total_slides);
+				
+				if (current_slide == total_slides) {
+					$("#slider .arrow-right").hide();
+				}
+				
+				if (!$("#slider .arrow-left").is(":visible")) {
+					$("#slider .arrow-left").show();
+				}
+			});
+			
+		});
+		$("#slider .arrow-left").click(function() {
+	
+			$("#slider .items").animate({"left":"+="+slide_amount}, 300, function() {
+			
+				current_slide = current_slide - 1;
+				
+				if (current_slide == 1) {
+					$("#slider .arrow-left").hide();
+				}
+				
+				if (!$("#slider .arrow-right").is(":visible")) {
+					$("#slider .arrow-right").show();
+				}
+			
+			});
+	
+		});	
+		
+		/* still need to add automatic scrolling when active slide moves beyond items_shown - as well as the end moving back to start */	
+	}
 /*
 	$("#slider img").adipoli({
 	
@@ -54,15 +128,9 @@ $(document).ready(function() {
 	
 	});	
 */
-	$("#slider a").click(function() {
-	
-		$("#slider").find("a.active").removeClass("active");
-		$(this).addClass("active");
-		changeSkin();
-		clearInterval(timer);
-		timer = setInterval(homeSlider, 10000);
-	});	
-		
+
+
+
 		
 	$(".movie-wrapper span").hover(function() {
 	

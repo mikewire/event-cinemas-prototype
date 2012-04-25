@@ -914,11 +914,18 @@ nav ul li.active a {
   position: absolute;
   display: block;
 }
-#wrapper .call-to-action .grey {
-  clear: both;
+#wrapper .call-to-action .grey-buttons {
   float: right;
-  width: 180px;
+  width: 210px;
   margin: 20px 0px 0px 0px;
+}
+#wrapper .call-to-action .grey-buttons .grey {
+  width: 70px;
+  float: left;
+  margin-right: 9px;
+}
+#wrapper .call-to-action .grey-buttons .grey:last-child {
+  margin-right: 0px;
 }
 #wrapper .call-to-action .blue {
   clear: both;
@@ -1340,6 +1347,7 @@ nav ul li.active a {
 }
 #slider .arrow-left {
   left: 0px;
+  display: none;
 }
 #slider .arrow-right {
   right: 0px;

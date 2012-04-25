@@ -29,92 +29,55 @@
 		  		<span class="arrow-left">&#8249;</span>
 		  		<span class="arrow-right">&#8250;</span>
 		  		<div class="items">
-		  		
+		  			
 		  			<a href="#" class="active">
 		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
 		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
 		  				<p>Prometheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
 		  				<p>The Lorax</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
-		  				<p>Dark Night Rises</p>
+		  				<img src="img/hp_bck/americanpie-thumb.jpg" skin="americanpie-skin.jpg" skin-title="americanpie-title.png" btn-title="find times and book" alt="batman-thumb" width="156" height="80" />
+		  				<p>American Pie Reunion</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
-		  				<p>Prometheus</p>
+		  				<img src="img/hp_bck/theluckyone-thumb.jpg" skin="theluckyone-skin.jpg" skin-title="theluckyone-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>The Lucky One</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
-		  				<p>The Lorax</p>
+		  				<img src="img/hp_bck/snowwhite-skin.jpg" skin="snowwhite-skin.jpg" skin-title="snowwhite-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>Snow White and the Huntsman</p>
 		  			</a>		  			
 		  			<a href="#">
 		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
 		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
 		  				<p>Prometheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
 		  				<p>The Lorax</p>
-		  			</a>		  			
-		  			
+		  			</a>
 		  			<a href="#">
 		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
 		  				<p>Dark Night Rises</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
 		  				<p>Prometheus</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
 		  				<p>The Lorax</p>
-		  			</a>		  			
-	  			<a href="#">
-		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
-		  				<p>Dark Night Rises</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
-		  				<p>The Lorax</p>
-		  			</a>	
-	  			<a href="#">
-		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
-		  				<p>Dark Night Rises</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
-		  				<p>The Lorax</p>
-		  			</a>	
-	  			<a href="#">
-		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
-		  				<p>Dark Night Rises</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="book now" alt="prometheus-thumb" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="#">
-		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="book now" alt="thelorax-thumb" width="156" height="80" />
-		  				<p>The Lorax</p>
-		  			</a>			  					  					  			
+		  			</a>		
 		  			
 		  					  		
 		  		</div>
@@ -160,7 +123,10 @@
 	  	<div class="call-to-action">
 			<img src="img/hp_bck/batman-title.png" />
 			<div class="clearfix"></div>
-			<a class="btn grey" href="#">More details</a>
+			<div class="grey-buttons">
+				<a class="btn grey" href="#">Details</a>
+				<a class="btn grey" href="#">Trailer</a>
+			</div>
 			<a class="btn blue" href="#">Advanced tickets</a>
 		</div>	  
 
