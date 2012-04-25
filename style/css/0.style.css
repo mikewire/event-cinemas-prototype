@@ -11,7 +11,9 @@ nav,
 section {
   display: block;
 }
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -48,7 +50,8 @@ a {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 blockquote {
@@ -92,14 +95,16 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -111,14 +116,16 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 0px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -160,11 +167,13 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
-table button, table input {
+table button,
+table input {
   *overflow: auto;
 }
 button,
@@ -174,7 +183,8 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -186,7 +196,8 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -195,7 +206,8 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -205,7 +217,8 @@ table {
 td {
   vertical-align: top;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
@@ -240,7 +253,8 @@ p {
   font-weight: normal;
   font-style: normal;
 }
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -1318,7 +1332,8 @@ nav ul li.active a {
   float: left;
   margin-right: 25px;
 }
-#slider .arrow-left, #slider .arrow-right {
+#slider .arrow-left,
+#slider .arrow-right {
   border: 1px solid #fff;
   padding: 5px 4px;
   display: block;
@@ -1395,7 +1410,8 @@ nav ul li.active a {
 #slider .items a.active {
   border: 1px solid #fff;
 }
-#slider .items a.active p, #slider .items a.active img {
+#slider .items a.active p,
+#slider .items a.active img {
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -1548,7 +1564,8 @@ footer {
     filter: none !important;
     -ms-filter: none !important;
   }
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -1557,17 +1574,21 @@ footer {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -1576,15 +1597,91 @@ footer {
   @page  {
     margin: 0.5cm;
   }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
-@media all and (max-width: 1260px) {
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  #wrapper .call-to-action {
+    z-index: -1;
+    top: -400px;
+  }
+  #skin {
+    z-index: 9000;
+    top: 65px;
+  }
+  #wrapper,
+  header {
+    width: 320px;
+    left: 15px;
+    margin: 10px 0px 0px 0px;
+  }
+  #slider {
+    display: none;
+  }
+  #premium-cinema-box {
+    top: 80px;
+  }
+  footer {
+    bottom: 0px;
+  }
+  #ads {
+    display: none;
+  }
+  #ticket-bar {
+    width: 320px;
+    height: 240px;
+    top: 280px;
+    padding: 10px;
+  }
+  #ticket-bar span {
+    width: 260px;
+    margin-right: 25px;
+    font-size: 18px;
+  }
+  #ticket-bar span strong {
+    font-family: 'GillSansRegular', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+  }
+  #ticket-bar span:first-child {
+    margin: 0px;
+  }
+  #ticket-bar span div {
+    margin-bottom: 10px;
+  }
+  #ticket-bar a.btn {
+    right: 138px;
+    top: 200px;
+  }
+  #ticket-bar .ticket-img {
+    top: 0px;
+    right: 0px;
+  }
+  nav {
+    top: 0px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav input {
+    display: none;
+  }
+  nav img {
+    width: 120px;
+  }
+  #cine-buzz {
+    display: none;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 1260px) {
   #ticket-bar {
     width: 860px;
   }
@@ -1618,7 +1715,8 @@ footer {
   .home .ad.half {
     width: 240px;
   }
-  #wrapper, header {
+  #wrapper,
+  header {
     width: 1000px;
   }
   .call-to-action {
@@ -1654,7 +1752,8 @@ footer {
   .home .ad.half {
     width: 197px;
   }
-  #wrapper, header {
+  #wrapper,
+  header {
     width: 1200px;
   }
   .call-to-action {
@@ -1681,7 +1780,8 @@ footer {
   .home .ad.half {
     width: 223px;
   }
-  #wrapper, header {
+  #wrapper,
+  header {
     width: 1366px;
   }
   .call-to-action {

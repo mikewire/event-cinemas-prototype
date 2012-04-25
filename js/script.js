@@ -18,10 +18,8 @@ function changeSkin() {
 	
 	$("#skin").fadeIn(600, function() {
 	
-	
 		$(".call-to-action img").attr("src","img/hp_bck/"+$("#slider a.active img").attr("skin-title"));
 		$(".call-to-action .btn.blue").text($("#slider a.active img").attr("btn-title"));
-
 		$(".call-to-action").fadeIn(300);
 	});
 

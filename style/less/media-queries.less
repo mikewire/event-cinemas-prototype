@@ -1,4 +1,75 @@
-@media all and (max-width: 1260px){
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+	
+	#wrapper .call-to-action 	{ z-index: -1; top: -400px; }
+	#skin 						{ z-index: 9000; top: 65px; }
+	
+	
+	#wrapper,header { width: 320px; left: 15px; margin: 10px 0px 0px 0px; }
+	#slider { display: none;}
+	#premium-cinema-box { top: 80px;}
+	footer { bottom: 0px;}
+	#ads { display: none;}
+	#ticket-bar { 
+		width: 320px; 
+		height: 240px;
+		top: 280px;
+		padding: 10px;
+		
+		span { 
+			width: 260px;
+			margin-right:25px; 
+			font-size: 18px;
+			strong {
+				font-family: @regular-font;
+				font-size: 18px;				
+			}
+			&:first-child {
+			
+				margin: 0px;
+			}
+			div {
+			
+				margin-bottom: 10px;
+				
+			}
+		}
+		a.btn {
+		
+			right: 138px;
+			top: 200px;
+		}
+		.ticket-img {
+			
+			top: 0px;
+			right: 0px;
+		}
+	}	
+	nav {
+	
+		ul {
+		
+			display: none;
+		}
+		input {
+		
+			display: none;
+		}
+		img {
+			
+			width: 120px;
+		}
+		top: 0px;
+		
+			
+	}
+	#cine-buzz { 
+	
+		display: none;
+	}
+}
+
+@media all and (min-width: 480px) and (max-width: 1260px){
 	
 	#ticket-bar 		{ 
 		width: 860px; 
