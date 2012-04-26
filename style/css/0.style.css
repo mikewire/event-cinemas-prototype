@@ -11,9 +11,7 @@ nav,
 section {
   display: block;
 }
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -35,12 +33,12 @@ body {
   line-height: 1.231;
 }
 ::-moz-selection {
-  background: #e400ff;
+  background: red;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #e400ff;
+  background: red;
   color: #fff;
   text-shadow: none;
 }
@@ -50,8 +48,7 @@ a {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b,
-strong {
+b, strong {
   font-weight: bold;
 }
 blockquote {
@@ -95,16 +92,14 @@ pre {
 q {
   quotes: none;
 }
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -116,16 +111,14 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul,
-ol {
+ul, ol {
   margin: 1em 0;
   padding: 0 0 0 0px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul,
-nav ol {
+nav ul, nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -167,13 +160,11 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button,
-input {
+button, input {
   line-height: normal;
   *overflow: visible;
 }
-table button,
-table input {
+table button, table input {
   *overflow: auto;
 }
 button,
@@ -183,8 +174,7 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -196,8 +186,7 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -206,8 +195,7 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid,
-textarea:invalid {
+input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -217,8 +205,7 @@ table {
 td {
   vertical-align: top;
 }
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
@@ -253,8 +240,7 @@ p {
   font-weight: normal;
   font-style: normal;
 }
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -274,6 +260,12 @@ strong {
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  background: url(../../img/close.png);
+  display: block;
 }
 .double-tick {
   text-indent: -9999px;
@@ -1332,8 +1324,7 @@ nav ul li.active a {
   float: left;
   margin-right: 25px;
 }
-#slider .arrow-left,
-#slider .arrow-right {
+#slider .arrow-left, #slider .arrow-right {
   border: 1px solid #fff;
   padding: 5px 4px;
   display: block;
@@ -1410,8 +1401,7 @@ nav ul li.active a {
 #slider .items a.active {
   border: 1px solid #fff;
 }
-#slider .items a.active p,
-#slider .items a.active img {
+#slider .items a.active p, #slider .items a.active img {
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -1556,6 +1546,74 @@ footer {
   background: white;
   opacity: 0;
 }
+#cover {
+  width: 100%;
+  height: 100%;
+  background: black;
+  /* IE 8 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
+  /* IE 5-7 */
+
+  filter: alpha(opacity=80);
+  /* Netscape */
+
+  -moz-opacity: 0.8;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0.8;
+  /* Good browsers */
+
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9990;
+  display: none;
+}
+#trailer {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  background: #333333;
+  z-index: 9999;
+}
+#trailer .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+#trailer video {
+  float: left;
+}
+#trailer .info {
+  float: right;
+  width: 175px;
+  padding: 15px;
+}
+#trailer .info .btn {
+  float: right;
+  width: 140px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+#trailer .info h3 {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+}
+#trailer .info .synopsis {
+  color: #dfdfdf;
+  float: left;
+}
+#trailer .info h3 {
+  text-transform: uppercase;
+}
+#trailer .info p {
+  margin-bottom: 10px;
+}
+#trailer .info p strong {
+  display: block;
+}
 @media print {
   * {
     background: transparent !important;
@@ -1564,8 +1622,7 @@ footer {
     filter: none !important;
     -ms-filter: none !important;
   }
-  a,
-  a:visited {
+  a, a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -1574,21 +1631,17 @@ footer {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  tr, img {
     page-break-inside: avoid;
   }
   img {
@@ -1597,38 +1650,32 @@ footer {
   @page  {
     margin: 0.5cm;
   }
-  p,
-  h2,
-  h3 {
+  p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid;
   }
 }
 /* iPhone [portrait + landscape] */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-device-width: 480px) {
   #wrapper .call-to-action {
     z-index: -1;
     top: -400px;
   }
   #skin {
     z-index: 9000;
-    top: 65px;
+    top: 0px;
   }
-  #wrapper,
-  header {
-    width: 320px;
-    left: 15px;
-    margin: 10px 0px 0px 0px;
+  #background-wrap {
+    width: 500px;
   }
   #slider {
     display: none;
   }
   #premium-cinema-box {
-    top: 80px;
+    display: none;
   }
   footer {
     bottom: 0px;
@@ -1637,19 +1684,19 @@ footer {
     display: none;
   }
   #ticket-bar {
-    width: 320px;
-    height: 240px;
-    top: 280px;
+    width: 480px;
+    height: 300px;
+    top: 300px;
     padding: 10px;
   }
   #ticket-bar span {
-    width: 260px;
+    width: 320px;
     margin-right: 25px;
-    font-size: 18px;
+    font-size: 22px;
   }
   #ticket-bar span strong {
     font-family: 'GillSansRegular', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 23px;
   }
   #ticket-bar span:first-child {
     margin: 0px;
@@ -1658,15 +1705,15 @@ footer {
     margin-bottom: 10px;
   }
   #ticket-bar a.btn {
-    right: 138px;
-    top: 200px;
+    right: 300px;
+    top: 240px;
   }
   #ticket-bar .ticket-img {
     top: 0px;
     right: 0px;
   }
   nav {
-    top: 0px;
+    top: 5px;
   }
   nav ul {
     display: none;
@@ -1675,9 +1722,12 @@ footer {
     display: none;
   }
   nav img {
-    width: 120px;
+    width: 150px;
   }
   #cine-buzz {
+    display: none;
+  }
+  footer {
     display: none;
   }
 }
@@ -1715,8 +1765,7 @@ footer {
   .home .ad.half {
     width: 240px;
   }
-  #wrapper,
-  header {
+  #wrapper, header {
     width: 1000px;
   }
   .call-to-action {
@@ -1728,6 +1777,13 @@ footer {
   }
   .what-blowout {
     left: 220px;
+  }
+  #trailer {
+    width: 1000px;
+    margin-left: -500px;
+  }
+  #trailer video {
+    width: 795px;
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
@@ -1752,13 +1808,19 @@ footer {
   .home .ad.half {
     width: 197px;
   }
-  #wrapper,
-  header {
+  #wrapper, header {
     width: 1200px;
   }
   .call-to-action {
     right: 20px;
     top: 180px;
+  }
+  #trailer {
+    width: 1200px;
+    margin-left: -600px;
+  }
+  #trailer video {
+    width: 995px;
   }
 }
 @media all and (min-width: 1400px) {
@@ -1780,8 +1842,7 @@ footer {
   .home .ad.half {
     width: 223px;
   }
-  #wrapper,
-  header {
+  #wrapper, header {
     width: 1366px;
   }
   .call-to-action {
@@ -1794,6 +1855,13 @@ footer {
   }
   .what-blowout {
     left: 310px;
+  }
+  #trailer {
+    width: 1400px;
+    margin-left: -700px;
+  }
+  #trailer video {
+    width: 1195px;
   }
 }
 @media all and (max-height: 745px) {

@@ -10,6 +10,8 @@
   <title>Event Cinemas</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="style/css/0.style.css">
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>

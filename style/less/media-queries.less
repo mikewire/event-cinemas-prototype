@@ -1,28 +1,27 @@
 /* iPhone [portrait + landscape] */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-device-width: 480px) {
 	
 	#wrapper .call-to-action 	{ z-index: -1; top: -400px; }
-	#skin 						{ z-index: 9000; top: 65px; }
+	#skin 						{ z-index: 9000; top: 0px; }
 	
-	
-	#wrapper,header { width: 320px; left: 15px; margin: 10px 0px 0px 0px; }
+	#background-wrap			{width: 500px; }
 	#slider { display: none;}
-	#premium-cinema-box { top: 80px;}
+	#premium-cinema-box { display: none;}
 	footer { bottom: 0px;}
 	#ads { display: none;}
 	#ticket-bar { 
-		width: 320px; 
-		height: 240px;
-		top: 280px;
+		width: 480px; 
+		height: 300px;
+		top: 300px;
 		padding: 10px;
 		
 		span { 
-			width: 260px;
+			width: 320px;
 			margin-right:25px; 
-			font-size: 18px;
+			font-size: 22px;
 			strong {
 				font-family: @regular-font;
-				font-size: 18px;				
+				font-size: 23px;				
 			}
 			&:first-child {
 			
@@ -36,8 +35,8 @@
 		}
 		a.btn {
 		
-			right: 138px;
-			top: 200px;
+			right: 300px;
+			top: 240px;
 		}
 		.ticket-img {
 			
@@ -57,9 +56,9 @@
 		}
 		img {
 			
-			width: 120px;
+			width: 150px;
 		}
-		top: 0px;
+		top: 5px;
 		
 			
 	}
@@ -67,6 +66,11 @@
 	
 		display: none;
 	}
+	footer {
+		
+		display: none;
+	}
+	
 }
 
 @media all and (min-width: 480px) and (max-width: 1260px){
@@ -115,6 +119,7 @@
 	}
 	.when-blowout 		{ left: 430px;  }
 	.what-blowout 		{ left: 220px; }
+	#trailer			{ width: 1000px; margin-left: -500px; video { width: 795px; }}
 	
 
 }
@@ -139,6 +144,7 @@
 		right: 20px;
 		top: 180px;
 	}
+	#trailer			{ width: 1200px; margin-left: -600px; video { width: 995px; }}
 
 }
 
@@ -156,6 +162,7 @@
 	.call-to-action 	{ right: 20px;top: 180px; }
 	.when-blowout 		{ left: 610px; width: 263px; }
 	.what-blowout 		{ left: 310px; }
+	#trailer			{ width: 1400px; margin-left: -700px; video { width: 1195px; }}
 }
 
 
