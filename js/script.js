@@ -6,7 +6,7 @@ var items_total = 0;
 var slide_amount = 0;
 var total_slides = 0;
 var current_slide = 1;
-var slide_interval = 10000;
+var slide_interval = 12000;
 
 function changeSkin() {
 	
@@ -98,6 +98,11 @@ function closeTrailer() {
   
 $(document).ready(function() {
 
+	$(window).resize(function() {
+	
+		console.log($(this).height());
+	
+	})
 	$("#poptrailer").click(function() {
 	
 		clearInterval(timer);

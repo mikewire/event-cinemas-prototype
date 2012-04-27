@@ -1,4 +1,3 @@
-@import "adipoli.css";
 article,
 aside,
 details,
@@ -261,6 +260,18 @@ strong {
   font-weight: normal;
   font-size: 14px;
 }
+.mobile {
+  width: 22px;
+  height: 30px;
+  background: url(../../img/assets.png) -29px -50px;
+  display: block;
+}
+.share {
+  width: 29px;
+  height: 25px;
+  background: url(../../img/assets.png) 0px -52px;
+  display: block;
+}
 .close {
   width: 30px;
   height: 30px;
@@ -404,6 +415,7 @@ header {
   background-image: -webkit-linear-gradient(bottom, #88191e 0%, #ff0000 100%);
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #88191e 0%, #ff0000 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#88191e, endColorstr=#ff0000);
   z-index: 4000;
   position: absolute;
   top: 10px;
@@ -503,6 +515,7 @@ header {
   background-image: -webkit-linear-gradient(bottom, #88191e 0%, #ff0000 100%);
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #88191e 0%, #ff0000 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#88191e, endColorstr=#ff0000);
   position: absolute;
   top: 10px;
   width: 235px;
@@ -1207,6 +1220,7 @@ nav ul li.active a {
   background-image: -webkit-linear-gradient(bottom, #292728 0%, #414042 100%);
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #292728 0%, #414042 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#88191e, endColorstr=#ff0000);
   margin: 0px;
   padding: 0px 0px 0px 0px;
   list-style: none;
@@ -1508,9 +1522,63 @@ footer {
   background-image: -webkit-linear-gradient(bottom, #2a2728 0%, #7d7f81 100%);
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #2a2728 0%, #7d7f81 100%);
-  position: absolute;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#88191e, endColorstr=#ff0000);
+  position: fixed;
+  bottom: 0px;
   left: 0px;
   z-index: 1000;
+  font-size: 12px;
+  color: #dfdfdf;
+}
+footer .footer-wrapper {
+  margin: 0px auto;
+}
+footer .copyright {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+footer .footer-nav {
+  float: left;
+  margin: 0px;
+  list-style: none;
+  margin-top: 10px;
+}
+footer .footer-nav li {
+  display: inline;
+  margin-right: 10px;
+}
+footer .footer-nav li a {
+  color: #dfdfdf;
+}
+footer .footer-nav li a:hover {
+  text-decoration: underline;
+}
+footer .right {
+  float: right;
+}
+footer .right ul {
+  list-style: none;
+  margin: 0px;
+}
+footer .right ul li {
+  height: 26px;
+  padding: 8px 10px 2px 10px;
+  display: block;
+  float: left;
+  border-left: 2px solid #2a2728;
+  font-size: 14px;
+}
+footer .right ul li .share {
+  float: left;
+  margin-top: -3px;
+}
+footer .right ul li .mobile {
+  float: left;
+  margin-top: -5px;
+}
+footer .right ul li:last-child {
+  padding: 5px 10px;
 }
 .ticketing {
   background: #000000 url(../../img/lights-bck.png) no-repeat;
@@ -1765,12 +1833,12 @@ footer {
   .home .ad.half {
     width: 240px;
   }
-  #wrapper, header {
+  #wrapper, header, .footer-wrapper {
     width: 1000px;
   }
   .call-to-action {
     right: 20px;
-    top: 160px;
+    top: 100px;
   }
   .when-blowout {
     left: 430px;
@@ -1808,12 +1876,12 @@ footer {
   .home .ad.half {
     width: 197px;
   }
-  #wrapper, header {
+  #wrapper, header, .footer-wrapper {
     width: 1200px;
   }
   .call-to-action {
     right: 20px;
-    top: 180px;
+    top: 100px;
   }
   #trailer {
     width: 1200px;
@@ -1842,12 +1910,11 @@ footer {
   .home .ad.half {
     width: 223px;
   }
-  #wrapper, header {
+  #wrapper, header, .footer-wrapper {
     width: 1366px;
   }
   .call-to-action {
     right: 20px;
-    top: 180px;
   }
   .when-blowout {
     left: 610px;
@@ -1866,25 +1933,153 @@ footer {
 }
 @media all and (max-height: 745px) {
   .home-items {
-    top: 500px;
+    top: 450px;
   }
-  footer {
-    top: 850px;
-  }
-}
-@media all and (min-height: 745px) and (max-height: 914px) {
-  .home-items {
-    top: 590px;
-  }
-  footer {
-    top: 950px;
+  .call-to-action {
+    top: 100px;
   }
 }
-@media all and (min-height: 915px) {
+@media all and (min-height: 745px) and (max-height: 875px) {
   .home-items {
-    top: 680px;
+    top: 570px;
   }
-  footer {
-    top: 980px;
+  .call-to-action {
+    top: 130px;
   }
+}
+@media all and (min-height: 875px) {
+  .home-items {
+    top: 640px;
+  }
+  .call-to-action {
+    top: 170px;
+  }
+}
+.ie9 .home .top, .ie8 .home .top, .ie7 .home .top {
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
+}
+.ie9 footer, .ie8 footer, .ie7 footer {
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
+}
+.ie8 #ticket-bar {
+  width: 860px;
+}
+.ie8 #ticket-bar span {
+  width: 185px;
+  margin-right: 25px;
+}
+.ie8 #ticket-bar a.btn {
+  right: 8px;
+}
+.ie8 #cine-buzz {
+  left: 870px;
+  width: 130px;
+}
+.ie8 #cine-buzz p {
+  display: none;
+}
+.ie8 .home .top {
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
+}
+.ie8 .home .home-items {
+  width: 1000px;
+  top: 550px;
+}
+.ie8 .home #slider {
+  width: 670px;
+  margin-right: 5px;
+}
+.ie8 .home #slider a {
+  margin-right: 8px;
+}
+.ie8 .home .ad.full {
+  width: 240px;
+}
+.ie8 .home .ad.half {
+  width: 240px;
+}
+.ie8 #wrapper, .ie8 header {
+  width: 1000px;
+}
+.ie8 .call-to-action {
+  right: 20px;
+  top: 160px;
+}
+.ie8 .when-blowout {
+  left: 430px;
+}
+.ie8 .what-blowout {
+  left: 220px;
+}
+.ie8 #trailer {
+  width: 1000px;
+  margin-left: -500px;
+}
+.ie8 #trailer video {
+  width: 795px;
+}
+.ie8 footer {
+  top: 850px;
+}
+.ie7 #ticket-bar {
+  background-color: red;
+  width: 860px;
+}
+.ie7 #ticket-bar span {
+  width: 185px;
+  margin-right: 25px;
+}
+.ie7 #ticket-bar a.btn {
+  right: 8px;
+}
+.ie7 #cine-buzz {
+  background-color: red;
+  left: 870px;
+  width: 130px;
+}
+.ie7 #cine-buzz p {
+  display: none;
+}
+.ie7 #background-wrap {
+  z-index: -1;
+}
+.ie7 .home .home-items {
+  width: 1000px;
+  top: 550px;
+}
+.ie7 .home #slider {
+  width: 670px;
+  margin-right: 5px;
+}
+.ie7 .home #slider a {
+  margin-right: 8px;
+}
+.ie7 .home .ad.full {
+  width: 240px;
+}
+.ie7 .home .ad.half {
+  width: 240px;
+}
+.ie7 #wrapper, .ie7 header {
+  width: 1000px;
+}
+.ie7 .call-to-action {
+  right: 20px;
+  top: 160px;
+}
+.ie7 .when-blowout {
+  left: 430px;
+}
+.ie7 .what-blowout {
+  left: 220px;
+}
+.ie7 #trailer {
+  width: 1000px;
+  margin-left: -500px;
+}
+.ie7 #trailer video {
+  width: 795px;
+}
+.ie7 footer {
+  top: 850px;
 }
