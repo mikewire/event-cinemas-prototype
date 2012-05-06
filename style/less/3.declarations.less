@@ -14,23 +14,39 @@ body {
 	margin: 0px; padding: 0px;
 	background-color: #000;
 	font-size: 14px;
+	color: #fff;
 }
 
 a {
 
-	color: white;
+	color: red;
 	text-decoration: none;
 	cursor: pointer;
+	&:hover {
+
+		color: @light-grey;	
+	}
 
 }
+a.add {
 
+	&:before {
+			
+		content: "+ ";
+	}
+	
+
+}
 strong {
 
 	font-family: @bold-font;
 	font-weight: normal;
 	font-size: 14px;
 }
+dl { 
 
+	margin: 0; padding: 0;
+}
 // ASSETS
 
 .mobile {
@@ -87,6 +103,92 @@ strong {
 	display: block;
 	
 }
+.vmax-icon {
+
+	width: 18px;
+	height: 17px;
+	background: url(../../img/assets.png) 0px -31px;
+	display: block;
+	
+
+}
+.thumb {
+	
+	background-color: @dark-grey;
+	.radius-full(2px);
+	padding: 3px;
+	width: 15px;
+	height: 14px;
+	display: block;
+	text-align: center;
+	
+	span {
+	
+		width: 13px;
+		margin: 0px auto;
+		display: block;
+	}
+	p {
+		
+		width: 5px;
+		height: 5px;	
+		margin: 1px 1px 1px 1px;
+		float: left;
+		display: block;
+		background-color: darken(@light-grey,20%);
+		
+		&:nth-child(even) {
+		
+			margin-right: 0px;
+		}
+	}
+	&.active {
+	
+		background-color: darken(@light-grey,20%);
+		cursor: default;		
+		p {
+		
+			background-color: white;
+		}
+			
+	}
+}
+.list {
+	
+	.radius-full(2px);
+	background-color: @dark-grey;
+	padding: 3px;
+	width: 15px;
+	height: 14px;
+	display: block;
+	text-align: center;
+	
+	span {
+	
+		width: 13px;
+		margin: 2px auto;
+		display: block;
+	}
+	p {
+		
+		width: 13px;
+		height: 2px;	
+		margin: 2px 0px 0px 0px;
+		display: block;
+		background-color: darken(@light-grey,20%);
+		
+	}
+	&.active {
+	
+		background-color: darken(@light-grey,20%);
+		cursor: default;		
+		p {
+		
+			background-color: white;
+		}
+			
+	}
+}
 
 .three-d-logo {
 	text-indent: -9999px;
@@ -95,4 +197,14 @@ strong {
 	background: url(../../img/assets.png) -163px 0px;
 	display: block;
 	
+}
+
+// Headings
+
+h1, h2, h3, h4 {
+
+	color: white;
+	font-family: @thin-font;
+	font-weight: normal;
+	margin: 0; padding:0;
 }

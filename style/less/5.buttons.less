@@ -16,6 +16,36 @@
 		0px -1px 0px rgba(000,000,000,0.4),
 		0px 1px 0px rgba(255,255,255,0.3);
 }
+.vmax {
+
+  background: #007fc3;
+  border: 1px solid #007fc3;
+  color: #fff;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px 5px 4px 5px;
+  .hover-fade(0.2s);
+   
+  background-image: -webkit-linear-gradient(top, rgba(0, 127, 195, 0), rgba(0, 6, 35, 0.6));
+  background-image: -moz-linear-gradient(top, rgba(0, 127, 195, 0), rgba(0, 6, 35, 0.6));
+  background-image: -o-linear-gradient(top, rgba(0, 127, 195, 0), rgba(0, 6, 35, 0.6));
+  background-image: -ms-linear-gradient(top, rgba(0, 127, 195, 0), rgba(0, 6, 35, 0.6));
+  background-image: linear-gradient(top, rgba(0, 127, 195, 0), rgba(0, 6, 35, 0.6));
+  
+  span {
+  	margin: -2px 0px 0px 8px;
+  	float: right;
+  }
+  
+  &:hover {
+  
+  	background: #007fc3;
+  	color: #fff;
+  }
+
+}
 .blue {
   text-transform: uppercase;
   background: #a6e4ff;
@@ -32,12 +62,12 @@
   background-image: -ms-linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
   background-image: linear-gradient(top, rgba(219, 242, 252, 0), rgba(76, 200, 242, 0.6));
   
-}
-.blue:hover {
-
+  &:hover {
+	color: #000;
 	background-color: #a6e4ff;
 	.shadow(0px, 1px, 4px, 1px, #333);
-
+  }
+  
 }
 .grey {
   background: #e2f4fd;
@@ -54,9 +84,9 @@
   background-image: -ms-linear-gradient(top, rgba(223, 241, 249, 0), rgba(170, 173, 176, 0.6));
   background-image: linear-gradient(top, rgba(223, 241, 249, 0), rgba(170, 173, 176, 0.6));
   
-}
-.grey:hover {
-
+  &:hover {
+	color: #000;
 	.shadow(0px, 1px, 6px, 1px, #333);
-	
+  }
+  	
 }

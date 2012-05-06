@@ -1,20 +1,7 @@
 <? include("includes/header.php") ?>
+	<div id="main" role="main" class="home">	
 	
-		  <nav>
-					
-			<a href="index.php"><img class="logo" src="img/ec-logo.png" /></a>
-			
-			<ul>
-				<li><a href="#">Movies</a></li>
-				<li><a href="#">Alternate content</a></li>
-				<li><a href="#">Cinemas</a></li>
-				<li><a href="#">Advanced Tickets</a></li>
-				<li><a href="#">Premium Cinema</a></li>					
-				<li><a href="#">Events & Promotions</a></li>					
-				<li><a href="#">Member programs</a></li>							
-			</ul>
-			<input class="search" type="text" placeholder="Film, Actor, etc.. "/>
-		  </nav>
+		<? include("includes/nav.php") ?>
 		  
 		 
 		 
@@ -138,26 +125,4 @@
 			
 		</div>	  
 
- </div>
-  <div id="background-wrap">
-  
-  	<img id="skin" src="img/hp_bck/avengers-skin.jpg" />
-
-  </div>
-  <div id="trailer">
-  	<a class="close"></a>
-  	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
-  	<div class="info">
-  		<img src="img/the-avengers-poster.jpg" alt="the-avengers-poster"  />
-  		<a class="btn blue" href="#">find times and book</a>
-  		<div class="synopsis">
-	  		<h3>Movie Info</h3>
-  			<p><strong>Director</strong> Joss Whedon</p>
-  			<p><strong>Starring</strong> Robert Downey Jr., Chris Evans, Mark Ruffalo, Scarlett Johansson</p>
-  			<p><strong>Running time</strong> 142 min</p>
-  		</div>
-  	</div>
-  	<div class="clearfix"></div>	
-  </div>
-  <div id="cover"></div>
 <? include("includes/footer.php") ?>

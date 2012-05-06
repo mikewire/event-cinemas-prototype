@@ -10,32 +10,31 @@
   <title>Event Cinemas</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="style/css/0.style.css">
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
   
-	  <header>
+	<header>
 	
-	  	<div id="ticket-bar">
-	  		<span>
+		<div id="ticket-bar">
+			<span>
 				<label><strong>Where</strong> would you like to go?</label>
 				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
 			</span>
-			
+		
 			<span>
 				<label><strong>What</strong> would you like to see?</label>
 				<div id="what">Any movie now showing <em class="arrow-down"></em></div>
 			</span>
-			
+		
 			<span>
 				<label><strong>When</strong> would you like to see it?</label>
 				<div id="when">Today <em class="arrow-down"></em></div>
 			</span>
 			<a class="btn blue" href="#">Find times and book</a>
-			
+		
 			<div class="ticket-img"></div>
+		
 		</div>
 		
 		<div id="cine-buzz">
@@ -43,8 +42,10 @@
 			<p>Sign up | Login</p>
 			<span></span>
 		</div>
-<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  
 		
-	  </header>
-  <div id="wrapper">
-	  <div id="main" role="main" class="home">
+		<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  
+		
+	</header>
+	
+  	<div id="wrapper">
+	

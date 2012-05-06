@@ -1,0 +1,147 @@
+ul.movie-overview {
+
+	list-style: none;
+	margin: 10px 0px 0px 10px;
+	padding: 0px;
+	width: 720px;
+	height: 400px;
+	overflow: auto;
+	
+	li {
+	
+		display: inline;
+		margin-right: 10px;	
+			
+	}
+	
+	li span {
+		//cursor: pointer;
+		position: relative;	
+		display: inline-block;
+		width: 105px;
+		height: 195px;
+		cursor: pointer;
+
+		
+		.image-wrapper {
+		
+			height: 150px;
+			width: 100%;
+			overflow: hidden;				
+			position: absolute;
+			top: 0px;
+			
+			img {
+				position: absolute; 
+				top: 0px;
+				z-index: 500;
+				.opaque(0.8);
+				.hover-fade(0.5s);
+			}
+			.hover {
+				z-index: 1000;
+				position: absolute;				
+				background-color: black;
+				width: 90px;
+				padding: 5px;
+				bottom: -150px;
+				left: 0px;
+				.opaque(0.9);
+				padding-left: 10px;
+				
+				p {
+					padding: 0px; 
+					margin: 0px 0px 2px 0px;
+					color: white;
+					font-size: 12px;
+					font-family: @bold-font;	
+				}
+				a {
+					color: red;
+					display: block;
+					font-size: 12px;
+					margin-bottom: 2px;
+					
+					&:hover {
+					
+						color: white;
+					}
+				}
+				
+				.icons {
+				
+					position: absolute;
+					bottom: 30px;
+					left: -15px;
+				}
+			}
+			&:hover {
+			
+			
+				.hover {
+					.hover-fade(0.2s);
+					bottom: 0px;
+				}
+
+			}
+			
+		}
+		&.active {
+		
+			.select {
+				background: @light-grey;
+				color: @dark-grey;
+			}
+			
+			img {
+			
+				.opaque(1);
+			}	
+					
+			&:hover {
+				.select {
+					.hover-fade(0s);
+					color: @dark-grey;
+				}
+			}
+		}
+		
+		.select {
+		
+			position: absolute;
+			bottom: 5px;
+			width: 102px;
+			color: @light-grey;
+			font-size: 14px;
+			text-align: center;
+			padding: 5px 0px 5px 0px;
+			background: #000;
+			border: 1px solid @dark-grey;
+			.radius-full(5px);
+			
+		}
+		a.find-times-and-book {
+			
+			position: absolute;
+			bottom: 5px;
+			width: 112px;
+			color: red;
+			cursor: pointer;
+			
+		}
+		&:hover {
+			
+			.select { 
+				.hover-fade(0.5s);	
+				color: #fff;
+				border: 1px solid #fff;
+			}
+			
+			img {
+			
+				.opaque(1);
+			}
+		}
+		
+	}
+}

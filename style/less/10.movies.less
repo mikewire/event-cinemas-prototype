@@ -1,0 +1,171 @@
+#main.movies {
+
+	.innerpage {
+		width: 1120px;
+	}
+
+	.left {
+		border: 1px solid @dark-grey;
+		background: black;
+		width: 858px;
+		float: left;
+		padding: 0px 10px;
+		margin-bottom: 100px;
+	}
+	
+	.right {
+		border: 1px solid @dark-grey;
+		background: black;
+		width: 210px;
+		float: right;
+		padding: 0px 10px;
+		
+		form {
+		
+			margin: 10px 0px;
+		}
+		
+		.filter-element {
+		
+			margin-bottom: 20px;
+
+			h4 {
+				.gradient(#282526,#4c4c4e);
+				padding: 4px 0px 4px 10px;
+				margin-left: -10px;
+				width: 220px;
+				margin-bottom: 10px;
+			
+			}
+			
+			span {
+			
+				display: block;
+				clear: both;
+				
+				margin-bottom: 4px;
+				input[type=checkbox] {
+					margin: 2px 0px 0px 0px;
+				}
+				
+				label {
+				}
+
+			}	
+			
+			.goldclass-logo {
+			
+				margin-bottom: 10px;
+			}		
+			.vmax-logo {
+			
+				margin-bottom: 5px;
+			}
+			
+			.column {
+			
+				width: 100px;
+				float: left;
+			}
+			
+		}
+		#experience-filters {
+		
+			
+			span {
+			
+			
+				label, input {
+				
+					float: left;
+				}
+				input {
+				
+					margin-right: 5px;
+				}
+			}
+		}
+		ol {
+		
+			margin-left: 15px;
+		}				
+	
+	}
+	h1 {
+		width: 868px;
+		.gradient(#282526,#4c4c4e);
+		padding: 4px 0px 4px 10px;
+		margin-left: -10px;
+	
+	}
+	h2 {
+	
+		width: 220px;
+		.gradient(#282526,#4c4c4e);
+		padding: 4px 0px 4px 10px;
+		margin-left: -10px;
+	}
+	.subnav {
+
+		list-style: none;
+		float: left;
+		width: 500px;
+		
+		li {
+			display: block;
+			float: left;
+			text-transform: uppercase;
+			color: white;
+			
+			&.active {
+			
+				color: red;
+			}
+			
+			&::after {
+				margin: 0px 10px;
+				content: "|";
+				color: white;
+			}
+			&:last-child {
+			
+				&::after {
+				
+					content: "";
+				}
+			}
+		}
+	}
+	
+	.tools {
+	
+		margin-top: 12px;
+		float: right;
+		dt,select,label,dl {
+		
+			float: left;
+			margin-left: 5px;
+		}
+		select {
+			margin-right: 5px;
+		}
+	}
+	ul.movie-overview {
+	
+		height: auto;
+		overflow: visible;
+		width: 100%;
+		margin: 10px 0px 0px 0px;
+		
+		li span {
+		
+			height: 180px;
+						
+		}
+	
+	}
+	
+	
+	
+	
+}	

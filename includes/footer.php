@@ -1,3 +1,24 @@
+ </div><!-- end wrapper -->
+
+  <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers-skin.jpg" /></div>
+
+  <div id="trailer">
+  	<a class="close"></a>
+  	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
+  	<div class="info">
+  		<img src="img/the-avengers-poster.jpg" alt="the-avengers-poster"  />
+  		<a class="btn blue" href="#">find times and book</a>
+  		<div class="synopsis">
+	  		<h3>Movie Info</h3>
+  			<p><strong>Director</strong> Joss Whedon</p>
+  			<p><strong>Starring</strong> Robert Downey Jr., Chris Evans, Mark Ruffalo, Scarlett Johansson</p>
+  			<p><strong>Running time</strong> 142 min</p>
+  		</div>
+  	</div>
+  	<div class="clearfix"></div>	
+  </div>
+  <div id="cover"></div>
+
     <footer>
     	<div class="footer-wrapper">
 	    	<span class="copyright">&copy; 2012 EVENT CINEMAS</span>

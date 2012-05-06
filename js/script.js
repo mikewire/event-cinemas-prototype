@@ -98,6 +98,25 @@ function closeTrailer() {
   
 $(document).ready(function() {
 
+	$(".find-times-and-book").hover(function() {
+	
+		var p = $(this).parent().parent().position();
+		console.log(p);
+		if (p.left > 300) { 
+			$("#quick-times-select-widget").css({"right":"0px","top":p.top+16});
+		} else {
+			$("#quick-times-select-widget").css({"left":p.left,"top":p.top+16});
+		}
+		
+		
+		
+		$("#quick-times-select-widget").show();
+	});
+	$("#quick-times-select-widget").mouseleave(function() {
+	
+		$("#quick-times-select-widget").hide();
+	});
+
 	$(window).resize(function() {
 	
 		console.log($(this).height());

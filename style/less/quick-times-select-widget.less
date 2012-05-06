@@ -1,0 +1,103 @@
+#quick-times-select-widget {
+
+	display: none;
+	position: absolute;
+	top: 0px;
+	z-index: 4000;
+	.gradient(#282526,#4c4c4e);
+	width: 670px;
+	padding: 10px;
+	.hidden-area {
+		
+		background: white;
+		.opaque(0);
+		position: absolute;
+		top: -30px;
+		left: 0px;
+		height: 30px;
+		width: 110px;
+	}
+	.arrow {
+	
+		.arrow-up(8px, #4c4c4e);
+		position: absolute;
+		top: -8px;
+	}
+	.close {
+	
+		position: absolute;
+		top: -10px;
+		right: -10px;
+	}
+
+
+	.dates {
+	
+		list-style: none;
+		height: 25px;
+		margin: 0px 0px 20px 0px;		
+		li {
+		
+			display: block;
+			float: left;
+			margin-right: 5px;
+			padding: 5px 8px;
+			cursor: pointer;
+			
+			&.active {
+				.radius-full(5px);
+				border: 1px solid darken(@light-grey, 50%);
+				.gradient(#4c4c4e,#282526);
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			&:last-child {
+			
+				margin-right: 0px;
+			}
+			&:hover {
+				
+				text-decoration: underline;
+			}
+		}
+		display: block;
+	}
+	.cinema-row {
+		
+		display: block;
+		margin-bottom: 15px;
+		width: 100%	;
+		overflow: hidden;
+	
+		.dates-row {
+		
+			width: 10000px;
+		}
+		.title {
+		
+			float: left;
+			margin: 5px 10px 0px 0px;
+		}		
+		.btn {
+		
+			font-size: 11px;
+
+			float: left;
+			margin-right: 5px;
+		}
+	
+		.btn.grey {
+			padding: 5px;		
+			width: auto;
+			
+			&:hover {
+			
+				background: #fff;
+			}
+	
+		}
+		
+	}
+}
