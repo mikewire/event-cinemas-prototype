@@ -70,9 +70,11 @@ ul.movie-overview {
 				
 				.icons {
 				
-					position: absolute;
-					bottom: 30px;
-					left: -15px;
+					div {
+					
+						float: left;
+						margin-right: 2px;
+					}
 				}
 			}
 			&:hover {
@@ -128,6 +130,10 @@ ul.movie-overview {
 			color: red;
 			cursor: pointer;
 			
+			&.active {
+			
+				color: white;
+			}
 		}
 		&:hover {
 			
@@ -136,7 +142,7 @@ ul.movie-overview {
 				color: #fff;
 				border: 1px solid #fff;
 			}
-			
+
 			img {
 			
 				.opaque(1);

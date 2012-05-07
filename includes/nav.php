@@ -11,5 +11,8 @@
 		<li><a href="#">Events & Promotions</a></li>					
 		<li><a href="#">Member programs</a></li>							
 	</ul>
-	<input class="search" type="text" placeholder="Film, Actor, etc.. "/>
+	<form class="search-form">
+		<input class="search" type="text" placeholder="Film, Actor, etc.. "/>
+		<input class="red-search-btn" type="submit" value="" />
+	</form>
   </nav>

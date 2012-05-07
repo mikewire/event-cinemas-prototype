@@ -1,4 +1,4 @@
-var timer;
+var timer;var dateScroller;
 var preferred_cinemas = new Array();
 var selected_movies = new Array();
 var items_shown = 0;
@@ -94,29 +94,112 @@ function closeTrailer() {
  	$("#trailer").hide();
  	timer = setInterval(homeSlider, slide_interval);
 }
-  
+
+function scrollDatesLeft(el,reveal_more) {
+	//console.log(el.siblings(".cinema-row-wrapper"));
+	var p = $(el).position();
+	console.log("dates row position: "+p.left);
+	console.log("width wrap width: "+ $(".width-wrap",el).width());
+	
+	if (p.left > ($(".cinema-row-wrapper").width()-$(".width-wrap",el).width() )) {
+		$(el).css({"left":"-=2px"});
+	} else {
+		$(reveal_more).hide();
+	}
+
+}
+function scrollDatesRight(el, reveal_less) {
+	//console.log(el.siblings(".cinema-row-wrapper"));
+	var p = $(el).position();
+	console.log(p.left);
+	if (p.left < 0) {
+		$(el).css({"left":"+=2px"});
+	} else {
+		$(reveal_less).hide();
+	}
+
+}
   
 $(document).ready(function() {
 
 	$(".find-times-and-book").hover(function() {
-	
+		//$(this).addClass("active");
 		var p = $(this).parent().parent().position();
-		console.log(p);
+		console.log($("#quick-times-select-widget").width());
+		
 		if (p.left > 300) { 
-			$("#quick-times-select-widget").css({"right":"0px","top":p.top+16});
+			$(".quick-times-select-widget .arrow").css({"left": "650px"});
+			$(".quick-times-select-widget .hidden-area").css({"left": "590px"});
+
+			$(".quick-times-select-widget").css({"left":(p.left-($(".quick-times-select-widget").width()-85)),"top":p.top+16});
 		} else {
-			$("#quick-times-select-widget").css({"left":p.left,"top":p.top+16});
+			$(".quick-times-select-widget .arrow").css({"left": "20px"});
+			$(".quick-times-select-widget .hidden-area").css({"left": "0px"});
+			$(".quick-times-select-widget").css({"left":p.left,"top":p.top+16});
 		}
 		
+		$(".quick-times-select-widget").show();
+		$(".cinema-row").each(function() {
 		
+			console.log($(".width-wrap", this).width());
+			console.log($(".cinema-row-wrapper").width());
+			
+			if ($(".width-wrap", this).width() > $(".cinema-row-wrapper").width()) {
+			
+				$(".reveal-more", this).show();
+				$(".shadow-right", this).show();
+			}
+		});
 		
-		$("#quick-times-select-widget").show();
 	});
-	$("#quick-times-select-widget").mouseleave(function() {
+	$(".dates li").click(function() {
+		
+		// ajax event to get times for this day
+		
+		$(this).parent().find(".active").removeClass("active");
+		$(this).addClass("active");
+	});
 	
-		$("#quick-times-select-widget").hide();
+	
+	$(".quick-times-select-widget").mouseleave(function() {
+		//console.log("out");
+		//$(".movie-overview .active").removeClass("active");
+		if (!$(this).parent().hasClass("movie-list-item")) {
+			$(".quick-times-select-widget").hide();
+		}
 	});
 
+	
+	
+	
+	$(".reveal-more").hover(function() {
+		$(this).siblings(".reveal-less").show();
+		var reveal_more = $(this);
+		var wrap = $(this).siblings(".cinema-row-wrapper");
+		var dates = $(".dates-row", wrap);
+		$(".shadow-left", wrap).show();
+		dateScroller = setInterval(function() { scrollDatesLeft(dates,reveal_more); }, 5);
+		
+	}, function() {
+	
+		clearInterval(dateScroller);
+		
+	});
+	$(".reveal-less").hover(function() {
+		var reveal_less = $(this);
+		$(this).siblings(".reveal-more").show();
+		var wrap = $(this).siblings(".cinema-row-wrapper");
+		var dates = $(".dates-row", wrap);	
+		dateScroller = setInterval(function() { scrollDatesRight(dates,reveal_less); }, 5);
+
+		
+	}, function() {
+	
+		clearInterval(dateScroller);
+		
+	});
+	
+	
 	$(window).resize(function() {
 	
 		console.log($(this).height());

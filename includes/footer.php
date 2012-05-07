@@ -1,7 +1,19 @@
  </div><!-- end wrapper -->
+<?
+
+$currentFile = $_SERVER["SCRIPT_NAME"];
+$parts = Explode('/', $currentFile);
+$currentFile = $parts[count($parts) - 1];
+
+if ($currentFile == "index.php") {
+
+?>
 
   <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers-skin.jpg" /></div>
 
+<?
+} 
+?>
   <div id="trailer">
   	<a class="close"></a>
   	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
