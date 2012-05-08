@@ -10,7 +10,9 @@ nav,
 section {
   display: block;
 }
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -47,7 +49,8 @@ a {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 blockquote {
@@ -91,14 +94,16 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -110,14 +115,16 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 0px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -159,11 +166,13 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
-table button, table input {
+table button,
+table input {
   *overflow: auto;
 }
 button,
@@ -173,7 +182,8 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -185,7 +195,8 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -194,7 +205,8 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -204,7 +216,8 @@ table {
 td {
   vertical-align: top;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
@@ -239,7 +252,8 @@ p {
   font-weight: normal;
   font-style: normal;
 }
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -1223,38 +1237,6 @@ nav .search-form {
   top: 455px;
   left: 883px;
 }
-#main.movie-detail {
-  height: 870px;
-  background: url(../../img/snow-white.jpg) no-repeat;
-}
-#main.movie-detail nav {
-  width: 242px;
-  left: 20px;
-  height: 563px;
-  background: url(../../img/movie-detail-left.png) no-repeat;
-}
-#main.movie-detail nav a.back {
-  position: absolute;
-  width: 50px;
-  height: 20px;
-  background-color: #fff;
-  top: 120px;
-  left: 0px;
-  opacity: 0;
-}
-#main.movie-detail .movie-detail-elements {
-  position: absolute;
-  top: 700px;
-  left: 20px;
-  width: 1195px;
-  height: 113px;
-  background: url(../../img/movie-detail-bottom.png) no-repeat;
-}
-#main.movie-detail #home-call-to-action {
-  position: absolute;
-  top: 430px;
-  left: 980px;
-}
 .test-container {
   background: #ccc;
   width: 100%;
@@ -1433,7 +1415,8 @@ nav .search-form {
   float: left;
   margin-right: 25px;
 }
-#slider .arrow-left, #slider .arrow-right {
+#slider .arrow-left,
+#slider .arrow-right {
   border: 1px solid #fff;
   padding: 5px 4px;
   display: block;
@@ -1510,7 +1493,8 @@ nav .search-form {
 #slider .items a.active {
   border: 1px solid #fff;
 }
-#slider .items a.active p, #slider .items a.active img {
+#slider .items a.active p,
+#slider .items a.active img {
   /* IE 8 */
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie_level)";
@@ -1657,7 +1641,8 @@ nav .search-form {
   width: 100px;
   float: left;
 }
-#main.movies .right #experience-filters span label, #main.movies .right #experience-filters span input {
+#main.movies .right #experience-filters span label,
+#main.movies .right #experience-filters span input {
   float: left;
 }
 #main.movies .right #experience-filters span input {
@@ -1757,6 +1742,12 @@ nav .search-form {
   float: right;
   display: block;
   position: static;
+}
+#main.movie-detail .movie-detail-items {
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  left: 0px;
 }
 ul.movie-overview {
   list-style: none;
@@ -2381,7 +2372,8 @@ footer .right ul li:last-child {
     filter: none !important;
     -ms-filter: none !important;
   }
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -2390,17 +2382,21 @@ footer .right ul li:last-child {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -2409,11 +2405,14 @@ footer .right ul li:last-child {
   @page  {
     margin: 0.5cm;
   }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
@@ -2524,7 +2523,9 @@ footer .right ul li:last-child {
   .home .ad.half {
     width: 240px;
   }
-  #wrapper, header, .footer-wrapper {
+  #wrapper,
+  header,
+  .footer-wrapper {
     width: 1000px;
   }
   .call-to-action {
@@ -2583,7 +2584,9 @@ footer .right ul li:last-child {
   .home .ad.half {
     width: 197px;
   }
-  #wrapper, header, .footer-wrapper {
+  #wrapper,
+  header,
+  .footer-wrapper {
     width: 1200px;
   }
   .call-to-action {
@@ -2629,7 +2632,9 @@ footer .right ul li:last-child {
   .home .ad.half {
     width: 223px;
   }
-  #wrapper, header, .footer-wrapper {
+  #wrapper,
+  header,
+  .footer-wrapper {
     width: 1366px;
   }
   .call-to-action {
@@ -2683,10 +2688,14 @@ footer .right ul li:last-child {
     top: 170px;
   }
 }
-.ie9 .home .top, .ie8 .home .top, .ie7 .home .top {
+.ie9 .home .top,
+.ie8 .home .top,
+.ie7 .home .top {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
 }
-.ie9 footer, .ie8 footer, .ie7 footer {
+.ie9 footer,
+.ie8 footer,
+.ie7 footer {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
 }
 .ie8 #ticket-bar {
@@ -2726,7 +2735,8 @@ footer .right ul li:last-child {
 .ie8 .home .ad.half {
   width: 240px;
 }
-.ie8 #wrapper, .ie8 header {
+.ie8 #wrapper,
+.ie8 header {
   width: 1000px;
 }
 .ie8 .call-to-action {
@@ -2788,7 +2798,8 @@ footer .right ul li:last-child {
 .ie7 .home .ad.half {
   width: 240px;
 }
-.ie7 #wrapper, .ie7 header {
+.ie7 #wrapper,
+.ie7 header {
   width: 1000px;
 }
 .ie7 .call-to-action {

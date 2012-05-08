@@ -5,7 +5,7 @@ $currentFile = $_SERVER["SCRIPT_NAME"];
 $parts = Explode('/', $currentFile);
 $currentFile = $parts[count($parts) - 1];
 
-if ($currentFile == "index.php") {
+if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
 
 ?>
 
