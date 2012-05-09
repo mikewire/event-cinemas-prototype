@@ -40,18 +40,18 @@ function changeSkin(isHome) {
 	
 		$("#skin").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin"));
 	});
-	
+	console.log(isHome);
 	if (isHome) {
 		$(".call-to-action").fadeOut(200);
 		$("#skin").fadeIn(600, function() {
 		
-			$(".call-to-action img#takeover-title").attr("src","img/hp_bck/"+$("#slider a.active img").attr("skin-title"));
-			if ($("#slider a.active img").attr("align-title") == "left") {
-				$(".call-to-action .button-wrapper").css("float",$("#slider a.active img").attr("align-title"));
+			$(".call-to-action img#takeover-title").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin-title"));
+			if ($("#slider.animate a.active img").attr("align-title") == "left") {
+				$(".call-to-action .button-wrapper").css("float",$("#slider.animate a.active img").attr("align-title"));
 			} else {
 				$(".call-to-action .button-wrapper").css("float","right");
 			}
-			$(".call-to-action .btn.blue").text($("#slider a.active img").attr("btn-title"));
+			$(".call-to-action .btn.blue").text($("#slider.animate a.active img").attr("btn-title"));
 			$(".call-to-action").fadeIn(300);
 		});
 	} else {

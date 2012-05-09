@@ -1,5 +1,38 @@
 $(document).ready(function() {
-
+	
+	var cookie = $.cookie('preferred_cinemas');
+	var preferred_cinemas = new Array();
+	if (cookie != null) {
+		preferred_cinemas = cookie.split(/,/); 	
+		removeByElement(preferred_cinemas, "");
+	}
+	
+	if (preferred_cinemas.length > 1) {
+	
+		$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
+		
+	} else if (preferred_cinemas.length == 1) {
+	
+		$("#where").html("<em class='star'></em>"+preferred_cinemas[0]+"<em class='arrow-down'></em>");
+	
+	} else if (preferred_cinemas.length == 0) {
+	
+		$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
+	}
+	
+	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
+		
+		$(".where-blowout").find("input[value='"+preferred_cinemas[i]+"']").attr("checked","checked").parent().addClass("active");
+		
+		
+		if ($("#cinema-filters").length > 0) {
+			if (preferred_cinemas[i] != "") {
+			$("#cinema-filters").prepend("<span><input value='"+preferred_cinemas[i]+"' id='"+preferred_cinemas[i]+"filter' type='checkbox'> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
+			}
+		}
+	
+	}
+	
 	$("#skin").animate({"opacity":"1"}, 500, function() {});
 	
 //========================================================================================================//
@@ -58,17 +91,15 @@ $(document).ready(function() {
 		if ($("input",this).is(':checked')) {
 			$("input",this).prop("checked", false);
 			removeByElement(preferred_cinemas, $("label",this).text());
+			$.cookie('preferred_cinemas', preferred_cinemas);
 			$(this).removeClass("active");
 		} else {
 			$("input",this).prop("checked", true);		
 			removeByElement(preferred_cinemas, $("label",this).text());
 			preferred_cinemas.push($("label",this).text());
+			$.cookie('preferred_cinemas', preferred_cinemas);
 			$(this).addClass("active");
 		}
-		for ( var i=0; i < preferred_cinemas.length; i++ ) { 
-			console.log(preferred_cinemas[i]);
-		}
-		console.log(preferred_cinemas.length+"---");
 		
 		if (preferred_cinemas.length > 1) {
 		
@@ -86,7 +117,8 @@ $(document).ready(function() {
 	});
 	$(".where-blowout .done").click(function() {
 		hideAllTicketBarBlowouts();
-			
+		console.log($.cookie('preferred_cinemas'));
+		
 	});
 	
 	
@@ -241,11 +273,13 @@ $(document).ready(function() {
 	
 		$("#slider.animate").find("a.active").removeClass("active");
 		$(this).addClass("active");
-		changeSkin();
-		clearInterval(timer);
 		if ($("#slider.animate").parent().hasClass("home-items")) {
+			changeSkin(true);
+			clearInterval(timer);
 			timer = setInterval(function() { animatedSlider(true); }, slide_interval);
 		} else {
+			changeSkin(false);
+			clearInterval(timer);
 			timer = setInterval(function() { animatedSlider(false); }, slide_interval);
 		}
 		

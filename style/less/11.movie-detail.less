@@ -1,5 +1,44 @@
 #main.movie-detail {
 
+	nav {
+		width: 270px;	
+		li.home {
+		
+			display: block;
+		}
+		.wrap {
+		
+			display: none;
+		}
+		.expand {
+			
+			display: block;
+		}
+		&:hover {
+			z-index: 4000;
+			
+
+			.wrap {
+				border: 2px solid darken(@light-grey,60%);
+				.radius-full(8px);
+				margin-top: 10px;
+				padding: 10px 10px 30px 15px;
+				display: block;
+				background: #000;
+				z-index: 8000;
+				width: 233px;	
+				
+			}
+			.expand {
+				background: #000;
+				.radius-full(8px);
+				.opaque(1);
+				border: 2px solid darken(@light-grey,60%);
+			}			
+		
+		}
+	
+	}
 	.gallery-items {
 		display: none;
 		width: 100%;

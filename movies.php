@@ -684,15 +684,7 @@
 				<div class="filter-element">
 				
 					<span class="strip"><h4>Show movies by cinema</h4></span>
-					<div class="wrap">
-						<span>
-							<input value="parramatta" id="sample1" type="checkbox">
-			  				<label for="sample1">Parramatta</label>
-			  			</span>
-						<span>
-							<input value="george-street" id="sample2" type="checkbox">
-			  				<label for="sample2">George Street</label>
-			  			</span>
+					<div class="wrap" id="cinema-filters">
 						<a class="add">add</a>				
 					</div>
 				</div>

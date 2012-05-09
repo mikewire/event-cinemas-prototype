@@ -2,10 +2,8 @@
   
 	<div id="main" role="main" class="movie-detail">	
 	
-		<nav>
-			<a href="index.php"><img class="logo" src="img/ec-logo.png" /></a>
-		</nav>		  
-		
+		<? include("includes/nav.php") ?>	  
+		  
 		<div class="movie-info">
 			
 			<h1>The Avengers</h1>

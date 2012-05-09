@@ -401,11 +401,11 @@
 		</div>  
 		
 		<div class="bottom">
-			<a class="btn blue done">Done</a>
 			<div class="remember-selection">
 				<input type="checkbox" checked="checked">
 	  			<label>Remember my selection</label>
 	  		</div>
+			<a class="btn blue done">Done</a>
 		</div>
 			
   	</div>

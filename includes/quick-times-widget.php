@@ -11,17 +11,28 @@
 				<li>Fri 05/05</li>
 			</ul>
 			<div class="clearfix"></div>
-
+			<?
+			$preferred = array();
+			$cookie = $_COOKIE["preferred_cinemas"];
+			if ($cookie != null) {
+				$preferred = explode(",",$cookie);
+			}
+			for ( $i=0; $i < count($preferred); $i++ ) { 
+			?>
 			<span class="cinema-row">
-				<span class="title">Top Ryde City</span>
+				<span class="title"><?=$preferred[$i]?></span>
 				<span class="cinema-row-wrapper">
 					<div class="dates-row">
 						<span class="width-wrap">
 							<a class="btn grey">10:00am</a>
-							<a class="btn vmax-btn">10:00am<span class="vmax-icon"></span></a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn goldclass-btn">12:00am<span class="goldclass-icon"></span></a>
-							<a class="btn grey">10:00am</a>
+							<a class="btn vmax-btn">12:00am<span class="vmax-icon"></span></a>
+							<a class="btn grey">12:00am</a>
+							<a class="btn goldclass-btn">14:00am<span class="goldclass-icon"></span></a>
+							<a class="btn grey">15:00am</a>
+							<a class="btn chicks-btn">18:00am<span class="chicks-icon"></span></a>
+							<a class="btn grey">18:00am</a>
+							<a class="btn grey">19:00am</a>
+							<a class="btn three-d-btn">20:00am<span class="three-d-icon"></span></a>
 						</span>
 					</div>
 					<span class="shadow-right"></span>
@@ -31,31 +42,8 @@
 				<div class="reveal-more">&#8250;</div>
 				<div class="reveal-less">&#8249;</div>
 			</span>  		
-
-			<span class="cinema-row">
-				<span class="title">Bondi Junction</span>
-				<span class="cinema-row-wrapper">
-					<div class="dates-row">
-						<span class="width-wrap">
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn chicks-btn">10:00am<span class="chicks-icon"></span></a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn three-d-btn">12:00am<span class="three-d-icon"></span></a>
-
-						</span>
-					</div>
-					<span class="shadow-left"></span>
-					<span class="shadow-right"></span>
-				</span>
-				<div class="reveal-more">&#8250;</div>
-				<div class="reveal-less">&#8249;</div>
-			</span>  		
+<? } ?>
+<!--
 			<span class="cinema-row">
 				<span class="title">Bondi Junction</span>
 				<span class="cinema-row-wrapper">
@@ -64,6 +52,30 @@
 							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn chicks-btn">10:00am<span class="chicks-icon"></span></a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn three-d-btn">12:00am<span class="three-d-icon"></span></a>
+
+						</span>
+					</div>
+					<span class="shadow-left"></span>
+					<span class="shadow-right"></span>
+				</span>
+				<div class="reveal-more">&#8250;</div>
+				<div class="reveal-less">&#8249;</div>
+			</span>  		
+			<span class="cinema-row">
+				<span class="title">Bondi Junction</span>
+				<span class="cinema-row-wrapper">
+					<div class="dates-row">
+						<span class="width-wrap">
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
 							<a class="btn chicks-btn">10:00am<span class="chicks-icon"></span></a>
 							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
@@ -82,7 +94,8 @@
 				</span>
 				<div class="reveal-more">&#8250;</div>
 				<div class="reveal-less">&#8249;</div>
-			</span>  		
+			</span> 
+--> 		
 		
 <!--
 			<div class="view-available-seats">

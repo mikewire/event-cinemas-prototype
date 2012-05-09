@@ -2,15 +2,19 @@
 <?
 
 
-if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
+if ($currentFile == "index.php") {
 
 ?>
 
   <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers-skin.jpg" /></div>
 
 <?
-} 
+} else if ($currentFile == "movie-detail.php") {
 ?>
+  <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers2.jpeg" /></div>
+<? }?>
+
+
   <div id="trailer">
   	<a class="close"></a>
   	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
@@ -28,7 +32,8 @@ if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
   </div>
   <div id="cover"></div>
 
-    <footer>
+
+    <footer <? if ($currentFile == "index.php") { ?>class="footer-home"<? } ?>>
     	<div class="footer-wrapper">
 	    	<span class="copyright">&copy; 2012 EVENT CINEMAS</span>
 	    	<ul class="footer-nav">
@@ -53,9 +58,11 @@ if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
   <? if ($currentFile == "movie-detail.php") { ?>
 	  <script>currentMovie = "The Avengers";</script>
   <? } ?>
+
   <script src="js/libs/jquery-1.7.1.min.js"></script>
-  <script src="js/libs/smartpreload.js"></script>  
   <script src="js/libs/hoverIntent.js"></script>    
+  <script src="js/libs/jquery.cookie.js"></script>
+
   <script src="js/functions.js"></script>
   <script src="js/script.js"></script>
 </body>

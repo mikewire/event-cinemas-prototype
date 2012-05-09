@@ -5,6 +5,29 @@ nav {
 	top: 100px;
 	color: white;
 	
+	li.home {
+	
+		display: none;
+	}
+	.expand {
+		display: none;
+		background: #000;
+		.radius-full(8px);
+		.opaque(0.8);
+		border: 2px solid darken(@light-grey,60%);
+		position: absolute;
+		top: 85px;
+		width: 16px;
+		height: 8px;
+		right: 10px;
+		padding: 5px 10px;
+		span {
+			
+			.arrow-down(8px, red);
+		}
+		
+	}
+	
 	ul {
 	
 		list-style: none;
