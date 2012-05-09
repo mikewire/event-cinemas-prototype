@@ -22,7 +22,6 @@ ul.movie-overview {
 		height: 195px;
 		cursor: pointer;
 
-		
 		.image-wrapper {
 		
 			height: 150px;
@@ -30,64 +29,7 @@ ul.movie-overview {
 			overflow: hidden;				
 			position: absolute;
 			top: 0px;
-			
-			img {
-				position: absolute; 
-				top: 0px;
-				z-index: 500;
-				.opaque(0.8);
-				.hover-fade(0.5s);
-			}
-			.hover {
-				z-index: 1000;
-				position: absolute;				
-				background-color: black;
-				width: 90px;
-				padding: 5px;
-				bottom: -150px;
-				left: 0px;
-				.opaque(0.9);
-				padding-left: 10px;
-				
-				p {
-					padding: 0px; 
-					margin: 0px 0px 2px 0px;
-					color: white;
-					font-size: 12px;
-					font-family: @bold-font;	
-				}
-				a {
-					color: red;
-					display: block;
-					font-size: 12px;
-					margin-bottom: 2px;
-					
-					&:hover {
-					
-						color: white;
-					}
-				}
-				
-				.icons {
-				
-					div {
-					
-						float: left;
-						margin-right: 2px;
-					}
-				}
-			}
-			&:hover {
-			
-			
-				.hover {
-					.hover-fade(0.2s);
-					bottom: 0px;
-				}
-
-			}
-			
-		}
+		}		
 		&.active {
 		
 			.select {
@@ -150,4 +92,64 @@ ul.movie-overview {
 		}
 		
 	}
+}
+.image-wrapper {
+
+	
+	img {
+		position: absolute; 
+		top: 0px;
+		z-index: 500;
+		.hover-fade(0.5s);
+	}
+	.hover {
+		z-index: 1000;
+		position: absolute;				
+		background-color: black;
+		width: 90px;
+		padding: 5px;
+		bottom: -150px;
+		left: 0px;
+		.opaque(0.9);
+		padding-left: 10px;
+		
+		p {
+			padding: 0px; 
+			margin: 0px 0px 2px 0px;
+			color: white;
+			font-size: 12px;
+			font-family: @bold-font;	
+		}
+		a {
+			color: red;
+			display: block;
+			font-size: 12px;
+			margin-bottom: 2px;
+			
+			&:hover {
+			
+				margin-left: 5px;
+				.hover-fade(0.2s);
+			}
+		}
+		
+		.icons {
+		
+			div {
+			
+				float: left;
+				margin-right: 2px;
+			}
+		}
+	}
+	&:hover {
+	
+	
+		.hover {
+			.hover-fade(0.2s);
+			bottom: 0px;
+		}
+
+	}
+	
 }

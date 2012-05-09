@@ -1,0 +1,51 @@
+.movie-overview-list {
+
+	display: block;
+	margin-top: 20px;
+	.movie-list-item {
+	
+		margin-top: 10px;
+		padding-bottom: 10px;
+		clear: both;
+		border-bottom: 1px solid #fff;
+		p.title {
+		
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.image-wrapper {
+		
+			margin-right: 10px;
+			float: left;
+			height: 150px;
+			width: 100px;
+			overflow: hidden;	
+			position: relative;		
+			
+			img {
+			
+				.opaque(1);
+			}	
+		}		
+		.quick-times-select-widget {
+			
+			background: #000;
+			padding: 0px;
+			float: left;
+			display: block;
+			position: static;
+			.cinema-row-wrapper {
+			
+			}
+			.arrow {
+			
+				display: none;
+			}
+		}
+		
+		&:last-child {
+		
+			border-bottom: none;
+		}
+	}
+}

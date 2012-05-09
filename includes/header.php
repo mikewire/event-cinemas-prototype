@@ -1,3 +1,8 @@
+<?
+$currentFile = $_SERVER["SCRIPT_NAME"];
+$parts = Explode('/', $currentFile);
+$currentFile = $parts[count($parts) - 1];
+?>
 <!doctype html>
 <!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->

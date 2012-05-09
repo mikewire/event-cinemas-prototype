@@ -3,7 +3,8 @@
 	<a href="index.php"><img class="logo" src="img/ec-logo.png" /></a>
 	
 	<ul>
-		<li><a href="movies.php">Movies</a></li>
+		
+		<li <? if ($currentFile == "movies.php" || $currentFile == "movie-detail.php") { ?>class="active"<? } ?>><a href="movies.php">Movies</a></li>
 		<li><a href="#">Alternate content</a></li>
 		<li><a href="#">Cinemas</a></li>
 		<li><a href="#">Advanced Tickets</a></li>

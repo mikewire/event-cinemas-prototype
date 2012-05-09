@@ -46,8 +46,8 @@
 						  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>	
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>		
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -69,8 +69,8 @@
 						  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Albert Nobbs</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -92,29 +92,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 					  					<p class="title">A few best men</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-					  					<a href="#">&#8250; view trailer</a>		  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
-							  			</div>
-					  				</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-					  				<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-					  				<div class="hover">
-					  					<p class="title">John Carter</p>
-					  					<a href="movie-detail.php">&#8250; more details</a>
-					  					<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  					<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -134,8 +113,8 @@
 					  				<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 					  				<div class="hover">
 					  					<p class="title">Journey 2</p>
-					  					<a href="movie-detail.php">&#8250; more details</a>
-					  					<a href="#">&#8250; view trailer</a>		  				
+					  					<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  					<a class="poptrailer">&#8250; view trailer</a>			  				
 					  				</div>
 								</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -150,8 +129,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Hugo</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -171,8 +150,8 @@
 						  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 2</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -189,8 +168,8 @@
 						  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 3</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -211,8 +190,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>		  				
 						  			</div>
 					  			</div>
 			
@@ -229,8 +208,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			<div class="icons">
 								  			<div class="goldclass-icon"></div>
 							  				<div class="vmax-icon"></div>
@@ -250,8 +229,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -266,8 +245,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -283,8 +262,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -301,8 +280,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -318,8 +297,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -334,8 +313,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -350,8 +329,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -368,8 +347,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -385,8 +364,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -401,8 +380,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -417,8 +396,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -435,8 +414,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -452,8 +431,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -468,8 +447,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -484,8 +463,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -502,8 +481,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -519,8 +498,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -535,8 +514,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -550,8 +529,8 @@
 						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 			
@@ -568,8 +547,8 @@
 						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -585,8 +564,8 @@
 						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -601,8 +580,8 @@
 						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 						  			<div class="hover">
 						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a href="movie-detail.php">&#8250; more details</a>
-						  				<a href="#">&#8250; view trailer</a>		  				
+						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  				<a class="poptrailer">&#8250; view trailer</a>			  				
 						  			</div>
 					  			</div>
 					  			<a class="find-times-and-book">Find times & book</a>
@@ -616,12 +595,72 @@
 					
 					
 						<div class="movie-list-item">
-							<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+				  			<div class="image-wrapper">
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+					  			<div class="hover">
+					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<div class="icons">
+							  			<div class="goldclass-icon"></div>
+						  				<div class="vmax-icon"></div>
+						  			</div>
+					  			</div>
+				  			</div>
+			  				<p class="title">Snow White and the Huntsman 7</p>
+
 							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
 						</div>
 						<div class="movie-list-item">
-							<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+				  			<div class="image-wrapper">
+					  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
+					  			<div class="hover">
+					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<div class="icons">
+							  			<div class="goldclass-icon"></div>
+						  				<div class="vmax-icon"></div>
+						  			</div>
+					  			</div>
+				  			</div>
+			  				<p class="title">Snow White and the Huntsman 7</p>
+
 							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
+					  			<div class="hover">
+					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<div class="icons">
+							  			<div class="goldclass-icon"></div>
+						  				<div class="vmax-icon"></div>
+						  			</div>
+					  			</div>
+				  			</div>
+			  				<p class="title">Snow White and the Huntsman 7</p>
+
+							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
+					  			<div class="hover">
+					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<div class="icons">
+							  			<div class="goldclass-icon"></div>
+						  				<div class="vmax-icon"></div>
+						  			</div>
+					  			</div>
+				  			</div>
+			  				<p class="title">Snow White and the Huntsman 7</p>
+
+							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
 						</div>
 					
 					

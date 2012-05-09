@@ -4,11 +4,11 @@
 			<ul class="dates">
 				<li class="active">Today</li>
 				<li>Tomorrow</li>
-				<li>Monday 01/05</li>
-				<li>Tuesday 02/05</li>
-				<li>Wednesday 03/05</li>	
-				<li>Thursday 04/05</li>
-				<li>Friday 05/05</li>
+				<li>Mon 01/05</li>
+				<li>Tue 02/05</li>
+				<li>Wed 03/05</li>	
+				<li>Thur 04/05</li>
+				<li>Fri 05/05</li>
 			</ul>
 			<div class="clearfix"></div>
 
@@ -17,13 +17,6 @@
 				<span class="cinema-row-wrapper">
 					<div class="dates-row">
 						<span class="width-wrap">
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn vmax-btn">10:00am<span class="vmax-icon"></span></a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn goldclass-btn">12:00am<span class="goldclass-icon"></span></a>
-							<a class="btn grey">10:00am</a>
-							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
 							<a class="btn vmax-btn">10:00am<span class="vmax-icon"></span></a>
 							<a class="btn grey">10:00am</a>
@@ -44,6 +37,9 @@
 				<span class="cinema-row-wrapper">
 					<div class="dates-row">
 						<span class="width-wrap">
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
+							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>
 							<a class="btn grey">10:00am</a>

@@ -1,13 +1,103 @@
 #main.movie-detail {
 
-.movie-detail-items {
+	.gallery-items {
+		display: none;
+		width: 100%;
+		position: absolute;
+		left: 0px;
 
-	width: 100%;
-	height: 220px;
-	position: absolute;
-	left: 0px;
+		#slider {
+		
+			width: 100%;
+		}
 	
-
-}
-
+	}
+	#gallery-close {
+		display: none;
+		position: absolute;
+		right: 0px;
+		top: 70px;
+		cursor:pointer;
+	}
+	.movie-detail-items {
+	
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		#slider {
+		
+			width: 850px;
+		}
+	
+	}
+	.promo-box {
+	
+		background: #000;
+		border: 1px solid @dark-grey;
+		.opaque(0.8);
+		width: 230px;
+		height: 120px;
+		float:left;
+		margin-right: 10px;
+	}
+	.movie-info {
+		
+		position: absolute;
+		top: 220px;
+		left: 0px;
+		width: 280px;
+		font-size: 16px;
+		font-family: @thin-font;
+		text-shadow:1px 2px #333;
+		
+		h1 {
+		
+			font-size: 25px;
+			font-family: @bold-font;
+			float: left;
+			margin: 0px 0px 10px 0px;
+		}
+		.three-d-white-bg  {
+		
+			float: left;
+			margin: 6px 0px 0px 5px;
+		}
+		.two-d-white-bg  {
+		
+			float: left;
+			margin: 6px 0px 0px 5px;
+		}	
+		span {
+			
+			clear: both;
+			display: block;
+			margin-bottom: 5px;
+			
+		}
+		strong {
+			font-size: 16px;
+			float: left;
+			margin: -1px 7px 0px 0px;
+		}
+		a {
+		
+			font-family: @regular-font;
+		}
+		
+		.experiences {
+		
+			margin-top: 20px;
+			div {
+			
+				
+				float: left;
+				margin-right: 15px;
+			}
+			.experience-gold-class {
+			
+				margin-top: 15px;
+			}
+		}
+		
+	}
 }

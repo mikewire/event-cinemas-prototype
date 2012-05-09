@@ -1,9 +1,6 @@
  </div><!-- end wrapper -->
 <?
 
-$currentFile = $_SERVER["SCRIPT_NAME"];
-$parts = Explode('/', $currentFile);
-$currentFile = $parts[count($parts) - 1];
 
 if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
 
@@ -52,9 +49,14 @@ if ($currentFile == "index.php" || $currentFile == "movie-detail.php") {
 	    	</div>
     	</div>
     </footer>  
-
+    <script>var currentMovie = "";</script>
+  <? if ($currentFile == "movie-detail.php") { ?>
+	  <script>currentMovie = "The Avengers";</script>
+  <? } ?>
   <script src="js/libs/jquery-1.7.1.min.js"></script>
   <script src="js/libs/smartpreload.js"></script>  
+  <script src="js/libs/hoverIntent.js"></script>    
+  <script src="js/functions.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

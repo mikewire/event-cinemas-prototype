@@ -7,7 +7,7 @@
 		 
 		  <div class="home-items">
 		  	
-		  	<div id="slider">
+		  	<div id="slider" class="animate">
 		  		<div class="opaque-background"></div>
 		  		<ul class="top">
 		  			<li class="active"><a href="#">Now showing</a></li>
@@ -39,7 +39,7 @@
 		  				<p>The Lucky One</p>
 		  			</a>
 		  			<a href="#">
-		  				<img src="img/hp_bck/snowwhite-skin.jpg" skin="snowwhite-skin.jpg" skin-title="snowwhite-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<img src="img/hp_bck/americanpie-thumb.jpg" skin="snowwhite-skin.jpg" skin-title="snowwhite-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
 		  				<p>Snow White and the Huntsman</p>
 		  			</a>		  			
 		  			<a href="#">
@@ -114,8 +114,8 @@
 			<div class="clearfix"></div>
 			<div class="button-wrapper">
 				<div class="grey-buttons">
-					<a class="btn grey" href="#">Details</a>
-					<a class="btn grey" id="poptrailer" href="#">Trailer</a>
+					<a class="btn grey" href="movie-detail.php">Details</a>
+					<a class="btn grey poptrailer">Trailer</a>
 				</div>
 				<a class="btn blue" href="#">Find times and book</a>
 			</div>
