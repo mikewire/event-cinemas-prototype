@@ -669,7 +669,7 @@
 					
 				</div><!-- end wrap -->				
 				
-				<? include("includes/quick-times-widget.php") ?>					
+				<div id="quick-times-widget-upon-hover"><? include("includes/quick-times-widget.php") ?></div>
 			</div><!-- end .left -->
 			
 			<div class="right filters">
@@ -685,7 +685,7 @@
 				
 					<span class="strip"><h4>Show movies by cinema</h4></span>
 					<div class="wrap" id="cinema-filters">
-						<a class="add">add</a>				
+						<a class="add set-preferred-cinemas">add / change</a>				
 					</div>
 				</div>
 				

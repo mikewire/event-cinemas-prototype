@@ -42,14 +42,13 @@
 				 
 		<div class="movie-detail-items">
 			<div class="promo-box"></div>
-			<div class="promo-box"></div>
 		  	<div id="slider">
 		  		<div class="opaque-background"></div>
-		  		<ul class="top">
-		  			<li><a href="#">Other movies you might like</a></li>
-		  		</ul>
+		  		<div class="title"><p>Other movies you might like</p></div>
+<!--
 		  		<span class="arrow-left">&#8249;</span>
 		  		<span class="arrow-right">&#8250;</span>
+-->
 		  		<div class="items">
 
 		  			<a href="movie-detail.php">
@@ -67,30 +66,6 @@
 		  			<a href="movie-detail.php">
 		  				<img src="img/hp_bck/americanpie-thumb.jpg" width="156" height="80" />
 		  				<p>American Pie</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
 		  			</a>
 		  			<a href="movie-detail.php">
 		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
@@ -109,11 +84,11 @@
 		<div class="gallery-items">
 		  	<div id="slider" class="animate">
 		  		<div class="opaque-background"></div>
-		  		<ul class="top">
-		  			<li><a href="#">Image gallery for The Avengers</a></li>
-		  		</ul>
+		  		<div class="title"><p>Image gallery for The Avengers</p></div>
+<!--
 		  		<span class="arrow-left">&#8249;</span>
 		  		<span class="arrow-right">&#8250;</span>
+-->
 		  		<div class="items">
 
 		  			<a><img skin="avengers1.jpeg" src="img/gallery/avengers1-thumb.jpg" width="156" height="80" /></a>
@@ -122,9 +97,11 @@
 		  			<a><img skin="avengers1.jpeg" src="img/gallery/avengers1-thumb.jpg" width="156" height="80" /></a>
 		  			<a><img skin="avengers2.jpeg" src="img/gallery/avengers2-thumb.jpg" width="156" height="80" /></a>
 		  			<a><img skin="avengers3.jpg" src="img/gallery/avengers3-thumb.jpg" width="156" height="80" /></a>
-		  			<a><img skin="avengers1.jpeg" src="img/gallery/avengers1-thumb.jpg" width="156" height="80" /></a>
+	  				<a><img skin="avengers1.jpeg" src="img/gallery/avengers1-thumb.jpg" width="156" height="80" /></a>
+	<!--
 		  			<a><img skin="avengers2.jpeg" src="img/gallery/avengers2-thumb.jpg" width="156" height="80" /></a>
 		  			<a><img skin="avengers3.jpg" src="img/gallery/avengers3-thumb.jpg" width="156" height="80" /></a>
+-->
 	
 		  			
 		  					  		
@@ -147,7 +124,7 @@
 					<a class="btn grey poptrailer">Trailer</a>
 					<a class="btn grey opengallery">Gallery</a>
 				</div>
-				<a class="btn blue" href="#">Find times and book</a>
+				<a class="btn blue find-times-and-book" href="#">Find times and book</a>
 			</div>
 			<div class="clearfix"></div>
 			

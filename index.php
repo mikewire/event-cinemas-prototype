@@ -10,9 +10,9 @@
 		  	<div id="slider" class="animate">
 		  		<div class="opaque-background"></div>
 		  		<ul class="top">
-		  			<li class="active"><a href="#">Now showing</a></li>
-		  			<li><a href="#">Coming soon</a></li>
-		  			<li><a href="#">Advanced tickets</a></li>
+		  			<li class="active">Now showing</li>
+		  			<li>Coming soon</li>
+		  			<li>Advanced tickets</li>
 		  		</ul>
 		  		<span class="arrow-left">&#8249;</span>
 		  		<span class="arrow-right">&#8250;</span>
@@ -117,7 +117,7 @@
 					<a class="btn grey" href="movie-detail.php">Details</a>
 					<a class="btn grey poptrailer">Trailer</a>
 				</div>
-				<a class="btn blue" href="#">Find times and book</a>
+				<a class="btn blue find-times-and-book" href="#">Find times and book</a>
 			</div>
 			<div class="clearfix"></div>
 			

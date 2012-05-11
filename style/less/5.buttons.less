@@ -151,4 +151,23 @@
   }
   	
 }
+.yellow {
+  background: #ffdf77;
+  border: 1px solid #fcb731;
+  color: #000;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  
+  .gradient(#ffdf77, #fcb731);
+
+  &:hover {
+	color: #000;
+	//.shadow(0px, 1px, 6px, 1px, #333);
+    .gradient(lighten(#ffdf77,10%), lighten(#fcb731,10%) );
+
+  }
+  	
+}
 

@@ -1,3 +1,10 @@
+  
+  	<form id="top-ticketing-form" method="get" action="index.php">
+  		<input type="hidden" value="" id="top-ticketing-cinemas" name="top-ticketing-cinemas" />
+  		<input type="hidden" value="" id="top-ticketing-movies" name="top-ticketing-movies" />
+  		<input type="hidden" value="" id="top-ticketing-time" name="top-ticketing-time" />
+  	</form>
+  	
   	<div class="when-blowout">
   		
   		<ul>
@@ -308,6 +315,7 @@
   			<li><a>WA</a></li>  
 			  			  			  			  		
   		</ul>
+  		<div class="explain"><span class="double-tick"></span>Select multiple cinemas to compare sessions</div>
   		<div class="columns">
 	  		<div class="column">
 	

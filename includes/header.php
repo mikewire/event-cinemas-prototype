@@ -47,7 +47,22 @@ $currentFile = $parts[count($parts) - 1];
 			<p>Sign up | Login</p>
 			<span></span>
 		</div>
-		
+		<div id="cine-buzz-blowout">
+			<div class="hidden-area"></div>
+			<div class="arrow"></div>
+			<p>Login using your favorite social network</p>
+			<div class="gigya"><img src="../img/social-login.png" alt="social-login" width="125" height="19" /></div>
+			<p>Or sign in using your Cine Buzz member number and password</p>
+			<form>
+			
+				<input type="text" placeholder="Member number" />
+				<input type="text" placeholder="Password" />
+				<input type="submit" class="btn yellow" value="sign in" >
+				
+			</form>
+			<p>Not yet a member? Earn free movies and much more by signing up today!</p>
+			<a class="btn yellow">Sign up for Cine buzz</a>
+		</div>
 		<? include("includes/top-ticketing-bar-drop-downs.php") ?>	  
 		
 	</header>

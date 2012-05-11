@@ -109,7 +109,7 @@ header {
 	width: 235px;
 	height: 53px;
 	cursor: pointer;
-	
+	z-index: 9000;
 	img {
 		
 		position: absolute;
@@ -133,6 +133,52 @@ header {
 		top: 23px;
 		.arrow-down(5px,#fff);
 	}
+	
+}
+#cine-buzz-blowout {
+	display: none;
+	background-color: #000;
+	padding: 10px;
+	position: absolute;
+	top: 63px;
+	right: 0px;
+	width: 216px;
+	z-index: 9000;
+	.arrow {
+		position: absolute;
+		top: -7px;
+		right: 6px;
+		.arrow-up(7px, black);
+	}
+	p {
+	
+		margin: 10px 0px;
+	}
+	input[type=text] {
+	
+		width: 200px;
+		margin-bottom: 5px;
+	}
+	form .btn {
+	
+		font-size: 12px;
+		padding-top: 3px 7px;
+	}
+	a.btn {
+	
+		margin-bottom:10px;
+	}
+	.hidden-area {
+	
+		width: 236px;
+		background-color: white;
+		.opaque(0);
+		position: absolute;
+		top: -53px;
+		height: 53px;
+		left: 0px;
+	}
+	
 }
 .explain {
 
@@ -163,6 +209,10 @@ header {
 		float: right;
 		margin-right: 15px;
 		
+		&.wider {
+		
+			width: 130px;
+		}
 	}
 	.remember-selection {
 	
@@ -320,7 +370,10 @@ ul.head {
 	width: 435px;
 	background-color: #000;
 	
-	
+	.explain {	
+		
+		margin-top: 20px;
+	}
 	p {
 		border-top: 1px solid #ccc;
 		color: white;
@@ -356,6 +409,20 @@ ul.head {
 			}
 		}
 	
+	}
+	
+	&.in-the-middle {
+	
+		top: 100px;
+		left: 50%;
+		margin-left: -218px;
+		
+		&:before {
+			font-size: 18px;
+			margin-bottom: 10px;
+			display: block;
+			content: "Select your cinema(s)";
+		}
 	}
 }
 

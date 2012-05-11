@@ -1,5 +1,4 @@
 var timer;var dateScroller;
-var preferred_cinemas = new Array();
 var selected_movies = new Array();
 var items_shown = 0;
 var items_total = 0;
@@ -8,6 +7,56 @@ var total_slides = 0;
 var current_slide = 1;
 var slide_interval = 12000;
 var rememberSkin = "";
+var cookie = "";
+var preferred_cinemas = new Array();
+
+function init() {
+
+	cookie = $.cookie('preferred_cinemas');
+	if (cookie != null) {
+		preferred_cinemas = cookie.split(/,/); 	
+		removeByElement(preferred_cinemas, "");
+		$("#top-ticketing-cinemas").val(preferred_cinemas);
+	} 	
+	if (preferred_cinemas.length > 1) {
+	
+		$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
+		
+	} else if (preferred_cinemas.length == 1) {
+	
+		$("#where").html("<em class='star'></em>"+preferred_cinemas[0]+"<em class='arrow-down'></em>");
+	
+	} else if (preferred_cinemas.length == 0) {
+	
+		$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
+		$(".find-times-and-book").addClass("set-preferred-cinemas");
+	}
+	
+	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
+		
+		$(".where-blowout").find("input[value='"+preferred_cinemas[i]+"']").attr("checked","checked").parent().addClass("active");
+		
+		
+		if ($("#cinema-filters").length > 0) {
+			if (preferred_cinemas[i] != "") {
+			$("#cinema-filters").prepend("<span><input value='"+preferred_cinemas[i]+"' id='"+preferred_cinemas[i]+"filter' type='checkbox'> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
+			}
+		}
+	
+	}
+	if (currentMovie != "") {
+	
+		$("#what").html(currentMovie+"<em class='arrow-down'></em>");
+		$("#top-ticketing-movies").val(currentMovie);
+
+	}
+	$("#skin").animate({"opacity":"1"}, 500, function() {});
+	$("#top-ticketing-time").val($(".when-blowout li.active").text());
+	
+
+}
+
+
 function initAnimatedSlider() {
 
 	// set slider to 10s for each slide
@@ -100,6 +149,8 @@ function moveSliderRight() {
 	
 		current_slide = current_slide + 1;
 		
+		console.log(total_slides);
+		
 		if (current_slide == total_slides) {
 			$("#slider .arrow-right").hide();
 		}
@@ -122,13 +173,12 @@ function closeTrailer() {
  	}
 }
 
-function scrollDatesLeft(el,reveal_more) {
+function scrollDatesLeft(parentEl, el,reveal_more) {
 	//console.log(el.siblings(".cinema-row-wrapper"));
 	var p = $(el).position();
-	console.log("dates row position: "+p.left);
-	console.log("width wrap width: "+ $(".width-wrap",el).width());
+	console.log(parentEl);
 	
-	if (p.left > ($(".cinema-row-wrapper").width()-$(".width-wrap",el).width() )) {
+	if (p.left > ($(".cinema-row-wrapper", parentEl).width()-$(".width-wrap",el).width() )) {
 		$(el).css({"left":"-=2px"});
 	} else {
 		$(reveal_more).hide();
@@ -150,8 +200,6 @@ function scrollDatesRight(el, reveal_less) {
 function determineDatesScrolling() {
 
 	$(".cinema-row").each(function() {
-	
-		
 		if ($(".width-wrap", this).width() > $(".cinema-row-wrapper").width()) {
 		
 			$(".reveal-more", this).show();
@@ -163,21 +211,14 @@ function determineDatesScrolling() {
 function showQuickTimesWidget() {
 
 	//$(this).addClass("active");
-	var p = $(this).parent().parent().position();
+	if (preferred_cinemas.length > 0) {
+		var p = $(this).parent().parent().position();
+		console.log(p.left);
 	
-	if (p.left > 300) { 
-		$(".quick-times-select-widget .arrow").css({"left": "550px"});
-		$(".quick-times-select-widget .hidden-area").css({"left": "495px"});
-
-		$(".quick-times-select-widget").css({"left":(p.left-($(".quick-times-select-widget").width()-85)),"top":p.top+16});
-	} else {
-		$(".quick-times-select-widget .arrow").css({"left": "20px"});
-		$(".quick-times-select-widget .hidden-area").css({"left": "0px"});
-		$(".quick-times-select-widget").css({"left":p.left,"top":p.top+16});
+		$(".quick-times-select-widget").css({"left":p.left-200,"top":p.top+20});
+		$(".quick-times-select-widget").show();
+		determineDatesScrolling();
 	}
-	
-	$(".quick-times-select-widget").show();
-	determineDatesScrolling();
 
 }
 function emptyFunction() {
@@ -196,7 +237,8 @@ function hideAllTicketBarBlowouts() {
 	$("#what").removeClass("active");
 	$(".what-blowout").hide(); 
 	$("#when").removeClass("active");
-	$(".when-blowout").hide(); 
+	$(".when-blowout").removeClass("in-the-middle").hide(); 
+	$(".where-blowout .btn").removeClass("wider").text("done");	
 	TicketBarZIndex(4000);
 	$("#cover").hide();
 }

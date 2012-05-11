@@ -1,50 +1,32 @@
 $(document).ready(function() {
 	
-	var cookie = $.cookie('preferred_cinemas');
-	var preferred_cinemas = new Array();
-	if (cookie != null) {
-		preferred_cinemas = cookie.split(/,/); 	
-		removeByElement(preferred_cinemas, "");
-	}
-	
-	if (preferred_cinemas.length > 1) {
-	
-		$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
-		
-	} else if (preferred_cinemas.length == 1) {
-	
-		$("#where").html("<em class='star'></em>"+preferred_cinemas[0]+"<em class='arrow-down'></em>");
-	
-	} else if (preferred_cinemas.length == 0) {
-	
-		$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
-	}
-	
-	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
-		
-		$(".where-blowout").find("input[value='"+preferred_cinemas[i]+"']").attr("checked","checked").parent().addClass("active");
-		
-		
-		if ($("#cinema-filters").length > 0) {
-			if (preferred_cinemas[i] != "") {
-			$("#cinema-filters").prepend("<span><input value='"+preferred_cinemas[i]+"' id='"+preferred_cinemas[i]+"filter' type='checkbox'> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
-			}
-		}
-	
-	}
-	
-	$("#skin").animate({"opacity":"1"}, 500, function() {});
+
+	init();
 	
 //========================================================================================================//
 //============================================ TOP TICKETING WIDGET ======================================//
 //========================================================================================================//
 
-
-	if (currentMovie != "") {
 	
-		$("#what").html(currentMovie);
+	
+	$("#cine-buzz").hover(function() {
+		$("#cine-buzz-blowout").show();
 		
-	}
+	});
+	$("#cine-buzz-blowout").mouseleave(function() {
+	
+		$("#cine-buzz-blowout").hide();
+	
+		
+	});
+
+	
+	$("#ticket-bar .btn").click(function() {
+	
+	
+		$("#top-ticketing-form").submit();
+		//console.log("submit");
+	}); 
 
 	// To hide all the ticket bar blowouts
 	
@@ -87,14 +69,13 @@ $(document).ready(function() {
 		
 	});
 	$(".where-blowout span").click(function() {
-		
 		if ($("input",this).is(':checked')) {
-			$("input",this).prop("checked", false);
+			$("input",this).attr("checked", false);
 			removeByElement(preferred_cinemas, $("label",this).text());
 			$.cookie('preferred_cinemas', preferred_cinemas);
 			$(this).removeClass("active");
 		} else {
-			$("input",this).prop("checked", true);		
+			$("input",this).attr("checked", true);		
 			removeByElement(preferred_cinemas, $("label",this).text());
 			preferred_cinemas.push($("label",this).text());
 			$.cookie('preferred_cinemas', preferred_cinemas);
@@ -113,6 +94,7 @@ $(document).ready(function() {
 		
 			$("#where").html("Select cinema(s)<em class='arrow-down'></em>");
 		} 
+		$("#top-ticketing-cinemas").val(preferred_cinemas);
 		
 	});
 	$(".where-blowout .done").click(function() {
@@ -174,6 +156,7 @@ $(document).ready(function() {
 		
 			$("#what").html("Any movie now showing<em class='arrow-down'></em>");
 		} 
+		$("#top-ticketing-movies").val(selected_movies);
 
 	});
 	$(".what-blowout .done").click(function() {
@@ -213,6 +196,7 @@ $(document).ready(function() {
 		
 			$(this).removeClass("active");
 		});
+		$("#top-ticketing-time").val($(this).text());
 		
 		$(this).addClass("active");
 		$("#when").html($(this).text()+"<em class='arrow-down'></em>");
@@ -293,7 +277,16 @@ $(document).ready(function() {
 //========================================================================================================//
 
 
-
+	$(".set-preferred-cinemas").live("click", function() {
+	
+		$("#cover").show();
+		$(".where-blowout").addClass("in-the-middle").show();
+		if ($(this).hasClass("find-times-and-book")) {
+			console.log("is book button");
+			$(".where-blowout .btn").addClass("wider").text("continue booking");
+		}
+	
+	});
 
 
 
@@ -302,14 +295,14 @@ $(document).ready(function() {
 	$(".thumb").click(function() {
 		$(".quick-times-select-widget").hide();
 		$(".movie-overview-list").hide();
-		$(".movie-overview").show();
+		$(".innerpage .movie-overview").show();
 		$(".tools").find(".active").removeClass("active");
 		$(this).addClass("active");
 	});
 	
 	$(".list").click(function() {
 		$(".movie-overview-list .quick-times-select-widget").show();
-		$(".movie-overview").hide();
+		$(".innerpage .movie-overview").hide();
 		$(".movie-overview-list").show();
 		determineDatesScrolling();
 		$(".tools").find(".active").removeClass("active");
@@ -326,7 +319,11 @@ $(document).ready(function() {
 	};
 
 	$(".find-times-and-book").hoverIntent( config );	
+	$(".btn.find-times-and-book").click(function() {
+	
+		$("#top-ticketing-form").submit();
 
+	});
 	
 	
 	// If we're in listview, we need to see which dates rows are longer than the allowed content area, so we throw the arrow
@@ -369,7 +366,8 @@ $(document).ready(function() {
 		var wrap = $(this).siblings(".cinema-row-wrapper");
 		var dates = $(".dates-row", wrap);
 		$(".shadow-left", wrap).show();
-		dateScroller = setInterval(function() { scrollDatesLeft(dates,reveal_more); }, 5);
+		var parentEl = $(this).parent().parent().parent();
+		dateScroller = setInterval(function() { scrollDatesLeft(parentEl, dates,reveal_more); }, 5);
 		
 	}, function() {
 	
