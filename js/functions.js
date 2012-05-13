@@ -176,7 +176,7 @@ function closeTrailer() {
 function scrollDatesLeft(parentEl, el,reveal_more) {
 	//console.log(el.siblings(".cinema-row-wrapper"));
 	var p = $(el).position();
-	console.log(parentEl);
+	console.log($(".width-wrap",el).width());
 	
 	if (p.left > ($(".cinema-row-wrapper", parentEl).width()-$(".width-wrap",el).width() )) {
 		$(el).css({"left":"-=2px"});

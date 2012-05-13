@@ -28,7 +28,7 @@
 						<span class="title"><?=$preferred[$i]?></span>
 						<span class="cinema-row-wrapper">
 							<div class="dates-row">
-								<div class="width-wrap">
+								<span class="width-wrap">
 									<a class="btn grey">10:00am</a>
 									<a class="btn vmax-btn">12:00am<span class="vmax-icon"></span></a>
 									<a class="btn grey">12:00am</a>
@@ -38,7 +38,7 @@
 									<a class="btn grey">18:00am</a>
 									<a class="btn grey">19:00am</a>
 									<a class="btn three-d-btn">20:00am<span class="three-d-icon"></span></a>
-								</div>
+								</span>
 							</div>
 							<span class="shadow-right"></span>
 							<span class="shadow-left"></span>

@@ -1,0 +1,686 @@
+
+<!doctype html>
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Event Cinemas</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style/css/0.style.css">
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  
+	<header>
+	
+		<div id="ticket-bar">
+			<span>
+				<label><strong>Where</strong> would you like to go?</label>
+				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
+			</span>
+		
+			<span>
+				<label><strong>What</strong> would you like to see?</label>
+				<div id="what">Any movie now showing <em class="arrow-down"></em></div>
+			</span>
+		
+			<span>
+				<label><strong>When</strong> would you like to see it?</label>
+				<div id="when">Today <em class="arrow-down"></em></div>
+			</span>
+			<a class="btn blue" href="#">Find times and book</a>
+		
+			<div class="ticket-img"></div>
+		
+		</div>
+		
+		<div id="cine-buzz">
+			<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" width="94" height="26" />		
+			<p>Sign up | Login</p>
+			<span></span>
+		</div>
+		<div id="cine-buzz-blowout">
+			<div class="hidden-area"></div>
+			<div class="arrow"></div>
+			<p>Login using your favorite social network</p>
+			<div class="gigya"><img src="../img/social-login.png" alt="social-login" width="125" height="19" /></div>
+			<p>Or sign in using your Cine Buzz member number and password</p>
+			<form>
+			
+				<input type="text" placeholder="Member number" />
+				<input type="text" placeholder="Password" />
+				<input type="submit" class="btn yellow" value="sign in" >
+				
+			</form>
+			<p>Not yet a member? Earn free movies and much more by signing up today!</p>
+			<a class="btn yellow">Sign up for Cine buzz</a>
+		</div>
+		  
+  	<form id="top-ticketing-form" method="get" action="index.php">
+  		<input type="hidden" value="" id="top-ticketing-cinemas" name="top-ticketing-cinemas" />
+  		<input type="hidden" value="" id="top-ticketing-movies" name="top-ticketing-movies" />
+  		<input type="hidden" value="" id="top-ticketing-time" name="top-ticketing-time" />
+  	</form>
+  	
+  	<div class="when-blowout">
+  		
+  		<ul>
+  			<li class="active">Today</li>
+  			<li>Tomorrow March 20</li>
+  			<li>Wednesday March 21</li>  			
+  			<li>Thursday March 22</li>  			
+  			<li>Friday March 23</li>  			
+  			<li>Saturday March 24</li>  			  			  		
+  			<li>Sunday March 25</li>  			  			  		
+  			<li>Monday March 26</li>  			  			  		
+  		
+  		</ul>  
+  		<p>You can always change the date later.</p>
+  	</div>
+  	<div class="what-blowout">
+  		
+  		<ul class="head">
+  		
+  			<li class="active"><a>Now showing</a></li>
+	  		<li><a>Advanced tickets</a></li>
+	  		<li><a>Alternate content</a></li>
+  		
+  		</ul>
+  		<ul class="filters">
+  			<li>
+  				<input name="goldclass-filter" id="goldclass-filter" type="checkbox">
+  				<label for="goldclass-filter" class="goldclass-logo">Gold Class</label>
+  			</li>
+ 			<li>
+  				<input name="vmax-filter" id="vmax-filter" type="checkbox">
+  				<label for="vmax-filter" class="vmax-logo">Vmax</label>
+  			</li>
+ 			<li>
+  				<input name="three-d-filter" id="three-d-filter" type="checkbox">
+  				<label for="three-d-filter" class="three-d-logo">3D</label>
+  			</li>
+ 			<li class="for-family">
+  				<input name="family-filter" id="family-filter" type="checkbox">
+  				<label for="family-filter">Family</label>
+  			</li>
+  		
+  		</ul>
+  		<div class="clearfix"></div>
+  		<div class="explain"><span class="double-tick"></span>Select multiple movies to compare times</div>
+  		<ul class="movie-overview">
+	  	
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Albert Nobbs</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			
+		  			
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+		  					<p class="title">A few best men</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+		  				<img src="img/movie3.png" alt="movie1" width="105" height="150" />
+		  				<div class="hover">
+		  					<p class="title">John Carter</p>
+		  					<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+		  				<img src="img/movie4.png" alt="movie1" width="105" height="150" />
+		  				<div class="hover">
+		  					<p class="title">Journey 2</p>
+		  					<a href="movie-detail.php">&#8250; more details</a>
+		  					<a href="#">&#8250; view trailer</a>		  				
+		  				</div>
+					</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Hugo</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 2</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 3</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 4</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 5</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 6</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 7</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+						<input type="checkbox">
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+
+
+
+
+		</ul>
+		<div class="bottom">
+			<a class="btn blue done">Done</a>
+		</div>
+	</div>
+  
+  	<div class="where-blowout">
+  		
+  		<ul class="head">
+  			<li class="active"><a>NSW</a></li>
+  			<li><a>ACT</a></li>
+  			<li><a>NT</a></li>
+  			<li><a>QLD</a></li>
+  			<li><a>SA</a></li>
+  			<li><a>VIC</a></li>		  			  			  			  		
+  			<li><a>WA</a></li>  
+			  			  			  			  		
+  		</ul>
+  		<div class="explain"><span class="double-tick"></span>Select multiple cinemas to compare sessions</div>
+  		<div class="columns">
+	  		<div class="column">
+	
+				<span>
+					<input value="Beverly Hills" id="n1" type="checkbox">
+	  				<label for="n1">Beverly Hills</label>
+	  			</span>
+				<span>
+					<input value="Bondi Junction" id="n2" type="checkbox">
+	  				<label for="n2">Bondi Junction</label>
+	  			</span>
+				<span>
+					<input value="Burwood" id="n3" type="checkbox">
+	  				<label for="n3">Burwood</label>
+	  			</span>
+				<span>
+					<input value="Campbelltown" id="n4" type="checkbox">
+	  				<label for="n4">Campbelltown</label>
+	  			</span>
+				<span>
+					<input value="Castle Hill" id="n5" type="checkbox">
+	  				<label for="n5">Castle Hill</label>
+	  			</span>
+				<span>
+					<input value="Coffs Harbour" id="n6" type="checkbox">
+	  				<label for="n6">Coffs Harbour</label>
+	  			</span>
+				<span>
+					<input value="Cronulla" id="n7" type="checkbox">
+	  				<label for="n7">Cronulla</label>
+	  			</span>
+				<span>
+					<input value="George Street" id="n8" type="checkbox">
+	  				<label for="n8">George Street</label>
+	  			</span>
+				<span>
+					<input value="Glendale" id="n9" type="checkbox">
+	  				<label for="n9">Glendale</label>
+	  			</span>
+				<span>
+					<input value="Hornsby" id="n9" type="checkbox">
+	  				<label for="n9">Hornsby</label>
+	  			</span>
+
+	  		
+	  		</div>
+	  		<div class="column">
+				<span>
+					<input value="Hurstville" id="n10" type="checkbox">
+	  				<label for="n10">Hurstville</label>
+	  			</span>
+				<span>
+					<input value="Lismore" id="n11" type="checkbox">
+	  				<label for="n11">Lismore</label>
+	  			</span>
+				<span>
+					<input value="Liverpool" id="n12" type="checkbox">
+	  				<label for="n12">Liverpool</label>
+	  			</span>
+				<span>
+					<input value="Macquarie" id="n13" type="checkbox">
+	  				<label for="n13">Macquarie</label>
+	  			</span>
+				<span>
+					<input value="Miranda" id="n14" type="checkbox">
+	  				<label for="n14">Miranda</label>
+	  			</span>
+				<span>
+					<input value="Parramatta" id="n15" type="checkbox">
+	  				<label for="n15">Parramatta</label>
+	  			</span>
+				<span>
+					<input value="Shellharbour" id="n16" type="checkbox">
+	  				<label for="n16">Shellharbour</label>
+	  			</span>
+				<span>
+					<input value="Top Ryde City" id="n17" type="checkbox">
+	  				<label for="n17">Top Ryde City</label>
+	  			</span>
+				<span>
+					<input value="Tuggerah" id="n18" type="checkbox">
+	  				<label for="n18">Tuggerah</label>
+	  			</span>
+				<span>
+					<input value="Parramatta" id="n19" type="checkbox">
+	  				<label for="n19">Parramatta</label>
+	  			</span>	
+	  		
+	  		</div>
+			<div class="clearfix"></div>
+		</div>  
+		
+		<div class="bottom">
+			<div class="remember-selection">
+				<input type="checkbox" checked="checked">
+	  			<label>Remember my selection</label>
+	  		</div>
+			<a class="btn blue done">Done</a>
+		</div>
+			
+  	</div>	  
+		
+	</header>
+	
+  	<div id="wrapper">
+	
+	<div id="main" role="main" class="home">	
+	
+		  <nav>
+			
+	<a href="index.php"><img class="logo" src="img/ec-logo.png" /></a>
+	<div class="expand"><span></span></div>
+	<span class="wrap">
+		<ul>
+			<li class="home"><a href="index.php">Home</a></li>
+			<li ><a href="movies.php">Movies</a></li>
+			<li><a href="#">Alternate content</a></li>
+			<li><a href="#">Cinemas</a></li>
+			<li><a href="#">Advanced Tickets</a></li>
+			<li><a href="#">Premium Cinema</a></li>					
+			<li><a href="#">Events & Promotions</a></li>					
+			<li><a href="#">Member programs</a></li>							
+		</ul>
+		<form class="search-form">
+			<input class="search" type="text" placeholder="Film, Actor, etc.. "/>
+			<input class="red-search-btn" type="submit" value="" />
+		</form>
+	</span>
+  </nav>
+		  
+		 
+		 
+		  <div class="home-items">
+		  	
+		  	<div id="slider" class="animate">
+		  		<div class="opaque-background"></div>
+		  		<ul class="top">
+		  			<li class="active">Now showing</li>
+		  			<li>Coming soon</li>
+		  			<li>Advanced tickets</li>
+		  		</ul>
+		  		<span class="arrow-left">&#8249;</span>
+		  		<span class="arrow-right">&#8250;</span>
+		  		<div class="items">
+		  			
+		  			<a href="#" class="active">
+		  				<img src="img/hp_bck/avengers-thumb.jpg" skin="avengers-skin.jpg" skin-title="avengers-title.png" btn-title="Find times and book" alt="avengers-thumb" width="156" height="80" />
+		  				<p>The Avengers</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Prometheus</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/americanpie-thumb.jpg" skin="americanpie-skin.jpg" skin-title="americanpie-title.png" btn-title="find times and book" alt="batman-thumb" width="156" height="80" />
+		  				<p>American Pie Reunion</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/theluckyone-thumb.jpg" skin="theluckyone-skin.jpg" skin-title="theluckyone-title.png" align-title="left" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>The Lucky One</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/americanpie-thumb.jpg" skin="snowwhite-skin.jpg" skin-title="snowwhite-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>Snow White and the Huntsman</p>
+		  			</a>		  			
+		  			<a href="#">
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Prometheus</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/batman-thumb.jpg" skin="batman-skin.jpg" skin-title="batman-title.png" btn-title="advanced tickets" alt="batman-thumb" width="156" height="80" />
+		  				<p>Dark Night Rises</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+		  				<p>Prometheus</p>
+		  			</a>
+		  			<a href="#">
+		  				<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+		  				<p>The Lorax</p>
+		  			</a>		
+		  			
+		  					  		
+		  		</div>
+		  		
+		  	</div>
+		  	
+		  	<div id="premium-cinema-box">
+		  		<div class="opaque-background"></div>
+	  			<ul class="top">
+		  			<li class="active"><a class="goldclass-logo">Gold Class</a></li>
+		  			<li><a class="vmax-logo-small">Vmax</a></li>
+		  		</ul>
+		  		
+		  		<div class="items">
+		  		
+		  			<a href="#">
+		  				<div class="opaque-strip"></div>
+		  				<img src="img/gold-class-thumb.jpg" alt="gold-class-thumb" width="290" height="78" />
+		  				<span class="title">Movies as they should be &#8250;</span>
+						<p>What's showing in Gold Class? Find out here </p>
+		  			</a>
+		  		
+		  		
+		  		</div>
+		  	
+		  	</div>
+		  	<div class="clearfix"></div>
+		  	
+		  	<div id="ads">
+		  	
+		  		<div class="ad half"><img src="img/AHL-02-ad-spaces-1.jpg" alt="AHL-02-ad-spaces-1" /></div>
+		  		<div class="ad full"><img src="img/sample-ad.jpg" alt="sample-ad" /></div>
+		  		<div class="ad full"><img src="img/sample-ad.jpg" alt="sample-ad" /></div>
+		  		<div class="ad half"><img src="img/AHL-02-ad-spaces-2.jpg" alt="AHL-02-ad-spaces-2" /></div>
+
+		  		<div class="clearfix"></div>
+		  	</div>
+		  </div>
+	  	  <!-- end home items -->
+	  	  
+	  </div> <!-- end main -->
+	  
+	  	<div class="call-to-action">
+			<img id="takeover-title" src="img/hp_bck/avengers-title.png" />
+			
+			<div class="clearfix"></div>
+			<div class="button-wrapper">
+				<div class="grey-buttons">
+					<a class="btn grey" href="movie-detail.php">Details</a>
+					<a class="btn grey poptrailer">Trailer</a>
+				</div>
+				<a class="btn blue find-times-and-book" href="#">Find times and book</a>
+			</div>
+			<div class="clearfix"></div>
+			
+<!-- 			<img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
+			
+		</div>	  
+
+ </div><!-- end wrapper -->
+
+  <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers-skin.jpg" /></div>
+
+
+
+  <div id="trailer">
+  	<a class="close"></a>
+  	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
+  	<div class="info">
+  		<img src="img/the-avengers-poster.jpg" alt="the-avengers-poster"  />
+  		<a class="btn blue" href="#">find times and book</a>
+  		<div class="synopsis">
+	  		<h3>Movie Info</h3>
+  			<p><strong>Director</strong> Joss Whedon</p>
+  			<p><strong>Starring</strong> Robert Downey Jr., Chris Evans, Mark Ruffalo, Scarlett Johansson</p>
+  			<p><strong>Running time</strong> 142 min</p>
+  		</div>
+  	</div>
+  	<div class="clearfix"></div>	
+  </div>
+  <div id="cover"></div>
+
+
+    <footer class="footer-home">
+    	<div class="footer-wrapper">
+	    	<span class="copyright">&copy; 2012 EVENT CINEMAS</span>
+	    	<ul class="footer-nav">
+	    		<li><a href="#">Gift Shop</a></li>
+	    		<li><a href="#">Corporate sales</a></li>
+	    		<li><a href="#">Event TV</a></li>
+	    		<li><a href="#">Customer service</a></li>
+	    		<li><a href="#">FAQ</a></li>
+	    		<li><a href="#">Careers</a></li>
+	    		<li><a href="#">Terms of use</a></li>
+	    	</ul>
+	    	<div class="right">
+	    		<ul>
+	    			<li><span class="mobile"></span>Download our mobile apps</li>
+	    			<li><span class="share"></span>Share</li>    		
+	    			<li class="social"><img src="img/social-icons.png" alt="social-icons" width="77" height="24" /></li>    		
+	    		</ul>
+	    	</div>
+    	</div>
+    </footer>  
+    <script>var currentMovie = "";</script>
+  
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <script src="js/libs/hoverIntent.js"></script>    
+  <script src="js/libs/jquery.cookie.js"></script>
+
+  <script src="js/functions.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
