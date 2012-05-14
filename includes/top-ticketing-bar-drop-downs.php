@@ -31,7 +31,7 @@
   		</ul>
   		<ul class="filters">
   			<li>
-  				<input name="goldclass-filter" id="goldclass-filter" type="checkbox">
+  				<span class="checkbox"></span>
   				<label for="goldclass-filter" class="goldclass-logo">Gold Class</label>
   			</li>
  			<li>
@@ -64,7 +64,7 @@
 			  			</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  		</span>
@@ -85,7 +85,7 @@
 		  			
 		  			
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -105,7 +105,7 @@
 		  				</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -125,7 +125,7 @@
 		  				</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -145,7 +145,7 @@
 		  				</div>
 					</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -165,7 +165,7 @@
 		  			</div>
 
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -185,7 +185,7 @@
 		  			</div>
 
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -206,7 +206,7 @@
 		  			</div>
 
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -227,7 +227,7 @@
 		  			</div>
 
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -247,7 +247,7 @@
 			  			</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -267,7 +267,7 @@
 			  			</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -286,7 +286,7 @@
 			  			</div>
 		  			</div>
 		  			<div class="select">
-						<input type="checkbox">
+		  				<div class="checkbox"></div>
 	  					<label>Select movie</label>
 		  			</div>
 		  			
@@ -320,43 +320,43 @@
 	  		<div class="column">
 	
 				<span>
-					<input value="Beverly Hills" id="n1" type="checkbox">
+	  				<div class="checkbox" value="Beverly Hills"></div>	  						
 	  				<label for="n1">Beverly Hills</label>
 	  			</span>
 				<span>
-					<input value="Bondi Junction" id="n2" type="checkbox">
+	  				<div class="checkbox" value="Bondi Junction"></div>
 	  				<label for="n2">Bondi Junction</label>
 	  			</span>
 				<span>
-					<input value="Burwood" id="n3" type="checkbox">
+	  				<div class="checkbox" value="Burwood"></div>
 	  				<label for="n3">Burwood</label>
 	  			</span>
 				<span>
-					<input value="Campbelltown" id="n4" type="checkbox">
+	  				<div class="checkbox" value="Campbelltown"></div>
 	  				<label for="n4">Campbelltown</label>
 	  			</span>
 				<span>
-					<input value="Castle Hill" id="n5" type="checkbox">
+	  				<div class="checkbox" value="Castle Hill"></div>
 	  				<label for="n5">Castle Hill</label>
 	  			</span>
 				<span>
-					<input value="Coffs Harbour" id="n6" type="checkbox">
+	  				<div class="checkbox" value="Coffs Harbour"></div>
 	  				<label for="n6">Coffs Harbour</label>
 	  			</span>
 				<span>
-					<input value="Cronulla" id="n7" type="checkbox">
+	  				<div class="checkbox" value="Cronulla"></div>
 	  				<label for="n7">Cronulla</label>
 	  			</span>
 				<span>
-					<input value="George Street" id="n8" type="checkbox">
+	  				<div class="checkbox" value="George Street"></div>
 	  				<label for="n8">George Street</label>
 	  			</span>
 				<span>
-					<input value="Glendale" id="n9" type="checkbox">
+	  				<div class="checkbox" value="Glendale"></div>
 	  				<label for="n9">Glendale</label>
 	  			</span>
 				<span>
-					<input value="Hornsby" id="n9" type="checkbox">
+	  				<div class="checkbox" value="Hornsby"></div>
 	  				<label for="n9">Hornsby</label>
 	  			</span>
 
@@ -364,43 +364,43 @@
 	  		</div>
 	  		<div class="column">
 				<span>
-					<input value="Hurstville" id="n10" type="checkbox">
+	  				<div class="checkbox" value="Hurstville"></div>
 	  				<label for="n10">Hurstville</label>
 	  			</span>
 				<span>
-					<input value="Lismore" id="n11" type="checkbox">
+	  				<div class="checkbox" value="Lismore"></div>
 	  				<label for="n11">Lismore</label>
 	  			</span>
 				<span>
-					<input value="Liverpool" id="n12" type="checkbox">
+	  				<div class="checkbox" value="Liverpool"></div>
 	  				<label for="n12">Liverpool</label>
 	  			</span>
 				<span>
-					<input value="Macquarie" id="n13" type="checkbox">
+	  				<div class="checkbox" value="Macquarie"></div>
 	  				<label for="n13">Macquarie</label>
 	  			</span>
 				<span>
-					<input value="Miranda" id="n14" type="checkbox">
+	  				<div class="checkbox" value="Miranda"></div>
 	  				<label for="n14">Miranda</label>
 	  			</span>
 				<span>
-					<input value="Parramatta" id="n15" type="checkbox">
+	  				<div class="checkbox" value="Parramatta"></div>
 	  				<label for="n15">Parramatta</label>
 	  			</span>
 				<span>
-					<input value="Shellharbour" id="n16" type="checkbox">
+	  				<div class="checkbox" value="Shellharbour"></div>
 	  				<label for="n16">Shellharbour</label>
 	  			</span>
 				<span>
-					<input value="Top Ryde City" id="n17" type="checkbox">
+	  				<div class="checkbox" value="Beverly Hills"></div>
 	  				<label for="n17">Top Ryde City</label>
 	  			</span>
 				<span>
-					<input value="Tuggerah" id="n18" type="checkbox">
+	  				<div class="checkbox" value="Tuggerah"></div>
 	  				<label for="n18">Tuggerah</label>
 	  			</span>
 				<span>
-					<input value="Parramatta" id="n19" type="checkbox">
+	  				<div class="checkbox" value="Parramatta"></div>
 	  				<label for="n19">Parramatta</label>
 	  			</span>	
 	  		
@@ -410,7 +410,7 @@
 		
 		<div class="bottom">
 			<div class="remember-selection">
-				<input type="checkbox" checked="checked">
+				<div class="checkbox checked"></div>
 	  			<label>Remember my selection</label>
 	  		</div>
 			<a class="btn blue done">Done</a>

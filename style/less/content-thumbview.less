@@ -33,8 +33,7 @@ ul.movie-overview {
 		&.active {
 		
 			.select {
-				background: @light-grey;
-				color: @dark-grey;
+				color: #fff;
 			}
 			
 			img {
@@ -44,9 +43,12 @@ ul.movie-overview {
 					
 			&:hover {
 				.select {
-					.hover-fade(0s);
-					color: @dark-grey;
+					color: #fff;
 				}
+			}
+			.checkbox {
+			
+				background-position: 0px 0px;
 			}
 		}
 		
@@ -60,8 +62,12 @@ ul.movie-overview {
 			text-align: center;
 			padding: 5px 0px 5px 0px;
 			background: #000;
-			border: 1px solid @dark-grey;
 			.radius-full(5px);
+			
+			.checkbox {
+			
+				margin-top: -8px;
+			}
 			
 		}
 		a.find-times-and-book {
@@ -80,9 +86,7 @@ ul.movie-overview {
 		&:hover {
 			
 			.select { 
-				.hover-fade(0.5s);	
 				color: #fff;
-				border: 1px solid #fff;
 			}
 
 			img {

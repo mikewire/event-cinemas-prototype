@@ -217,8 +217,14 @@ header {
 	.remember-selection {
 	
 		float: left;
-		width: 200px;
+		width: 240px;
 		margin: 2px 0px 0px 5px;
+		font-size: 16px;
+		
+		.checkbox {
+		
+			margin-top: -4px;
+		}
 	}
 }
 ul.head {
@@ -393,17 +399,33 @@ ul.head {
 			margin: 0px 10px 0px 5px;
 			
 			span {
+				position: relative;
 				cursor: pointer;
 				margin: 3px 0px 8px 0px;
-				background: @dark-grey;
 				padding: 5px 8px;
+				border: 1px solid #000;
 				.radius-full(5px);
 				display: block;
 				
+				&:hover {
+				
+					border: 1px solid @dark-grey;
+					
+				}
+				
 				&.active {
 				
-					background: @light-grey;
-					color: @dark-grey;
+					border: 1px solid @dark-grey;
+					background: @dark-grey;
+					
+					.checkbox {
+					
+						background-position: 0px 0px;
+					}
+				}
+				.checkbox {
+					
+					margin-top: -7px;
 				}
 
 			}

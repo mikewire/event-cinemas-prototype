@@ -6,8 +6,17 @@ $(document).ready(function() {
 //========================================================================================================//
 //============================================ TOP TICKETING WIDGET ======================================//
 //========================================================================================================//
-
 	
+/*
+	$(".checkbox").click(function() {
+		
+		if ($(this).hasClass("checked")) {
+			$(this).removeClass("checked");
+		} else {
+			$(this).addClass("checked");
+		}
+	});
+*/
 	
 	$("#cine-buzz").hover(function() {
 		$("#cine-buzz-blowout").show();
@@ -69,13 +78,11 @@ $(document).ready(function() {
 		
 	});
 	$(".where-blowout span").click(function() {
-		if ($("input",this).is(':checked')) {
-			$("input",this).attr("checked", false);
+		if ($(this).hasClass("active")) {
 			removeByElement(preferred_cinemas, $("label",this).text());
 			$.cookie('preferred_cinemas', preferred_cinemas);
 			$(this).removeClass("active");
 		} else {
-			$("input",this).attr("checked", true);		
 			removeByElement(preferred_cinemas, $("label",this).text());
 			preferred_cinemas.push($("label",this).text());
 			$.cookie('preferred_cinemas', preferred_cinemas);
@@ -99,7 +106,6 @@ $(document).ready(function() {
 	});
 	$(".where-blowout .done").click(function() {
 		hideAllTicketBarBlowouts();
-		console.log($.cookie('preferred_cinemas'));
 		
 	});
 	
@@ -130,12 +136,10 @@ $(document).ready(function() {
 	});
 	$(".what-blowout .movie-overview span").click(function() {
 	
-		if ($("input",this).is(':checked')) {
-			$("input",this).prop("checked", false);
+		if ($(this).hasClass("active")) {
 			removeByElement(selected_movies, $(".title",this).text());
 			$(this).removeClass("active");
 		} else {
-			$("input",this).prop("checked", true);		
 			removeByElement(selected_movies, $(".title",this).text());
 			selected_movies.push($(".title",this).text());
 			$(this).addClass("active");

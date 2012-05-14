@@ -34,7 +34,7 @@ function init() {
 	
 	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
 		
-		$(".where-blowout").find("input[value='"+preferred_cinemas[i]+"']").attr("checked","checked").parent().addClass("active");
+		$(".where-blowout").find(".checkbox[value='"+preferred_cinemas[i]+"']").parent().addClass("active");
 		
 		
 		if ($("#cinema-filters").length > 0) {

@@ -306,6 +306,18 @@ input[type=text]:focus {
   box-shadow: 0 0 7px #C8E0EF;
   outline: none;
 }
+.checkbox {
+  width: 25px;
+  height: 25px;
+  background: url(../../img/checkbox.png) no-repeat 0px -25px;
+  display: block;
+  float: left;
+  margin-right: 0px;
+  cursor: pointer;
+}
+.checkbox.checked {
+  background-position: 0px 0px;
+}
 .mobile {
   width: 22px;
   height: 30px;
@@ -1037,8 +1049,12 @@ header {
 }
 .bottom .remember-selection {
   float: left;
-  width: 200px;
+  width: 240px;
   margin: 2px 0px 0px 5px;
+  font-size: 16px;
+}
+.bottom .remember-selection .checkbox {
+  margin-top: -4px;
 }
 ul.head {
   font-size: 16px;
@@ -1180,18 +1196,28 @@ ul.head li.active a {
   margin: 0px 10px 0px 5px;
 }
 .where-blowout .columns .column span {
+  position: relative;
   cursor: pointer;
   margin: 3px 0px 8px 0px;
-  background: #333333;
   padding: 5px 8px;
+  border: 1px solid #000;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   display: block;
 }
+.where-blowout .columns .column span:hover {
+  border: 1px solid #333333;
+}
 .where-blowout .columns .column span.active {
-  background: #dfdfdf;
-  color: #333333;
+  border: 1px solid #333333;
+  background: #333333;
+}
+.where-blowout .columns .column span.active .checkbox {
+  background-position: 0px 0px;
+}
+.where-blowout .columns .column span .checkbox {
+  margin-top: -7px;
 }
 .where-blowout.in-the-middle {
   top: 100px;
@@ -2199,8 +2225,7 @@ ul.movie-overview li span .image-wrapper {
   top: 0px;
 }
 ul.movie-overview li span.active .select {
-  background: #dfdfdf;
-  color: #333333;
+  color: #fff;
 }
 ul.movie-overview li span.active img {
   /* IE 8 */
@@ -2220,12 +2245,10 @@ ul.movie-overview li span.active img {
   opacity: 1;
 }
 ul.movie-overview li span.active:hover .select {
-  -webkit-transition: All 0s ease;
-  -moz-transition: All 0s ease;
-  -o-transition: All 0s ease;
-  -ms-transition: All 0s ease;
-  transition: All 0s ease;
-  color: #333333;
+  color: #fff;
+}
+ul.movie-overview li span.active .checkbox {
+  background-position: 0px 0px;
 }
 ul.movie-overview li span .select {
   position: absolute;
@@ -2236,10 +2259,12 @@ ul.movie-overview li span .select {
   text-align: center;
   padding: 5px 0px 5px 0px;
   background: #000;
-  border: 1px solid #333333;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+ul.movie-overview li span .select .checkbox {
+  margin-top: -8px;
 }
 ul.movie-overview li span a.find-times-and-book {
   position: absolute;
@@ -2252,13 +2277,7 @@ ul.movie-overview li span a.find-times-and-book.active {
   color: white;
 }
 ul.movie-overview li span:hover .select {
-  -webkit-transition: All 0.5s ease;
-  -moz-transition: All 0.5s ease;
-  -o-transition: All 0.5s ease;
-  -ms-transition: All 0.5s ease;
-  transition: All 0.5s ease;
   color: #fff;
-  border: 1px solid #fff;
 }
 ul.movie-overview li span:hover img {
   /* IE 8 */
