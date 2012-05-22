@@ -18,6 +18,15 @@ $(document).ready(function() {
 	});
 */
 	
+	$(".filters li").live("click",function() {
+		if ($(this).hasClass("active")) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+		alert("AJAX update results");
+	});
+
 	$("#cine-buzz").hover(function() {
 		$("#cine-buzz-blowout").show();
 		
@@ -68,7 +77,7 @@ $(document).ready(function() {
 			$("#cover").show();
 			TicketBarZIndex(9999);
 			$(this).addClass("active");
-			$(".where-blowout").show(); 
+			$(".where-blowout").removeClass("in-the-middle").show(); 
 			$("#what").removeClass("active");
 			$(".what-blowout").hide(); 
 			$("#when").removeClass("active");
@@ -207,7 +216,7 @@ $(document).ready(function() {
 		hideAllTicketBarBlowouts();
 	});
 
-});
+
 
 
 
@@ -281,6 +290,15 @@ $(document).ready(function() {
 //========================================================================================================//
 
 
+	$(".filter-element span").live("click",function() {
+		if ($(this).hasClass("active")) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+		alert("AJAX update results");
+	});
+	
 	$(".set-preferred-cinemas").live("click", function() {
 	
 		$("#cover").show();
@@ -351,6 +369,7 @@ $(document).ready(function() {
 		
 		$(this).parent().find(".active").removeClass("active");
 		$(this).addClass("active");
+		alert("AJAX update");
 	});
 	
 	// If the quick times widget was opened by mouseover, get rid of it again upon mouseleave
@@ -459,6 +478,56 @@ $(document).ready(function() {
 	
 	});
 	
+
+//========================================================================================================//
+//============================================ CINEMAS ===================================================//
+//========================================================================================================//
+
+
+	// Trailer lightbox will open upon click off all links / buttons with this class
+	
+	$(".block .strip").click(function() {
+	
+		if ($("span",this).hasClass("open")) {
+			$("span",this).removeClass("open").addClass("closed");
+			$(this).siblings(".content").hide();
+			
+		} else {
+		
+			$("span",this).removeClass("closed").addClass("open");
+			$(this).siblings(".content").show();
+		
+		}		
+	
+	});
+	
+	// These two events cause the trailer lightbox to close
+	
+	$("#trailer .close").click(function() {
+
+		closeTrailer();
+	});
+	$("#cover").click(function() {
+	
+		closeTrailer();
+	
+	});
+	
+	$(".cinema-promo-slider").cycle({
+		fx:     'fade', 
+		speed: 	1000,
+		timeout: 4000,
+	    next:   '.arrow-right', 
+	    prev:   '.arrow-left',
+	    cleartype:  1,
+		cleartypeNoBg: 1 
+	});
+});
+
+
+
+
+
 
 
 

@@ -694,15 +694,15 @@
 					<span class="strip"><h4>Show movies by experience</h4></span>
 					<div class="wrap">
 			 			<span>
-			  				<input name="goldclass-filter2" id="goldclass-filter2" type="checkbox">
+			  				<div class="checkbox" value="goldclass"></div>
 			  				<label for="goldclass-filter2" class="goldclass-logo">Gold Class</label>
 			  			</span>
 			 			<span>
-			  				<input name="vmax-filter2" id="vmax-filter2" type="checkbox">
+			  				<div class="checkbox" value="vmax"></div>
 			  				<label for="vmax-filter2" class="vmax-logo">Vmax</label>
 			  			</span>
 			 			<span>
-			  				<input name="three-d-filter2" id="three-d-filter2" type="checkbox">
+			  				<div class="checkbox" value="three-d"></div>
 			  				<label for="three-d-filter2" class="three-d-logo">3D</label>
 			  			</span>
 			  			<div class="clearfix"></div>
@@ -715,46 +715,46 @@
 				  		<div class="column">
 				
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 						</div>
 				  		<div class="column">
 				
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 							<span>
-								<input value="drama" id="drama" type="checkbox">
+								<div class="checkbox" value="drama"></div>
 				  				<label for="drama">Drama</label>
 				  			</span>
 						</div>

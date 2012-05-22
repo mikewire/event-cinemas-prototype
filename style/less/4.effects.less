@@ -22,7 +22,18 @@
 	border-bottom: @size solid @color;
 
 }
+.arrow-right(@size, @color) {
 
+
+	float: right;
+	width: 0;
+	height: 0;
+	border-top: @size solid transparent;
+	border-bottom: @size solid transparent;
+
+	border-left: @size solid @color;
+
+}
 .background-fade {
   -webkit-transition: background-color 100ms linear;
   -moz-transition: background-color 100ms linear;

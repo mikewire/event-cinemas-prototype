@@ -31,19 +31,19 @@
   		</ul>
   		<ul class="filters">
   			<li>
-  				<span class="checkbox"></span>
+  				<div class="checkbox"></div>
   				<label for="goldclass-filter" class="goldclass-logo">Gold Class</label>
   			</li>
  			<li>
-  				<input name="vmax-filter" id="vmax-filter" type="checkbox">
+  				<div class="checkbox"></div>
   				<label for="vmax-filter" class="vmax-logo">Vmax</label>
   			</li>
  			<li>
-  				<input name="three-d-filter" id="three-d-filter" type="checkbox">
+  				<div class="checkbox"></div>
   				<label for="three-d-filter" class="three-d-logo">3D</label>
   			</li>
  			<li class="for-family">
-  				<input name="family-filter" id="family-filter" type="checkbox">
+  				<div class="checkbox"></div>
   				<label for="family-filter">Family</label>
   			</li>
   		

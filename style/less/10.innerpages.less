@@ -1,0 +1,174 @@
+.innerpage {
+
+	width: 1120px;
+
+	.left {
+		border: 1px solid @dark-grey;
+		background: black;
+		width: 878px;
+		float: left;
+		padding: 0px 0px;
+		margin-bottom: 200px;
+	}
+
+	.right {
+		border: 1px solid @dark-grey;
+		background: black;
+		width: 230px;
+		float: right;
+		
+		.search-form {
+		
+			position: relative;
+			width: 160px;
+			margin: 10px 0px;
+			
+			.search {
+			
+				font-size: 13px;
+			}
+		}
+	
+		
+		.filter-element {
+		
+			margin-bottom: 20px;
+			h4 {
+				padding: 4px 0px 4px 10px;
+			
+			}
+			.strip {
+			
+				margin-bottom: 10px;
+			}			
+			span {
+			
+				display: block;
+				clear: both;
+				
+				margin-bottom: 6px;
+				.checkbox {
+					margin: -6px 0px 0px 0px;
+				}
+				
+				label {
+				}
+				
+				&.active {
+				
+					.checkbox {
+					
+						background-position: 0px 0px;
+					}
+				}
+	
+			}	
+			
+			.goldclass-logo {
+			
+				margin-bottom: 10px;
+			}		
+			.vmax-logo {
+			
+				margin-bottom: 5px;
+			}
+			
+			.column {
+			
+				width: 100px;
+				float: left;
+			}
+			
+		}
+		#experience-filters {
+		
+			
+			span {
+			
+			
+				label, input {
+				
+					float: left;
+				}
+				input {
+				
+					margin-right: 5px;
+				}
+			}
+		}
+		ol {
+		
+			margin-left: 15px;
+		}				
+	
+	}
+}
+
+.wrap {
+
+	padding: 0px 10px;
+}
+
+
+.strip {
+	margin: 0px;
+	width: 100%;
+	display: block;
+	.gradient(#282526,#4c4c4e);
+}
+h1 {
+	margin: 0px 0px 4px 10px;
+	padding-top: 4px;
+
+}
+h2 {
+
+	padding: 7px 0px 7px 0px;
+	margin: 0px 0px 4px 10px;
+}
+.subnav {
+
+	list-style: none;
+	float: left;
+	width: 410px;
+	
+	li {
+		cursor: pointer;
+		display: block;
+		float: left;
+		text-transform: uppercase;
+		color: white;
+		
+		&.active {
+		
+			color: red;
+		}
+		
+		&::after {
+			margin: 0px 10px;
+			content: "|";
+			color: white;
+		}
+		&:last-child {
+		
+			&::after {
+				margin: 0px 0px;
+				content: "";
+			}
+		}
+	}
+}
+
+.tools {
+
+	margin-top: 12px;
+	float: right;
+	dt,select,label,dl {
+	
+		float: left;
+		margin-left: 5px;
+	}
+	select {
+		margin-right: 5px;
+	}
+}

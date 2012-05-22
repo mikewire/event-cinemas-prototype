@@ -39,7 +39,7 @@ function init() {
 		
 		if ($("#cinema-filters").length > 0) {
 			if (preferred_cinemas[i] != "") {
-			$("#cinema-filters").prepend("<span><input value='"+preferred_cinemas[i]+"' id='"+preferred_cinemas[i]+"filter' type='checkbox'> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
+				$("#cinema-filters").prepend("<span><div class='checkbox' value='"+preferred_cinemas[i]+"'></div> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
 			}
 		}
 	

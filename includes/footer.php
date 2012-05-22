@@ -62,7 +62,8 @@ if ($currentFile == "index.php") {
   <script src="js/libs/jquery-1.7.1.min.js"></script>
   <script src="js/libs/hoverIntent.js"></script>    
   <script src="js/libs/jquery.cookie.js"></script>
-
+  <script src="js/libs/jquery.cycle.js"></script>
+  
   <script src="js/functions.js"></script>
   <script src="js/script.js"></script>
 </body>

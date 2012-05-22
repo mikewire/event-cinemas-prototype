@@ -66,9 +66,6 @@ header {
 			}
 			.star {
 			
-				width: 17px;
-				height: 16px;
-				background: url(../../img/star.png);
 				float: left;
 				margin-right: 5px;
 			}
@@ -268,6 +265,47 @@ ul.head {
 		}
 	}
 }
+ul.filters {
+	
+	width: 710px;
+	height: 25px;
+	list-style: none;
+	margin-left: 10px;
+	
+	li {
+	
+		display: block;
+		float: left;
+		margin-right: 30px;
+		.checkbox {
+			
+			float: left;
+			margin: -5px 5px 0px 0px;
+			
+		}
+		label {
+			text-indent: -9999px;
+			float: left;
+		}
+		&.for-family {
+		
+			label {
+			
+				text-indent: 0px;
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+		&.active {
+		
+			.checkbox {
+			
+				background-position: 0px 0px;
+
+			}
+		}
+	}
+}
 
 .when-blowout {
 	.shadow(1px, 3px, 4px, 0px, #000);
@@ -330,41 +368,6 @@ ul.head {
 	width: 730px;
 	background-color: #000;
 	
-
-	ul.filters {
-		
-		width: 710px;
-		height: 25px;
-		list-style: none;
-		margin-left: 10px;
-		
-		li {
-		
-			display: block;
-			float: left;
-			margin-right: 30px;
-			input {
-				
-				float: left;
-				margin: 5px 5px 0px 0px;
-				
-			}
-			label {
-				text-indent: -9999px;
-				float: left;
-			}
-			&.for-family {
-			
-				label {
-				
-					text-indent: 0px;
-					color: #fff;
-					font-size: 16px;
-				}
-			}
-		}
-	}
-
 }
 .where-blowout {
 	.shadow(1px, 3px, 4px, 0px, #000);

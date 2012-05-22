@@ -7,7 +7,7 @@
 			<li class="home"><a href="index.php">Home</a></li>
 			<li <? if ($currentFile == "movies.php") { ?>class="active"<? } ?>><a href="movies.php">Movies</a></li>
 			<li><a href="#">Alternate content</a></li>
-			<li><a href="#">Cinemas</a></li>
+			<li <? if ($currentFile == "cinemas.php") { ?>class="active"<? } ?>><a href="cinemas.php">Cinemas</a></li>
 			<li><a href="#">Advanced Tickets</a></li>
 			<li><a href="#">Premium Cinema</a></li>					
 			<li><a href="#">Events & Promotions</a></li>					
