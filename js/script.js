@@ -522,7 +522,38 @@ $(document).ready(function() {
 	    cleartype:  1,
 		cleartypeNoBg: 1 
 	});
+
+
+
+//========================================================================================================//
+//============================================ PREMIUM CINEMA ===================================================//
+//========================================================================================================//
+
+
+	// Trailer lightbox will open upon click off all links / buttons with this class
+	
+	$(".third-nav a").click(function() {
+		var p = $(this).position();
+		
+		$(this).parent().parent().css("z-index","9999");
+		$("#cover").show();
+		$(".overlay").css("top",p.top+145).show();
+			
+	});
+	$(".overlay .close-small").click(function() {
+		$(this).parent().parent().css("z-index","1000");
+	
+		$("#cover").hide();
+		$(".overlay").hide();
+		
+	});
+	
 });
+
+
+
+
+
 
 
 

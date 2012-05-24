@@ -6,15 +6,15 @@
   		
   		<div class="innerpage">
 			<div class="left">
-				<span class="strip"><h1>Movies</h1></span>
+				<span class="strip"><h1>Alternate Content</h1></span>
 				
 				<div class="wrap">
 					<span class="head">
 						
 						<ul class="subnav">
-							<li class="active"><a href="movies.php">Now showing</a></li>
-							<li><a href="coming-soon.php">Coming soon</a></li>
-							<li><a href="advanced-tickets.php">Advanced tickets</a></li>				
+							<li class="active">Now showing</li>
+							<li>Coming soon</li>
+							<li>Advanced tickets</li>				
 						</ul>
 						
 						<div class="tools">

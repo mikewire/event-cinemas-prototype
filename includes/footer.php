@@ -11,8 +11,14 @@ if ($currentFile == "index.php") {
 <?
 } else if ($currentFile == "movie-detail.php") {
 ?>
+
   <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers2.jpeg" /></div>
-<? }?>
+
+<? } else if ($currentFile == "goldclass.php") { ?>
+
+  <div id="background-wrap"><img id="skin" src="img/goldclass-bck.jpg" /></div>
+
+<? } ?>
 
 
   <div id="trailer">

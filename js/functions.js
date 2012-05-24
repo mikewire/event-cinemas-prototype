@@ -240,6 +240,7 @@ function hideAllTicketBarBlowouts() {
 	$(".when-blowout").removeClass("in-the-middle").hide(); 
 	$(".where-blowout .btn").removeClass("wider").text("done");	
 	TicketBarZIndex(4000);
+	$(".overlay").hide();
 	$("#cover").hide();
 }
 

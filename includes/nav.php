@@ -5,11 +5,11 @@
 	<span class="wrap">
 		<ul>
 			<li class="home"><a href="index.php">Home</a></li>
-			<li <? if ($currentFile == "movies.php") { ?>class="active"<? } ?>><a href="movies.php">Movies</a></li>
-			<li><a href="#">Alternate content</a></li>
-			<li <? if ($currentFile == "cinemas.php") { ?>class="active"<? } ?>><a href="cinemas.php">Cinemas</a></li>
-			<li><a href="#">Advanced Tickets</a></li>
-			<li><a href="#">Premium Cinema</a></li>					
+			<li <? if ($currentFile == "movies.php" || $currentFile == "coming-soon.php") { ?>class="active"<? } ?>><a href="movies.php">Movies</a></li>
+			<li <? if ($currentFile == "alternate-content.php") { ?>class="active"<? } ?>><a href="alternate-content.php">Alternate Content</a></li>
+			<li <? if ($currentFile == "cinemas.php" || $currentFile == "cinema-detail.php") { ?>class="active"<? } ?>><a href="cinemas.php">Cinemas</a></li>
+			<li <? if ($currentFile == "advanced-tickets.php") { ?>class="active"<? } ?>><a href="advanced-tickets.php">Advanced Tickets</a></li>
+			<li <? if ($currentFile == "premium-cinema.php") { ?>class="active"<? } ?>><a href="premium-cinema.php">Premium Cinema</a></li>
 			<li><a href="#">Events & Promotions</a></li>					
 			<li><a href="#">Member programs</a></li>							
 		</ul>

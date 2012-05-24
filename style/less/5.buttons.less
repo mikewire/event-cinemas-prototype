@@ -115,7 +115,6 @@
 
 }
 
-
 .blue {
   text-transform: uppercase;
   background: #a6e4ff;
@@ -130,6 +129,23 @@
   &:hover {
 	color: #000;
     .gradient(lighten(#4cc8f2,10%), lighten(#e2f4fd,10%));
+  }
+  
+}
+.gold {
+  text-transform: uppercase;
+  background: #b19062;
+  border: 1px solid #b19062;
+  color: #000;
+  overflow: hidden; 
+  display: block;
+  text-align: center;
+  
+  .gradient(#b19062, #ffffff);   
+  
+  &:hover {
+	color: #000;
+    .gradient(lighten(#b19062,10%), lighten(#fff,10%));
   }
   
 }

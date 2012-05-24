@@ -12,8 +12,8 @@
 					<span class="head">
 						
 						<ul class="subnav">
-							<li class="active"><a href="movies.php">Now showing</a></li>
-							<li><a href="coming-soon.php">Coming soon</a></li>
+							<li><a href="movies.php">Now showing</a></li>
+							<li class="active"><a href="coming-soon.php">Coming soon</a></li>
 							<li><a href="advanced-tickets.php">Advanced tickets</a></li>				
 						</ul>
 						
@@ -21,7 +21,7 @@
 							<label for="sort">Sort by</label>
 							
 							<select id="sort">
-								<option>Most popular first</option>
+								<option>Most recent first</option>
 								<option>Alphabetical</option>
 							</select>		
 							
