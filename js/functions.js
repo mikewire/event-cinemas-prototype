@@ -85,14 +85,14 @@ function initAnimatedSlider() {
 function changeSkin(isHome) {
 	
 	
-	$("#skin").fadeOut(200, function() {
+	$("#background-wrap").fadeOut(200, function() {
 	
-		$("#skin").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin"));
+		$("#background-wrap").css("background","url(img/hp_bck/"+$("#slider.animate a.active img").attr("skin")+") center center fixed");
 	});
-	console.log(isHome);
+	
 	if (isHome) {
 		$(".call-to-action").fadeOut(200);
-		$("#skin").fadeIn(600, function() {
+		$("#background-wrap").fadeIn(600, function() {
 		
 			$(".call-to-action img#takeover-title").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin-title"));
 			if ($("#slider.animate a.active img").attr("align-title") == "left") {
@@ -104,7 +104,7 @@ function changeSkin(isHome) {
 			$(".call-to-action").fadeIn(300);
 		});
 	} else {
-		$("#skin").fadeIn(600);
+		$("#background-wrap").fadeIn(600);
 	}
 }
 function animatedSlider(isHome) {

@@ -6,17 +6,16 @@ if ($currentFile == "index.php") {
 
 ?>
 
-  <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers-skin.jpg" /></div>
+  <div id="background-wrap" style="background: url(img/hp_bck/avengers-skin.jpg) center center fixed;"></div>
 
 <?
 } else if ($currentFile == "movie-detail.php") {
 ?>
-
-  <div id="background-wrap"><img id="skin" src="img/hp_bck/avengers2.jpeg" /></div>
+  <div id="background-wrap" style="background: url(img/hp_bck/avengers2.jpeg) center center fixed;"></div>
 
 <? } else if ($currentFile == "goldclass.php") { ?>
 
-  <div id="background-wrap"><img id="skin" src="img/goldclass-bck.jpg" /></div>
+  <div id="background-wrap" style="background: url(img/goldclass-bck.jpg) center center fixed;"></div>
 
 <? } ?>
 

@@ -17,8 +17,11 @@ $currentFile = $parts[count($parts) - 1];
   <link rel="stylesheet" href="style/css/0.style.css">
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
+<? if ($currentFile == "index.php" || $currentFile == "movie-detail.php" || $currentFile == "goldclass.php") { ?>
 <body>
-  
+<? } else {?>  
+<body class="lights">
+<? } ?>
 	<header>
 	
 		<div id="ticket-bar">

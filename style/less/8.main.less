@@ -39,13 +39,14 @@
 	}	
 	
 }
-#background-wrap {
+/*#background-wrap {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	overflow: hidden;
 	z-index: -1;
+	
 	img#skin {
 		position: absolute;
 		z-index: -1;
@@ -54,6 +55,17 @@
 		.opaque(0);
 	}
 
+}*/
+#background-wrap {
+	position: fixed;
+	top: 0; left:0;
+	background-repeat: no-repeat;	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%; width: 100%;
+	z-index: -1;
 }
 
 #main {
