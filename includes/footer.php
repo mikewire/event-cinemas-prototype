@@ -50,16 +50,21 @@
 	  <script>currentMovie = "The Avengers";</script>
   <? } ?>
 
-
+  <!-- load libs and plugins -->
   <script src="js/libs/jquery-1.7.1.min.js"></script>
   <script src="js/libs/hoverIntent.js"></script>    
   <script src="js/libs/jquery.cookie.js"></script>
   <script src="js/libs/jquery.cycle.js"></script>
   <script src="js/libs/selectivizr-min.js"></script>
-  
   <script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=3_Xx36uDGryegaVqYj0xv4tDB8un6RQjCUNF37_XKEXsn5NK9ienhFHxuAoH98Pccr"></script>
   
+  <!-- load functions and events js -->
   <script src="js/functions.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/ticket-widget.js"></script>
+  <script src="js/home.js"></script>  
+  <script src="js/trailers.js"></script>
+  <script src="js/others.js"></script>  
+
+
 </body>
 </html>

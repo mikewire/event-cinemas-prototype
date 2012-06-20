@@ -14,7 +14,9 @@ $currentFile = $parts[count($parts) - 1];
 
   <title>Event Cinemas</title>
   <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1.0;" />
   <link rel="stylesheet" href="style/css/0.style.css">
+
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <? if ($currentFile == "index.php" || $currentFile == "movie-detail.php" || $currentFile == "goldclass.php") { ?>
@@ -73,7 +75,7 @@ if ($currentFile == "index.php") {
 			<div class="hidden-area"></div>
 			<div class="arrow"></div>
 			<p>Login using your favorite social network</p>
-			<div class="gigya"><img src="../img/social-login.png" alt="social-login" width="125" height="19" /></div>
+			<div class="gigya"><img src="img/social-login.png" alt="social-login" width="125" height="19" /></div>
 			<p>Or sign in using your Cine Buzz member number and password</p>
 			<form>
 			

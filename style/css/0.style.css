@@ -1014,7 +1014,7 @@ header {
   padding: 10px;
   position: absolute;
   top: 63px;
-  right: 0px;
+  right: -5px;
   width: 216px;
   z-index: 9000;
 }
@@ -3174,6 +3174,17 @@ footer .right ul li:hover {
     page-break-after: avoid;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .home-items {
+    top: 800px;
+  }
+  .footer-home {
+    top: 1050px;
+  }
+  .call-to-action {
+    top: 200px;
+  }
+}
 /* iPhone [portrait + landscape] */
 @media only screen and (max-device-width: 480px) {
   #wrapper .call-to-action {
@@ -3704,6 +3715,23 @@ footer .right ul li:hover {
 .ie8 footer {
   top: 850px;
 }
+.ie7 .ie7 header {
+  z-index: 9999;
+}
+.ie7 .where-blowout .bottom {
+  width: 435px;
+  clear: both;
+}
+.ie7 .top li {
+  display: block;
+  float: left;
+}
+.ie7 .call-to-action {
+  text-align: right;
+}
+.ie7 #takeover-title {
+  text-align: right;
+}
 .ie7 #ticket-bar {
   background-color: red;
   width: 860px;
@@ -3766,4 +3794,17 @@ footer .right ul li:hover {
 }
 .ie7 footer {
   top: 850px;
+}
+.ie7 #cine-buzz-blowout .hidden-area,
+.ie8 #cine-buzz-blowout .hidden-area  {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=10))"; 
+  	filter: alpha(opacity = 10));  
+
+}
+.ie7 #cover,
+.ie8 #cover {
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80))"; 
+  	filter: alpha(opacity = 80));  
+
 }

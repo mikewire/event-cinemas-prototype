@@ -1,4 +1,5 @@
-var timer;var dateScroller;
+var timer;
+var dateScroller;
 var selected_movies = new Array();
 var items_shown = 0;
 var items_total = 0;
@@ -9,111 +10,9 @@ var slide_interval = 12000;
 var rememberSkin = "";
 var cookie = "";
 var preferred_cinemas = new Array();
-var share_act = new gigya.socialize.UserAction();
 
-var showFollowBarUI_params=
-{ 
-	containerID: 'shareDiv',
-	iconSize: 25,
-	buttons: [
-	{ 
-		provider: 'facebook',
-		actionURL: 'http://www.facebook.com/EventCinemas',
-		action: 'dialog',
-		iconURL: 'img/fb.png'
-
-	},
-	{ 
-		provider: 'twitter',
-		action: 'dialog',
-		followUsers: 'eVent_cinemas',
-		iconURL: 'img/tw.png'
-	},
-	{
-        provider: 'custom',
-        action: 'window',
-        actionURL: 'http://www.youtube.com/user/eventcinemas',
-		iconURL: 'img/yt.png'
-	}
-	
-	]
-}
-
-
-function init() {
-
-	cookie = $.cookie('preferred_cinemas');
-	if (cookie != null) {
-		preferred_cinemas = cookie.split(/,/); 	
-		removeByElement(preferred_cinemas, "");
-		$("#top-ticketing-cinemas").val(preferred_cinemas);
-	} 	
-	if (preferred_cinemas.length > 1) {
-	
-		$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
-		
-	} else if (preferred_cinemas.length == 1) {
-	
-		$("#where").html("<em class='star'></em>"+preferred_cinemas[0]+"<em class='arrow-down'></em>");
-	
-	} else if (preferred_cinemas.length == 0) {
-	
-		$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
-		$(".find-times-and-book").addClass("set-preferred-cinemas");
-	}
-	
-	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
-		
-		$(".where-blowout").find(".checkbox[value='"+preferred_cinemas[i]+"']").parent().addClass("active");
-		
-		
-		if ($("#cinema-filters").length > 0) {
-			if (preferred_cinemas[i] != "") {
-				$("#cinema-filters").prepend("<span><div class='checkbox' value='"+preferred_cinemas[i]+"'></div> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
-			}
-		}
-	
-	}
-	if (currentMovie != "") {
-	
-		$("#what").html(currentMovie+"<em class='arrow-down'></em>");
-		$("#top-ticketing-movies").val(currentMovie);
-
-	}
-	$("#skin").animate({"opacity":"1"}, 500, function() {});
-	$("#top-ticketing-time").val($(".when-blowout li.active").text());
-	
-	// gigya follow + share init
-	
-	gigya.socialize.showFollowBarUI(showFollowBarUI_params);
-
-	// Setting the Title for sharing
-	share_act.setTitle("Event Cinemas");
-
-	// Adding a Link Back for sharing
-	share_act.setLinkBack("");
-
-	// Setting the Description for sharing
-	share_act.setDescription("");
-
-	// Adding a Media (image) for sharing
-	// share_act.addMediaItem( { 
- 	//   type: 'image',     
- 	//   src: page_picture,   
- 	//   href:    
- 	// });
-
-}
-
-
+// init the animated slider at bottom of homepage 
 function initAnimatedSlider() {
-
-	// set slider to 10s for each slide
-	if ($("#slider.animate").parent().hasClass("home-items")) {
-		timer = setInterval(function() { animatedSlider(true); }, slide_interval);
-	} else {
-		timer = setInterval(function() { animatedSlider(false); }, slide_interval);
-	}
 	
 	// calculate how many items are shown, based on the width of the slider (varies depending on screen res.)
 	items_shown = $("#slider").width() / $(".items a").width();
@@ -127,37 +26,14 @@ function initAnimatedSlider() {
     // calculates how many slides
     total_slides = Math.ceil(items_total / Math.floor(items_shown));
 	
-	/* still need to add automatic scrolling when active slide moves beyond items_shown*/	
-
+	// move slides up one by one, on the slide interval
+	timer = setInterval(function() { animatedSlider(); }, slide_interval);
+	
 }
 
-function changeSkin(isHome) {
+function animatedSlider() {
 	
-	
-	$("#background-wrap").fadeOut(200, function() {
-	
-		$("#background-wrap").css("background-image","url(img/hp_bck/"+$("#slider.animate a.active img").attr("skin")+")");
-	});
-	
-	if (isHome) {
-		$(".call-to-action").fadeOut(200);
-		$("#background-wrap").fadeIn(600, function() {
-		
-			$(".call-to-action img#takeover-title").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin-title"));
-			if ($("#slider.animate a.active img").attr("align-title") == "left") {
-				$(".call-to-action .button-wrapper").css("float",$("#slider.animate a.active img").attr("align-title"));
-			} else {
-				$(".call-to-action .button-wrapper").css("float","right");
-			}
-			$(".call-to-action .btn.blue").text($("#slider.animate a.active img").attr("btn-title"));
-			$(".call-to-action").fadeIn(300);
-		});
-	} else {
-		$("#background-wrap").fadeIn(600);
-	}
-}
-function animatedSlider(isHome) {
-	
+	// if slider reached the end, go back to the start
 	if ($("#slider a.active").nextAll().length == 0) {
 		$("#slider a.active").removeClass("active");
 		$("#slider a:first-child").addClass("active");
@@ -169,18 +45,84 @@ function animatedSlider(isHome) {
 				$("#slider .arrow-right").show();
 			}
 		
-		});		
-	} else {
-		$("#slider a.active").removeClass("active").next().addClass("active");
-		if (Math.floor(items_shown) == $("#slider a.active").prevAll().length) {
+		});
 		
-			//moveSliderRight();
+	} else {
+		
+		// if slider is not the end, set the next thumb to be active
+		$("#slider a.active").removeClass("active").next().addClass("active");
+		
+		// if the division of the previous thumbs and the items shown is zero - move to next slide
+		var div = $("#slider a.active").prevAll().length % Math.floor(items_shown);		
+		if (div == 0) {
+			moveSliderRight();
 		}
 	}
 	
-	changeSkin(isHome);
+	// change the skin to match the next thumbnail
+	changeSkin();
 	
 }
+
+// fade out the current background skin, and load the next active thumb (either animated or on click)
+function changeSkin() {
+	
+	$("#background-wrap").fadeOut(200, function() {
+	
+		// set the background image according to the skin attribute on the thumb image
+		$("#background-wrap").css("background-image","url(img/hp_bck/"+$("#slider.animate a.active img").attr("skin")+")");
+	});
+	
+	$(".call-to-action").fadeOut(200);
+	
+	$("#background-wrap").fadeIn(600, function() {
+	
+		$(".call-to-action img#takeover-title").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin-title"));
+		if ($("#slider.animate a.active img").attr("align-title") == "left") {
+			$(".call-to-action .button-wrapper").css("float",$("#slider.animate a.active img").attr("align-title"));
+		} else {
+			$(".call-to-action .button-wrapper").css("float","right");
+		}
+		$(".call-to-action .btn.blue").text($("#slider.animate a.active img").attr("btn-title"));
+		$(".call-to-action").fadeIn(300);
+	});
+
+}
+function moveSliderRight() {
+
+	$("#slider .items").animate({"left":"-="+slide_amount}, 300, function() {
+	
+		current_slide = current_slide + 1;
+				
+		if (current_slide == total_slides) {
+			$("#slider .arrow-right").hide();
+		}
+		
+		if (!$("#slider .arrow-left").is(":visible")) {
+			$("#slider .arrow-left").show();
+		}
+	});
+
+}
+function moveSliderLeft() {
+
+	$("#slider .items").animate({"left":"+="+slide_amount}, 300, function() {
+	
+		current_slide = current_slide - 1;
+		
+		if (current_slide == 1) {
+			$("#slider .arrow-left").hide();
+		}
+		
+		if (!$("#slider .arrow-right").is(":visible")) {
+			$("#slider .arrow-right").show();
+		}
+	
+	});
+
+}
+
+
 function removeByElement(arrayName,arrayElement) {
 	
 	for ( var i=0; i < arrayName.length; i++ ) { 
@@ -192,25 +134,7 @@ function removeByElement(arrayName,arrayElement) {
 		}
   	} 
 }
-function moveSliderRight() {
 
-	$("#slider .items").animate({"left":"-="+slide_amount}, 300, function() {
-	
-		current_slide = current_slide + 1;
-		
-		console.log(total_slides);
-		
-		if (current_slide == total_slides) {
-			$("#slider .arrow-right").hide();
-		}
-		
-		if (!$("#slider .arrow-left").is(":visible")) {
-			$("#slider .arrow-left").show();
-		}
-	});
-
-
-}
 function closeTrailer() {
  
 	$("#trailer video")[0].pause();
@@ -270,10 +194,7 @@ function showQuickTimesWidget() {
 	}
 
 }
-function emptyFunction() {
-
-
-}
+function emptyFunction() {}
 function TicketBarZIndex(nr) {
 
 	$("#ticket-bar").css("z-index",nr);
