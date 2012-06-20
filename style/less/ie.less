@@ -1,16 +1,160 @@
 .ie9,.ie8,.ie7 {
 	.top,.gallery-items .title,.movie-detail-items .title { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292728, endColorstr=#414042);}
 	footer { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292728, endColorstr=#414042);}
-	.btn.blue { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cc8f2, endColorstr=#e2f4fd);}
-	.btn.grey { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaadb0, endColorstr=#dff1f9);}
 	.btn.yellow { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffdf77, endColorstr=#fcb731);}
 	.btn { border-radius: 0px; }
-	#ticket-bar, #cine-buzz { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@dark-red, endColorstr=#ff0000);}
+	#ticket-bar, #cine-buzz { background: url(../../img/ie_gradient_red.png) repeat-x;}
+	
+	.btn.grey {
+	
+		padding-top: 7px;
+		padding-bottom: 8px;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaadb0, endColorstr=#dff1f9);
+		
+		&:hover {
+			
+			background: #dff1f9;
+			filter: none;
+		}
+	}
+	.btn.blue {
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cc8f2, endColorstr=#e2f4fd);
+		padding-bottom: 8px;
+		&:hover {
+			
+			background: darken(#e2f4fd,10%);
+			filter: none;
+		}
+	}
+	nav ul li a {
+	
+			text-indent: -9999px;
+			background: url(../../img/nav_sprite.png) no-repeat 0px 0px;
+			display: block;
+			height: 19px;
+			margin-bottom: 8px;
+	
+	}
+	li.movies_li {
+	
+		a {
+			width: 75px;
+		
+		} 
+		&.active a {
+		
+			background-position: 0px -20px;
+		}
 
+
+	}	
+	li.alternate_li {
+	
+		a {
+			background-position: -83px 0px;
+			width: 175px;
+		
+		} 
+		&.active a {
+		
+			background-position: -82px -20px;
+		}
+
+
+	}	
+	li.cinemas_li {
+	
+		a {
+			background-position: -271px 0px;
+			width: 80px;
+		
+		} 
+		&.active a {
+		
+			background-position: -271px -20px;
+		}
+
+
+	}	
+	li.advanced-tickets_li {
+	
+		a {
+			background-position: -360px 0px;
+			width: 168px;
+		
+		} 
+		&.active a {
+		
+			background-position: -360px -20px;
+		}
+
+
+	}	
+	li.premium_li {
+	
+		a {
+			background-position: -536px 0px;
+			width: 168px;
+		
+		} 
+		&.active a {
+		
+			background-position: -536px -20px;
+		}
+
+
+	}	
+	li.promos_li {
+	
+		a {
+			background-position: -715px 0px;
+			width: 200px;
+		
+		} 
+		&.active a {
+		
+			background-position: -715px -20px;
+		}
+
+
+	}	
+	li.member_programs_li {
+	
+		a {
+			background-position: -925px 0px;
+			width: 200px;
+			height: 25px;
+		
+		} 
+		&.active a {
+		
+			background-position: -925px -25px;
+		}
+
+
+	}	
 }
+.ie8, .ie7 {
+
+	#wrapper .call-to-action .grey-buttons .grey {
+	
+	}
+	#slider .items a {
 
 
+	}
+}
+.ie8 #background-wrap,
+.ie7 #background-wrap { 
 
+	background-position: top center;
+}
+.ie9 {
+
+	#ticket-bar .ticket-img {
+		
+	}
+}
 
 .ie8 {
 

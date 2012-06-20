@@ -22,6 +22,25 @@ $currentFile = $parts[count($parts) - 1];
 <? } else {?>  
 <body class="lights">
 <? } ?>
+<?
+
+
+if ($currentFile == "index.php") {
+
+?>
+
+  <div id="background-wrap" style="background-image: url(img/hp_bck/avengers-skin.jpg);"></div>
+
+<?
+} else if ($currentFile == "movie-detail.php") {
+?>
+  <div id="background-wrap" style="background-image: url(img/hp_bck/avengers2.jpeg);"></div>
+
+<? } else if ($currentFile == "goldclass.php") { ?>
+
+  <div id="background-wrap" style="background-image: url(img/goldclass-bck.jpg);"></div>
+
+<? } ?>
 	<header>
 	
 		<div id="ticket-bar">

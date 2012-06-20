@@ -9,6 +9,36 @@ var slide_interval = 12000;
 var rememberSkin = "";
 var cookie = "";
 var preferred_cinemas = new Array();
+var share_act = new gigya.socialize.UserAction();
+
+var showFollowBarUI_params=
+{ 
+	containerID: 'shareDiv',
+	iconSize: 25,
+	buttons: [
+	{ 
+		provider: 'facebook',
+		actionURL: 'http://www.facebook.com/EventCinemas',
+		action: 'dialog',
+		iconURL: 'img/fb.png'
+
+	},
+	{ 
+		provider: 'twitter',
+		action: 'dialog',
+		followUsers: 'eVent_cinemas',
+		iconURL: 'img/tw.png'
+	},
+	{
+        provider: 'custom',
+        action: 'window',
+        actionURL: 'http://www.youtube.com/user/eventcinemas',
+		iconURL: 'img/yt.png'
+	}
+	
+	]
+}
+
 
 function init() {
 
@@ -53,6 +83,25 @@ function init() {
 	$("#skin").animate({"opacity":"1"}, 500, function() {});
 	$("#top-ticketing-time").val($(".when-blowout li.active").text());
 	
+	// gigya follow + share init
+	
+	gigya.socialize.showFollowBarUI(showFollowBarUI_params);
+
+	// Setting the Title for sharing
+	share_act.setTitle("Event Cinemas");
+
+	// Adding a Link Back for sharing
+	share_act.setLinkBack("");
+
+	// Setting the Description for sharing
+	share_act.setDescription("");
+
+	// Adding a Media (image) for sharing
+	// share_act.addMediaItem( { 
+ 	//   type: 'image',     
+ 	//   src: page_picture,   
+ 	//   href:    
+ 	// });
 
 }
 
@@ -87,7 +136,7 @@ function changeSkin(isHome) {
 	
 	$("#background-wrap").fadeOut(200, function() {
 	
-		$("#background-wrap").css("background","url(img/hp_bck/"+$("#slider.animate a.active img").attr("skin")+") center center fixed");
+		$("#background-wrap").css("background-image","url(img/hp_bck/"+$("#slider.animate a.active img").attr("skin")+")");
 	});
 	
 	if (isHome) {

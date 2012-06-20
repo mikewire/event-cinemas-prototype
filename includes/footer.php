@@ -1,24 +1,4 @@
  </div><!-- end wrapper -->
-<?
-
-
-if ($currentFile == "index.php") {
-
-?>
-
-  <div id="background-wrap" style="background: url(img/hp_bck/avengers-skin.jpg) center center fixed;"></div>
-
-<?
-} else if ($currentFile == "movie-detail.php") {
-?>
-  <div id="background-wrap" style="background: url(img/hp_bck/avengers2.jpeg) center center fixed;"></div>
-
-<? } else if ($currentFile == "goldclass.php") { ?>
-
-  <div id="background-wrap" style="background: url(img/goldclass-bck.jpg) center center fixed;"></div>
-
-<? } ?>
-
 
   <div id="trailer">
   	<a class="close"></a>
@@ -52,22 +32,32 @@ if ($currentFile == "index.php") {
 	    	</ul>
 	    	<div class="right">
 	    		<ul>
-	    			<li><span class="mobile"></span>Download our mobile apps</li>
-	    			<li><span class="share"></span>Share</li>    		
-	    			<li class="social"><img src="img/social-icons.png" alt="social-icons" width="77" height="24" /></li>    		
+	    			<li><a><span class="mobile"></span>Download our mobile apps</a></li>
+	    			<li class="share_li"><a><span class="share"></span>Share</a></li>    		
+	    			<li class="social">
+
+						<div id="shareDiv"></div>
+	    			
+	    			</li>    		
 	    		</ul>
 	    	</div>
     	</div>
     </footer>  
+
+    
     <script>var currentMovie = "";</script>
   <? if ($currentFile == "movie-detail.php") { ?>
 	  <script>currentMovie = "The Avengers";</script>
   <? } ?>
 
+
   <script src="js/libs/jquery-1.7.1.min.js"></script>
   <script src="js/libs/hoverIntent.js"></script>    
   <script src="js/libs/jquery.cookie.js"></script>
   <script src="js/libs/jquery.cycle.js"></script>
+  <script src="js/libs/selectivizr-min.js"></script>
+  
+  <script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=3_Xx36uDGryegaVqYj0xv4tDB8un6RQjCUNF37_XKEXsn5NK9ienhFHxuAoH98Pccr"></script>
   
   <script src="js/functions.js"></script>
   <script src="js/script.js"></script>
