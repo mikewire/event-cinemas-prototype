@@ -19,7 +19,7 @@ $currentFile = $parts[count($parts) - 1];
 
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
-<? if ($currentFile == "index.php" || $currentFile == "movie-detail.php" || $currentFile == "goldclass.php") { ?>
+<? if ($currentFile == "index.php" || $currentFile == "movie-detail.php" || $currentFile == "goldclass.php" || $currentFile == "movie-detail-gallery.php") { ?>
 <body>
 <? } else {?>  
 <body class="lights">
@@ -37,6 +37,12 @@ if ($currentFile == "index.php") {
 } else if ($currentFile == "movie-detail.php") {
 ?>
   <div id="background-wrap" style="background-image: url(img/hp_bck/avengers2.jpeg);"></div>
+
+
+<? } else if ($currentFile == "movie-detail-gallery.php") { ?>
+
+  <div id="background-wrap" style="background-image: url(img/hp_bck/avengers1.jpeg);"></div>
+
 
 <? } else if ($currentFile == "goldclass.php") { ?>
 

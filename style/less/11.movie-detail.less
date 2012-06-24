@@ -41,7 +41,6 @@
 	}
 	
 	.gallery-items {
-		display: none;
 		width: 100%;
 		position: absolute;
 		left: 0px;
@@ -67,20 +66,27 @@
 	
 	}
 	#gallery-close {
-		display: none;
 		position: absolute;
 		right: 0px;
 		top: 70px;
 		cursor:pointer;
 	}
+	
 	.movie-detail-items {
 	
 		width: 100%;
 		position: absolute;
 		left: 0px;
-		#slider {
 		
+		#slider {
+			margin-bottom: 100px;
+			
+			&.full-width {
+			
+				width: 100%;
+			}
 		}
+		
 		.title {
 			text-transform: uppercase;
 			z-index: 100;
@@ -113,16 +119,17 @@
 		top: 220px;
 		left: 0px;
 		width: 280px;
-		font-size: 16px;
+		font-size: 14px;
 		font-family: @thin-font;
 		text-shadow:1px 2px #333;
 		
 		h1 {
 		
-			font-size: 25px;
+			font-size: 20px;
 			font-family: @bold-font;
 			float: left;
 			margin: 0px 0px 10px 0px;
+			width: 180px;
 		}
 		.three-d-white-bg  {
 		
@@ -142,14 +149,11 @@
 			
 		}
 		strong {
-			font-size: 16px;
+			font-size: 14px;
 			float: left;
 			margin: -1px 7px 0px 0px;
 		}
-		a {
-		
-			font-family: @regular-font;
-		}
+
 		
 		.experiences {
 		

@@ -7,6 +7,31 @@
 	.gradient(darken(#282526,10%),darken(#4c4c4e,10%));
 	width: 575px;
 	padding: 10px;
+	
+	.view-seats-link {
+	
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+		z-index: 9000;
+		
+		p {
+		
+			background-color: red;
+			padding: 3px 5px;
+			color: white;
+			
+			
+		}
+		.view-seats-arrow {
+		
+			position: absolute;
+			bottom: 5px;
+			left: 55px;
+			.arrow-down(5px, red);
+		}
+	}
 	.hidden-area {
 		
 		background: white;
@@ -24,6 +49,7 @@
 		left: 250px;
 		top: -8px;
 	}
+	
 	.close {
 	
 		position: absolute;
@@ -124,7 +150,7 @@
 		.btn {
 		
 			font-size: 11px;
-
+			position: relative;
 			float: left;
 			margin-right: 5px;
 		}

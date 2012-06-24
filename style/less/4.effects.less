@@ -60,13 +60,13 @@
   -ms-transition: All @speed ease;
   transition: All @speed ease;
 }
-.turn {
+.turn(@deg) {
 
-	transform: rotate(-10deg);
-	-ms-transform: rotate(-10deg); /* IE 9 */
-	-webkit-transform: rotate(-10deg); /* Safari and Chrome */
-	-o-transform: rotate(-10deg); /* Opera */
-	-moz-transform: rotate(-10deg); /* Firefox */
+	transform: rotate(@deg);
+	-ms-transform: rotate(@deg); /* IE 9 */
+	-webkit-transform: rotate(@deg); /* Safari and Chrome */
+	-o-transform: rotate(@deg); /* Opera */
+	-moz-transform: rotate(@deg); /* Firefox */
 
 }
 .shadow(@top, @left, @blur, @strength, @color) {

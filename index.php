@@ -2,8 +2,6 @@
 	<div id="main" role="main" class="home">	
 	
 		<? include("includes/nav.php") ?>
-		  
-		 
 		 
 		  <div class="home-items">
 		  	

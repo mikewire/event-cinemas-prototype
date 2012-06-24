@@ -12,6 +12,29 @@ var cookie = "";
 var preferred_cinemas = new Array();
 
 // init the animated slider at bottom of homepage 
+function initStaticSlider() {
+	
+	// calculate how many items are shown, based on the width of the slider (varies depending on screen res.)
+	items_shown = $("#slider").width() / $(".items a").width();
+	
+	// check how many items there are in total
+	items_total = $("#slider .items a").length;
+	
+	//calculate by how much the items div should slide left
+    slide_amount = ((Math.floor(items_shown) * 158) + (Math.floor(items_shown))*10);
+    
+    // calculates how many slides
+    total_slides = Math.ceil(items_total / Math.floor(items_shown));
+    
+    if (total_slides > 1) {
+    
+    	$(".arrow-right").show();
+    }
+    console.log("items shown: "+items_shown+" items total: "+items_total+ "total slides: "+total_slides );
+    
+}
+
+// init the animated slider at bottom of homepage 
 function initAnimatedSlider() {
 	
 	// calculate how many items are shown, based on the width of the slider (varies depending on screen res.)
@@ -26,6 +49,11 @@ function initAnimatedSlider() {
     // calculates how many slides
     total_slides = Math.ceil(items_total / Math.floor(items_shown));
 	
+    if (total_slides > 1) {
+    
+    	$(".arrow-right").show();
+    }
+
 	// move slides up one by one, on the slide interval
 	timer = setInterval(function() { animatedSlider(); }, slide_interval);
 	
@@ -186,12 +214,22 @@ function showQuickTimesWidget() {
 	//$(this).addClass("active");
 	if (preferred_cinemas.length > 0) {
 		var p = $(this).parent().parent().position();
-		console.log(p.left);
+		//console.log(p.left);
 	
 		$(".quick-times-select-widget").css({"left":p.left-200,"top":p.top+20});
 		$(".quick-times-select-widget").show();
 		determineDatesScrolling();
 	}
+
+}
+function showAvailableSeatsLink() {
+
+	var p = $(this).parent().parent().parent().parent().position();
+	var l = $(this).position();
+	console.log(p.top);
+	console.log(l.left);
+	$(".view-seats-link").css({"left":l.left+100,"top":p.top-40});
+	$(".view-seats-link").show();
 
 }
 function emptyFunction() {}
@@ -212,16 +250,4 @@ function hideAllTicketBarBlowouts() {
 	TicketBarZIndex(4000);
 	$(".overlay").hide();
 	$("#cover").hide();
-}
-
-function toggleGallery() {
-
-	$("#main.movie-detail nav").toggle();
-	$("#main.movie-detail .movie-info").toggle();
-	$("#main.movie-detail .movie-detail-items").toggle();
-	$(".call-to-action").toggle();
-	$("footer").toggle();
-	$(".gallery-items").toggle();	
-	$("#gallery-close").toggle();	
-
 }

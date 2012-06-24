@@ -63,6 +63,8 @@
   <script src="js/ticket-widget.js"></script>
   <script src="js/home.js"></script>  
   <script src="js/trailers.js"></script>
+  <script src="js/movies.js"></script>
+  <script src="js/cinemas.js"></script>
   <script src="js/others.js"></script>  
 
 

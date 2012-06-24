@@ -56,6 +56,16 @@ $(function() {
 	};
 
 	$(".find-times-and-book").hoverIntent( config );	
+	
+	var config_seats = {    
+	     over: showAvailableSeatsLink,     
+	     timeout: 500,    
+	     out: emptyFunction 
+	};
+	
+	$(".quick-times-select-widget .dates-row .btn").hoverIntent(config_seats);
+	
+	
 	$(".btn.find-times-and-book").click(function() {
 	
 		$("#top-ticketing-form").submit();
@@ -136,30 +146,9 @@ $(function() {
 //========================================================================================================//
 
 
-
-	$(".opengallery").click(function() {
+	if ($("#slider.static").length > 0 && $("#slider.static").is(":visible")) {
+		initStaticSlider();
+	}
 	
-		toggleGallery();
-		rememberSkin = $("#skin").attr("src");
-		$("#slider.animate a:first-child").addClass("active");
-		$("#skin").fadeOut(200, function() {
-	
-			$("#skin").attr("src","img/hp_bck/"+$("#slider.animate a.active img").attr("skin"));
-			$("#skin").fadeIn(600);
-		});
-		initAnimatedSlider();
-	});
-	
-	$("#gallery-close").click(function() {
-	
-		$("#skin").fadeOut(200, function() {
-	
-			$("#skin").attr("src",rememberSkin);
-			$("#skin").fadeIn(600);
-		});
-		clearInterval(timer);
-		toggleGallery();
-	
-	});
 
 });

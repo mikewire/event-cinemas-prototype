@@ -526,21 +526,6 @@ h4 {
   -ms-transition: background-color 100ms linear;
   transition: background-color 100ms linear;
 }
-.turn {
-  transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  /* IE 9 */
-
-  -webkit-transform: rotate(-10deg);
-  /* Safari and Chrome */
-
-  -o-transform: rotate(-10deg);
-  /* Opera */
-
-  -moz-transform: rotate(-10deg);
-  /* Firefox */
-
-}
 .border-bottom {
   border-bottom: solid 1px #b28f55;
 }
@@ -1702,6 +1687,7 @@ nav .search-form {
 }
 #slider .arrow-right {
   right: 0px;
+  display: none;
 }
 #slider .items {
   position: absolute;
@@ -1838,7 +1824,7 @@ nav .search-form {
 }
 .innerpage .right .search-form {
   position: relative;
-  width: 160px;
+  width: 94%;
   margin: 10px 0px;
 }
 .innerpage .right .search-form .search {
@@ -1963,10 +1949,51 @@ h2 {
   margin: 10px 0px 0px 0px;
 }
 #main.movies ul.movie-overview li {
-  margin-right: 15px;
+  margin-right: 7px;
 }
 #main.movies ul.movie-overview li span {
+  width: 130px;
+  height: 210px;
+}
+#main.movies ul.movie-overview li span .image-wrapper {
+  width: inherit;
   height: 180px;
+}
+#main.movies ul.movie-overview li span img {
+  width: inherit;
+  height: auto;
+}
+#main.movies ul.movie-overview li span .hover {
+  width: 100%;
+}
+#main.movies ul.movie-overview li span .hurry {
+  background-color: red;
+  z-index: 1000;
+  position: absolute;
+  transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  /* IE 9 */
+
+  -webkit-transform: rotate(-40deg);
+  /* Safari and Chrome */
+
+  -o-transform: rotate(-40deg);
+  /* Opera */
+
+  -moz-transform: rotate(-40deg);
+  /* Firefox */
+
+  left: -27px;
+  top: 10px;
+  -webkit-box-shadow: 0px 1px 6px 1px #333333;
+  -moz-box-shadow: 0px 1px 6px 1px #333333;
+  box-shadow: 0px 1px 6px 1px #333333;
+  text-align: center;
+}
+#main.movies ul.movie-overview li span .hurry p {
+  line-height: 12px;
+  font-size: 12px;
+  padding: 2px 20px;
 }
 #main.movies .movie-overview-list {
   display: none;
@@ -2017,7 +2044,6 @@ h2 {
   border: 2px solid #464646;
 }
 #main.movie-detail .gallery-items {
-  display: none;
   width: 100%;
   position: absolute;
   left: 0px;
@@ -2050,7 +2076,6 @@ h2 {
   padding: 5px 10px;
 }
 #main.movie-detail #gallery-close {
-  display: none;
   position: absolute;
   right: 0px;
   top: 70px;
@@ -2060,6 +2085,12 @@ h2 {
   width: 100%;
   position: absolute;
   left: 0px;
+}
+#main.movie-detail .movie-detail-items #slider {
+  margin-bottom: 100px;
+}
+#main.movie-detail .movie-detail-items #slider.full-width {
+  width: 100%;
 }
 #main.movie-detail .movie-detail-items .title {
   text-transform: uppercase;
@@ -2109,15 +2140,16 @@ h2 {
   top: 220px;
   left: 0px;
   width: 280px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
   text-shadow: 1px 2px #333;
 }
 #main.movie-detail .movie-info h1 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
   float: left;
   margin: 0px 0px 10px 0px;
+  width: 180px;
 }
 #main.movie-detail .movie-info .three-d-white-bg {
   float: left;
@@ -2133,12 +2165,9 @@ h2 {
   margin-bottom: 5px;
 }
 #main.movie-detail .movie-info strong {
-  font-size: 16px;
+  font-size: 14px;
   float: left;
   margin: -1px 7px 0px 0px;
-}
-#main.movie-detail .movie-info a {
-  font-family: 'GillSansRegular', Helvetica, Arial, sans-serif;
 }
 #main.movie-detail .movie-info .experiences {
   margin-top: 20px;
@@ -2271,6 +2300,8 @@ h2 {
   position: absolute;
   top: 0px;
   left: 0px;
+  max-width: 100%;
+  height: auto;
 }
 #main.cinemas .right .promo .trans-bck {
   position: absolute;
@@ -2729,6 +2760,29 @@ ul.movie-overview li span:hover img {
   width: 575px;
   padding: 10px;
 }
+.quick-times-select-widget .view-seats-link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  z-index: 9000;
+}
+.quick-times-select-widget .view-seats-link p {
+  background-color: red;
+  padding: 3px 5px;
+  color: white;
+}
+.quick-times-select-widget .view-seats-link .view-seats-arrow {
+  position: absolute;
+  bottom: 5px;
+  left: 55px;
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ff0000;
+}
 .quick-times-select-widget .hidden-area {
   background: white;
   /* Netscape */
@@ -2859,6 +2913,7 @@ ul.movie-overview li span:hover img {
 }
 .quick-times-select-widget .cinema-row .btn {
   font-size: 11px;
+  position: relative;
   float: left;
   margin-right: 5px;
 }
@@ -3342,6 +3397,14 @@ footer .right ul li:hover {
   .movie-detail-items #slider a {
     margin-right: 2px;
   }
+  .movie-detail-items #slider.full-width a {
+    margin-right: 7px;
+  }
+  .tools {
+    position: absolute;
+    right: 190px;
+    top: 75px;
+  }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
   #ticket-bar {
@@ -3452,6 +3515,9 @@ footer .right ul li:hover {
   }
   .innerpage .right {
     width: 230px;
+  }
+  #main.movies ul.movie-overview li {
+    margin-right: 11px;
   }
   .movie-list-item .quick-times-select-widget {
     width: 730px;
@@ -3794,17 +3860,4 @@ footer .right ul li:hover {
 }
 .ie7 footer {
   top: 850px;
-}
-.ie7 #cine-buzz-blowout .hidden-area,
-.ie8 #cine-buzz-blowout .hidden-area  {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=10))"; 
-  	filter: alpha(opacity = 10));  
-
-}
-.ie7 #cover,
-.ie8 #cover {
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80))"; 
-  	filter: alpha(opacity = 80));  
-
 }

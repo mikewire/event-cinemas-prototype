@@ -293,6 +293,44 @@
 		  		</span>
 	  		
 	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 7</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+		  				<div class="checkbox"></div>
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
+	  		<li>
+		  		<span>
+		  			
+		  			<div class="image-wrapper">
+			  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+			  			<div class="hover">
+			  				<p class="title">Snow White and the Huntsman 7</p>
+			  				<a href="movie-detail.php">&#8250; more details</a>
+			  				<a href="#">&#8250; view trailer</a>		  				
+			  			</div>
+		  			</div>
+		  			<div class="select">
+		  				<div class="checkbox"></div>
+	  					<label>Select movie</label>
+		  			</div>
+		  			
+		  		</span>
+	  		
+	  		</li>
 
 
 
