@@ -21,7 +21,7 @@
 							<label for="sort">Sort by</label>
 							
 							<select id="sort">
-								<option>Most recent first</option>
+								<option>Release date</option>
 								<option>Alphabetical</option>
 							</select>		
 							
@@ -35,641 +35,683 @@
 						<div class="clearfix"></div>
 					</span>
 					
-					<p class="results">30 movies currently showing</p>
+					<div class="movie-overview-thumb">
+					<p class="month">JULY 2012</p>
 		
-			  		<ul class="movie-overview">
-				  	
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>		
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
-							  				<div class="three-d-icon-small"></div>
-											<div class="two-d-icon-small"></div>							  				
-							  			</div>
-	  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Albert Nobbs</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
+				  		<ul class="movie-overview">
+					  	
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie6.png" alt="movie1" />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>		
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  				<div class="three-d-icon-small"></div>
+												<div class="two-d-icon-small"></div>							  				
+								  			</div>
+		  				
 							  			</div>
 						  			</div>
-					  			</div>
-					  			
-					  			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-					  					<p class="title">A few best men</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  					<a class="poptrailer">&#8250; view trailer</a>			  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
-							  			</div>
-					  				</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-					  				<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-					  				<div class="hover">
-					  					<p class="title">Journey 2</p>
-					  					<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  					<a class="poptrailer">&#8250; view trailer</a>			  				
-					  				</div>
-								</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Hugo</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
+						  			<p class="showing-date">July 12</p>
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie1.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Albert Nobbs</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  			</div>
 							  			</div>
 						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie6.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 2</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			
+						  			
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+						  					<p class="title">A few best men</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  					<a class="poptrailer">&#8250; view trailer</a>			  				
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  			</div>
+						  				</div>
 						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 3</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+						  				<img src="img/movie4.png" alt="movie1"  />
+						  				<div class="hover">
+						  					<p class="title">Journey 2</p>
+						  					<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+						  					<a class="poptrailer">&#8250; view trailer</a>			  				
+						  				</div>
+									</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							
+							  			<div class="hover">
+							  				<p class="title">Hugo</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  			</div>
 							  			</div>
 						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>		  				
-						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-							  			<div class="icons">
-								  			<div class="goldclass-icon"></div>
-							  				<div class="vmax-icon"></div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie6.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 2</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
 							  			</div>
 						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie1.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 3</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  			</div>
+							  			</div>
 						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>		  				
+							  			</div>
 						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-	
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+								  			<div class="icons">
+									  			<div class="goldclass-icon"></div>
+								  				<div class="vmax-icon"></div>
+								  			</div>
+							  			</div>
 						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
 						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
 						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 4</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-			
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 5</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-			
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie4.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 6</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>
-				  		<li>
-					  		<span>
-					  			
-					  			<div class="image-wrapper">
-						  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-						  			<div class="hover">
-						  				<p class="title">Snow White and the Huntsman 7</p>
-						  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-						  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			</div>
-					  			</div>
-					  			<a class="find-times-and-book">Find times & book</a>
-					  			
-					  		</span>
-				  		
-				  		</li>			  					  					  					  		
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
 					</ul>
+					
+					
+					
+					
+					<p class="month">AUGUST 2012</p>
+					
+						<ul class="movie-overview">
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie2.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 4</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+				
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie3.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 5</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+				
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie4.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 6</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>
+					  		<li>
+						  		<span>
+						  			
+						  			<div class="image-wrapper">
+							  			<img src="img/movie5.png" alt="movie1"  />
+							  			<div class="hover">
+							  				<p class="title">Snow White and the Huntsman 7</p>
+							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+							  				<a class="poptrailer">&#8250; view trailer</a>			  				
+							  			</div>
+						  			</div>
+						  			<p class="showing-date">July 12</p>
+						  			
+						  		</span>
+					  		
+					  		</li>			  					  					  					  		
+						</ul>
+					</div><!-- end .movie-overview-thumb -->
 					
 					<div class="movie-overview-list">
 					
+						<p class="month">JULY 2012</p>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  						
+			  				<p class="showing-date">19 July</p>	
+			  				<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  									  				<p class="showing-date">19 July</p>	
+							<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  						 			  				<p class="showing-date">19 July</p>	
+							<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>												
+
+
+						<p class="month">JULY 2012</p>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  						
+			  				<p class="showing-date">19 July</p>	
+			  				<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  									  				<p class="showing-date">19 July</p>	
+							<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<a href="movie-detail.php"><img src="img/movie5.png" alt="movie1"  /></a>
+				  			</div>
+			  				<p class="title">The Amazing Spiderman</p>										  						 			  				<p class="showing-date">19 July</p>	
+							<div class="descr">
+								<p>Peter Parker finds a clue that might help him understand why his parents disappeared when he was young. His path puts him on a collision course with Dr. Curt Connors, his father's former partner.</p>
+				  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+				  				<a class="poptrailer">&#8250; view trailer</a>			  				
+					  			<div class="icons">
+						  			<div class="goldclass-icon"></div>
+					  				<div class="vmax-icon"></div>
+					  			</div>
+							</div>	
+							<div class="clearfix"></div>
+						</div>												
 					
-						<div class="movie-list-item">
-				  			<div class="image-wrapper">
-					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
-				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
-
-							<? include("includes/quick-times-widget.php") ?>
-							<div class="clearfix"></div>
-						</div>
-						<div class="movie-list-item">
-				  			<div class="image-wrapper">
-					  			<img src="img/movie2.png" alt="movie1" width="105" height="150" />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
-				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
-
-							<? include("includes/quick-times-widget.php") ?>
-							<div class="clearfix"></div>
-						</div>
-						<div class="movie-list-item">
-				  			<div class="image-wrapper">
-					  			<img src="img/movie3.png" alt="movie1" width="105" height="150" />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
-				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
-
-							<? include("includes/quick-times-widget.php") ?>
-							<div class="clearfix"></div>
-						</div>
-						<div class="movie-list-item">
-				  			<div class="image-wrapper">
-					  			<img src="img/movie1.png" alt="movie1" width="105" height="150" />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
-				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
-
-							<? include("includes/quick-times-widget.php") ?>
-							<div class="clearfix"></div>
-						</div>
 					
-					
-					</div>
+					</div><!-- end movie overview list -->
 					
 					
 				</div><!-- end wrap -->				
 				
-				<div id="quick-times-widget-upon-hover"><? include("includes/quick-times-widget.php") ?></div>
 			</div><!-- end .left -->
 			
 			<div class="right filters">

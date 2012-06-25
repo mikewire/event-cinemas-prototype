@@ -7,7 +7,9 @@
 		margin-top: 10px;
 		padding-bottom: 10px;
 		clear: both;
-		border-bottom: 1px solid #fff;
+		//border-bottom: 1px solid #fff;
+		position: relative;
+		
 		p.title {
 		
 			font-size: 16px;
@@ -44,7 +46,36 @@
 				display: none;
 			}
 		}
+		.showing-date {
 		
+			position: absolute;
+			top: 0px;
+			right: 10px;
+		}
+		.descr {
+		
+			float: left;
+			
+			p {
+			
+				margin-bottom: 10px;
+			}
+			a {
+			
+				display: block;
+				width: 120px;
+				
+			}
+			.icons {
+				margin-top: 10px;			
+				div {
+					margin-right: 3px;
+					float: left;
+				}
+			
+			}
+			
+		}
 		&:last-child {
 		
 			border-bottom: none;

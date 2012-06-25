@@ -1942,6 +1942,13 @@ h2 {
 .tools select {
   margin-right: 5px;
 }
+#main.movies p.month {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+  color: red;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: block;
+}
 #main.movies ul.movie-overview {
   height: auto;
   overflow: visible;
@@ -1965,6 +1972,11 @@ h2 {
 }
 #main.movies ul.movie-overview li span .hover {
   width: 100%;
+}
+#main.movies ul.movie-overview li span .showing-date {
+  position: absolute;
+  bottom: 5px;
+  width: 112px;
 }
 #main.movies ul.movie-overview li span .hurry {
   background-color: red;
@@ -1994,6 +2006,9 @@ h2 {
   line-height: 12px;
   font-size: 12px;
   padding: 2px 20px;
+}
+#main.movies .movie-overview-thumb {
+  display: block;
 }
 #main.movies .movie-overview-list {
   display: none;
@@ -2546,7 +2561,7 @@ h2 {
   margin-top: 10px;
   padding-bottom: 10px;
   clear: both;
-  border-bottom: 1px solid #fff;
+  position: relative;
 }
 .movie-overview-list .movie-list-item p.title {
   font-size: 16px;
@@ -2582,6 +2597,28 @@ h2 {
 }
 .movie-overview-list .movie-list-item .quick-times-select-widget .arrow {
   display: none;
+}
+.movie-overview-list .movie-list-item .showing-date {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+.movie-overview-list .movie-list-item .descr {
+  float: left;
+}
+.movie-overview-list .movie-list-item .descr p {
+  margin-bottom: 10px;
+}
+.movie-overview-list .movie-list-item .descr a {
+  display: block;
+  width: 120px;
+}
+.movie-overview-list .movie-list-item .descr .icons {
+  margin-top: 10px;
+}
+.movie-overview-list .movie-list-item .descr .icons div {
+  margin-right: 3px;
+  float: left;
 }
 .movie-overview-list .movie-list-item:last-child {
   border-bottom: none;
@@ -3314,6 +3351,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 480px) and (max-width: 1260px) {
+  .movie-overview-list .movie-list-item .descr {
+    width: 440px;
+  }
   #ticket-bar {
     width: 860px;
   }
@@ -3407,6 +3447,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
+  .movie-overview-list .movie-list-item .descr {
+    width: 578px;
+  }
   #ticket-bar {
     width: 960px;
   }
@@ -3467,6 +3510,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1400px) {
+  .movie-overview-list .movie-list-item .descr {
+    width: 740px;
+  }
   #ticket-bar {
     width: 1120px;
   }

@@ -1,8 +1,10 @@
 		<div class="quick-times-select-widget">
+<!--
 			<a class="view-seats-link">
 				<p>View available seats</p>
 				<div class="view-seats-arrow"></div>
 			</a>
+-->
 			<span class="arrow"></span>
 			<div class="hidden-area"></div>
 			<?
