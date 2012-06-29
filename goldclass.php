@@ -19,8 +19,6 @@
 				 
 		<div class="overlay">
 			<a class="close-small">x</a>
-			<span class="arrow-inner"></span>
-			<span class="arrow-outer"></span>
 			
 			<p>Gold Class is Australia’s ultimate movie-going experience. Each auditorium boasts just 26-60 luxurious electronic recliners, a wall-to-wall mega screen, crisp digital surround sound and has access to a private lounge and bar with a stunning menu, cocktail and wine list. Waiter service is available before, after and during the event, direct to your seat. Gold Class is your unique and impressive solution to corporate entertaining, whether it be for a presentation, workshop, meeting or your own exclusive movie night.</p>
 		

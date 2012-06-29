@@ -1,3 +1,41 @@
+.dates {
+
+	list-style: none;
+	height: 25px;
+	margin: 0px 0px 20px 0px;		
+	
+	li {
+	
+		display: block;
+		float: left;
+		margin-right: 3px;
+		padding: 6px 5px;
+		cursor: pointer;
+		color: darken(#fff,60%);
+		
+		&.active {
+			color: #fff;
+			.radius-full(5px);
+			border: 1px solid darken(@light-grey, 50%);
+			.gradient(#4c4c4e,#282526);
+			padding: 5px 4px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&:last-child {
+		
+			margin-right: 0px;
+		}
+		&:hover {
+			
+			color: #fff;
+		}
+	}
+	display: block;
+}
+
+
 .quick-times-select-widget {
 
 	display: none;
@@ -60,42 +98,6 @@
 		
 		margin: 10px 0px;
 	}	
-	.dates {
-	
-		list-style: none;
-		height: 25px;
-		margin: 0px 0px 20px 0px;		
-		
-		li {
-		
-			display: block;
-			float: left;
-			margin-right: 3px;
-			padding: 6px 5px;
-			cursor: pointer;
-			color: darken(#fff,60%);
-			
-			&.active {
-				color: #fff;
-				.radius-full(5px);
-				border: 1px solid darken(@light-grey, 50%);
-				.gradient(#4c4c4e,#282526);
-				padding: 5px 4px;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-			&:last-child {
-			
-				margin-right: 0px;
-			}
-			&:hover {
-				
-				color: #fff;
-			}
-		}
-		display: block;
-	}
 	.cinema-row {
 		
 		display: block;

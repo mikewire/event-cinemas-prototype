@@ -251,3 +251,7 @@ function hideAllTicketBarBlowouts() {
 	$(".overlay").hide();
 	$("#cover").hide();
 }
+function showState(state) {
+    $("div.columns").hide();
+    $("div#" + state).fadeIn();
+}

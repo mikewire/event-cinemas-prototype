@@ -46,9 +46,17 @@
 
     
     <script>var currentMovie = "";</script>
+	<script>var ie = false;</script>
+	
   <? if ($currentFile == "movie-detail.php") { ?>
 	  <script>currentMovie = "The Avengers";</script>
   <? } ?>
+
+
+  <!--[if IE ]>
+	<script>ie = true;</script>
+  <![endif]-->
+
 
   <!-- load libs and plugins -->
   <script src="js/libs/jquery-1.7.1.min.js"></script>

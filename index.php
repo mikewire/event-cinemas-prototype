@@ -92,7 +92,7 @@
 		  	</div>
 		  	<div class="clearfix"></div>
 		  	
-		  	<div id="ads">
+		  	<div class="ads">
 		  	
 		  		<div class="ad half"><img src="img/AHL-02-ad-spaces-1.jpg" alt="AHL-02-ad-spaces-1" /></div>
 		  		<div class="ad full"><img src="img/sample-ad.jpg" alt="sample-ad" /></div>

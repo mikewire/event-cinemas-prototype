@@ -53,20 +53,25 @@ $(function() {
 	// Trailer lightbox will open upon click off all links / buttons with this class
 	
 	$(".third-nav a").click(function() {
-		var p = $(this).position();
+		//var p = $(this).position();
 		
-		$(this).parent().parent().css("z-index","9999");
+		$(".movie-info").css("z-index","9999");
 		$("#cover").show();
-		$(".overlay").css("top",p.top+145).show();
+		//$(".overlay").css("top",p.top+145).show();
+		$(".overlay").show();
 			
 	});
 	$(".overlay .close-small").click(function() {
-		$(this).parent().parent().css("z-index","1000");
-	
+		//$(this).parent().parent().css("z-index","1000");
+		$(".movie-info").css("z-index","100");
 		$("#cover").hide();
 		$(".overlay").hide();
 		
 	});
+	$("#enquiry").click(function() {
 	
+		$("#cover").show();
+		$(".overlay").show();
+	});
 	
 }); // end $(function() 

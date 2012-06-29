@@ -1776,11 +1776,11 @@ nav .search-form {
   display: block;
   width: 154px;
 }
-#ads {
+.ads {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
-#ads .ad {
+.ads .ad {
   margin-left: 10px;
   float: left;
   height: 100px;
@@ -1799,10 +1799,10 @@ nav .search-form {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(80));
   filter: alpha(opacity = (80));
 }
-#ads .ad:first-child {
+.ads .ad:first-child {
   margin-left: 0px;
 }
-#ads .ad img {
+.ads .ad img {
   width: 100%;
 }
 .innerpage {
@@ -2281,6 +2281,16 @@ h2 {
 #main.cinemas .left {
   min-height: 700px;
 }
+#main.cinemas .dates {
+  margin: -10px 0px 0px -10px;
+  padding: 0px 0px 15px 10px;
+  border-bottom: 1px solid #333333;
+}
+#main.cinemas ul.filters {
+  width: 100%;
+  margin-left: 0px;
+  padding: 0px 0px 15px 0px;
+}
 #main.cinemas .movie-overview-list {
   margin-left: 10px;
 }
@@ -2303,6 +2313,31 @@ h2 {
   text-align: center;
   color: black;
   margin-bottom: 10px;
+}
+#main.cinemas .right .item {
+  margin: 10px 0px;
+  display: block;
+}
+#main.cinemas .right .item img {
+  float: left;
+  margin-right: 5px;
+}
+#main.cinemas .right .item .desc {
+  width: 120px;
+  float: left;
+}
+#main.cinemas .right .item .title {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+  color: white;
+}
+#main.cinemas .right .item p {
+  color: white;
+}
+#main.cinemas .right .btn {
+  margin: 10px 0px;
+  font-size: 12px;
+  width: auto;
+  display: inline-block;
 }
 #main.cinemas .right .promo {
   position: relative;
@@ -2474,6 +2509,11 @@ h2 {
 }
 #main.premium-cinema .innerpage a {
   display: block;
+  margin-bottom: 1px;
+}
+#main.premium-cinema .innerpage a img {
+  width: 100%;
+  height: auto;
 }
 #main.premium-cinema .innerpage a:last-child {
   margin-bottom: 20px;
@@ -2495,18 +2535,28 @@ h2 {
   font-size: 18px;
   margin-bottom: 5px;
 }
-#main.premium-cinema .overlay {
+.premium-cinema-line {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  font-size: 38px;
+  display: block;
+  width: 290px;
+  margin: 80px 0px 10px 0px;
+  text-align: right;
+}
+.overlay {
   display: none;
   background: black;
   border: 1px solid #dfdfdf;
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  top: 146px;
+  width: 600px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -300px;
   z-index: 9999;
-  left: 170px;
 }
-#main.premium-cinema .overlay .arrow-inner {
+.overlay .arrow-inner {
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
@@ -2517,7 +2567,7 @@ h2 {
   left: -12px;
   z-index: 10;
 }
-#main.premium-cinema .overlay .arrow-outer {
+.overlay .arrow-outer {
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
@@ -2528,12 +2578,12 @@ h2 {
   left: -13px;
   z-index: 9;
 }
-#main.premium-cinema .overlay p {
+.overlay p {
   font-size: 16px;
   margin: 20px;
   color: #fff;
 }
-#main.premium-cinema .overlay .close-small {
+.overlay .close-small {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -2545,13 +2595,80 @@ h2 {
   padding: 0px 6px 2px 6px;
   color: white;
 }
-.premium-cinema-line {
-  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
-  font-size: 38px;
+.overlay .content {
+  margin: 20px;
+}
+.overlay .left-column,
+.overlay .right-column {
+  width: 250px;
+  float: left;
+}
+.overlay .left-column input,
+.overlay .right-column input,
+.overlay .left-column textarea,
+.overlay .right-column textarea {
+  width: 100%;
+}
+.overlay .left-column label,
+.overlay .right-column label {
   display: block;
-  width: 290px;
-  margin: 80px 0px 10px 0px;
-  text-align: right;
+  margin-top: 10px;
+}
+.overlay .left-column textarea,
+.overlay .right-column textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 80px;
+}
+.overlay .left-column {
+  margin-right: 20px;
+}
+.overlay .btn {
+  display: inline;
+  width: auto;
+  margin-top: 5px;
+}
+#main.promos .full {
+  border: 1px solid #333333;
+  background: black;
+  width: 100%;
+  float: left;
+  padding: 0px 0px;
+  margin-bottom: 200px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info {
+  position: relative;
+  height: auto;
+  float: left;
+  display: block;
+  width: 730px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info strong {
+  display: inline;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info strong.title {
+  font-size: 18px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info p {
+  display: inline;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info .icons {
+  margin: 6px 0px;
+}
+.cinemas .movie-overview-list .cinema-movie-times-info .icons div {
+  margin-right: 3px;
+  float: left;
 }
 .movie-overview-list {
   display: block;
@@ -2777,6 +2894,49 @@ ul.movie-overview li span:hover img {
   transition: All 0.2s ease;
   bottom: 0px;
 }
+.dates {
+  list-style: none;
+  height: 25px;
+  margin: 0px 0px 20px 0px;
+  display: block;
+}
+.dates li {
+  display: block;
+  float: left;
+  margin-right: 3px;
+  padding: 6px 5px;
+  cursor: pointer;
+  color: #666666;
+}
+.dates li.active {
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #606060;
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4c4c4e), color-stop(1, #282526));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
+  padding: 5px 4px;
+}
+.dates li.active:hover {
+  text-decoration: none;
+}
+.dates li:last-child {
+  margin-right: 0px;
+}
+.dates li:hover {
+  color: #fff;
+}
 .quick-times-select-widget {
   display: none;
   position: absolute;
@@ -2857,49 +3017,6 @@ ul.movie-overview li span:hover img {
 }
 .quick-times-select-widget p {
   margin: 10px 0px;
-}
-.quick-times-select-widget .dates {
-  list-style: none;
-  height: 25px;
-  margin: 0px 0px 20px 0px;
-  display: block;
-}
-.quick-times-select-widget .dates li {
-  display: block;
-  float: left;
-  margin-right: 3px;
-  padding: 6px 5px;
-  cursor: pointer;
-  color: #666666;
-}
-.quick-times-select-widget .dates li.active {
-  color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #606060;
-  /* IE10 */
-  background-image: -ms-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
-  /* Mozilla Firefox */
-  background-image: -moz-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
-  /* Opera */
-  background-image: -o-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
-  /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4c4c4e), color-stop(1, #282526));
-  /* Webkit (Chrome 11+) */
-  background-image: -webkit-linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
-  /* Proposed W3C Markup */
-  background-image: linear-gradient(bottom, #4c4c4e 0%, #282526 100%);
-  padding: 5px 4px;
-}
-.quick-times-select-widget .dates li.active:hover {
-  text-decoration: none;
-}
-.quick-times-select-widget .dates li:last-child {
-  margin-right: 0px;
-}
-.quick-times-select-widget .dates li:hover {
-  color: #fff;
 }
 .quick-times-select-widget .cinema-row {
   display: block;
@@ -3277,80 +3394,110 @@ footer .right ul li:hover {
     top: 200px;
   }
 }
-/* iPhone [portrait + landscape] */
+/*
 @media only screen and (max-device-width: 480px) {
-  #wrapper .call-to-action {
-    z-index: -1;
-    top: -400px;
-  }
-  #skin {
-    z-index: 9000;
-    top: 0px;
-  }
-  #background-wrap {
-    width: 500px;
-  }
-  #slider {
-    display: none;
-  }
-  #premium-cinema-box {
-    display: none;
-  }
-  footer {
-    bottom: 0px;
-  }
-  #ads {
-    display: none;
-  }
-  #ticket-bar {
-    width: 480px;
-    height: 300px;
-    top: 300px;
-    padding: 10px;
-  }
-  #ticket-bar span {
-    width: 320px;
-    margin-right: 25px;
-    font-size: 22px;
-  }
-  #ticket-bar span strong {
-    font-family: 'GillSansRegular', Helvetica, Arial, sans-serif;
-    font-size: 23px;
-  }
-  #ticket-bar span:first-child {
-    margin: 0px;
-  }
-  #ticket-bar span div {
-    margin-bottom: 10px;
-  }
-  #ticket-bar a.btn {
-    right: 300px;
-    top: 240px;
-  }
-  #ticket-bar .ticket-img {
-    top: 0px;
-    right: 0px;
-  }
-  nav {
-    top: 5px;
-  }
-  nav ul {
-    display: none;
-  }
-  nav input {
-    display: none;
-  }
-  nav img {
-    width: 150px;
-  }
-  #cine-buzz {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
+	
+	#wrapper .call-to-action 	{ z-index: -1; top: -400px; }
+	#skin 						{ z-index: 9000; top: 0px; }
+	
+	#background-wrap			{width: 500px; }
+	#slider { display: none;}
+	#premium-cinema-box { display: none;}
+	footer { bottom: 0px;}
+	.ads { display: none;}
+	#ticket-bar { 
+		width: 480px; 
+		height: 300px;
+		top: 300px;
+		padding: 10px;
+		
+		span { 
+			width: 320px;
+			margin-right:25px; 
+			font-size: 22px;
+			strong {
+				font-family: @regular-font;
+				font-size: 23px;				
+			}
+			&:first-child {
+			
+				margin: 0px;
+			}
+			div {
+			
+				margin-bottom: 10px;
+				
+			}
+		}
+		a.btn {
+		
+			right: 300px;
+			top: 240px;
+		}
+		.ticket-img {
+			
+			top: 0px;
+			right: 0px;
+		}
+	}	
+	nav {
+	
+		ul {
+		
+			display: none;
+		}
+		input {
+		
+			display: none;
+		}
+		img {
+			
+			width: 150px;
+		}
+		top: 5px;
+		
+			
+	}
+	#cine-buzz { 
+	
+		display: none;
+	}
+	footer {
+		
+		display: none;
+	}
+	
 }
+*/
 @media all and (min-width: 480px) and (max-width: 1260px) {
+  #main.cinemas .block .content a.btn {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .cinemas .movie-overview-list .cinema-movie-times-info {
+    width: 450px;
+  }
+  .cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+    position: static;
+    display: block;
+  }
+  .cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
+    position: static;
+    display: block;
+  }
+  #main.cinemas .right .item {
+    text-align: center;
+  }
+  #main.cinemas .right .item .desc {
+    float: none;
+  }
+  #main.cinemas .right .item .title {
+    font-size: 13px;
+  }
+  #main.cinemas .right .item img {
+    float: none;
+    margin-bottom: 5px;
+  }
   .movie-overview-list .movie-list-item .descr {
     width: 440px;
   }
@@ -3447,6 +3594,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
+  .cinemas .movie-overview-list .cinema-movie-times-info {
+    width: 580px;
+  }
   .movie-overview-list .movie-list-item .descr {
     width: 578px;
   }
@@ -3768,6 +3918,39 @@ footer .right ul li:hover {
 .ie8 #background-wrap,
 .ie7 #background-wrap {
   background-position: top center;
+}
+.ie9 #main.movies ul.movie-overview li {
+  margin-right: 6px;
+}
+.ie9 .tools {
+  postion: relative;
+}
+.ie9 .tools label,
+.ie9 .tools select {
+  position: absolute;
+}
+.ie9 .tools select {
+  right: 310px;
+}
+.ie9 .tools label {
+  right: 450px;
+}
+.ie9 .tools dt {
+  float: right;
+}
+.ie9 .tools dt dl {
+  display: block;
+  float: left;
+}
+.ie9 #main.movies .movie-overview-list {
+  display: block;
+}
+.ie9 #main.movies .movie-overview-thumb {
+  display: none;
+}
+.ie9 .quick-times-select-widget .cinema-row .dates-row {
+  zoom: 1;
+  z-index: 9999;
 }
 .ie8 #ticket-bar {
   width: 860px;

@@ -9,7 +9,7 @@
 
 
 
-/* iPhone [portrait + landscape] */
+/*
 @media only screen and (max-device-width: 480px) {
 	
 	#wrapper .call-to-action 	{ z-index: -1; top: -400px; }
@@ -19,7 +19,7 @@
 	#slider { display: none;}
 	#premium-cinema-box { display: none;}
 	footer { bottom: 0px;}
-	#ads { display: none;}
+	.ads { display: none;}
 	#ticket-bar { 
 		width: 480px; 
 		height: 300px;
@@ -83,9 +83,43 @@
 	}
 	
 }
+*/
+
 
 @media all and (min-width: 480px) and (max-width: 1260px){
+	#main.cinemas .block .content a.btn {
 	
+		font-size: 12px;
+		margin-top: 10px;
+	}
+	.cinemas .movie-overview-list .cinema-movie-times-info {
+	
+		width: 450px;
+	}
+	.cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+	
+		position: static;
+		display: block;
+	}
+	.cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
+	
+		position: static;
+		display: block;
+	}
+	#main.cinemas .right .item {
+			text-align: center;			
+		.desc {	
+			float: none;
+		}
+		.title {
+			font-size: 13px;
+		}
+		img {
+
+			float: none;
+			margin-bottom: 5px;
+		}
+	}
 	.movie-overview-list .movie-list-item .descr {
 	
 		width: 440px;
@@ -127,7 +161,6 @@
 	#wrapper,header, .footer-wrapper {
 		
 		width: 1000px;
-
 	}
 	.call-to-action {
 	
@@ -200,6 +233,10 @@
 
 }
 @media all and (min-width: 1260px) and (max-width: 1400px){
+	.cinemas .movie-overview-list .cinema-movie-times-info {
+	
+		width: 580px;
+	}
 
 	.movie-overview-list .movie-list-item .descr {
 	
