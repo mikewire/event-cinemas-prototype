@@ -6,7 +6,7 @@ figure,
 footer,
 header,
 hgroup,
-nav,
+.nav,
 section {
   display: block;
 }
@@ -123,7 +123,7 @@ ol {
 dd {
   margin: 0 0 0 40px;
 }
-nav ul,
+.nav ul,
 nav ol {
   list-style: none;
   list-style-image: none;
@@ -323,6 +323,17 @@ input[type=text]:focus {
 }
 .checkbox.checked {
   background-position: 0px 0px;
+}
+.ratings a {
+  width: auto;
+  display: inline;
+  padding: 2px;
+  background-color: yellow;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: default;
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
 }
 .star {
   display: block;
@@ -525,6 +536,11 @@ h4 {
   -o-transition: background-color 100ms linear;
   -ms-transition: background-color 100ms linear;
   transition: background-color 100ms linear;
+}
+.shadow-none {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .border-bottom {
   border-bottom: solid 1px #b28f55;
@@ -1259,16 +1275,16 @@ ul.filters li.active .checkbox {
   display: block;
   content: "Select your cinema(s)";
 }
-nav {
+.nav {
   position: absolute;
   left: 0px;
   top: 100px;
   color: white;
 }
-nav li.home {
+.nav li.home {
   display: none;
 }
-nav .expand {
+.nav .expand {
   display: none;
   background: #000;
   -webkit-border-radius: 8px;
@@ -1293,7 +1309,7 @@ nav .expand {
   right: 10px;
   padding: 5px 10px;
 }
-nav .expand span {
+.nav .expand span {
   float: right;
   width: 0;
   height: 0;
@@ -1301,24 +1317,25 @@ nav .expand span {
   border-right: 8px solid transparent;
   border-top: 8px solid #ff0000;
 }
-nav ul {
+.nav ul {
   list-style: none;
   margin: 10px 0px 10px 0px;
   padding: 0;
 }
-nav ul li a {
+.nav ul li a {
   color: white;
   text-shadow: 1px 2px #333;
   font-size: 22px;
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
 }
-nav ul li a:hover {
+.nav ul li a:hover {
   color: #dfdfdf;
 }
-nav ul li.active a {
+.nav ul li div.rtsSelected a,
+.nav ul li.active a {
   color: red;
 }
-nav .search-form {
+.nav .search-form {
   position: relative;
   width: 180px;
 }
@@ -1383,34 +1400,34 @@ nav .search-form {
   background-attachment: fixed;
   z-index: -1;
 }
-#main .innerpage {
+.main .innerpage {
   position: absolute;
   top: 100px;
   left: 240px;
   margin-bottom: 100px;
 }
-#main.memberprograms .memberprograms-wrapper {
+.main .memberprograms .memberprograms-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 685px;
 }
-#main.memberprograms .cinebuzz-wrapper {
+.main .memberprograms .cinebuzz-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 672px;
 }
-#main.offers .offers-wrapper {
+.main .offers .offers-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 685px;
 }
-#main.offers .offers-wrapper a.to-detail {
+.main .offers .offers-wrapper a.to-detail {
   width: 220px;
   height: 300px;
   background: #fff;
@@ -1419,7 +1436,7 @@ nav .search-form {
   top: 40px;
   left: 20px;
 }
-#main.offers .offers-wrapper a.to-overview {
+.main .offers .offers-wrapper a.to-overview {
   width: 70px;
   height: 20px;
   background: #fff;
@@ -1428,21 +1445,21 @@ nav .search-form {
   right: 20px;
   opacity: 0;
 }
-#main.experiences .experiences-wrapper {
+.main .experiences .experiences-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 685px;
 }
-#main.events .events-wrapper {
+.main .events .events-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 685px;
 }
-#main.events .events-wrapper a.to-detail {
+.main .events .events-wrapper a.to-detail {
   width: 310px;
   height: 600px;
   background: #fff;
@@ -1451,24 +1468,24 @@ nav .search-form {
   left: 0px;
   opacity: 0;
 }
-#main.cinemas .cinema-wrapper {
+.main .cinemas .cinema-wrapper {
   position: absolute;
   left: 263px;
   top: 118px;
   width: 965px;
   height: 685px;
 }
-#main.event-detail {
+.main .event-detail {
   height: 870px;
   background: url(../../img/the-vow.jpg) no-repeat;
 }
-#main.event-detail nav {
+.main .event-detail .nav {
   width: 242px;
   left: 20px;
   height: 563px;
   background: url(../../img/event-detail-left.png) no-repeat;
 }
-#main.event-detail nav a.back {
+.main .event-detail .nav a.back {
   position: absolute;
   width: 50px;
   height: 20px;
@@ -1477,12 +1494,12 @@ nav .search-form {
   left: 0px;
   opacity: 0;
 }
-#main.event-detail .the-vow-title {
+.main .event-detail .the-vow-title {
   position: absolute;
   top: 300px;
   left: 880px;
 }
-#main.event-detail .event-detail-elements {
+.main .event-detail .event-detail-elements {
   position: absolute;
   top: 700px;
   left: 20px;
@@ -1490,7 +1507,7 @@ nav .search-form {
   height: 150px;
   background: url(../../img/event-detail-elements.png) no-repeat;
 }
-#main.event-detail #home-call-to-action {
+.main .event-detail #home-call-to-action {
   position: absolute;
   top: 455px;
   left: 883px;
@@ -1693,7 +1710,7 @@ nav .search-form {
   position: absolute;
   top: 32px;
   left: 10px;
-  width: 10000px;
+  width: 20000px;
   z-index: 100;
 }
 #slider .items a {
@@ -1804,6 +1821,9 @@ nav .search-form {
 }
 .ads .ad img {
   width: 100%;
+}
+.background-repeat {
+  background-repeat: repeat;
 }
 .innerpage {
   width: 1120px;
@@ -1942,43 +1962,7 @@ h2 {
 .tools select {
   margin-right: 5px;
 }
-#main.movies p.month {
-  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
-  color: red;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  display: block;
-}
-#main.movies ul.movie-overview {
-  height: auto;
-  overflow: visible;
-  width: 100%;
-  margin: 10px 0px 0px 0px;
-}
-#main.movies ul.movie-overview li {
-  margin-right: 7px;
-}
-#main.movies ul.movie-overview li span {
-  width: 130px;
-  height: 210px;
-}
-#main.movies ul.movie-overview li span .image-wrapper {
-  width: inherit;
-  height: 180px;
-}
-#main.movies ul.movie-overview li span img {
-  width: inherit;
-  height: auto;
-}
-#main.movies ul.movie-overview li span .hover {
-  width: 100%;
-}
-#main.movies ul.movie-overview li span .showing-date {
-  position: absolute;
-  bottom: 5px;
-  width: 112px;
-}
-#main.movies ul.movie-overview li span .hurry {
+.hurry {
   background-color: red;
   z-index: 1000;
   position: absolute;
@@ -2002,33 +1986,69 @@ h2 {
   box-shadow: 0px 1px 6px 1px #333333;
   text-align: center;
 }
-#main.movies ul.movie-overview li span .hurry p {
+.hurry p {
   line-height: 12px;
   font-size: 12px;
   padding: 2px 20px;
 }
-#main.movies .movie-overview-thumb {
+.movies p.month {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+  color: red;
+  margin-top: 15px;
+  margin-bottom: 20px;
   display: block;
 }
-#main.movies .movie-overview-list {
+.movies ul.movie-overview {
+  height: auto;
+  overflow: visible;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+.movies ul.movie-overview li {
+  margin-right: 7px;
+}
+.movies ul.movie-overview li span {
+  width: 130px;
+  height: 210px;
+}
+.movies ul.movie-overview li span .image-wrapper {
+  width: inherit;
+  height: 180px;
+}
+.movies ul.movie-overview li span img {
+  width: inherit;
+  height: auto;
+}
+.movies ul.movie-overview li span .hover {
+  width: 100%;
+}
+.movies ul.movie-overview li span .showing-date {
+  position: absolute;
+  bottom: 5px;
+  width: 112px;
+}
+.movies .movie-overview-thumb {
+  display: block;
+}
+.movies .movie-overview-list {
   display: none;
 }
-#main.movie-detail nav {
+.main.movie-detail .nav {
   width: 270px;
 }
-#main.movie-detail nav li.home {
+.main.movie-detail .nav li.home {
   display: block;
 }
-#main.movie-detail nav .wrap {
+.main.movie-detail .nav .wrap {
   display: none;
 }
-#main.movie-detail nav .expand {
+.main.movie-detail .nav .expand {
   display: block;
 }
-#main.movie-detail nav:hover {
+.main.movie-detail .nav:hover {
   z-index: 4000;
 }
-#main.movie-detail nav:hover .wrap {
+.main.movie-detail .nav:hover .wrap {
   border: 2px solid #464646;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -2040,7 +2060,7 @@ h2 {
   z-index: 8000;
   width: 233px;
 }
-#main.movie-detail nav:hover .expand {
+.main.movie-detail .nav:hover .expand {
   background: #000;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -2058,15 +2078,15 @@ h2 {
   filter: alpha(opacity = (100));
   border: 2px solid #464646;
 }
-#main.movie-detail .gallery-items {
+.main.movie-detail .gallery-items {
   width: 100%;
   position: absolute;
   left: 0px;
 }
-#main.movie-detail .gallery-items #slider {
+.main.movie-detail .gallery-items #slider {
   width: 100%;
 }
-#main.movie-detail .gallery-items .title {
+.main.movie-detail .gallery-items .title {
   text-transform: uppercase;
   z-index: 100;
   width: 100%;
@@ -2087,27 +2107,27 @@ h2 {
   margin: 0px;
   padding: 0px 0px 0px 0px;
 }
-#main.movie-detail .gallery-items .title p {
+.main.movie-detail .gallery-items .title p {
   padding: 5px 10px;
 }
-#main.movie-detail #gallery-close {
+.main.movie-detail #gallery-close {
   position: absolute;
   right: 0px;
   top: 70px;
   cursor: pointer;
 }
-#main.movie-detail .movie-detail-items {
+.main.movie-detail .movie-detail-items {
   width: 100%;
   position: absolute;
   left: 0px;
 }
-#main.movie-detail .movie-detail-items #slider {
+.main.movie-detail .movie-detail-items #slider {
   margin-bottom: 100px;
 }
-#main.movie-detail .movie-detail-items #slider.full-width {
+.main.movie-detail .movie-detail-items #slider.full-width {
   width: 100%;
 }
-#main.movie-detail .movie-detail-items .title {
+.main.movie-detail .movie-detail-items .title {
   text-transform: uppercase;
   z-index: 100;
   width: 100%;
@@ -2128,10 +2148,10 @@ h2 {
   margin: 0px;
   padding: 0px 0px 0px 0px;
 }
-#main.movie-detail .movie-detail-items .title p {
+.main.movie-detail .movie-detail-items .title p {
   padding: 5px 10px;
 }
-#main.movie-detail .promo-box {
+.main.movie-detail .promo-box {
   background: #000;
   border: 1px solid #333333;
   /* Netscape */
@@ -2150,7 +2170,7 @@ h2 {
   float: left;
   margin-right: 20px;
 }
-#main.movie-detail .movie-info {
+.main.movie-detail .movie-info {
   position: absolute;
   top: 220px;
   left: 0px;
@@ -2159,39 +2179,46 @@ h2 {
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
   text-shadow: 1px 2px #333;
 }
-#main.movie-detail .movie-info h1 {
+.main.movie-detail .movie-info h1 {
   font-size: 20px;
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
   float: left;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 2px 0px;
   width: 180px;
 }
-#main.movie-detail .movie-info .three-d-white-bg {
+.main.movie-detail .movie-info .three-d-white-bg {
   float: left;
   margin: 6px 0px 0px 5px;
 }
-#main.movie-detail .movie-info .two-d-white-bg {
+.main.movie-detail .movie-info .two-d-white-bg {
   float: left;
   margin: 6px 0px 0px 5px;
 }
-#main.movie-detail .movie-info span {
+.main.movie-detail .movie-info .ratings {
+  clear: both;
+  margin-bottom: 7px;
+}
+.main.movie-detail .movie-info .ratings a {
+  text-shadow: none;
+}
+.main.movie-detail .movie-info span {
   clear: both;
   display: block;
   margin-bottom: 5px;
 }
-#main.movie-detail .movie-info strong {
+.main.movie-detail .movie-info strong {
   font-size: 14px;
   float: left;
   margin: -1px 7px 0px 0px;
 }
-#main.movie-detail .movie-info .experiences {
+.main.movie-detail .movie-info .experiences {
   margin-top: 20px;
 }
-#main.movie-detail .movie-info .experiences div {
+.main.movie-detail .movie-info .experiences div {
   float: left;
   margin-right: 15px;
 }
-#main.movie-detail .movie-info .experiences .experience-gold-class {
+.main.movie-detail .movie-info .experiences .experience-gold-class {
   margin-top: 15px;
 }
 .cinema-promo-wrapper {
@@ -2278,34 +2305,34 @@ h2 {
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #8d8f93 0%, #cbced0 100%);
 }
-#main.cinemas .left {
+.main.cinemas .left {
   min-height: 700px;
 }
-#main.cinemas .dates {
+.main.cinemas .dates {
   margin: -10px 0px 0px -10px;
   padding: 0px 0px 15px 10px;
   border-bottom: 1px solid #333333;
 }
-#main.cinemas ul.filters {
+.main.cinemas ul.filters {
   width: 100%;
   margin-left: 0px;
   padding: 0px 0px 15px 0px;
 }
-#main.cinemas .movie-overview-list {
+.main.cinemas .movie-overview-list {
   margin-left: 10px;
 }
-#main.cinemas .strip {
+.main.cinemas .strip {
   position: relative;
 }
-#main.cinemas .strip .compare {
+.main.cinemas .strip .compare {
   position: absolute;
   right: 10px;
   top: 12px;
 }
-#main.cinemas .right .cinema-info {
+.main.cinemas .right .cinema-info {
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
 }
-#main.cinemas .right .logo {
+.main.cinemas .right .logo {
   height: 70px;
   width: 100%;
   background: white;
@@ -2314,46 +2341,46 @@ h2 {
   color: black;
   margin-bottom: 10px;
 }
-#main.cinemas .right .item {
+.main.cinemas .right .item {
   margin: 10px 0px;
   display: block;
 }
-#main.cinemas .right .item img {
+.main.cinemas .right .item img {
   float: left;
   margin-right: 5px;
 }
-#main.cinemas .right .item .desc {
+.main.cinemas .right .item .desc {
   width: 120px;
   float: left;
 }
-#main.cinemas .right .item .title {
+.main.cinemas .right .item .title {
   font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
   color: white;
 }
-#main.cinemas .right .item p {
+.main.cinemas .right .item p {
   color: white;
 }
-#main.cinemas .right .btn {
+.main.cinemas .right .btn {
   margin: 10px 0px;
   font-size: 12px;
   width: auto;
   display: inline-block;
 }
-#main.cinemas .right .promo {
+.main.cinemas .right .promo {
   position: relative;
   height: 130px;
   width: 100%;
   display: block;
   margin: 10px 0px;
 }
-#main.cinemas .right .promo img {
+.main.cinemas .right .promo img {
   position: absolute;
   top: 0px;
   left: 0px;
   max-width: 100%;
   height: auto;
 }
-#main.cinemas .right .promo .trans-bck {
+.main.cinemas .right .promo .trans-bck {
   position: absolute;
   bottom: 0px;
   height: 25px;
@@ -2373,25 +2400,25 @@ h2 {
   background: black;
   z-index: 100;
 }
-#main.cinemas .right .promo p {
+.main.cinemas .right .promo p {
   position: absolute;
   bottom: 6px;
   left: 8px;
   color: #fff;
   z-index: 1000;
 }
-#main.cinemas .block .star {
+.main.cinemas .block .star {
   float: left;
   margin: 6px 5px 0px 5px;
 }
-#main.cinemas .block h2 {
+.main.cinemas .block h2 {
   text-transform: uppercase;
   font-size: 14px;
   font-family: 'GillSansRegular', Helvetica, Arial, sans-serif;
   cursor: pointer;
   margin-bottom: 0px;
 }
-#main.cinemas .block h2 span.open {
+.main.cinemas .block h2 span.open {
   float: right;
   width: 0;
   height: 0;
@@ -2400,7 +2427,7 @@ h2 {
   border-top: 8px solid #ffffff;
   margin: 4px 10px 0px 0px;
 }
-#main.cinemas .block h2 span.closed {
+.main.cinemas .block h2 span.closed {
   float: right;
   width: 0;
   height: 0;
@@ -2409,11 +2436,11 @@ h2 {
   border-left: 8px solid #ffffff;
   margin: 0px 12px 0px 0px;
 }
-#main.cinemas .block .content {
+.main.cinemas .block .content {
   display: none;
   margin: 10px;
 }
-#main.cinemas .block .content a {
+.main.cinemas .block .content a {
   color: #fff;
   display: inline-block;
   margin: 0px 10px 10px 0px;
@@ -2423,25 +2450,25 @@ h2 {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-#main.cinemas .block .content a:hover {
+.main.cinemas .block .content a:hover {
   border: 1px solid #dfdfdf;
 }
-#main.cinemas .block .content a.btn {
+.main.cinemas .block .content a.btn {
   color: #333333;
 }
-#main.cinemas .block .content a.btn:hover {
+.main.cinemas .block .content a.btn:hover {
   border: none;
 }
-#main.cinemas .block .content a.add {
+.main.cinemas .block .content a.add {
   color: red;
 }
-#main.cinemas .block .content a.add:hover {
+.main.cinemas .block .content a.add:hover {
   border: none;
 }
-#main.cinemas .block.preferred .content {
+.main.cinemas .block.preferred .content {
   display: block;
 }
-#main.cinemas .block.preferred .fav {
+.main.cinemas .block.preferred .fav {
   /* IE10 */
   background-image: -ms-linear-gradient(bottom, #414042 0%, #292728 100%);
   /* Mozilla Firefox */
@@ -2465,18 +2492,18 @@ h2 {
   float: left;
   margin-right: 10px;
 }
-#main.cinemas .block.preferred .fav .star {
+.main.cinemas .block.preferred .fav .star {
   float: left;
   margin: 0px 5px 0px 0px;
 }
-#main.cinemas .block.preferred .fav a {
+.main.cinemas .block.preferred .fav a {
   border: none;
   padding: 0px;
 }
-#main.cinemas .block.preferred .fav a:hover {
+.main.cinemas .block.preferred .fav a:hover {
   color: red;
 }
-#main.cinemas .block.preferred .fav span.x {
+.main.cinemas .block.preferred .fav span.x {
   cursor: pointer;
   padding: 1px 6px 2px 6px;
   display: block;
@@ -2490,47 +2517,47 @@ h2 {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-#main.cinemas .block.preferred .fav span.x:hover {
+.main.cinemas .block.preferred .fav span.x:hover {
   background-color: #939393;
   color: #333333;
 }
-#main.cinemas .block.preferred .set-preferred-cinemas {
+.main.cinemas .block.preferred .set-preferred-cinemas {
   padding: 0px;
   border: none;
   margin-top: 8px;
 }
-#main.cinemas .block.preferred .btn {
+.main.cinemas .block.preferred .btn {
   border: none;
   padding-top: 7px;
   float: right;
 }
-#main.premium-cinema .innerpage {
+.main .premium-cinema .innerpage {
   height: 800px;
 }
-#main.premium-cinema .innerpage a {
+.main .premium-cinema .innerpage a {
   display: block;
   margin-bottom: 1px;
 }
-#main.premium-cinema .innerpage a img {
+.main .premium-cinema .innerpage a img {
   width: 100%;
   height: auto;
 }
-#main.premium-cinema .innerpage a:last-child {
+.main .premium-cinema .innerpage a:last-child {
   margin-bottom: 20px;
 }
-#main.premium-cinema .btn {
+.main .premium-cinema .btn {
   width: auto;
 }
-#main.premium-cinema .third-nav {
+.main .premium-cinema .third-nav {
   list-style: none;
   margin: 10px 0px 0px 0px;
   position: relative;
 }
-#main.premium-cinema .third-nav li {
+.main .premium-cinema .third-nav li {
   display: block;
   margin-bottom: 5px;
 }
-#main.premium-cinema .third-nav li a {
+.main .premium-cinema .third-nav li a {
   color: white;
   font-size: 18px;
   margin-bottom: 5px;
@@ -2629,7 +2656,7 @@ h2 {
   width: auto;
   margin-top: 5px;
 }
-#main.promos .full {
+.main .promos .full {
   border: 1px solid #333333;
   background: black;
   width: 100%;
@@ -2637,38 +2664,53 @@ h2 {
   padding: 0px 0px;
   margin-bottom: 200px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info {
+.cinema-movie-times-info {
   position: relative;
   height: auto;
   float: left;
   display: block;
   width: 730px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+.cinema-movie-times-info .details-link {
   position: absolute;
   top: 0px;
   right: 10px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
+.cinema-movie-times-info .poptrailer {
   position: absolute;
   top: 0px;
   right: 100px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info strong {
+.cinema-movie-times-info strong {
   display: inline;
+  float: left;
+  margin-bottom: 4px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info strong.title {
+.cinema-movie-times-info strong.title {
   font-size: 18px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info p {
+.cinema-movie-times-info p {
   display: inline;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info .icons {
+.cinema-movie-times-info .icons {
   margin: 6px 0px;
+  height: 20px;
 }
-.cinemas .movie-overview-list .cinema-movie-times-info .icons div {
+.cinema-movie-times-info .icons div {
   margin-right: 3px;
   float: left;
+}
+.cinema-movie-times-info .ratings {
+  margin-left: 5px;
+  float: left;
+}
+.cinema-movie-times-info .ratings a:hover {
+  margin-left: 0px;
+}
+.cinema-movie-times-info .info {
+  display: block;
+  margin: 3px 0px;
+  clear: both;
 }
 .movie-overview-list {
   display: block;
@@ -2707,12 +2749,14 @@ h2 {
 }
 .movie-overview-list .movie-list-item .quick-times-select-widget {
   background: #000;
+  border: none;
   padding: 0px;
   float: left;
   display: block;
   position: static;
 }
-.movie-overview-list .movie-list-item .quick-times-select-widget .arrow {
+.movie-overview-list .movie-list-item .quick-times-select-widget .arrow,
+.movie-overview-list .movie-list-item .quick-times-select-widget .arrow-outer {
   display: none;
 }
 .movie-overview-list .movie-list-item .showing-date {
@@ -2861,6 +2905,18 @@ ul.movie-overview li span:hover img {
   filter: alpha(opacity = (90));
   padding-left: 10px;
 }
+.image-wrapper .hover .ratings {
+  margin-bottom: 3px;
+}
+.image-wrapper .hover .ratings a {
+  width: auto;
+  display: inline;
+  padding: 2px;
+  color: #333333;
+}
+.image-wrapper .hover .ratings a:hover {
+  margin-left: 0px;
+}
 .image-wrapper .hover p {
   padding: 0px;
   margin: 0px 0px 2px 0px;
@@ -2937,6 +2993,86 @@ ul.movie-overview li span:hover img {
 .dates li:hover {
   color: #fff;
 }
+.movie-detail .quick-times-select-widget .hurry {
+  display: block;
+  transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  /* IE 9 */
+
+  -webkit-transform: rotate(40deg);
+  /* Safari and Chrome */
+
+  -o-transform: rotate(40deg);
+  /* Opera */
+
+  -moz-transform: rotate(40deg);
+  /* Firefox */
+
+  left: 474px;
+  width: 190px;
+  top: 2px;
+  background: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 11px;
+}
+.movie-detail .quick-times-select-widget .hurry p {
+  padding: 0px 20px;
+  line-height: 10px;
+}
+.movie-detail .quick-times-select-widget .hurry-bck {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  background: url(../../img/hurry-banner.png) no-repeat;
+  width: 73px;
+  height: 62px;
+}
+.movie-detail .quick-times-select-widget .hidden-area {
+  background: white;
+  /* Netscape */
+
+  -moz-opacity: 0;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0;
+  /* Good browsers */
+
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0));
+  filter: alpha(opacity = (0));
+  position: absolute;
+  top: -40px;
+  left: 380px;
+  height: 40px;
+  width: 210px;
+}
+.movie-detail .quick-times-select-widget .arrow {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #333334;
+  position: absolute;
+  left: 500px;
+  top: -8px;
+}
+.movie-detail .quick-times-select-widget .arrow-outer {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #797979;
+  position: absolute;
+  left: 498px;
+  top: -10px;
+  z-index: 90;
+}
 .quick-times-select-widget {
   display: none;
   position: absolute;
@@ -2954,8 +3090,13 @@ ul.movie-overview li span:hover img {
   background-image: -webkit-linear-gradient(bottom, #0e0c0d 0%, #333334 100%);
   /* Proposed W3C Markup */
   background-image: linear-gradient(bottom, #0e0c0d 0%, #333334 100%);
+  border: 1px solid #797979;
   width: 575px;
   padding: 10px;
+}
+.quick-times-select-widget .hurry,
+.quick-times-select-widget .hurry-bck {
+  display: none;
 }
 .quick-times-select-widget .view-seats-link {
   position: absolute;
@@ -3009,6 +3150,19 @@ ul.movie-overview li span:hover img {
   position: absolute;
   left: 250px;
   top: -8px;
+  z-index: 1000;
+}
+.quick-times-select-widget .arrow-outer {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #797979;
+  position: absolute;
+  left: 248px;
+  top: -10px;
+  z-index: 90;
 }
 .quick-times-select-widget .close {
   position: absolute;
@@ -3238,12 +3392,12 @@ footer .right ul li:hover {
 .ticketing header {
   margin: 20px;
 }
-.ticketing #main {
+.ticketing .main {
   margin: 10px 0px 0px 20px;
   width: 1184px;
   height: 687px;
 }
-.ticketing #main .session-button {
+.ticketing .main .session-button {
   position: absolute;
   top: 390px;
   left: 250px;
@@ -3252,14 +3406,14 @@ footer .right ul li:hover {
   background: white;
   opacity: 0;
 }
-.ticketing #main .back-button {
+.ticketing .main .back-button {
   position: absolute;
   width: 100px;
   height: 70px;
   background: white;
   opacity: 0;
 }
-.ticketing #main .proceed-button {
+.ticketing .main .proceed-button {
   position: absolute;
   width: 100px;
   height: 70px;
@@ -3440,7 +3594,7 @@ footer .right ul li:hover {
 			right: 0px;
 		}
 	}	
-	nav {
+	.nav {
 	
 		ul {
 		
@@ -3470,31 +3624,32 @@ footer .right ul li:hover {
 }
 */
 @media all and (min-width: 480px) and (max-width: 1260px) {
-  #main.cinemas .block .content a.btn {
+  .main .cinemas .block .content a.btn {
     font-size: 12px;
     margin-top: 10px;
   }
-  .cinemas .movie-overview-list .cinema-movie-times-info {
+  .cinema-movie-times-info {
     width: 450px;
   }
-  .cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+  .cinema-movie-times-info .details-link {
+    position: static;
+    display: block;
+    clear: both;
+  }
+  .cinema-movie-times-info .poptrailer {
     position: static;
     display: block;
   }
-  .cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
-    position: static;
-    display: block;
-  }
-  #main.cinemas .right .item {
+  .main .cinemas .right .item {
     text-align: center;
   }
-  #main.cinemas .right .item .desc {
+  .main .cinemas .right .item .desc {
     float: none;
   }
-  #main.cinemas .right .item .title {
+  .main .cinemas .right .item .title {
     font-size: 13px;
   }
-  #main.cinemas .right .item img {
+  .main .cinemas .right .item img {
     float: none;
     margin-bottom: 5px;
   }
@@ -3594,7 +3749,7 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
-  .cinemas .movie-overview-list .cinema-movie-times-info {
+  .cinema-movie-times-info {
     width: 580px;
   }
   .movie-overview-list .movie-list-item .descr {
@@ -3670,7 +3825,7 @@ footer .right ul li:hover {
     left: 1130px;
   }
   .home .home-items {
-    width: 1366px;
+    width: 1366px !important;
   }
   .home #slider {
     width: 1015px;
@@ -3712,7 +3867,7 @@ footer .right ul li:hover {
   .innerpage .right {
     width: 230px;
   }
-  #main.movies ul.movie-overview li {
+  .main .movies ul.movie-overview li {
     margin-right: 11px;
   }
   .movie-list-item .quick-times-select-widget {
@@ -3829,9 +3984,9 @@ footer .right ul li:hover {
   background: #b2e2fa;
   filter: none;
 }
-.ie9 nav ul li a,
-.ie8 nav ul li a,
-.ie7 nav ul li a {
+.ie9 .nav ul li a,
+.ie8 .nav ul li a,
+.ie7 .nav ul li a {
   text-indent: -9999px;
   background: url(../../img/nav_sprite.png) no-repeat 0px 0px;
   display: block;
@@ -3919,7 +4074,7 @@ footer .right ul li:hover {
 .ie7 #background-wrap {
   background-position: top center;
 }
-.ie9 #main.movies ul.movie-overview li {
+.ie9 .main .movies ul.movie-overview li {
   margin-right: 6px;
 }
 .ie9 .tools {
@@ -3942,10 +4097,10 @@ footer .right ul li:hover {
   display: block;
   float: left;
 }
-.ie9 #main.movies .movie-overview-list {
+.ie9 .main .movies .movie-overview-list {
   display: block;
 }
-.ie9 #main.movies .movie-overview-thumb {
+.ie9 .main .movies .movie-overview-thumb {
   display: none;
 }
 .ie9 .quick-times-select-widget .cinema-row .dates-row {

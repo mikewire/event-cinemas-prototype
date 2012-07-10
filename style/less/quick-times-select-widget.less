@@ -35,7 +35,63 @@
 	display: block;
 }
 
+.movie-detail .quick-times-select-widget {
 
+	.hurry {
+		display: block;
+		.turn(40deg);
+		left: 474px;
+		width: 190px;
+		top: 2px;
+		background: none !important;
+		.shadow-none;
+		font-size: 11px;
+		
+		p {
+		
+			padding: 0px 20px;
+			line-height: 10px;
+		}
+	
+	
+	}
+	.hurry-bck {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 0px;
+		right: 0px;
+		background: url(../../img/hurry-banner.png) no-repeat;
+		width: 73px;
+		height: 62px;
+	}
+	.hidden-area {
+		
+		background: white;
+		.opaque(0);
+		position: absolute;
+		top: -40px;
+		left: 380px;
+		height: 40px;
+		width: 210px;
+	}
+	.arrow {
+	
+		.arrow-up(8px, darken(#4c4c4e,10%));
+		position: absolute;
+		left: 500px;
+		top: -8px;
+	}
+	.arrow-outer {
+	
+		.arrow-up(10px, darken(@light-grey,40%));
+		position: absolute;
+		left: 498px;
+		top: -10px;
+		z-index: 90;
+	}
+
+}
 .quick-times-select-widget {
 
 	display: none;
@@ -43,9 +99,13 @@
 	top: 0px;
 	z-index: 8000;
 	.gradient(darken(#282526,10%),darken(#4c4c4e,10%));
+	border: 1px solid darken(@light-grey,40%);
 	width: 575px;
 	padding: 10px;
+	.hurry, .hurry-bck {
 	
+		display: none;
+	}
 	.view-seats-link {
 	
 		position: absolute;
@@ -86,6 +146,15 @@
 		position: absolute;
 		left: 250px;
 		top: -8px;
+		z-index: 1000;
+	}
+	.arrow-outer {
+	
+		.arrow-up(10px, darken(@light-grey,40%));
+		position: absolute;
+		left: 248px;
+		top: -10px;
+		z-index: 90;
 	}
 	
 	.close {

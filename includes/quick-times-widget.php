@@ -1,4 +1,7 @@
 		<div class="quick-times-select-widget">
+			<div class="hurry-bck"></div>
+  			<div class="hurry"><p>Hurry!<br />ends in 1 week</p></div>
+		
 <!--
 			<a class="view-seats-link">
 				<p>View available seats</p>
@@ -6,6 +9,7 @@
 			</a>
 -->
 			<span class="arrow"></span>
+			<span class="arrow-outer"></span>
 			<div class="hidden-area"></div>
 			<?
 			$preferred = array();

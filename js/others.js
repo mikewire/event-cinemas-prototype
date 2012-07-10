@@ -11,20 +11,20 @@ $(function() {
 			provider: 'facebook',
 			actionURL: 'http://www.facebook.com/EventCinemas',
 			action: 'dialog',
-			iconURL: 'img/fb.png'
+			iconURL: '//cdn.eventcinemas.com.au/www/img/fb.png'
 	
 		},
 		{ 
 			provider: 'twitter',
 			action: 'dialog',
 			followUsers: 'eVent_cinemas',
-			iconURL: 'img/tw.png'
+			iconURL: '//cdn.eventcinemas.com.au/www/img/tw.png'
 		},
 		{
 	        provider: 'custom',
 	        action: 'window',
 	        actionURL: 'http://www.youtube.com/user/eventcinemas',
-			iconURL: 'img/yt.png'
+	        iconURL: '//cdn.eventcinemas.com.au/www/img/yt.png'
 		}
 		
 		]
@@ -46,12 +46,12 @@ $(function() {
 	// Only for illustrative purpose - whenever a checkbox is checked something needs to happen
 	
 	$(".filters li").live("click",function() {
-		if ($(this).hasClass("active")) {
-			$(this).removeClass("active");
-		} else {
-			$(this).addClass("active");
-		}
-		alert("AJAX update results");
+	    if ($(this).hasClass("active")) {
+	        $(this).removeClass("active");
+	    } else {
+	        $(this).addClass("active");
+	    }
+	    FilterMovies();
 	});
 
 	// cinebuzz blowout behavior
@@ -66,14 +66,3 @@ $(function() {
 		
 
 });
-
-
-
-
-
-
-
-
-
-
-

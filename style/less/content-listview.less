@@ -1,4 +1,4 @@
-.cinemas .movie-overview-list .cinema-movie-times-info {
+.cinema-movie-times-info {
 
 	position: relative;
 	height: auto;
@@ -6,7 +6,7 @@
 	display: block;
 	width: 730px;
 	.details-link {
-	
+		
 		position: absolute;
 		top: 0px;
 		right: 10px;
@@ -21,7 +21,8 @@
 	strong {
 	
 		display: inline;
-		
+		float: left;
+		margin-bottom: 4px;
 		&.title {
 			font-size: 18px;
 		}
@@ -33,13 +34,32 @@
 	.icons {
 
 		margin: 6px 0px;	
+		height: 20px;
 		div {
 			margin-right: 3px;
 			float: left;
 		}
+
 	
 	
 	}
+	.ratings {
+		margin-left: 5px;
+		float: left;
+		a {
+			
+			&:hover {
+				margin-left: 0px;
+			}
+		}
+	}
+	.info {
+	
+		display: block;
+		margin: 3px 0px;
+		clear:both;
+	}
+	
 
 }
 .movie-overview-list {
@@ -76,6 +96,7 @@
 		.quick-times-select-widget {
 			
 			background: #000;
+			border: none;
 			padding: 0px;
 			float: left;
 			display: block;
@@ -85,7 +106,7 @@
 			
 			}
 			
-			.arrow {
+			.arrow, .arrow-outer {
 			
 				display: none;
 			}

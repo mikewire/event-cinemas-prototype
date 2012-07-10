@@ -1,5 +1,5 @@
 <? include("includes/header.php") ?>
-	<div id="main" role="main" class="home">	
+	<div class="main home" role="main">	
 	
 		<? include("includes/nav.php") ?>
 		 

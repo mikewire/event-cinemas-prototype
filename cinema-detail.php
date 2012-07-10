@@ -39,7 +39,7 @@
 	
 	</div>
   
-  <div id="main" role="main" class="cinemas">
+  <div class="main cinemas" role="main">
 
 		<? include("includes/nav.php") ?>	  
   		

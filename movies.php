@@ -1,6 +1,6 @@
 <? include("includes/header.php") ?>
   
-  <div id="main" role="main" class="movies">
+  <div class="main movies" role="main">
 
 		<? include("includes/nav.php") ?>	  
   		
@@ -49,6 +49,10 @@
 							  			<div class="hurry"><p>Hurry!<br />Ends in 1 week</p></div>
 							  			<div class="hover">
 							  				<p class="title">Snow White and the Huntsman</p>
+							  				<div class="ratings">
+							  					<a class="pg-icon" title="suitable for all ages">PG</a>
+							  					<a class="g-icon" title="suitable for all ages">G</a>
+							  				</div>
 							  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
 							  				<a class="poptrailer">&#8250; view trailer</a>		
 								  			<div class="icons">
@@ -596,77 +600,148 @@
 					  		</li>			  					  					  					  		
 						</ul>
 					</div><!-- end .movie-overview-thumb -->
+					
+					
+					
+					
 					<div class="movie-overview-list">
 					
 					
 						<div class="movie-list-item">
 				  			<div class="image-wrapper">
-					  			<img src="img/movie5.png" alt="movie1"  />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
 
 							<? include("includes/quick-times-widget.php") ?>
 							<div class="clearfix"></div>
 						</div>
 						<div class="movie-list-item">
 				  			<div class="image-wrapper">
-					  			<img src="img/movie2.png" alt="movie1"  />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
+						  			<div class="hurry"><p>Hurry!<br />Ends in 1 week</p></div>
+				  			
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
 
 							<? include("includes/quick-times-widget.php") ?>
 							<div class="clearfix"></div>
 						</div>
 						<div class="movie-list-item">
 				  			<div class="image-wrapper">
-					  			<img src="img/movie3.png" alt="movie1"  />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
 
 							<? include("includes/quick-times-widget.php") ?>
 							<div class="clearfix"></div>
 						</div>
 						<div class="movie-list-item">
 				  			<div class="image-wrapper">
-					  			<img src="img/movie1.png" alt="movie1"  />
-					  			<div class="hover">
-					  				<a class="details-link" href="movie-detail.php">&#8250; more details</a>
-					  				<a class="poptrailer">&#8250; view trailer</a>			  				
-						  			<div class="icons">
-							  			<div class="goldclass-icon"></div>
-						  				<div class="vmax-icon"></div>
-						  			</div>
-					  			</div>
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
 				  			</div>
-			  				<p class="title">Snow White and the Huntsman 7</p>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
 
 							<? include("includes/quick-times-widget.php") ?>
 							<div class="clearfix"></div>
 						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+				  			</div>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
+
+							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
+						</div>
+						<div class="movie-list-item">
+				  			<div class="image-wrapper">
+					  			<img src="img/movie5.png" alt="movie1" width="105" height="150" />
+				  			</div>
+				  			
+							<div class="cinema-movie-times-info">
+			  					<strong class="title">Snow White and the Huntsman 7</strong>
+			  					<div class="ratings">
+			  					
+			  						<a class="pg-icon" title="suitable for all ages">PG</a>
+			  						<a class="g-icon" title="suitable for all ages">G</a>
+
+			  					</div>
+			  					
+								
+					  			<a class="details-link" href="movie-detail.php">&#8250; more details</a>
+					  			<a class="poptrailer">&#8250; view trailer</a>			  				
+							</div>
+
+							<? include("includes/quick-times-widget.php") ?>
+							<div class="clearfix"></div>
+						</div>
+
 					
 					
 					</div>

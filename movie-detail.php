@@ -1,14 +1,21 @@
 <? include("includes/header.php") ?>
   
-	<div id="main" role="main" class="movie-detail">	
+	<div class="main movie-detail" role="main">	
 	
 		<? include("includes/nav.php") ?>	  
 		  
 		<div class="movie-info">
 			
-			<h1>The Avengers from outer space</h1>
+			<h1>The Avengers</h1>
 			<div class="three-d-white-bg"></div>
 			<div class="two-d-white-bg"></div>
+			<div class="ratings">
+			
+				<a class="pg-icon" title="suitable for all ages">PG</a>
+				<a class="g-icon" title="suitable for all ages">G</a>
+
+			</div>
+			
 			<span>
 				<strong>Genre</strong>
 				<p>Action, Adventure</p>
@@ -104,6 +111,7 @@
 		  </div>
 	  	  <div id="gallery-close" class="close"></div>
 -->
+		<div id="quick-times-widget-upon-hover"><? include("includes/quick-times-widget.php") ?></div>
 	  	  
 	  </div> <!-- end main -->
 	  
@@ -123,4 +131,5 @@
 <!-- 			<img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
 			
 		</div>	
+
 <? include("includes/footer.php") ?>

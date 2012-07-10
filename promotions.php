@@ -1,6 +1,6 @@
 <? include("includes/header.php") ?>
   
-  <div id="main" role="main" class="promos">
+  <div class="main" role="main" class="promos">
 
 		<? include("includes/nav.php") ?>	  
   		

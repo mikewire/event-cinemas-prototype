@@ -55,7 +55,7 @@
 			right: 0px;
 		}
 	}	
-	nav {
+	.nav {
 	
 		ul {
 		
@@ -87,26 +87,29 @@
 
 
 @media all and (min-width: 480px) and (max-width: 1260px){
-	#main.cinemas .block .content a.btn {
+	.main .cinemas .block .content a.btn {
 	
 		font-size: 12px;
 		margin-top: 10px;
 	}
-	.cinemas .movie-overview-list .cinema-movie-times-info {
+	.cinema-movie-times-info {
 	
 		width: 450px;
 	}
-	.cinemas .movie-overview-list .cinema-movie-times-info .details-link {
+	.cinema-movie-times-info .details-link {
+	
+		position: static;
+		display: block;
+		clear: both;
+	}
+	.cinema-movie-times-info .ratings {
+	}
+	.cinema-movie-times-info .poptrailer {
 	
 		position: static;
 		display: block;
 	}
-	.cinemas .movie-overview-list .cinema-movie-times-info .poptrailer {
-	
-		position: static;
-		display: block;
-	}
-	#main.cinemas .right .item {
+	.main .cinemas .right .item {
 			text-align: center;			
 		.desc {	
 			float: none;
@@ -233,7 +236,7 @@
 
 }
 @media all and (min-width: 1260px) and (max-width: 1400px){
-	.cinemas .movie-overview-list .cinema-movie-times-info {
+	.cinema-movie-times-info {
 	
 		width: 580px;
 	}
@@ -318,7 +321,7 @@
 	#ticket-bar 		{ width: 1120px; }
 	#cine-buzz			{ left: 1130px; }
 	.home {
-		.home-items	 	{ width: 1366px; }
+		.home-items	 	{ width: 1366px !important; }
 		#slider 		{ width: 1015px; }
 		.ad.full		{ width: 440px; }
 		.ad.half		{ width: 223px; }
@@ -343,7 +346,7 @@
 		}
 
 	}
-	#main.movies ul.movie-overview li {
+	.main .movies ul.movie-overview li {
 	
 		margin-right: 11px
 	}

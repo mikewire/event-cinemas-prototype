@@ -1,6 +1,6 @@
 <? include("includes/header.php") ?>
   
-	<div id="main" role="main" class="movie-detail">	
+	<div class="main movie-detail" role="main">	
 
 		<div class="gallery-items">
 		  	<div id="slider" class="animate">

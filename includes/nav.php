@@ -1,4 +1,4 @@
-  <nav>
+  <div class="nav">
 			
 	<a href="#"><img class="logo" src="img/ec-logo.png" /></a>
 	<div class="expand"><span></span></div>
@@ -18,4 +18,4 @@
 			<input class="red-search-btn" type="submit" value="" />
 		</form>
 	</span>
-  </nav>
+  </div>

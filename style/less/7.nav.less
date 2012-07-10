@@ -1,4 +1,4 @@
-nav {
+.nav {
 
 	position: absolute;
 	left: 0px;
@@ -6,7 +6,6 @@ nav {
 	color: white;
 	
 	li.home {
-	
 		display: none;
 	}
 	.expand {
@@ -21,11 +20,9 @@ nav {
 		height: 8px;
 		right: 10px;
 		padding: 5px 10px;
-		span {
-			
+		span {	
 			.arrow-down(8px, red);
 		}
-		
 	}
 	
 	ul {
@@ -42,12 +39,11 @@ nav {
 				font-size: 22px;
 				font-family: @thin-font;
 				&:hover {
-					
 					color: @light-grey;
 				}
 			}
+			div.rtsSelected a,
 			&.active a {
-			
 				color: red;
 			}
 		

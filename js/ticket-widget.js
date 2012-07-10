@@ -53,7 +53,6 @@ $(function() {
 	//======= events =======//
 		
 	$("#ticket-bar .btn").click(function() {
-	
 		$("#top-ticketing-form").submit();
 		//console.log("submit");
 	}); 
@@ -71,7 +70,6 @@ $(function() {
 		
 	});
 	$("#cover").click(function() {
-	
 		hideAllTicketBarBlowouts();
 	});
 
@@ -81,23 +79,28 @@ $(function() {
 	// where would you like to go 
 	
 	$("#where").click(function() { 
-						
 		if ($(".where-blowout").is(":visible")) {
 			hideAllTicketBarBlowouts(); 
-			
 		} else {
 			$("#cover").show();
 			TicketBarZIndex(9999);
 			$(this).addClass("active");
+			var state = $("div.where-blowout ul.head li.active a").html();
+			showState(state);
 			$(".where-blowout").removeClass("in-the-middle").show(); 
 			$("#what").removeClass("active");
 			$(".what-blowout").hide(); 
 			$("#when").removeClass("active");
 			$(".when-blowout").hide(); 
-		
 		}
-		
 	});
+	
+    $("div.where-blowout ul.head li").click(function () {
+        $("div.where-blowout ul.head li").removeClass("active");
+        $(this).addClass("active");
+        showState($("a", this).html());
+    });
+	
 	$(".where-blowout span").click(function() {
 		if ($(this).hasClass("active")) {
 			removeByElement(preferred_cinemas, $("label",this).text());
@@ -121,52 +124,56 @@ $(function() {
 		} else {
 		
 			$("#where").html("Select cinema(s)<em class='arrow-down'></em>");
-		} 
+		}
+		FilterMovies();
 		$("#top-ticketing-cinemas").val(preferred_cinemas);
-		
 	});
 	$(".where-blowout .done").click(function() {
-		hideAllTicketBarBlowouts();
-		
+	    hideAllTicketBarBlowouts();
+	    FilterMovies();
 	});
 	
 	
 	// What would you like to see 
 
 	$("#what").click(function() { 
-		
 		if ($(".what-blowout").is(":visible")) {
-
 			hideAllTicketBarBlowouts(); 
-
-			
-		
 		} else {
 			$("#cover").show();
 			TicketBarZIndex(9999);
-		
+		    FilterMovies();
 			$(this).addClass("active");
 			$(".what-blowout").show(); 
 			$("#where").removeClass("active");
 			$(".where-blowout").hide(); 
 			$("#when").removeClass("active");
-			$(".when-blowout").hide(); 
-		
+			$(".when-blowout").hide();
 		}
-		
 	});
-	$(".what-blowout .movie-overview span").click(function() {
-	
-		if ($(this).hasClass("active")) {
-			removeByElement(selected_movies, $(".title",this).text());
+	$(".what-blowout .movie-overview").on("click", "span",function(e) {
+	    var movie = { title: $(".title", this).text(), id: $(".title", this).data("id") };
+	    if ($(this).hasClass("active")) {
+	        for (var i = 0; i < selected_movies.length; i++) {
+	            if (selected_movies[i].id == movie.id) {
+	                removeByElement(selected_movies[i]);
+	                break;
+	            }
+	        }
 			$(this).removeClass("active");
 		} else {
-			removeByElement(selected_movies, $(".title",this).text());
-			selected_movies.push($(".title",this).text());
+	        for (var i = 0; i < selected_movies.length; i++) {
+	            if (selected_movies[i].id == movie.id) {
+	                removeByElement(selected_movies[i]);
+	                break;
+	            }
+	        }
+	        selected_movies.push(movie);
 			$(this).addClass("active");
 		}
 		for ( var i=0; i < selected_movies.length; i++ ) { 
-			console.log(selected_movies[i]);
+		    console.log(selected_movies[i].title);
+		    console.log(selected_movies[i].id);
 		}
 
 		if (selected_movies.length > 1) {
@@ -175,7 +182,7 @@ $(function() {
 			
 		} else if (selected_movies.length == 1) {
 			
-			$("#what").html(selected_movies[0]+"<em class='arrow-down'></em>");
+			$("#what").html(selected_movies[0].title+"<em class='arrow-down'></em>");
 		
 		} else {
 		
@@ -185,8 +192,7 @@ $(function() {
 
 	});
 	$(".what-blowout .done").click(function() {
-		hideAllTicketBarBlowouts();
-			
+		hideAllTicketBarBlowouts();			
 	});
 	
 	
@@ -228,4 +234,37 @@ $(function() {
 		hideAllTicketBarBlowouts();
 	});
 
+	$("a#advancedTickets").click(function () {
+	    $("ul.head li").removeClass("active");$(this).parent().addClass("active");
+	    GetAdvancedMovies();
+	});
+	$("a#nowShowing").click(function () {
+	    $("ul.head li").removeClass("active");
+	    $(this).parent().addClass("active");
+	    RenderNowShowing();
+	});
+    
+	$("#logout").click(function () {
+	    $.post('@Url.Action("LogOut", "SessionFilter", null, "https")', null, function (result) {
+	        location.href = location.href + "?logout";
+	    });
+	    return false;
+	});
+
+	$("#login").click(function () {
+	    var data = {
+	        username: $("#username").val(),
+	        password: $("#password").val(),
+	        memberId: "",
+	        cardnumber: ""
+	    };
+	    $.post('@Url.Action("LogOn", "SessionFilter", null, "https")', data, function (result) {
+	        location.href = location.href + "?login";
+	    });
+	    return false;
+	});
+
+	$(".what-blowout img").error(function () {
+	    $(this).attr("src", $("#cdnUrl").attr("path") + "img/unavailable_poster105x50.jpg");
+	});
 });
