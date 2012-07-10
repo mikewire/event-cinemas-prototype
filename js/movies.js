@@ -118,12 +118,12 @@ $(function() {
 		var reveal_more = $(this);
 		var wrap = $(this).siblings(".cinema-row-wrapper");
 		var dates = $(".dates-row", wrap);
-		$(".shadow-left", wrap).show();
-		var parentEl = $(this).parent().parent().parent();
-		dateScroller = setInterval(function() { scrollDatesLeft(parentEl, dates,reveal_more); }, 5);
+		$(".shadow-left", wrap).show();		
+		var limit = $(this).siblings(".cinema-row-wrapper").width() - $(this).siblings(".cinema-row-wrapper").find(".width-wrap").width();
+		dateScroller = setInterval(function() { scrollDatesLeft(dates,reveal_more, limit); }, 5);
 		
 	}, function() {
-	
+		if (ie) $(".dates-row").show(); // strange IE bug fix
 		clearInterval(dateScroller);
 		
 	});

@@ -48,6 +48,9 @@
 									<a class="btn grey">18:00am</a>
 									<a class="btn grey">19:00am</a>
 									<a class="btn three-d-btn">20:00am<span class="three-d-icon"></span></a>
+									<a class="btn grey">18:00am</a>
+									<a class="btn grey">18:00am</a>
+									<a class="btn grey">18:00am</a>
 								</span>
 							</div>
 							<span class="shadow-right"></span>

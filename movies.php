@@ -6,6 +6,8 @@
   		
   		<div class="innerpage">
 			<div class="left">
+				<div id="quick-times-widget-upon-hover"><? include("includes/quick-times-widget.php") ?></div>
+
 				<span class="strip"><h1>Movies</h1></span>
 				
 				<div class="wrap">
@@ -749,7 +751,6 @@
 					
 				</div><!-- end wrap -->				
 				
-				<div id="quick-times-widget-upon-hover"><? include("includes/quick-times-widget.php") ?></div>
 			</div><!-- end .left -->
 			
 			<div class="right filters">

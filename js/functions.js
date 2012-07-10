@@ -121,7 +121,7 @@ function changeSkin() {
 function moveSliderRight() {
 
     $("#slider .items").animate({ "left": "-=" + slide_amount }, 300, function () {
-
+		
         current_slide = current_slide + 1;
 
         if (current_slide == total_slides) {
@@ -176,24 +176,30 @@ function closeTrailer() {
     }
 }
 
-function scrollDatesLeft(parentEl, el, reveal_more) {
-    //console.log(el.siblings(".cinema-row-wrapper"));
+function scrollDatesLeft(el, reveal_more, limit) {
     var p = $(el).position();
-    console.log($(".width-wrap", el).width());
 
-    if (p.left > ($(".cinema-row-wrapper", parentEl).width() - $(".width-wrap", el).width())) {
-        $(el).css({ "left": "-=2px" });
+    if (p.left > limit) {
+    	if (ie) { 
+			  $(el).css({ "left": "-=4px" }).show(); // strange IE bug fix 
+		} else {
+			  $(el).css({ "left": "-=2px" });
+		}
     } else {
         $(reveal_more).hide();
     }
 
 }
 function scrollDatesRight(el, reveal_less) {
-    //console.log(el.siblings(".cinema-row-wrapper"));
     var p = $(el).position();
-    console.log(p.left);
+   
     if (p.left < 0) {
-        $(el).css({ "left": "+=2px" });
+    	if (ie) { 
+ 	       $(el).css({ "left": "+=4px" });
+ 	    } else {
+ 	       $(el).css({ "left": "+=2px" });
+
+ 	    }
     } else {
         $(reveal_less).hide();
     }
@@ -209,6 +215,7 @@ function determineDatesScrolling() {
             $(".shadow-right", this).show();
         }
     });
+    $(".dates-row").show();
 
 }
 function showQuickTimesWidget() {

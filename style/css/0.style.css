@@ -3029,7 +3029,6 @@ ul.movie-overview li span:hover img {
 
   left: 524px;
   width: 90px;
-  border: 1px solid #fff;
   top: 2px;
   background: none !important;
   -webkit-box-shadow: none;
@@ -3960,7 +3959,10 @@ footer .right ul li:hover {
 }
 .ie9 footer,
 .ie8 footer,
-.ie7 footer {
+.ie7 footer,
+.ie9 .strip,
+.ie8 .strip,
+.ie7 .strip {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr=#292728, endColorstr=#414042);
 }
 .ie9 .btn.yellow,
@@ -3980,6 +3982,12 @@ footer .right ul li:hover {
 .ie8 #cine-buzz,
 .ie7 #cine-buzz {
   background: url(../../img/ie_gradient_red.png) repeat-x;
+}
+.ie9 .quick-times-select-widget,
+.ie8 .quick-times-select-widget,
+.ie7 .quick-times-select-widget {
+  background-color: #333334;
+  zoom: 1;
 }
 .ie9 .btn.grey,
 .ie8 .btn.grey,
@@ -4015,89 +4023,89 @@ footer .right ul li:hover {
   height: 19px;
   margin-bottom: 8px;
 }
-.ie9 li.movies_li a,
-.ie8 li.movies_li a,
-.ie7 li.movies_li a {
+.ie9 .nav li.movies_li a,
+.ie8 .nav li.movies_li a,
+.ie7 .nav li.movies_li a {
   width: 75px;
 }
-.ie9 li.movies_li.active a,
-.ie8 li.movies_li.active a,
-.ie7 li.movies_li.active a {
+.ie9 .nav li.movies_li.active a,
+.ie8 .nav li.movies_li.active a,
+.ie7 .nav li.movies_li.active a {
   background-position: 0px -20px;
 }
-.ie9 li.alternate_li a,
-.ie8 li.alternate_li a,
-.ie7 li.alternate_li a {
+.ie9 .nav li.alternate_li a,
+.ie8 .nav li.alternate_li a,
+.ie7 .nav li.alternate_li a {
   background-position: -83px 0px;
   width: 175px;
 }
-.ie9 li.alternate_li.active a,
-.ie8 li.alternate_li.active a,
-.ie7 li.alternate_li.active a {
+.ie9 .nav li.alternate_li.active a,
+.ie8 .nav li.alternate_li.active a,
+.ie7 .nav li.alternate_li.active a {
   background-position: -82px -20px;
 }
-.ie9 li.cinemas_li a,
-.ie8 li.cinemas_li a,
-.ie7 li.cinemas_li a {
+.ie9 .nav li.cinemas_li a,
+.ie8 .nav li.cinemas_li a,
+.ie7 .nav li.cinemas_li a {
   background-position: -271px 0px;
   width: 80px;
 }
-.ie9 li.cinemas_li.active a,
-.ie8 li.cinemas_li.active a,
-.ie7 li.cinemas_li.active a {
+.ie9 .nav li.cinemas_li.active a,
+.ie8 .nav li.cinemas_li.active a,
+.ie7 .nav li.cinemas_li.active a {
   background-position: -271px -20px;
 }
-.ie9 li.advanced-tickets_li a,
-.ie8 li.advanced-tickets_li a,
-.ie7 li.advanced-tickets_li a {
+.ie9 .nav li.advanced-tickets_li a,
+.ie8 .nav li.advanced-tickets_li a,
+.ie7 .nav li.advanced-tickets_li a {
   background-position: -360px 0px;
   width: 168px;
 }
-.ie9 li.advanced-tickets_li.active a,
-.ie8 li.advanced-tickets_li.active a,
-.ie7 li.advanced-tickets_li.active a {
+.ie9 .nav li.advanced-tickets_li.active a,
+.ie8 .nav li.advanced-tickets_li.active a,
+.ie7 .nav li.advanced-tickets_li.active a {
   background-position: -360px -20px;
 }
-.ie9 li.premium_li a,
-.ie8 li.premium_li a,
-.ie7 li.premium_li a {
+.ie9 .nav li.premium_li a,
+.ie8 .nav li.premium_li a,
+.ie7 .nav li.premium_li a {
   background-position: -536px 0px;
   width: 168px;
 }
-.ie9 li.premium_li.active a,
-.ie8 li.premium_li.active a,
-.ie7 li.premium_li.active a {
+.ie9 .nav li.premium_li.active a,
+.ie8 .nav li.premium_li.active a,
+.ie7 .nav li.premium_li.active a {
   background-position: -536px -20px;
 }
-.ie9 li.promos_li a,
-.ie8 li.promos_li a,
-.ie7 li.promos_li a {
+.ie9 .nav li.promos_li a,
+.ie8 .nav li.promos_li a,
+.ie7 .nav li.promos_li a {
   background-position: -715px 0px;
   width: 200px;
 }
-.ie9 li.promos_li.active a,
-.ie8 li.promos_li.active a,
-.ie7 li.promos_li.active a {
+.ie9 .nav li.promos_li.active a,
+.ie8 .nav li.promos_li.active a,
+.ie7 .nav li.promos_li.active a {
   background-position: -715px -20px;
 }
-.ie9 li.member_programs_li a,
-.ie8 li.member_programs_li a,
-.ie7 li.member_programs_li a {
+.ie9 .nav li.member_programs_li a,
+.ie8 .nav li.member_programs_li a,
+.ie7 .nav li.member_programs_li a {
   background-position: -925px 0px;
   width: 200px;
   height: 25px;
 }
-.ie9 li.member_programs_li.active a,
-.ie8 li.member_programs_li.active a,
-.ie7 li.member_programs_li.active a {
+.ie9 .nav li.member_programs_li.active a,
+.ie8 .nav li.member_programs_li.active a,
+.ie7 .nav li.member_programs_li.active a {
   background-position: -925px -25px;
 }
 .ie8 #background-wrap,
 .ie7 #background-wrap {
   background-position: top center;
 }
-.ie9 .main .movies ul.movie-overview li {
-  margin-right: 6px;
+.ie9 .main.movies ul.movie-overview li {
+  margin-right: 5px;
 }
 .ie9 .tools {
   postion: relative;
@@ -4124,10 +4132,6 @@ footer .right ul li:hover {
 }
 .ie9 .main .movies .movie-overview-thumb {
   display: none;
-}
-.ie9 .quick-times-select-widget .cinema-row .dates-row {
-  zoom: 1;
-  z-index: 9999;
 }
 .ie8 #ticket-bar {
   width: 860px;

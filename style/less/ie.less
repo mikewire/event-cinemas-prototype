@@ -1,10 +1,20 @@
 .ie9,.ie8,.ie7 {
 	.top,.gallery-items .title,.movie-detail-items .title { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292728, endColorstr=#414042);}
-	footer { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292728, endColorstr=#414042);}
+	footer, .strip { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292728, endColorstr=#414042);}
 	.btn.yellow { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffdf77, endColorstr=#fcb731);}
 	.btn { border-radius: 0px; }
 	#ticket-bar, #cine-buzz { background: url(../../img/ie_gradient_red.png) repeat-x;}
+		
+		
+	.quick-times-select-widget {
+		background-color: darken(#4c4c4e,10%);
+		//display: block;
+		zoom: 1;
+
+	}	
 	
+	
+		
 	.btn.grey {
 	
 		padding-top: 7px;
@@ -35,104 +45,107 @@
 			margin-bottom: 8px;
 	
 	}
-	li.movies_li {
+	.nav {
+		li.movies_li {
+		
+			a {
+				width: 75px;
+			
+			} 
+			&.active a {
+			
+				background-position: 0px -20px;
+			}
 	
-		a {
-			width: 75px;
-		
-		} 
-		&.active a {
-		
-			background-position: 0px -20px;
-		}
-
-
-	}	
-	li.alternate_li {
 	
-		a {
-			background-position: -83px 0px;
-			width: 175px;
-		
-		} 
-		&.active a {
-		
-			background-position: -82px -20px;
-		}
-
-
-	}	
-	li.cinemas_li {
+		}	
 	
-		a {
-			background-position: -271px 0px;
-			width: 80px;
+		li.alternate_li {
 		
-		} 
-		&.active a {
-		
-			background-position: -271px -20px;
-		}
-
-
-	}	
-	li.advanced-tickets_li {
+			a {
+				background-position: -83px 0px;
+				width: 175px;
+			
+			} 
+			&.active a {
+			
+				background-position: -82px -20px;
+			}
 	
-		a {
-			background-position: -360px 0px;
-			width: 168px;
-		
-		} 
-		&.active a {
-		
-			background-position: -360px -20px;
-		}
-
-
-	}	
-	li.premium_li {
 	
-		a {
-			background-position: -536px 0px;
-			width: 168px;
+		}	
+		li.cinemas_li {
 		
-		} 
-		&.active a {
-		
-			background-position: -536px -20px;
-		}
-
-
-	}	
-	li.promos_li {
+			a {
+				background-position: -271px 0px;
+				width: 80px;
+			
+			} 
+			&.active a {
+			
+				background-position: -271px -20px;
+			}
 	
-		a {
-			background-position: -715px 0px;
-			width: 200px;
-		
-		} 
-		&.active a {
-		
-			background-position: -715px -20px;
-		}
-
-
-	}	
-	li.member_programs_li {
 	
-		a {
-			background-position: -925px 0px;
-			width: 200px;
-			height: 25px;
+		}	
+		li.advanced-tickets_li {
 		
-		} 
-		&.active a {
+			a {
+				background-position: -360px 0px;
+				width: 168px;
+			
+			} 
+			&.active a {
+			
+				background-position: -360px -20px;
+			}
+	
+	
+		}	
+		li.premium_li {
 		
-			background-position: -925px -25px;
-		}
-
-
-	}	
+			a {
+				background-position: -536px 0px;
+				width: 168px;
+			
+			} 
+			&.active a {
+			
+				background-position: -536px -20px;
+			}
+	
+	
+		}	
+		li.promos_li {
+		
+			a {
+				background-position: -715px 0px;
+				width: 200px;
+			
+			} 
+			&.active a {
+			
+				background-position: -715px -20px;
+			}
+	
+	
+		}	
+		li.member_programs_li {
+		
+			a {
+				background-position: -925px 0px;
+				width: 200px;
+				height: 25px;
+			
+			} 
+			&.active a {
+			
+				background-position: -925px -25px;
+			}
+	
+	
+		}	
+	}
 }
 
 .ie8 #background-wrap,
@@ -147,9 +160,9 @@
 	}
 	
 	
-	.main .movies ul.movie-overview li {
+	.main.movies ul.movie-overview li {
 	
-		margin-right: 6px;
+		margin-right: 5px;
 	}
 	.tools {
 	
@@ -183,11 +196,7 @@
 		
 		display: none;
 	}
-	.quick-times-select-widget .cinema-row .dates-row {
-	
-		zoom: 1;
-		z-index: 9999;
-	}
+
 }
 
 .ie8 {
