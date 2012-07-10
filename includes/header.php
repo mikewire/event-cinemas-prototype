@@ -53,19 +53,20 @@ if ($currentFile == "index.php") {
 	
 		<div id="ticket-bar">
 			<span>
-				<label><strong>Where</strong> would you like to go?</label>
-				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
+				<label><strong>When</strong> would you like to go?</label>
+				<div id="when">Today <em class="arrow-down"></em></div>
 			</span>
-		
+
 			<span>
 				<label><strong>What</strong> would you like to see?</label>
 				<div id="what">Any movie now showing <em class="arrow-down"></em></div>
 			</span>
 		
 			<span>
-				<label><strong>When</strong> would you like to see it?</label>
-				<div id="when">Today <em class="arrow-down"></em></div>
+				<label><strong>Where</strong> would you like see it?</label>
+				<div id="where">Select cinema(s) <em class="arrow-down"></em></div>
 			</span>
+		
 			<a class="btn blue" href="#">Find times and book</a>
 		
 			<div class="ticket-img"></div>

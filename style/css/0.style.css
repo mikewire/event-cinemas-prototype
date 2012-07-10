@@ -449,12 +449,33 @@ input[type=text]:focus {
   background: url(../../img/assets.png) -90px -55px;
   display: block;
 }
+.babes-icon {
+  width: 50px;
+  height: 18px;
+  background: url(../../img/assets.png) -140px -55px;
+  display: block;
+}
 .two-d-icon-small {
   width: 23px;
   height: 13px;
   background: url(../../img/assets.png) -81px -31px;
   display: block;
   margin-top: 1px;
+}
+.btn .babes-icon {
+  margin: -2px 0px 0px 4px;
+}
+.btn .chicks-icon {
+  margin: -2px 0px 0px 4px;
+}
+.btn .three-d-icon {
+  margin: 1px 0px 0px 4px;
+}
+.btn .vmax-icon {
+  margin: -2px 0px 0px 4px;
+}
+.btn .goldclass-icon {
+  margin: -2px 0px 0px 4px;
 }
 .thumb {
   background-color: #333333;
@@ -580,7 +601,6 @@ h4 {
   background-image: linear-gradient(bottom, #000623 0%, #007fc3 100%);
 }
 .vmax-btn span {
-  margin: -2px 0px 0px 8px;
   float: right;
 }
 .vmax-btn:hover {
@@ -621,7 +641,6 @@ h4 {
   background-image: linear-gradient(bottom, #b19062 0%, #ffffff 100%);
 }
 .goldclass-btn span {
-  margin: -3px 0px 0px 8px;
   float: right;
 }
 .goldclass-btn:hover {
@@ -1164,7 +1183,7 @@ ul.filters li.active .checkbox {
   z-index: 9999;
   position: absolute;
   top: 57px;
-  left: 510px;
+  left: 10px;
   width: 213px;
   background-color: #333333;
 }
@@ -1218,7 +1237,7 @@ ul.filters li.active .checkbox {
   z-index: 9999;
   position: absolute;
   top: 57px;
-  left: 10px;
+  left: 510px;
   width: 435px;
   background-color: #000;
 }
@@ -2995,21 +3014,22 @@ ul.movie-overview li span:hover img {
 }
 .movie-detail .quick-times-select-widget .hurry {
   display: block;
-  transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
+  transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
   /* IE 9 */
 
-  -webkit-transform: rotate(40deg);
+  -webkit-transform: rotate(41deg);
   /* Safari and Chrome */
 
-  -o-transform: rotate(40deg);
+  -o-transform: rotate(41deg);
   /* Opera */
 
-  -moz-transform: rotate(40deg);
+  -moz-transform: rotate(41deg);
   /* Firefox */
 
-  left: 474px;
-  width: 190px;
+  left: 524px;
+  width: 90px;
+  border: 1px solid #fff;
   top: 2px;
   background: none !important;
   -webkit-box-shadow: none;
@@ -3018,7 +3038,7 @@ ul.movie-overview li span:hover img {
   font-size: 11px;
 }
 .movie-detail .quick-times-select-widget .hurry p {
-  padding: 0px 20px;
+  padding: 0px 1px;
   line-height: 10px;
 }
 .movie-detail .quick-times-select-widget .hurry-bck {
@@ -3698,7 +3718,7 @@ footer .right ul li:hover {
     right: 20px;
     top: 100px;
   }
-  .when-blowout {
+  .where-blowout {
     left: 430px;
   }
   .what-blowout {
@@ -3844,12 +3864,14 @@ footer .right ul li:hover {
   .call-to-action {
     right: 20px;
   }
-  .when-blowout {
+  .where-blowout {
     left: 610px;
-    width: 263px;
   }
   .what-blowout {
     left: 310px;
+  }
+  .when-blowout {
+    width: 263px;
   }
   #trailer {
     width: 1400px;

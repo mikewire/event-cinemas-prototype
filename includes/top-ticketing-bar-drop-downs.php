@@ -5,21 +5,6 @@
   		<input type="hidden" value="" id="top-ticketing-time" name="top-ticketing-time" />
   	</form>
   	
-  	<div class="when-blowout">
-  		
-  		<ul>
-  			<li class="active">Today</li>
-  			<li>Tomorrow March 20</li>
-  			<li>Wednesday March 21</li>  			
-  			<li>Thursday March 22</li>  			
-  			<li>Friday March 23</li>  			
-  			<li>Saturday March 24</li>  			  			  		
-  			<li>Sunday March 25</li>  			  			  		
-  			<li>Monday March 26</li>  			  			  		
-  		
-  		</ul>  
-  		<p>You can always change the date later.</p>
-  	</div>
   	<div class="what-blowout">
   		
   		<ul class="head">
@@ -455,3 +440,19 @@
 		</div>
 			
   	</div>
+  	<div class="when-blowout">
+  		
+  		<ul>
+  			<li class="active">Today</li>
+  			<li>Tomorrow March 20</li>
+  			<li>Wednesday March 21</li>  			
+  			<li>Thursday March 22</li>  			
+  			<li>Friday March 23</li>  			
+  			<li>Saturday March 24</li>  			  			  		
+  			<li>Sunday March 25</li>  			  			  		
+  			<li>Monday March 26</li>  			  			  		
+  		
+  		</ul>  
+  		<p>You can always change the date later.</p>
+  	</div>
+  	
