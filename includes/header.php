@@ -47,6 +47,9 @@ if ($currentFile == "index.php") {
 
   <div id="background-wrap" style="background-image: url(img/catf-bckground.jpg);"></div>
 
+<? } else if ($currentFile == "member-program-detail.php") { ?>
+
+  <div id="background-wrap" style="background-image: url(img/member-program-bck.jpg);"></div>
 
 <? } else if ($currentFile == "goldclass.php") { ?>
   

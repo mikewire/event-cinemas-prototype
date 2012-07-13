@@ -13,8 +13,7 @@
 				</span>
 				<div class="wrap">
 					<div class="hero">
-					
-						<img src="img/sample-ad.jpg" alt="sample-ad" />
+						<img src="img/promo.jpg" alt="promo" />
 					</div>
 					<div class="desc">
 						<h2>See the Artist in Gold Class</h2>

@@ -2631,6 +2631,9 @@ h2 {
   margin: 10px 0px 0px 0px;
   position: relative;
 }
+.third-nav img {
+  margin-bottom: 5px;
+}
 .third-nav li {
   display: block;
   margin-bottom: 5px;
@@ -2786,6 +2789,9 @@ h2 {
 .main.event-detail .movie-detail-items {
   height: 180px;
 }
+.main.promos .wrap {
+  padding: 0px;
+}
 .main.promos .full {
   border: 1px solid #333333;
   background: black;
@@ -2824,6 +2830,7 @@ h2 {
 }
 .main.promos .desc {
   margin-bottom: 20px;
+  padding: 10px;
 }
 .main.promos .desc h2 {
   margin: 10px 0px 0px 0px;
@@ -2837,6 +2844,20 @@ h2 {
 .main.promos .desc .btn {
   font-size: 12px;
   width: auto;
+}
+.member-program-line {
+  font-family: 'SerifaBold', Helvetica, Arial, sans-serif;
+  margin-bottom: 20px;
+  font-size: 22px;
+  width: 260px;
+}
+.call-to-action-member-programs {
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  text-align: right;
+  right: 20px;
+  top: 200px;
 }
 .main.member-programs .wrap {
   padding: 0px;
@@ -2860,10 +2881,11 @@ h2 {
   font-size: 24px;
   width: 340px;
   line-height: 25px;
-  font-family: 'SerifaBlack', Helvetica, Arial, sans-serif;
+  font-family: 'SerifaBold', Helvetica, Arial, sans-serif;
   z-index: 1000;
 }
 .main.member-programs .member-programs-hero .intro img {
+  margin-bottom: 10px;
   display: block;
 }
 .main.member-programs .programs {
@@ -2891,11 +2913,6 @@ h2 {
 }
 .main.member-programs .programs .program a {
   color: #ffdf77;
-}
-.main.member-programs .programs .program.program-kids img,
-.main.member-programs .programs .program.program-vip img {
-  margin-top: -8px;
-  margin-bottom: 2px;
 }
 .cinema-movie-times-info {
   position: relative;
