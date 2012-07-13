@@ -2626,16 +2626,16 @@ h2 {
 .main.premium-cinema .btn {
   width: auto;
 }
-.main.premium-cinema .third-nav {
+.third-nav {
   list-style: none;
   margin: 10px 0px 0px 0px;
   position: relative;
 }
-.main.premium-cinema .third-nav li {
+.third-nav li {
   display: block;
   margin-bottom: 5px;
 }
-.main.premium-cinema .third-nav li a {
+.third-nav li a {
   color: white;
   font-size: 18px;
   margin-bottom: 5px;
@@ -2783,6 +2783,9 @@ h2 {
   width: auto;
   margin-top: 5px;
 }
+.main.event-detail .movie-detail-items {
+  height: 180px;
+}
 .main.promos .full {
   border: 1px solid #333333;
   background: black;
@@ -2834,6 +2837,65 @@ h2 {
 .main.promos .desc .btn {
   font-size: 12px;
   width: auto;
+}
+.main.member-programs .wrap {
+  padding: 0px;
+  margin-top: -4px;
+  border: 1px solid #333333;
+  margin-bottom: 100px;
+}
+.main.member-programs .member-programs-hero {
+  position: relative;
+  z-index: 1;
+}
+.main.member-programs .member-programs-hero > img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.main.member-programs .member-programs-hero .intro {
+  position: absolute;
+  left: 15px;
+  top: 100px;
+  font-size: 24px;
+  width: 340px;
+  line-height: 25px;
+  font-family: 'SerifaBlack', Helvetica, Arial, sans-serif;
+  z-index: 1000;
+}
+.main.member-programs .member-programs-hero .intro img {
+  display: block;
+}
+.main.member-programs .programs {
+  background: #000;
+  padding: 10px;
+  z-index: 1000;
+}
+.main.member-programs .programs .program {
+  width: 18%;
+  margin-right: 15px;
+  float: left;
+}
+.main.member-programs .programs .program p {
+  height: 150px;
+}
+.main.member-programs .programs .program img {
+  display: block;
+  margin-bottom: 9px;
+}
+.main.member-programs .programs .program .btn {
+  margin: 15px 0px 5px 0px;
+  display: block;
+  width: 100px;
+  color: #000;
+}
+.main.member-programs .programs .program a {
+  color: #ffdf77;
+}
+.main.member-programs .programs .program.program-kids img,
+.main.member-programs .programs .program.program-vip img {
+  margin-top: -8px;
+  margin-bottom: 2px;
 }
 .cinema-movie-times-info {
   position: relative;

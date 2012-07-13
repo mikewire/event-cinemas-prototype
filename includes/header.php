@@ -43,6 +43,10 @@ if ($currentFile == "index.php") {
 
   <div id="background-wrap" style="background-image: url(img/hp_bck/avengers1.jpeg);"></div>
 
+<? } else if ($currentFile == "event-detail.php") { ?>
+
+  <div id="background-wrap" style="background-image: url(img/catf-bckground.jpg);"></div>
+
 
 <? } else if ($currentFile == "goldclass.php") { ?>
   

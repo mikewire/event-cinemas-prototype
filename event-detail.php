@@ -1,6 +1,6 @@
 <? include("includes/header.php") ?>
   
-	<div role="main" class="main movie-detail premium-cinema">	
+	<div role="main" class="main movie-detail event-detail">	
 	
 		<? include("includes/nav.php") ?>	  
 		  
@@ -8,12 +8,19 @@
 			<div class="goldclass-logo"></div>
 			<ul class="third-nav">
 			
-				<li><a id="overlay1">About Gold Class</a></li>
-				<li><a id="overlay2">See the menu</a></li>
-				<li><a id="overlay3">Corporate bookings</a></li>
-				<li><a id="overlay4">Gold Class locations</a></li>
+				<li><a id="overlay1">Next Event</a></li>
+				<li><a id="overlay2">Synopsis and Cast</a></li>
+				<li><a id="overlay3">Packages</a></li>
+				<li><a id="overlay4">Past Events</a></li>
+				<li><a id="overlay4">About Chicks at the Flicks</a></li>
 			</ul>
 			
+			<div class="share-tools"></div>
+			
+			<div class="experiences">
+				<div class="experience-gold-class"></div>
+				<div class="bigger-better-vmax"></div>
+			</div>
 			
 		</div>
 				 
@@ -26,43 +33,10 @@
 		</div>		 
 		<div class="movie-detail-items">
 			<div class="promo-box"></div>
-		  	<div id="slider">
-		  		<div class="opaque-background"></div>
-		  		<div class="title"><p>Gold Class movies now showing</p></div>
-<!--
-		  		<span class="arrow-left">&#8249;</span>
-		  		<span class="arrow-right">&#8250;</span>
--->
-		  		<div class="items">
-
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/americanpie-thumb.jpg" width="156" height="80" />
-		  				<p>American Pie</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/americanpie-thumb.jpg" width="156" height="80" />
-		  				<p>American Pie</p>
-		  			</a>
-		  			<a href="movie-detail.php">
-		  				<img src="img/hp_bck/prometheus-thumb.jpg" width="156" height="80" />
-		  				<p>Prometheus</p>
-		  			</a>
-	
-		  			
-		  					  		
-		  		</div>
-		  		
-		  	</div>
-		  	
-		  </div>
+			<div class="promo-box"></div>
+			<div class="promo-box"></div>
+			<div class="clearfix"></div>		  	
+		</div>
 	  	  <!-- end movie detail items -->
 	  	  	  	  
 	  </div> <!-- end main -->

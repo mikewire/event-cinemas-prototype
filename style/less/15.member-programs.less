@@ -1,0 +1,84 @@
+.main.member-programs {
+
+
+	.wrap {
+	
+		padding: 0px;
+		margin-top: -4px;
+		border: 1px solid @dark-grey;
+		margin-bottom: 100px;
+	}
+	.member-programs-hero {
+	
+		position: relative;
+		z-index: 1;
+	
+		> img {
+			width: 100%;
+			height: auto;
+			z-index: 1;
+		}
+		.intro {
+			position: absolute;
+			left: 15px;
+			top: 100px;
+			font-size: 24px;
+			width: 340px;
+			line-height: 25px;
+			font-family: @cinebuzz-font-black;
+			z-index: 1000;
+			
+			img {
+			
+				display: block;
+			}
+		}
+		
+	}
+	.programs {
+		background: #000;
+		padding: 10px;
+		z-index: 1000;
+		.program {
+		
+			width: 18%;
+			margin-right: 15px;
+			float: left;
+			
+			p {
+			
+				height: 150px;
+			}
+			
+			img {
+			
+				display: block;
+				margin-bottom: 9px;
+				
+			}
+			.btn {
+			
+				margin: 15px 0px 5px 0px;
+				display: block;
+				width: 100px;
+				color: #000;
+			}
+			a {
+			
+				color: @yellow;
+			}
+			&.program-kids,
+			&.program-vip {
+			
+				img {
+				
+					margin-top: -8px;	
+					margin-bottom: 2px;
+				}
+			}
+		
+		}
+		
+	
+	}
+}
