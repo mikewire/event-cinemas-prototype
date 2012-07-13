@@ -252,6 +252,34 @@ p {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'BadaBoomBBRegular';
+  src: url('../fonts/badabb__-webfont.eot');
+  src: url('../fonts/badabb__-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/badabb__-webfont.woff') format('woff'), url('../fonts/badabb__-webfont.ttf') format('truetype'), url('../fonts/badabb__-webfont.svg#BadaBoomBBRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SerifaBold';
+  src: url('../fonts/12_serifa_65_bold___07235-webfont.eot');
+  src: url('../fonts/12_serifa_65_bold___07235-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/12_serifa_65_bold___07235-webfont.woff') format('woff'), url('../fonts/12_serifa_65_bold___07235-webfont.ttf') format('truetype'), url('../fonts/12_serifa_65_bold___07235-webfont.svg#SerifaBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SerifaLight';
+  src: url('../fonts/12_serifa_45_light___02235-webfont.eot');
+  src: url('../fonts/12_serifa_45_light___02235-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/12_serifa_45_light___02235-webfont.woff') format('woff'), url('../fonts/12_serifa_45_light___02235-webfont.ttf') format('truetype'), url('../fonts/12_serifa_45_light___02235-webfont.svg#SerifaLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SerifaBlack';
+  src: url('../fonts/12_serifa_75_black___09235-webfont.eot');
+  src: url('../fonts/12_serifa_75_black___09235-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/12_serifa_75_black___09235-webfont.woff') format('woff'), url('../fonts/12_serifa_75_black___09235-webfont.ttf') format('truetype'), url('../fonts/12_serifa_75_black___09235-webfont.svg#SerifaBlack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   width: 100%;
@@ -746,7 +774,6 @@ h4 {
   border: 1px solid #76cfed;
   color: #000;
   overflow: hidden;
-  display: block;
   text-align: center;
   /* IE10 */
   background-image: -ms-linear-gradient(bottom, #4cc8f2 0%, #e2f4fd 100%);
@@ -782,7 +809,6 @@ h4 {
   border: 1px solid #b19062;
   color: #000;
   overflow: hidden;
-  display: block;
   text-align: center;
   /* IE10 */
   background-image: -ms-linear-gradient(bottom, #b19062 0%, #ffffff 100%);
@@ -817,7 +843,6 @@ h4 {
   border: 1px solid #939598;
   color: #000;
   overflow: hidden;
-  display: block;
   text-align: center;
   /* IE10 */
   background-image: -ms-linear-gradient(bottom, #aaadb0 0%, #dff1f9 100%);
@@ -852,7 +877,6 @@ h4 {
   border: 1px solid #fcb731;
   color: #000;
   overflow: hidden;
-  display: block;
   text-align: center;
   text-transform: uppercase;
   /* IE10 */
@@ -1434,6 +1458,25 @@ ul.filters li.active .checkbox {
   background-position: top center;
   background-attachment: fixed;
   z-index: -1;
+}
+#background-wrap-multiple div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  z-index: -1;
+  display: none;
+}
+#background-wrap-multiple div.active {
+  display: block;
 }
 .main .innerpage {
   position: absolute;
@@ -2566,38 +2609,87 @@ h2 {
   padding-top: 7px;
   float: right;
 }
-.main .premium-cinema .innerpage {
+.main.premium-cinema .innerpage {
   height: 800px;
 }
-.main .premium-cinema .innerpage a {
+.main.premium-cinema .innerpage a {
   display: block;
   margin-bottom: 1px;
 }
-.main .premium-cinema .innerpage a img {
+.main.premium-cinema .innerpage a img {
   width: 100%;
   height: auto;
 }
-.main .premium-cinema .innerpage a:last-child {
+.main.premium-cinema .innerpage a:last-child {
   margin-bottom: 20px;
 }
-.main .premium-cinema .btn {
+.main.premium-cinema .btn {
   width: auto;
 }
-.main .premium-cinema .third-nav {
+.main.premium-cinema .third-nav {
   list-style: none;
   margin: 10px 0px 0px 0px;
   position: relative;
 }
-.main .premium-cinema .third-nav li {
+.main.premium-cinema .third-nav li {
   display: block;
   margin-bottom: 5px;
 }
-.main .premium-cinema .third-nav li a {
+.main.premium-cinema .third-nav li a {
   color: white;
   font-size: 18px;
   margin-bottom: 5px;
 }
-.premium-cinema-line {
+.premium-cinema-call-to-action .background-arrows {
+  position: absolute;
+  right: 0px;
+  top: 220px;
+}
+.premium-cinema-call-to-action .background-arrow-left,
+.premium-cinema-call-to-action .background-arrow-right {
+  border: 2px solid #fff;
+  padding: 0px 10px 4px 10px;
+  line-height: 25px;
+  display: block;
+  background: #000;
+  color: #fff;
+  font-size: 25px;
+  /* Netscape */
+
+  -moz-opacity: 0.8;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0.8;
+  /* Good browsers */
+
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(80));
+  filter: alpha(opacity = (80));
+  display: block;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  float: left;
+  margin-right: 4px;
+}
+.premium-cinema-call-to-action .background-arrow-left:hover,
+.premium-cinema-call-to-action .background-arrow-right:hover {
+  /* Netscape */
+
+  -moz-opacity: 1;
+  /* Safari 1.x */
+
+  -khtml-opacity: 1;
+  /* Good browsers */
+
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(100));
+  filter: alpha(opacity = (100));
+}
+.premium-cinema-call-to-action .call-to-action {
+  right: 80px;
+}
+.premium-cinema-call-to-action .premium-cinema-line {
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
   font-size: 38px;
   display: block;
@@ -2691,13 +2783,57 @@ h2 {
   width: auto;
   margin-top: 5px;
 }
-.main .promos .full {
+.main.promos .full {
   border: 1px solid #333333;
   background: black;
   width: 100%;
   float: left;
   padding: 0px 0px;
   margin-bottom: 200px;
+}
+.main.promos .item {
+  clear: both;
+  margin-bottom: 20px;
+}
+.main.promos .item img {
+  width: 200px;
+  height: 130px;
+  float: left;
+  margin-right: 15px;
+}
+.main.promos .item .desc {
+  margin-bottom: 0px;
+  float: left;
+}
+.main.promos .strip {
+  position: relative;
+}
+.main.promos .strip .back {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 22px;
+  color: white;
+}
+.main.promos .hero img {
+  width: 100%;
+  height: auto;
+}
+.main.promos .desc {
+  margin-bottom: 20px;
+}
+.main.promos .desc h2 {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+.main.promos .desc p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
+.main.promos .desc .btn {
+  font-size: 12px;
+  width: auto;
 }
 .cinema-movie-times-info {
   position: relative;
@@ -3746,6 +3882,9 @@ footer .right ul li:hover {
 }
 */
 @media all and (min-width: 480px) and (max-width: 1260px) {
+  .main.promos .item .desc {
+    width: 490px;
+  }
   .main .cinemas .block .content a.btn {
     font-size: 12px;
     margin-top: 10px;
@@ -3864,6 +4003,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
+  .main.promos .item .desc {
+    width: 650px;
+  }
   .cinema-movie-times-info {
     width: 580px;
   }
@@ -3923,6 +4065,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1400px) {
+  .main.promos .item .desc {
+    width: 850px;
+  }
   .movie-overview-list .movie-list-item .descr {
     width: 740px;
   }
@@ -3984,6 +4129,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (max-height: 745px) {
+  .premium-cinema-call-to-action .background-arrows {
+    top: 210px;
+  }
   .home-items {
     top: 480px;
   }
@@ -3999,6 +4147,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-height: 745px) and (max-height: 875px) {
+  .premium-cinema-call-to-action .background-arrows {
+    top: 240px;
+  }
   .home-items {
     top: 570px;
   }
@@ -4014,6 +4165,9 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-height: 875px) {
+  .premium-cinema-call-to-action .background-arrows {
+    top: 290px;
+  }
   .home-items {
     top: 640px;
   }

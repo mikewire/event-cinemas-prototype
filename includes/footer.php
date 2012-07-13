@@ -97,7 +97,7 @@
   <script src="js/movies.js"></script>
   <script src="js/cinemas.js"></script>
   <script src="js/others.js"></script>  
-
+  <script src="js/premium-cinemas.js"></script>  
 
 </body>
 </html>

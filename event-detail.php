@@ -66,18 +66,13 @@
 	  	  <!-- end movie detail items -->
 	  	  	  	  
 	  </div> <!-- end main -->
-	  <div class="premium-cinema-call-to-action">
+	  
 	  	<div class="call-to-action">
 			<p class="premium-cinema-line">Experience movies as they should be.</p>			
 			<a class="btn gold find-times-and-book" href="#">Find times and book</a>
 		</div>
-		<div class="background-arrows">
-			<a class="background-arrow-left">&#8249;</a>
-			<a class="background-arrow-right">&#8250;</a>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-
+		<div class="clearfix"></div>
+			
 <!-- 			<img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
 			
 		</div>	

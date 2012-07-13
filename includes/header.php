@@ -45,8 +45,12 @@ if ($currentFile == "index.php") {
 
 
 <? } else if ($currentFile == "goldclass.php") { ?>
-
-  <div id="background-wrap" style="background-image: url(img/goldclass-bck.jpg);"></div>
+  
+  <div id="background-wrap-multiple">
+  
+  	<div class="active" style="background-image: url(img/goldclass-bck.jpg);"></div>
+  	<div style="background-image: url(img/goldclass-bck2.jpg);"></div>
+  </div> 
 
 <? } ?>
 	<header>
