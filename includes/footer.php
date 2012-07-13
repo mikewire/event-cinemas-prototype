@@ -5,7 +5,6 @@
   	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
   	<div class="info">
   		<img src="img/the-avengers-poster.jpg" alt="the-avengers-poster"  />
-  		<a class="btn blue" href="#">find times and book</a>
   		<div class="synopsis">
 	  		<h3>Movie Info</h3>
   			<p><strong>Director</strong> Joss Whedon</p>
@@ -13,6 +12,30 @@
   			<p><strong>Running time</strong> 142 min</p>
   		</div>
   	</div>
+	<div class="items">
+		
+		<a  class="active">
+			<img src="img/hp_bck/avengers-thumb.jpg" skin="avengers-skin.jpg" skin-title="avengers-title.png" btn-title="Find times and book" alt="avengers-thumb" width="156" height="80" />
+			<p>The Avengers</p>
+		</a>
+		<a >
+			<img src="img/hp_bck/prometheus-thumb.jpg" skin="prometheus-skin.jpg" skin-title="prometheus-title.png" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+			<p>Prometheus</p>
+		</a>
+		<a >
+			<img src="img/hp_bck/thelorax-thumb.jpg" skin="thelorax-skin.jpg" skin-title="thelorax-title.png" btn-title="find times and book" alt="thelorax-thumb" width="156" height="80" />
+			<p>The Lorax</p>
+		</a>
+		<a >
+			<img src="img/hp_bck/americanpie-thumb.jpg" skin="americanpie-skin.jpg" skin-title="americanpie-title.png" btn-title="find times and book" alt="batman-thumb" width="156" height="80" />
+			<p>American Pie Reunion</p>
+		</a>
+		<a >
+			<img src="img/hp_bck/theluckyone-thumb.jpg" skin="theluckyone-skin.jpg" skin-title="theluckyone-title.png" align-title="left" btn-title="find times and book" alt="prometheus-thumb" width="156" height="80" />
+			<p>The Lucky One</p>
+		</a>
+
+	</div>  	
   	<div class="clearfix"></div>	
   </div>
   <div id="cover"></div>

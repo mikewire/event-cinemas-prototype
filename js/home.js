@@ -1,5 +1,5 @@
 $(function() {
-
+    baseCdnUrl = $("#cdnUrl").attr("path");
 //========================================================================================================//
 //============================================ HOME PAGE =================================================//
 //========================================================================================================//
@@ -7,12 +7,16 @@ $(function() {
 	// If there is a slider and it has class 'animate', init the slider (in functions.js)
 	if ($("#slider.animate").length > 0 && $("#slider.animate").is(":visible")) {
 	    initAnimatedSlider();
-
 	    // move slides up one by one, on the slide interval
 	    if (timer == null) {
-	        timer = setInterval(function () { animatedSlider(); }, slide_interval);
+	         timer = setInterval(function () { animatedSlider(); }, slide_interval);
 	    }
 	}
+
+
+    $("#slider img").error(function() {
+        $(this).attr("src", $("#cdnUrl").attr("path") + "img/unavailable_poster156x80.jpg");
+    });
 
 	// moving the slides left and right
 	$("#slider .arrow-right").click(function() {
@@ -32,7 +36,6 @@ $(function() {
 		
 	});
 
-
 	$("li#rotatorNowShowing").click(function () {
 	    rotatorNowShowing();
 	});
@@ -44,6 +47,9 @@ $(function() {
 	$("li#rotatorAdvancedTickets").click(function () {
 	    rotatorAdvancedTickets();
 	});
+
+	FilterMovies();
+    FilterRotatorByCinema();
 
 });
 

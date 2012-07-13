@@ -117,7 +117,10 @@
 	  
 	  	<div class="call-to-action">
 			<img id="takeover-title" src="img/hp_bck/avengers-title.png" />
-			
+ <div id="CountdownTimer">
+        <div>BE THE FIRST TO SEE IT</div>
+        <div class="timer">OPENING IN x DAYS x HOURS x MINUTES AND x SECONDS</div>
+    </div>			
 			<div class="clearfix"></div>
 			<div class="button-wrapper">
 				<div class="grey-buttons">

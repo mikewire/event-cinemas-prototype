@@ -45,12 +45,7 @@ $(function() {
 	
 	// Only for illustrative purpose - whenever a checkbox is checked something needs to happen
 	
-	$(".filters li").live("click",function() {
-	    if ($(this).hasClass("active")) {
-	        $(this).removeClass("active");
-	    } else {
-	        $(this).addClass("active");
-	    }
+	$(".what-blowout .filters li").bind("filter-clicked", function () {
 	    FilterMovies();
 	});
 

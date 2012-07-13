@@ -7,16 +7,21 @@ $(function() {
 	//======= init =======//
 	
 	cookie = $.cookie('preferred_cinemas');
+
+    var isLoggedIn = $(".where-blowout span.active").length > 0;
+
+    if (isLoggedIn) {
+        preferred_cinemas = [$(".where-blowout span.active:first div").attr("value")];
+    } else {
+        if (cookie != null) {
+            preferred_cinemas = cookie.split(/,/);
+            removeByElement(preferred_cinemas, "");
+        }
+    }
+    $("#top-ticketing-cinemas").val(preferred_cinemas);
+    preferred_cinemas = preferred_cinemas.sort();
 	
-	if (cookie != null) {
-		preferred_cinemas = cookie.split(/,/); 	
-		removeByElement(preferred_cinemas, "");
-		$("#top-ticketing-cinemas").val(preferred_cinemas);
-	} 	
-	
-	//
 	if (preferred_cinemas.length > 1) {
-	
 		$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
 		
 	} else if (preferred_cinemas.length == 1) {
@@ -33,14 +38,25 @@ $(function() {
 		
 		$(".where-blowout").find(".checkbox[value='"+preferred_cinemas[i]+"']").parent().addClass("active");
 		
-		
 		if ($("#cinema-filters").length > 0) {
 			if (preferred_cinemas[i] != "") {
-				$("#cinema-filters").prepend("<span><div class='checkbox' value='"+preferred_cinemas[i]+"'></div> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
+				$("#cinema-filters").prepend("<span class='active'><div class='checkbox' value='"+preferred_cinemas[i]+"'></div> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
 			}
 		}
-	
 	}
+    
+	var cinemas = $("#cinema-filters span");
+	cinemas.sort(function (a, b) {
+	    var compA = $("div", a).attr("value").toLowerCase();
+	    var compB = $("div", b).attr("value").toLowerCase();
+	    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	});
+	$.each(cinemas, function (idx, item) { $("#cinema-filters a").before(item); });
+    
+	if (cinemas.length > 0) {
+        MovieFilter();
+    }
+
 	if (currentMovie != "") {
 	
 		$("#what").html(currentMovie+"<em class='arrow-down'></em>");
@@ -85,6 +101,7 @@ $(function() {
 			$("#cover").show();
 			TicketBarZIndex(9999);
 			$(this).addClass("active");
+		    $(".where-blowout span").show();
 			var state = $("div.where-blowout ul.head li.active a").html();
 			showState(state);
 			$(".where-blowout").removeClass("in-the-middle").show(); 
@@ -101,7 +118,7 @@ $(function() {
         showState($("a", this).html());
     });
 	
-	$(".where-blowout span").click(function() {
+	$(".where-blowout").on("click", "span", function() {
 		if ($(this).hasClass("active")) {
 			removeByElement(preferred_cinemas, $("label",this).text());
 			$.cookie('preferred_cinemas', preferred_cinemas);
@@ -114,19 +131,18 @@ $(function() {
 		}
 		
 		if (preferred_cinemas.length > 1) {
-		
 			$("#where").html("<em class='star'></em>My preferred cinemas <em class='arrow-down'></em>");
-			
 		} else if (preferred_cinemas.length == 1) {
-			
 			$("#where").html("<em class='star'></em>"+preferred_cinemas[0]+"<em class='arrow-down'></em>");
-		
 		} else {
-		
 			$("#where").html("Select cinema(s)<em class='arrow-down'></em>");
 		}
 		FilterMovies();
-		$("#top-ticketing-cinemas").val(preferred_cinemas);
+	    FilterRotatorByCinema();
+	    $("#top-ticketing-cinemas").val(preferred_cinemas);
+
+	    console.log("set cinema");
+	    $(this).trigger("set-cinema");
 	});
 	$(".where-blowout .done").click(function() {
 	    hideAllTicketBarBlowouts();
@@ -235,34 +251,15 @@ $(function() {
 	});
 
 	$("a#advancedTickets").click(function () {
-	    $("ul.head li").removeClass("active");$(this).parent().addClass("active");
+	    $(".what-blowout ul.head li").removeClass("active"); $(this).parent().addClass("active");
 	    GetAdvancedMovies();
 	});
 	$("a#nowShowing").click(function () {
-	    $("ul.head li").removeClass("active");
+	    $(".what-blowout ul.head li").removeClass("active");
 	    $(this).parent().addClass("active");
 	    RenderNowShowing();
 	});
     
-	$("#logout").click(function () {
-	    $.post('@Url.Action("LogOut", "SessionFilter", null, "https")', null, function (result) {
-	        location.href = location.href + "?logout";
-	    });
-	    return false;
-	});
-
-	$("#login").click(function () {
-	    var data = {
-	        username: $("#username").val(),
-	        password: $("#password").val(),
-	        memberId: "",
-	        cardnumber: ""
-	    };
-	    $.post('@Url.Action("LogOn", "SessionFilter", null, "https")', data, function (result) {
-	        location.href = location.href + "?login";
-	    });
-	    return false;
-	});
 
 	$(".what-blowout img").error(function () {
 	    $(this).attr("src", $("#cdnUrl").attr("path") + "img/unavailable_poster105x50.jpg");

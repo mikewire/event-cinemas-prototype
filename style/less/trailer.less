@@ -10,13 +10,16 @@
 	display: none;
 }
 #trailer {
-
 	display: none;
-	position: absolute;
+	width: 980px; 
+	margin-left: -500px; 
+	position: fixed;
 	left: 50%;
-	top: 50px;
+	top: 30px;
+	height: 510px;
 	background: @dark-grey;
 	z-index: 9999;
+	padding: 10px;
 	.close {
 	
 		position: absolute;
@@ -25,24 +28,20 @@
 	}
 	video {
 		float: left;
-	}
+		 width: 775px;
+ 	}
 	.info {
 		float: right;
 		width: 175px;
-		padding: 15px;
-		
-		.btn {
-			float: left;
-			width: 140px;
-			margin: 20px 0px;
-			font-size: 12px;
-		}
+		padding: 0px 5px 15px 15px;
+
 		h3 {
 		
 			font-family: @bold-font;
 			margin-bottom: 10px;
 		}
 		.synopsis {
+			margin: 10px 0px;
 			font-family: @thin-font;
 			float:left;
 		}
@@ -57,4 +56,57 @@
 			}
 		}
 	}
+	.items {
+	
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		width: 800px;
+		z-index: 100;
+		
+		a {
+		
+			display: block;
+			float: left;
+			margin-right: 4px;
+			position: relative;
+			border: 1px solid @dark-grey;		
+			width: 150px;
+			height: 80px;
+			overflow: hidden;
+				
+			img {
+				margin:0;
+				.opaque(0.8);
+				.hover-fade(0.5s);
+			}
+			&.active {
+			
+				border: 1px solid #fff;
+				
+				p,img {
+				
+					.opaque(1);
+				}
+			}
+			&:hover {
+			
+				img {
+					.opaque(1);
+				}
+			}
+			p {
+				color: #fff;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				padding: 2px 4px;
+				background: #000;
+				.opaque(0.8);
+				display: block;
+				width: 154px;
+			}
+		}
+	}
+	
 }
