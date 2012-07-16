@@ -52,7 +52,9 @@ $(function() {
 	// cinebuzz blowout behavior
 	
 	$("#cine-buzz").hover(function() {
-		$("#cine-buzz-blowout").show();
+		if (!$(this).hasClass("no-blowout")) {
+			$("#cine-buzz-blowout").show();
+		}
 	});
 	
 	$("#cine-buzz-blowout").mouseleave(function() {

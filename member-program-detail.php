@@ -23,9 +23,9 @@
 		
 		</div>		 
 		<div class="movie-detail-items">
-			<div class="promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
-			<div class="promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
-			<div class="promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
 			<div class="clearfix"></div>		  	
 		</div>
 	  	  <!-- end movie detail items -->
@@ -38,7 +38,7 @@
 		</div>
 		<div class="clearfix"></div>
 			
-<!-- 			<img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
+<!-- <img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
 			
 		</div>	
 <? include("includes/footer.php") ?>

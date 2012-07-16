@@ -1,22 +1,434 @@
-.member-program-line {
-
-	font-family: @cinebuzz-font-bold;
-	margin-bottom: 20px;
-	font-size: 22px;
-	width: 260px;
-}
-.call-to-action-member-programs {
-
-	z-index: 1000;
-	position: absolute;
-	display: block;
-	text-align: right; 
-	right: 20px;
-	top: 200px;
-}
 .main.member-programs {
 
+	&.dashboard {
+	
+		.strip {
+			position: relative;
+			h1 {
+			
+				color: @yellow;
+			}
+			h2 {
+				
+				color: @yellow;
+			}
+			.small-links {
+			
+				list-style: none;
+				position: absolute;
+				top: 10px;
+				margin: 0;
+				right: 10px;
+				
+				li {
+					display: inline;
+					margin-left: 5px;
+					a {
+						
+						font-size: 13px;
+						color: @yellow;
+						
+					}
+				}
+			}	
+		}
+		.right {
+		
+			min-height: 900px;
+			
+			.dashboard-box {
+			
+				border: none !important;
+			}
+			.dashboard-box.trivia {
+				
+				.content {
+				
+					padding: 10px;
+					
+					ul {
+					
+						list-style: none;
+						
+						li {
+						
+							margin-bottom: 5px;
+						}
+			
+					}	
+					input[type=radio] {
+					
+						margin-right: 5px;
+					}			
+	
+				}
+	
+			}
+			.strip {
+			
+				h2 {
+				
+					font-size: 15px;
+				}
+				.popcorn {
+				
+					background: url(../../img/popcorn.png) no-repeat;
+					width: 30px;
+					height: 37px;
+					float: left;
+					margin: -10px 5px 0px 5px;
+				}
+			}
+			.offerslider {
+			
+				position: relative;
+				margin-top: 0px;
+				.move-offer-left, .move-offer-right {
+				
+					position: absolute;
+					top: 48px;
+					border: 1px solid #fff;
+					padding: 5px 4px;
+					display: block;
+					background: #000;
+					.opaque(0.8);
+					color: #fff;
+					z-index: 2000;
+					font-size: 18px;
+					cursor: pointer;
 
+				}
+				.move-offer-left {
+					left: 0px;
+				}
+				.move-offer-right {
+				
+					right: 0px;
+				}
+				
+				.slide-wrapper {
+					overflow: hidden;
+					
+					img {
+					
+						width: 100%;
+						height: auto;
+					}
+				
+				}
+			
+			}
+		
+		
+		}
+		.left {
+			
+			border: none;
+		}
+		.wrap {
+			padding: 10px;
+
+			.help {
+			
+				position: absolute;
+				right: 10px;
+				top: 10px;
+			}
+			.dashboard-box {
+				border: 1px solid #333;
+				margin-bottom: 10px;
+				.ratings a {
+					
+					color: #333;
+				}
+				a {
+				
+					color: @yellow;
+					&.btn {
+					
+						color: black;
+					}
+				}
+				
+				table.bookings {
+					margin: 10px 0px 20px 10px;
+					
+					th {
+					
+						font-family: @bold-font;
+						text-align: left;
+						width: 20%;
+					}
+				
+				
+				}
+				
+					
+								
+				&.half {
+				
+					width: 49%;
+					float: left;
+					
+					&.profile {
+						height: 180px;
+					
+						margin-right: 10px;
+						
+						.content {
+						
+							padding: 10px;
+						}
+						img {
+						
+							float: left;
+							margin: 0px 10px 10px 0px;
+						}
+						.desc {
+						
+							float: left;
+						}
+					}
+					&.points {
+						position: relative;
+						height: 180px;
+						.strip.tabs {
+						
+							ul {
+							
+								list-style: none;
+								margin: 0px;
+								
+								li {
+									padding: 0px 10px 0px 0px;
+									margin: 7px 0px 7px 10px;
+									float: left;
+									font-size: 20px;
+									font-family: @thin-font;
+									
+									&.active {
+									
+										color: @yellow;
+									}
+									&:first-child {
+									
+										border-right: 1px solid #fff;
+									}
+								
+								}
+							}
+						}
+						.content {
+						
+							padding: 10px;
+						}
+						.progress-bar {
+							margin: 10px 0px 30px 0px;
+							width: 320px;
+							background-color: white;
+							height: 30px;
+							position: relative;
+							
+							.progress {
+							
+								position: absolute;
+								left: 0px;
+								top: 0px;
+								.gradient(darken(@yellow,10%), darken(@yellow,20%));
+								border-right: 1px solid darken(@yellow,30%);
+								height: 100%;
+								text-align: right;
+								
+								p {
+									font-size: 16px;
+									margin: 33px -7px 0px 0px;
+								}
+								
+							}
+							a {
+							
+								display: block;
+								position: absolute;
+								cursor: help;
+								top: 5px;
+							}
+							.two-d-icon-small { left: 60px; }
+							.three-d-icon-small { left: 100px; }
+							.vmax-icon { left: 140px; }
+							.gc1 { left: 240px; }
+							.gc2 { left: 300px; }
+							
+							
+						}
+						.btn {
+
+							font-size: 11px;
+							padding: 5px 8px 3px 8px;
+						}
+						.points-expiring {
+						
+							position: absolute;
+							bottom: 5px; 
+							line-height: 100%;
+							color: red;
+							width: 170px;
+							right: 0px;
+						}
+					
+					
+					}
+				}
+				
+				&.recommended {
+
+					.strip {
+					
+						.gradient(darken(@yellow,20%), darken(@yellow, 30%));
+						
+						h2 {
+							color: black;
+						}
+						
+					}
+				}
+				&.preferred {
+					.strip .star {
+						
+						float: left;
+						margin: 10px 3px 0px 4px;
+					}
+					.content {
+						display: block;
+						padding: 10px;
+					}
+					.fav {
+						.gradient(#414042, #292728);
+						border: 1px solid #292728;
+						.radius-full(5px);
+						padding: 8px 30px 8px 8px;
+						position: relative;
+						display: block;
+						width: auto;
+						float: left;
+						margin-right: 10px;
+						
+						.star {
+					
+							float: left;
+							margin: 0px 5px 0px 0px;
+						}
+						
+						a {
+						
+							border: none;
+							padding: 0px;
+							color: lighten(black, 60%);
+							&:hover {
+							
+								color: red;
+							}
+						}
+						span.x {
+							cursor: pointer;
+							padding: 1px 6px 2px 6px;
+							display: block;
+							position: absolute;
+							top: 7px;
+							right: 5px;
+							
+							background-color: darken(@light-grey, 60%);
+							color: @light-grey;
+							font-family: @regular-font;
+							.radius-full(10px);
+							
+							&:hover {
+								background-color: darken(@light-grey, 30%);
+								color: @dark-grey;
+							}
+						}
+					}
+					.set-preferred-cinemas {
+					
+						//padding: 0px;
+						border: none;
+						margin-top: 8px;
+					}
+					.btn {
+						border: none;
+						float: right;
+						font-size: 12px;
+					}
+				}
+				
+				.recommended-movies {
+				
+					position: relative;
+					padding: 10px;
+					.move-left, .move-right {
+					
+						position: absolute;
+						top: 50px;
+						border: 1px solid #fff;
+						padding: 5px 4px;
+						display: block;
+						background: #000;
+						.opaque(0.8);
+						color: #fff;
+						z-index: 2000;
+						font-size: 18px;
+						cursor: pointer;
+
+					}
+					.move-left {
+						left: 0px;
+					}
+					.move-right {
+					
+						right: 0px;
+					}
+					.slide {
+					
+						width: 100%;
+					}
+					.recommended-movies-wrapper {
+					
+						width: 100%;
+						height: 150px;
+						overflow: hidden;
+						
+						.recommended-movies-slide {
+						
+							width: 50%;
+							float: left;
+
+							img {
+							
+								float: left;	
+								margin-right: 15px;
+							}
+							.desc {
+								float: left;
+								width: 200px;
+								.ratings a { display: inline;}
+								a {
+									display: block;
+								
+								}
+								.btn {
+									display: block;
+									margin-top: 10px;
+									font-size: 12px;
+									width: 140px;
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	
+	}
 	.wrap {
 	
 		padding: 0px;
@@ -87,9 +499,173 @@
 		
 		}
 	}
-	.member-program-detail {
 	
+}
+
+.form-block {
+	padding: 10px;
+	background: black;
+	font-size: 16px;
 	
-		
+	.title {
+		font-size: 18px;
+		display: block;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		border-bottom: 1px solid @light-grey;
 	}
+	a {
+		color: @yellow;
+	}
+	.memberships {
+	
+		.membership {
+		
+			float: left;
+			width: 24%;
+			display: block;
+			
+			ul {
+			
+				margin-left: 17px;
+			}
+		}
+	
+	
+	}
+	.column {
+	
+		width: 50%;
+		margin: 10px 0px 0px 0px;
+		float: left;
+		
+		label {
+			float: left;
+			display: block;
+			width: 150px;		
+		}
+		fieldset {
+		
+			margin-bottom: 10px;
+			height: 25px;
+		}
+		input[type=text],
+		input[type=password] {
+			width: 240px;
+		}
+		select {
+		
+		}
+	}
+	.cinema-pref-list {
+	
+		.head {
+		
+			margin: 10px 0px;
+		}
+		.listing {
+			span {
+				position: relative;
+				cursor: pointer;
+				margin: 3px 4px 8px 0px;
+				padding: 5px 8px;
+				border: 1px solid #000;
+				.radius-full(5px);
+				display: block;
+				width: 160px;
+				float: left;
+				
+				&:hover {
+				
+					border: 1px solid @dark-grey;
+					
+				}
+				
+				&.active {
+				
+					border: 1px solid @dark-grey;
+					background: @dark-grey;
+					
+					.checkbox {
+					
+						background-position: 0px 0px;
+					}
+				}
+				.checkbox {
+					
+					margin-top: -7px;
+				}
+
+			}
+		
+			
+		}
+	}
+	&.last {
+	
+		span {
+			margin: 3px 4px 8px 0px;
+			padding: 5px 8px 5px 0px;
+			display: block;
+			
+			label {
+				display: block;
+				margin-top: 5px;
+			}
+			&.active {
+				
+				.checkbox {
+				
+					background-position: 0px 0px;
+				}
+			}			
+		}
+	}
+}
+
+
+
+.member-program-line {
+
+	font-family: @cinebuzz-font-bold;
+	margin-bottom: 20px;
+	font-size: 22px;
+	width: 260px;
+}
+.call-to-action-member-programs {
+
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	text-align: right; 
+	right: 20px;
+	top: 200px;
+}
+.main.member-program-detail,
+.main.event-detail {
+
+	.movie-detail-items {
+	
+		height: 200px;
+	}
+}
+.image-promo-box {
+	
+	//background: black;
+	//.opaque(0.8);
+	width: 32.5%;
+	margin-right: 5px;
+	height: 120px;
+	float: left;
+	
+	img {
+	
+		width: 100%;
+		height: auto;
+	}
+	&:last-child {
+	
+		margin-right: 0px;
+	}
+
 }

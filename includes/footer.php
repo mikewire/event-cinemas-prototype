@@ -83,6 +83,7 @@
 
   <!-- load libs and plugins -->
   <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <script src="js/libs/jquery.tooltip.min.js"></script>
   <script src="js/libs/hoverIntent.js"></script>    
   <script src="js/libs/jquery.cookie.js"></script>
   <script src="js/libs/jquery.cycle.js"></script>
@@ -98,6 +99,7 @@
   <script src="js/cinemas.js"></script>
   <script src="js/others.js"></script>  
   <script src="js/premium-cinemas.js"></script>  
+  <script src="js/cinebuzz.js"></script>  
 
 </body>
 </html>

@@ -5,11 +5,10 @@
 		<? include("includes/nav.php") ?>	  
 		  
 		<div class="movie-info">
-			<div class="goldclass-logo"></div>
+			<img src="img/logo-catf.png" alt="logo-catf" width="97" height="61" />
 			<ul class="third-nav">
 			
-				<li><a id="overlay1">Next Event</a></li>
-				<li><a id="overlay2">Synopsis and Cast</a></li>
+				<li><a id="overlay1">Current film info</a></li>
 				<li><a id="overlay3">Packages</a></li>
 				<li><a id="overlay4">Past Events</a></li>
 				<li><a id="overlay4">About Chicks at the Flicks</a></li>
@@ -32,18 +31,30 @@
 		
 		</div>		 
 		<div class="movie-detail-items">
-			<div class="promo-box"></div>
-			<div class="promo-box"></div>
-			<div class="promo-box"></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
+			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
 			<div class="clearfix"></div>		  	
 		</div>
 	  	  <!-- end movie detail items -->
 	  	  	  	  
 	  </div> <!-- end main -->
 	  
-	  	<div class="call-to-action">
-			<p class="premium-cinema-line">Experience movies as they should be.</p>			
-			<a class="btn gold find-times-and-book" href="#">Find times and book</a>
+	  	<div class="call-to-action event-call-to-action">
+	  		<img src="img/thevow.png" alt="thevow" width="278" height="58" />
+	  	
+	  		<div class="info">
+		  		<strong>Date</strong><p>Wednesday 7 June</p><br />
+		  		<strong>Time</strong><p>Activities begin at 6pm, followed by the film at 7pm</p>
+			</div>
+			<div class="button-wrapper">
+				<div class="grey-buttons">
+					<a class="btn grey poptrailer">Trailer</a>
+					<a class="btn grey popgoodiebag">Goodie bag</a>
+				</div>
+				<a class="btn blue find-times-and-book" href="#">Find times and book</a>
+			</div>
+	  		
 		</div>
 		<div class="clearfix"></div>
 			

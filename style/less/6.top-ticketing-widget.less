@@ -107,11 +107,15 @@ header {
 	height: 53px;
 	cursor: pointer;
 	z-index: 9000;
+	&.no-blowout {
+	
+		cursor: default;
+	}
 	img {
 		
 		position: absolute;
 		left: 10px;
-		top: 14px;
+		top: 3px;
 		
 	}
 	p {
@@ -130,6 +134,58 @@ header {
 		top: 23px;
 		.arrow-down(5px,#fff);
 	}
+	.links {
+	
+		position: absolute;
+		top: 3px;
+		left: 115px;
+		font-size: 12px;
+		a {
+			color: white;
+			text-decoration: underline;
+			
+			&:hover {
+			
+				text-decoration: none;
+			}
+		}
+	}
+	p.points {
+		font-size: 12px;
+		top: 36px;
+		margin: 0px 0px 0px 0px;
+		font-family: @thin-font;
+		strong {
+			font-size: 12px;
+			font-style: normal;
+		}
+		text-transform:none;
+
+	}		
+	
+	.progress-bar {
+		position: absolute;
+		left: 115px;
+		top: 20px;
+		width: 100px;
+		background-color: white;
+		height: 13px;
+		position: relative;
+		
+		.progress {
+		
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			.gradient(darken(@yellow,10%), darken(@yellow,20%));
+			border-right: 1px solid darken(@yellow,30%);
+			height: 100%;
+			text-align: right;
+			
+						
+		}
+	}
+	
 	
 }
 #cine-buzz-blowout {
@@ -437,7 +493,7 @@ ul.filters {
 	}
 	
 	&.in-the-middle {
-	
+		position: fixed;
 		top: 100px;
 		left: 50%;
 		margin-left: -218px;

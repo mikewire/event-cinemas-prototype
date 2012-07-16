@@ -84,10 +84,21 @@ if ($currentFile == "index.php") {
 		
 		</div>
 		
-		<div id="cine-buzz">
-			<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" width="94" height="26" />		
-			<p>Sign up | Login</p>
-			<span></span>
+		<div id="cine-buzz" <? if ($currentFile == "member-programs-dashboard.php") { ?>class="no-blowout"<? } ?>>
+			<img src="img/cinebuzz-rewards.png" alt="cinebuzz-rewards" />		
+			<? if ($currentFile == "member-programs-dashboard.php") { ?>
+
+				<div class="links"><a class="name">John Doe</a> | <a class="logout">Logout</a></div>
+				<div class="progress-bar"><div class="progress"></div></div>
+				<p class="points"><strong>20</strong> Points</p>				
+				
+			<? } else { ?>
+			
+				<p>Sign up | Login</p>
+				<span></span>
+			
+			<? } ?>
+
 		</div>
 		<div id="cine-buzz-blowout">
 			<div class="hidden-area"></div>

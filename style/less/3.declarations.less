@@ -57,7 +57,17 @@ dl {
 
 	display: none;
 }
-input[type=text] {
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: #000;
+	padding: 5px;
+	.opaque(0.9);
+}
+input[type=text],
+input[type=password] {
 
 	.radius-full(7px);
 	border: 1px solid #999;
@@ -267,7 +277,8 @@ input[type=text] {
 	display: block;
 
 
-}.two-d-icon-small {
+}
+.two-d-icon-small {
 
 	width: 23px;
 	height: 13px;
@@ -276,7 +287,13 @@ input[type=text] {
 	margin-top: 1px;
 
 }
+.help {
 
+	width: 17px;
+	height: 17px;
+	display: block;
+	background: url(../../img/help.png) no-repeat;
+}
 .btn {
 
 	.babes-icon {
