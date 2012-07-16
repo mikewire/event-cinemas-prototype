@@ -1,5 +1,21 @@
  </div><!-- end wrapper -->
 
+  <div id="quick-view-seats">
+  
+  	<div class="outer-arrow"></div>
+  	<div class="inner-arrow"></div>
+  	
+  	<div class="content">
+  	
+  		
+  	
+  	
+  	</div>
+  
+  </div>
+
+
+
   <div id="trailer">
   	<a class="close"></a>
   	<video src="trailers/avengers-high-res.mp4" controls="controls"></video>
@@ -100,6 +116,6 @@
   <script src="js/others.js"></script>  
   <script src="js/premium-cinemas.js"></script>  
   <script src="js/cinebuzz.js"></script>  
-
+  <script src="js/booking-engine.js"></script>  
 </body>
 </html>

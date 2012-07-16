@@ -3542,7 +3542,6 @@ h2 {
 }
 .cinema-movie-times-info strong {
   display: inline;
-  float: left;
   margin-bottom: 4px;
 }
 .cinema-movie-times-info strong.title {
@@ -4244,6 +4243,43 @@ footer .right ul li a {
 }
 footer .right ul li:hover {
   background: #2a2728;
+}
+#quick-view-seats {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  display: none;
+}
+#quick-view-seats .inner-arrow {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ff0000;
+  position: absolute;
+  left: 350px;
+  bottom: -7px;
+  z-index: 1000;
+}
+#quick-view-seats .outer-arrow {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ffffff;
+  position: absolute;
+  left: 348px;
+  bottom: -9px;
+  z-index: 90;
+}
+#quick-view-seats .content {
+  width: 650px;
+  height: 350px;
+  background-color: red;
+  border: 1px solid #fff;
 }
 .ticketing {
   background: #000000 url(../../img/lights-bck.png) no-repeat;

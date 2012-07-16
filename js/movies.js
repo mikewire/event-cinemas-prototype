@@ -115,7 +115,7 @@ $(function () {
 
     var config = {
         over: showQuickTimesWidget,
-        timeout: 500,
+        interval: 500,
         out: delay(emptyFunction, 500)
     };
 

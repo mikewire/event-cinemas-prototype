@@ -240,7 +240,7 @@ function closeTrailer() {
 
 }
 
-function scrollDatesLeft(parentEl, el, reveal_more) {
+function scrollDatesLeft(el, reveal_more, limit) {
     var p = $(el).position();
 
     if (p.left > limit) {
