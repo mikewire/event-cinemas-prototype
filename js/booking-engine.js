@@ -2,28 +2,31 @@ function showQuickSeats() {
 
 	//console.log("show seats");
 	var p = $(this).offset();
+	var btn_width = $(this).width();
 	var w = $("#quick-view-seats").width();
 	var h = $("#quick-view-seats").height();
-	
-	$("#quick-view-seats").css({"left":p.left-(w/2), "top":p.top-(h+20)}).fadeIn();
+	$("#quick-view-seats .hidden-area").width($(this).width()+10).css({"left": (w/2)-(btn_width/2)});	
+	$("#quick-view-seats").css({"left":p.left-(w/2)+(btn_width/2), "top":p.top-(h+0)}).fadeIn();
 	
 
 }
-function hideQuickSeats() {
+function nothing() {
 
-	console.log("hide seats");
-	$("#quick-view-seats").hide();
 }
 
 
 $(function() {
 
-
-    $(".quick-times-select-widget .cinema-row .btn").hoverIntent({
+	$("#quick-view-seats").mouseleave(function() {
+	
+		$(this).fadeOut();
+	
+	});
+    $(".quick-times-select-widget .btn").hoverIntent({
 		over: showQuickSeats,
         timeout: 0,
         interval: 500,
-        out: hideQuickSeats    
+        out: nothing    
     });
 
 });

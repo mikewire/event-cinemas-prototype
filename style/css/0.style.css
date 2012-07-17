@@ -4244,12 +4244,253 @@ footer .right ul li a {
 footer .right ul li:hover {
   background: #2a2728;
 }
+.seat-selection {
+  margin: 50px;
+}
+.seat-selection .legend {
+  float: left;
+  width: 200px;
+  margin-top: 50px;
+}
+.seat-selection .legend span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+}
+.seat-selection .legend p {
+  float: left;
+  margin-left: 10px;
+}
+.seat-selection .legend div {
+  clear: both;
+  height: 30px;
+}
+.seat-selection .legend .available span {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+}
+.seat-selection .legend .your-seats span {
+  background-color: #00b300;
+}
+.seat-selection .legend .reserved span {
+  background-color: red;
+}
+.seat-selection .legend .couple-seat span {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  padding-left: 3px;
+  width: 17px;
+}
+.seat-selection .legend .wheel-chair span {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  padding-left: 3px;
+  width: 17px;
+}
+.seat-selection .seats {
+  float: left;
+  width: 588px;
+}
+.seat-selection .seats .front {
+  width: 100%;
+  display: block;
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+  color: black;
+  margin-bottom: 10px;
+}
+.seat-selection .seats ul.row {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+}
+.seat-selection .seats ul.row li {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  margin: 0px 4px 4px 0px;
+  cursor: pointer;
+}
+.seat-selection .seats ul.row li:hover {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #cdcdcd 0%, #9a9a9a 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #cdcdcd 0%, #9a9a9a 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #cdcdcd 0%, #9a9a9a 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cdcdcd), color-stop(1, #9a9a9a));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #cdcdcd 0%, #9a9a9a 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #cdcdcd 0%, #9a9a9a 100%);
+}
+.seat-selection .seats ul.row li:first-child {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #333333 0%, #666666 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #333333 0%, #666666 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #333333 0%, #666666 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #333333), color-stop(1, #666666));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #333333 0%, #666666 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #333333 0%, #666666 100%);
+  padding: 2px 5px 8px 5px;
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+}
+.seat-selection .seats ul.row li:last-child {
+  margin-right: 0px;
+}
+.seat-selection .seats ul.row li.spacer {
+  margin-right: 20px;
+}
+.seat-selection .seats ul.row li.taken {
+  cursor: default;
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #ff0000 0%, #ff0000 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #ff0000 0%, #ff0000 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #ff0000 0%, #ff0000 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff0000), color-stop(1, #ff0000));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #ff0000 0%, #ff0000 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #ff0000 0%, #ff0000 100%);
+}
+.seat-selection .seats ul.row li.wheel-chair {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  padding-left: 3px;
+  width: 17px;
+}
+.seat-selection .seats ul.row li.couple-seat {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  padding-left: 3px;
+  width: 17px;
+}
+.seat-selection .seats .rear {
+  clear: both;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+  color: white;
+  margin-top: 10px;
+}
 #quick-view-seats {
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 9999;
-  display: none;
+}
+#quick-view-seats .hidden-area {
+  background-color: white;
+  /* Netscape */
+
+  -moz-opacity: 0;
+  /* Safari 1.x */
+
+  -khtml-opacity: 0;
+  /* Good browsers */
+
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0));
+  filter: alpha(opacity = (0));
+  position: absolute;
+  bottom: -23px;
+  left: 120px;
+  height: 23px;
+  width: 80px;
+  z-index: 80;
 }
 #quick-view-seats .inner-arrow {
   float: right;
@@ -4259,7 +4500,7 @@ footer .right ul li:hover {
   border-right: 8px solid transparent;
   border-top: 8px solid #ff0000;
   position: absolute;
-  left: 350px;
+  left: 152px;
   bottom: -7px;
   z-index: 1000;
 }
@@ -4271,49 +4512,182 @@ footer .right ul li:hover {
   border-right: 10px solid transparent;
   border-top: 10px solid #ffffff;
   position: absolute;
-  left: 348px;
+  left: 150px;
   bottom: -9px;
   z-index: 90;
 }
 #quick-view-seats .content {
-  width: 650px;
-  height: 350px;
+  width: 300px;
+  height: 50px;
   background-color: red;
   border: 1px solid #fff;
 }
-.ticketing {
-  background: #000000 url(../../img/lights-bck.png) no-repeat;
+.ticketing .strip h2 {
+  font-size: 18px;
+}
+.ticketing #wrapper {
+  height: auto;
 }
 .ticketing header {
-  margin: 20px;
+  margin: 20px auto;
+}
+.ticketing header .logo {
+  float: left;
+}
+.ticketing header .return-home {
+  margin-top: 50px;
+  font-size: 16px;
+  height: 30px;
+  float: right;
+  padding-right: 30px;
+  padding-top: 3px;
+  background: url(../../img/return-home.png) no-repeat top right;
+}
+.ticketing .left {
+  background: black;
+  border: 1px solid #333333;
+  float: left;
+  min-height: 600px;
+}
+.ticketing .right {
+  background: black;
+  float: right;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  min-height: 600px;
+}
+.ticketing .right .top {
+  height: 36px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: grey;
+  display: block;
+}
+.ticketing .right .top p {
+  padding: 8px;
+}
+.ticketing .right .strip {
+  height: 36px;
+  display: block;
+}
+.ticketing .right .strip h4 {
+  padding: 9px;
+}
+.ticketing .right .wrap {
+  padding: 10px;
+}
+.ticketing .right .wrap#recap img {
+  width: 90px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+}
+.ticketing .right .wrap#recap p {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  margin-bottom: 10px;
 }
 .ticketing .main {
-  margin: 10px 0px 0px 20px;
-  width: 1184px;
-  height: 687px;
+  margin-bottom: 30px;
 }
-.ticketing .main .session-button {
-  position: absolute;
-  top: 390px;
-  left: 250px;
-  width: 400px;
-  height: 70px;
-  background: white;
-  opacity: 0;
+.ticketing .top {
+  background-image: none;
+  list-style: none;
+  margin: 0px;
+  position: static;
+  overflow: hidden;
 }
-.ticketing .main .back-button {
-  position: absolute;
-  width: 100px;
-  height: 70px;
-  background: white;
-  opacity: 0;
+.ticketing .top li {
+  padding: 7px 84px 7px 30px;
+  background-color: grey;
+  margin: 0px 0px 0px 0px;
+  display: block;
+  float: left;
+  cursor: default;
+  position: relative;
+  text-transform: none;
+  font-size: 18px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
 }
-.ticketing .main .proceed-button {
+.ticketing .top li.active {
+  background-color: #cc0000;
+  color: white;
+}
+.ticketing .top li.active span.inner {
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 19px solid #cc0000;
+  right: -19px;
+}
+.ticketing .top li span.inner {
   position: absolute;
-  width: 100px;
-  height: 70px;
-  background: white;
-  opacity: 0;
+  right: -19px;
+  top: 0px;
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 19px solid #808080;
+  z-index: 3000;
+}
+.ticketing .top li span.outer {
+  position: absolute;
+  right: -21px;
+  top: 0px;
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 19px solid #dfdfdf;
+  z-index: 2000;
+}
+.ticketing .top li:first-child {
+  padding-left: 10px;
+}
+.ticketing .movie-overview-list {
+  margin-top: 10px;
+  padding: 10px;
+}
+.ticketing .movie-overview-list .see-other-movies {
+  border-top: 1px solid #333333;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.ticketing .movie-overview-list .see-other-movies .btn {
+  display: block;
+  width: 240px;
+  font-size: 12px;
+}
+.ticketing .movie-overview-list .dates {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+}
+.ticketing .movie-overview-list ul.filters {
+  margin-left: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+}
+.ticketing .movie-overview-list .cinema-movie-times-info {
+  margin-bottom: 5px;
+}
+.ticketing .movie-overview-list .cinema-movie-times-info strong.title {
+  float: left;
+}
+.ticketing .movie-overview-list .cinema-movie-times-info p.thin {
+  float: left;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin: 0px 8px;
+}
+.ticketing .movie-overview-list .not-showing {
+  display: block;
+  padding-top: 5px;
 }
 #cover {
   width: 100%;
@@ -4606,6 +4980,24 @@ footer .right ul li:hover {
 }
 */
 @media all and (min-width: 480px) and (max-width: 1260px) {
+  .ticketing .left {
+    width: 730px;
+  }
+  .ticketing .right {
+    width: 267px;
+  }
+  .ticketing .right .top p {
+    font-size: 14px;
+  }
+  .ticketing .top li {
+    padding-right: 20px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget {
+    width: 550px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget .cinema-row-wrapper {
+    width: 410px;
+  }
   .dashboard .innerpage .left {
     width: 560px;
   }
@@ -4773,6 +5165,24 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
+  .ticketing .left {
+    width: 930px;
+  }
+  .ticketing .right {
+    width: 267px;
+  }
+  .ticketing .right .top p {
+    font-size: 14px;
+  }
+  .ticketing .top li {
+    padding-right: 60px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget {
+    width: 750px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget .cinema-row-wrapper {
+    width: 610px;
+  }
   .dashboard .innerpage .left {
     width: 695px;
   }
@@ -4838,6 +5248,21 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1400px) {
+  .ticketing .left {
+    width: 1050px;
+  }
+  .ticketing .right {
+    width: 313px;
+  }
+  .ticketing .top li {
+    padding-right: 84px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget {
+    width: 850px;
+  }
+  .ticketing .movie-list-item .quick-times-select-widget .cinema-row-wrapper {
+    width: 710px;
+  }
   .dashboard .innerpage .left {
     width: 850px;
   }
