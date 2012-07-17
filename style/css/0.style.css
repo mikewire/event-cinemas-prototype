@@ -4247,6 +4247,49 @@ footer .right ul li:hover {
 .seat-selection {
   margin: 50px;
 }
+.seat-selection#onpop {
+  background: black;
+  width: 900px;
+  padding: 30px;
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -480px;
+  z-index: 9999;
+  border: 1px solid #333333;
+}
+.seat-selection#onpop .seats ul.row li {
+  cursor: default;
+}
+.seat-selection#onpop .seats ul.row li:hover {
+  /* IE10 */
+  background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #b3b3b3));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(bottom, #e6e6e6 0%, #b3b3b3 100%);
+}
+.seat-selection#onpop .seats ul.row li.taken:hover {
+  background: red;
+}
+.seat-selection#onpop .close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+.seat-selection#onpop .btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 .seat-selection .legend {
   float: left;
   width: 200px;
@@ -4470,7 +4513,8 @@ footer .right ul li:hover {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 9999;
+  z-index: 3000;
+  display: none;
 }
 #quick-view-seats .hidden-area {
   background-color: white;
@@ -4518,9 +4562,27 @@ footer .right ul li:hover {
 }
 #quick-view-seats .content {
   width: 300px;
-  height: 50px;
+  height: 25px;
   background-color: red;
   border: 1px solid #fff;
+  text-align: left;
+  padding: 10px;
+}
+#quick-view-seats .content a.quick-view {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 5px;
+}
+#quick-view-seats .content a.attribute {
+  color: black;
+  padding: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #dfdfdf;
+  cursor: help;
+  font-size: 11px;
 }
 .ticketing .strip h2 {
   font-size: 18px;

@@ -1,20 +1,5 @@
  </div><!-- end wrapper -->
 
-  <div id="quick-view-seats">
-  
-  	<div class="outer-arrow"></div>
-  	<div class="inner-arrow"></div>
-  	
-  	<div class="content">
-  	
-  		
-  	
-  	
-  	</div>
-  
-  </div>
-
-
 
   <div id="trailer">
   	<a class="close"></a>

@@ -1,6 +1,48 @@
 .seat-selection {
 	margin: 50px;
+	&#onpop {
 	
+		background: black;
+		width: 900px;
+		padding: 30px;
+		display: none;
+		position: fixed;
+		top: 50px;
+		left: 50%;
+		margin-top: 0px;
+		margin-left: -480px;
+		z-index: 9999;
+		border: 1px solid @dark-grey;
+		
+		.seats ul.row li {
+		
+			cursor: default;
+			
+			&:hover {
+				.gradient(lighten(grey,40%), lighten(grey,20%));
+			
+			}		
+			&.taken {
+			
+				&:hover {
+				
+					background: red;
+				}
+			}
+		}
+		.close {
+			position: absolute;
+			top: -12px;
+			right: -12px;
+		}
+		.btn {
+		
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+		
+	}
 	.legend {
 	
 		float: left;
@@ -152,8 +194,8 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 9999;
-	//display: none;
+	z-index: 3000;
+	display: none;
 	.hidden-area {
 	
 		background-color: white;
@@ -184,9 +226,30 @@
 	.content {
 	
 		width: 300px;
-		height: 50px;
+		height: 25px;
 		background-color: red;
 		border: 1px solid #fff;
+		text-align: left;
+		padding: 10px;
+		
+		a.quick-view {
+		
+			color: white;
+			text-decoration: underline;
+			cursor: pointer;
+			margin-right: 5px;
+			
+		}
+		a.attribute {
+		
+			color: black;
+			padding: 2px;
+			.radius-full(2px);
+			background: @light-grey;
+			cursor: help;
+			font-size: 11px;
+			
+		}
 		
 	}
 

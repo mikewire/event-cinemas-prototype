@@ -17,6 +17,14 @@ function nothing() {
 
 $(function() {
 
+	$("a.attribute").tooltip({ 
+	    track: true, 
+	    delay: 0, 
+	    showURL: false, 
+	    showBody: " - ", 
+	    fade: 100
+	});
+		
 	$("#quick-view-seats").mouseleave(function() {
 	
 		$(this).fadeOut();
@@ -28,5 +36,21 @@ $(function() {
         interval: 500,
         out: nothing    
     });
+    $("#quick-view-seats").click(function() {
+    
+    	$("#cover").show();
+    	$(".seat-selection#onpop").show();
+    });
+    
+    $("#cover").click(function() {
+    	$(this).hide();
+    	$(".seat-selection#onpop").hide();
+    });
+    
+    $(".seat-selection#onpop .close").click(function() {
 
+    	$("#cover").hide();
+    	$(".seat-selection#onpop").hide();
+    
+	});
 });
