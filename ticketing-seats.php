@@ -11,7 +11,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="initial-scale=1.0;" />
   <link rel="stylesheet" href="style/css/0.style.css">
-
+  <script src="js/libs/respond.min.js"></script>
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body class="lights ticketing">
@@ -426,7 +426,9 @@
 					<strong>Number of tickets (<a href="#">Change</a>)</strong>	
 					<p>1 x Adult</p>			
 					<strong>Extras (<a href="#">Change</a>)</strong>	
-					<p>1 x 3D Glasses</p>			
+					<p>1 x 3D Glasses</p>		
+					
+						
 				</div>
 
 			</div>
@@ -469,5 +471,10 @@
   <script src="js/premium-cinemas.js"></script>  
   <script src="js/cinebuzz.js"></script>  
   <script src="js/booking-engine.js"></script>  
+
+  <!--[if lt IE 8]>
+	  <script src="js/ie.js"></script>  
+  <![endif]-->
+
 </body>
 </html>

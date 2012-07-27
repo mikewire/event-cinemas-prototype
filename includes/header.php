@@ -16,7 +16,7 @@ $currentFile = $parts[count($parts) - 1];
   <meta name="description" content="">
   <meta name="viewport" content="initial-scale=1.0;" />
   <link rel="stylesheet" href="style/css/0.style.css">
-
+  <script src="js/libs/respond.min.js"></script>
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <? if ($currentFile == "index.php" || $currentFile == "movie-detail.php" || $currentFile == "goldclass.php" || $currentFile == "movie-detail-gallery.php") { ?>
@@ -32,24 +32,39 @@ if ($currentFile == "index.php") {
 ?>
 
   <div id="background-wrap" style="background-image: url(img/hp_bck/avengers-skin.jpg);"></div>
+	<!--[if lt IE 9]>
+		<img id='bck-img' src='img/hp_bck/avengers-skin.jpg' />
+	<![endif]-->
 
 <?
 } else if ($currentFile == "movie-detail.php") {
 ?>
   <div id="background-wrap" style="background-image: url(img/hp_bck/avengers2.jpeg);"></div>
+	<!--[if lt IE 9]>
+		<img id='bck-img' src='img/hp_bck/avengers2.jpeg' />
+	<![endif]-->
 
 
 <? } else if ($currentFile == "movie-detail-gallery.php") { ?>
 
   <div id="background-wrap" style="background-image: url(img/hp_bck/avengers1.jpeg);"></div>
+	<!--[if lt IE 9]>
+		<img id='bck-img' src='img/hp_bck/avengers1.jpeg' />
+	<![endif]-->
 
 <? } else if ($currentFile == "event-detail.php") { ?>
 
   <div id="background-wrap" style="background-image: url(img/catf-bckground.jpg);"></div>
+	<!--[if lt IE 9]>
+		<img id='bck-img' src='img/catf-bckground.jpg' />
+	<![endif]-->
 
 <? } else if ($currentFile == "member-program-detail.php") { ?>
 
   <div id="background-wrap" style="background-image: url(img/member-program-bck.jpg);"></div>
+	<!--[if lt IE 9]>
+		<img id='bck-img' src='img/member-program-bck.jpg' />
+	<![endif]-->
 
 <? } else if ($currentFile == "goldclass.php") { ?>
   

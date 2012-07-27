@@ -16,7 +16,7 @@ var baseCdnUrl = "";
 function initAnimatedSlider() {
 
     // Fix any broken images
-    $("#slider img").one('error',function () { SetMovieDefaultImageLandscape($(this)); });
+    $("#slider img").one('error', function () { SetMovieDefaultImageLandscape($(this)); });
 
     // calculate how many items are shown, based on the width of the slider (varies depending on screen res.)
     items_shown = $("#slider").width() / $(".items a:visible").width();
@@ -33,11 +33,13 @@ function initAnimatedSlider() {
     $("#slider .items").attr("style", "left: 10px;");
     $("#slider .arrow-left").hide();
     if (total_slides > 1) {
-      $("#slider .arrow-right").show();
+        $("#slider .arrow-right").show();
     }
     current_slide = 1;
 
-    changeSkin();
+    if ($("#slider.animate").length > 0) {
+        changeSkin();
+    }
 }
 
 function resetSlider() {
@@ -108,6 +110,9 @@ function changeSkin() {
         $(".call-to-action .btn.blue").attr("style", "");
     }
 
+    $(".call-to-action .btn.blue").attr("data-firstsession", RotatorImage.attr("data-firstsession"));
+    $(".call-to-action .btn.blue").attr("data-lastsession", RotatorImage.attr("data-lastsession"));
+
 }
 
 function changeSkinBackground(movieId, imageName) {
@@ -157,6 +162,7 @@ function changeCallToActionInfo(movieId, movieUrl) {
         $(".call-to-action .details").attr("href", movieUrl);
         $(".call-to-action .opengallery").attr("href", movieUrl + "/gallery");
         $(".call-to-action .poptrailer").attr("movieId", movieId);
+        $(".call-to-action .find-times-and-book").attr("id", movieId);
 
         $(".call-to-action").fadeIn(600);
     });
@@ -224,6 +230,30 @@ function LoadTrailer(movieId) {
     });
 }
 
+function showTrailer(clicked) {
+    $("#trailer a.active").removeClass("active");
+    clicked.addClass("active");
+
+    if (clicked.attr("data-isyoutube") == "true") {
+        $("#trailer #videoArea").html("<iframe src='http://www.youtube.com/embed/" + clicked.attr("data-trailerid") + "' width='775px' height='410px' frameborder='0' allowfullscreen style='float: left;'></iframe>");
+    } else {
+        $("#trailer #videoArea").html("<video src='" + clicked.attr("data-trailerPath") + clicked.attr("data-trailerid") + ".flv' controls='controls' ></video>");
+    }
+}
+
+function RenderTrailer(trailer) {
+
+    var $moviesList = $("div.#trailer");
+    $moviesList.html("");
+
+    $("#trailer-template").tmpl(trailer).appendTo($moviesList);
+
+    $("#cover").show();
+    $("#trailer").show();
+
+    showTrailer($("#trailer a.active"));
+}
+
 function closeTrailer() {
     var $trailer = $("#trailer video");
     if ($trailer.length > 0) {
@@ -240,15 +270,14 @@ function closeTrailer() {
 
 }
 
-function scrollDatesLeft(el, reveal_more, limit) {
+function scrollDatesLeft(parentEl, el, reveal_more) {
     var p = $(el).position();
-
-    if (p.left > limit) {
-    	if (ie) { 
-			  $(el).css({ "left": "-=4px" }).show(); // strange IE bug fix 
-		} else {
-			  $(el).css({ "left": "-=2px" });
-		}
+    if (p.left > ($(".cinema-row-wrapper", parentEl).width() - $(".width-wrap", el).width())) {
+        if (ie) {
+            $(el).css({ "left": "-=4px" }).show(); // strange IE bug fix 
+        } else {
+            $(el).css({ "left": "-=2px" });
+        }
     } else {
         $(reveal_more).hide();
     }
@@ -256,14 +285,13 @@ function scrollDatesLeft(el, reveal_more, limit) {
 }
 function scrollDatesRight(el, reveal_less) {
     var p = $(el).position();
-   
     if (p.left < 0) {
-    	if (ie) { 
- 	       $(el).css({ "left": "+=4px" });
- 	    } else {
- 	       $(el).css({ "left": "+=2px" });
+        if (ie) {
+            $(el).css({ "left": "+=4px" });
+        } else {
+            $(el).css({ "left": "+=2px" });
 
- 	    }
+        }
     } else {
         $(reveal_less).hide();
     }
@@ -272,13 +300,13 @@ function scrollDatesRight(el, reveal_less) {
 
 function determineDatesScrolling(movieId) {
     if (movieId == null) {
-        $(".cinema-row").each(function() {
+        $(".cinema-row").each(function () {
             if ($(".width-wrap", this).width() > $(".cinema-row-wrapper").width()) {
                 $(".reveal-more", this).show();
                 $(".shadow-right", this).show();
             }
         });
-    } else { 
+    } else {
         var $movie = $("div.movie-list-item[data-id='" + movieId + "']");
         if ($(".width-wrap", $movie).width() > $(".cinema-row-wrapper").width()) {
             $(".reveal-more", $movie).show();
@@ -288,61 +316,97 @@ function determineDatesScrolling(movieId) {
 }
 
 function showQuickTimesWidget() {
-    if (preferred_cinemas.length > 0 && $("#cinema-filters span.active").length > 0) {
-        var p = $(this).parent().parent().position();
+    if (preferred_cinemas.length > 0) {
         var movieId = $(this).attr("id");
-        
-        if ($("#movie-overview-thumb").data("isadvanced")) {
-            var startDate = $(this).parents("li").first().data("firstsession");
-            var endDate = $(this).parents("li").first().data("lastsession");
-            endDate = Date.parse(endDate).addDays(1).toString("yyyy-MM-dd");
-            SetQuickTimeSelectWidgetDates(startDate, endDate);
+
+        if ($(".home-items #slider").length > 0) {
+            clearInterval(timer);
         }
-        
-        var startDate = $("#quick-times-widget-upon-hover .dates li.active").data("value");
 
-        showSessionTime(movieId, startDate);
-        $("#quick-times-widget-upon-hover .quick-times-select-widget").css({ "left": p.left - 200, "top": p.top + 20 });
-        $("#quick-times-widget-upon-hover .quick-times-select-widget").show();
-        
-        $(".quick-times-select-widget").on("hover", "div.reveal-more", function(e) {
-            if (e.type == "mouseenter") {
-                $(this).siblings(".reveal-less").show();
-                var reveal_more = $(this);
-                var wrap = $(this).siblings(".cinema-row-wrapper");
-                var dates = $(".dates-row", wrap);
-                $(".shadow-left", wrap).show();
-                var parentEl = $(this).parent().parent().parent();
-                dateScroller = setInterval(function () { scrollDatesLeft(parentEl, dates, reveal_more); }, 5);
-            } else {
-                clearInterval(dateScroller);
+        var $sessionWidget = $("#quick-times-widget-upon-hover .quick-times-select-widget");
+        $sessionWidget.data("movieid", movieId);
+        if ($(this).hasClass("btn")) {
+            var p = $(this).position();
+
+            var startDate = $("a.find-times-and-book").attr("data-firstsession");
+            var endDate = $("a.find-times-and-book").attr("data-lastsession");
+
+            if ((startDate.length > 0) && (endDate.length > 0)) {
+                endDate = Date.parse(endDate).addDays(1).toString("yyyy-MM-dd");
+                SetQuickTimeSelectWidgetDates(startDate, endDate);
             }
-        });
-        
-        $(".quick-times-select-widget").on("hover", "div.reveal-less", function (e) {
-            if (e.type == "mouseenter") {
-                var reveal_less = $(this);
-                $(this).siblings(".reveal-more").show();
-                var wrap = $(this).siblings(".cinema-row-wrapper");
-                var dates = $(".dates-row", wrap);
-                dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
-            } else {
-                clearInterval(dateScroller);
+            var startDate = $(".dates li.active", $sessionWidget).data("value");
 
+            var cinemas = new Array();
+
+            $.each(preferred_cinemas, function (i, cinemaName) {
+                cinemas.push({ Id: getCinemaId(cinemaName), Name: cinemaName });
+            });
+
+            showSessionTime(movieId, startDate, cinemas, renderSessions2, $sessionWidget);
+
+            $(".quick-times-select-widget").css({ "left": p.left - 150, "top": p.top + 50 });
+            $(".quick-times-select-widget").show();
+
+        } else {
+            if ($("#cinema-filters span.active").length > 0) {
+                var p = $(this).parent().parent().position();
+
+                if ($("#movie-overview-thumb").data("isadvanced")) {
+                    var startDate = $(this).parents("li").first().data("firstsession");
+                    var endDate = $(this).parents("li").first().data("lastsession");
+                    endDate = Date.parse(endDate).addDays(1).toString("yyyy-MM-dd");
+                    SetQuickTimeSelectWidgetDates(startDate, endDate);
+                }
+                
+                var startDate = $(".dates li.active", $sessionWidget).data("value");
+
+                var cinemas = new Array();
+                $("#cinema-filters span.active").each(function () {
+                    var cinemaName = $("div", this).attr("value");
+                    cinemas.push({ Id: getCinemaId(cinemaName), Name: cinemaName });
+                });
+
+                 showSessionTime(movieId, startDate, cinemas, renderSessions2, $sessionWidget);
+                $sessionWidget.css({ "left": p.left - 200, "top": p.top + 20 });
+                $sessionWidget.show();
             }
-        });
-
-        determineDatesScrolling();
+        }
     }
 }
 
+function bindRevealScrollers() {
+    $(".reveal-more").hover(function () {
+        $(this).siblings(".reveal-less").show();
+        var reveal_more = $(this);
+        var wrap = $(this).siblings(".cinema-row-wrapper");
+        var dates = $(".dates-row", wrap);
+        $(".shadow-left", wrap).show();
+        var parentEl = $(this).parent().parent().parent();
+        dateScroller = setInterval(function () { scrollDatesLeft(parentEl, dates, reveal_more); }, 5);
+    }, function () {
+        clearInterval(dateScroller);
+    });
+
+    // The reveal less button scrolls the dates to the right.
+    $(".reveal-less").hover(function () {
+        var reveal_less = $(this);
+        $(this).siblings(".reveal-more").show();
+        var wrap = $(this).siblings(".cinema-row-wrapper");
+        var dates = $(".dates-row", wrap);
+        dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
+    }, function () {
+        clearInterval(dateScroller);
+    });
+}
+
 function showAvailableSeatsLink() {
-	var p = $(this).parent().parent().parent().parent().position();
-	var l = $(this).position();
-	console.log(p.top);
-	console.log(l.left);
-	$(".view-seats-link").css({"left":l.left+100,"top":p.top-40});
-	$(".view-seats-link").show();
+    var p = $(this).parent().parent().parent().parent().position();
+    var l = $(this).position();
+    console.log(p.top);
+    console.log(l.left);
+    $(".view-seats-link").css({ "left": l.left + 100, "top": p.top - 40 });
+    $(".view-seats-link").show();
 }
 function emptyFunction() { }
 function TicketBarZIndex(nr) {
@@ -423,7 +487,7 @@ function FilterRotatorByCinema() {
 
     if (cinemaFilter.length > 0) {
         $("#slider .items a").each(function () {
-            var cinemaIds = $(this).data("cinemas").toString().split( /[\s,]+/ );
+            var cinemaIds = $(this).data("cinemas").toString().split(/[\s,]+/);
             var isInPreferred = false;
             for (var i = 0; i < cinemaFilter.length; i++) {
                 isInPreferred = isInPreferred || ($.inArray(cinemaFilter[i].toString(), cinemaIds) >= 0);
@@ -640,7 +704,34 @@ function renderSessions(movieId, sessions) {
             $movie.show();
         }
 
-        determineDatesScrolling();
+        if ($times.width() > $(".cinema-row-wrapper", $cinemaRow).width()) {
+            $(".reveal-more", $cinemaRow).show();
+            $(".shadow-right", $cinemaRow).show();
+        }
+
+        $(".reveal-more", $cinemaRow).hover(function () {
+            $(this).siblings(".reveal-less").show();
+            var reveal_more = $(this);
+            var wrap = $(this).siblings(".cinema-row-wrapper");
+            var dates = $(".dates-row", wrap);
+            $(".shadow-left", wrap).show();
+            var parentEl = $(this).parent().parent().parent();
+            dateScroller = setInterval(function () { scrollDatesLeft(parentEl, dates, reveal_more); }, 5);
+        }, function () {
+            clearInterval(dateScroller);
+        });
+
+        // The reveal less button scrolls the dates to the right.
+        $(".reveal-less", $cinemaRow).hover(function () {
+            var reveal_less = $(this);
+            $(this).siblings(".reveal-more").show();
+            var wrap = $(this).siblings(".cinema-row-wrapper");
+            var dates = $(".dates-row", wrap);
+            dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
+        }, function () {
+            clearInterval(dateScroller);
+        });
+        
         ShowMovieIcons(movieId);
     }
 }
@@ -656,7 +747,7 @@ function SetQuickTimeSelectWidgetDates(startDate, endDate) {
     while (dStart < dEnd) {
         if (Date.compare(dStart, Date.today()) == 0) {
             dates.push({ value: dStart.toString("yyyy-MM-dd"), text: "Today" });
-        } else if (Date.compare(dStart,Date.today().next()) == 0) {
+        } else if (Date.compare(dStart, Date.today().next()) == 0) {
             dates.push({ value: dStart.toString("yyyy-MM-dd"), text: "Tomorrow" });
         } else {
             dates.push({ value: dStart.toString("yyyy-MM-dd"), text: dStart.toString("ddd dd/MM") });
@@ -669,86 +760,106 @@ function SetQuickTimeSelectWidgetDates(startDate, endDate) {
     $("li", $dateContainer).first().addClass("active");
 }
 
-function showSessionTime(movieId, sDate) {
+function showSessionTime(movieId, sDate, cinemas, success, $sessionWidget) {
     if (sDate == null) {
         sDate = Date.parse(new Date()).toString("yyyy-MM-dd HH:mm");
     }
     var startDate = Date.parse(sDate);
     var endDate = startDate.clone().addDays(1);
-    var attributeCodes = [];
-    var screenTypeCodes = [];
 
-    var $sessionWidget = $(".quick-times-select-widget");
     $sessionWidget.data("movieId", movieId);
     $(".cinema-row", $sessionWidget).remove();
-    
-    $("#cinema-filters span.active div").each(function () {
-        var cinemaName = $(this).attr("value");
-        var cinemaId = $(".where-blowout span div[value='" + cinemaName + "']").attr("id");
-        console.log("Fetching sessions for " + cinemaName + " (" + cinemaId + ")");
 
-        var $attributeFilters = $("#experience-filters span.active");
-        var attributeFilters = new Array();
-        $attributeFilters.each(function() {
-            attributeFilters.push($(this).children("div").attr("value"));
-        });
-        console.log(attributeFilters);
+    $(cinemas).each(function () {
+        var cinemaName = this.Name;
+        var cinemaId = this.Id;
 
-        var cinemaData = { Name: cinemaName, Id: cinemaId };
-        $("#cinemaRowLoading-template").tmpl(cinemaData).appendTo($sessionWidget);
-        var cinemaIds = [cinemaId];
-        var data = {
-            cinemaIds: cinemaIds,
-            movieId: movieId,
-            startDate: startDate.toString("yyyy-MM-dd HH:mm"),
-            endDate: endDate.toString("yyyy-MM-dd"),
-            attributeCodes: attributeCodes,
-            screenTypeCodes: attributeFilters
-        };
-        $.ajax({
-            url: '/SSW/SessionFilter/FindTimesAndBook',
-            data: data,
-            traditional: true,
-            success: function (sessions) {
-                renderSessions2(cinemaId, sessions);
-            },
-            error: function () {
-               
-            }
-        });
+        if (cinemaId != null) {
+            var screenTypes = getScreenTypes();
+            var attributes = getAttributeCodes();
+            var has3d = getHas3d();
+
+            var cinemaData = { Name: cinemaName, Id: cinemaId };
+            $("#cinemaRowLoading-template").tmpl(cinemaData).appendTo($sessionWidget);
+            var cinemaIds = [cinemaId];
+            var data = {
+                cinemaIds: cinemaIds,
+                movieId: movieId,
+                startDate: startDate.toString("yyyy-MM-dd HH:mm"),
+                endDate: endDate.toString("yyyy-MM-dd"),
+                attributeCodes: attributes,
+                screenTypeCodes: screenTypes,
+                has3d: has3d
+            };
+            $.ajax({
+                url: '/SSW/SessionFilter/FindTimesAndBook',
+                data: data,
+                traditional: true,
+                success: function (sessions) {
+                    success(cinemaId, sessions, $sessionWidget);
+                },
+                error: function () {
+                }
+            });
+        }
     });
-
 }
 
-function renderSessions2(cinemaId, sessions) {
-    console.log("Found " + sessions.length + " sessions for " + cinemaId);
-    var $cinemaRow = $("span[id='" + cinemaId + "']");
+function renderSessions2(cinemaId, sessions, $sessionWidget) {
+     var $cinemaRow = $("span[id='" + cinemaId + "']", $sessionWidget);
     var $times = $("span.width-wrap", $cinemaRow);
     $times.html("");
-    
+
     if (sessions.length == 0) {
-        $times.append("No available sessions");
+        $times.html("No available sessions");
     }
     else {
         $("#sessiontime-template").tmpl(sessions).appendTo($times);
+
+        if ($times.width() > $(".cinema-row-wrapper", $cinemaRow).width()) {
+            $(".reveal-more", $cinemaRow).show();
+            $(".shadow-right", $cinemaRow).show();
+        }
+
+        $(".reveal-more", $cinemaRow).hover(function () {
+            $(this).siblings(".reveal-less").show();
+            var reveal_more = $(this);
+            var wrap = $(this).siblings(".cinema-row-wrapper");
+            var dates = $(".dates-row", wrap);
+            $(".shadow-left", wrap).show();
+            var parentEl = $(this).parent().parent().parent();
+            dateScroller = setInterval(function () { scrollDatesLeft(parentEl, dates, reveal_more); }, 5);
+        }, function () {
+            clearInterval(dateScroller);
+        });
+
+        // The reveal less button scrolls the dates to the right.
+        $(".reveal-less", $cinemaRow).hover(function () {
+            var reveal_less = $(this);
+            $(this).siblings(".reveal-more").show();
+            var wrap = $(this).siblings(".cinema-row-wrapper");
+            var dates = $(".dates-row", wrap);
+            dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
+        }, function () {
+            clearInterval(dateScroller);
+        });
     }
-    determineDatesScrolling();
 }
 
 function FilterCinemaMovies() {
     var $movies = $("div.movie-list-item");
     $movies.hide();
-    
+
     var $filters = $(".movie-overview-list .filters li.active");
     var isGoldclass = $filters.filter("[data-id='gc']").length > 0;
     var isVmax = $filters.filter("[data-id='vmax']").length > 0;
     var isThreeD = $filters.filter("[data-id='3d']").length > 0;
-    
+
     if ($filters.length == 0) {
         $movies.fadeIn();
     }
     else {
-        $movies.each(function() {
+        $movies.each(function () {
 
             if ($("div.icons div.three-d-icon", this).length > 0 && isThreeD) {
                 $(this).fadeIn();
@@ -765,16 +876,16 @@ function FilterCinemaMovies() {
 
 function ShowMovieIcons(movieId) {
     if (movieId == null) {
-        $("div.movie-list-item").each(function() {
+        $("div.movie-list-item").each(function () {
             var $icons = $("div.icons", this);
             $icons.html("");
-            if ($("span.three-d-icon",this).length > 0) {
+            if ($("span.three-d-icon", this).length > 0) {
                 $icons.append("<div class='three-d-icon'></div>");
             }
-            if ($("span.goldclass-icon",this).length > 0) {
+            if ($("span.goldclass-icon", this).length > 0) {
                 $icons.append("<div class='goldclass-icon'></div>");
             }
-            if ($("span.vmax-icon",this).length > 0) {
+            if ($("span.vmax-icon", this).length > 0) {
                 $icons.append("<div class='vmax-icon'></div>");
             }
         });
@@ -801,6 +912,7 @@ function FormatSessionTime(jsonDate) {
 
 function FormatSessionClass(attributes, screenType, isThreeD) {
     var cssClass = new Array();
+
     if (screenType.toString().toLowerCase() == "gc") {
         cssClass.push("goldclass-btn");
     }
@@ -821,9 +933,18 @@ function FormatSessionClass(attributes, screenType, isThreeD) {
 function FilterCinemaNowShowing() {
     var startDate = Date.parse($("ul.dates li.active").data("value"));
     var endDate = startDate.clone().clearTime().addDays(1);
-    var attributeCodes = [];
-    var screenTypeCodes = [];
+    var attributeCodes = new Array();
+    var screenTypeCodes = new Array();
 
+    var $filters = $("#cinema-NowShowing ul.filters");
+    var has3d = $("li[data-id='3d']", $filters).hasClass("active");
+    if ($("li[data-id='gc']", $filters).hasClass("active")) {
+        screenTypeCodes.push("gc");
+    }
+    if ($("li[data-id='vmax']", $filters).hasClass("active")) {
+        screenTypeCodes.push("vmax");
+    }
+    
     $("div.movie-list-item").each(function () {
         var movieId = $(this).data("id");
         $(".icons").html("");
@@ -835,7 +956,8 @@ function FilterCinemaNowShowing() {
             startDate: startDate.toString("yyyy-MM-dd HH:mm"),
             endDate: endDate.toString("yyyy-MM-dd"),
             attributeCodes: attributeCodes,
-            screenTypeCodes: screenTypeCodes
+            screenTypeCodes: screenTypeCodes,
+            has3d: has3d
         };
         $.ajax({
             url: '/SSW/SessionFilter/FindTimesAndBook',
@@ -852,25 +974,41 @@ function FilterCinemaNowShowing() {
 }
 
 function RenderSessionIcon(attributes, screenType, isThreeD) {
-    var cssClass = new Array();
-    if (screenType.toString().toLowerCase() == "gc") {
-        cssClass.push("goldclass-icon");
-    }
-    else if (screenType.toString().toLowerCase() == "vmax") {
-        cssClass.push("vmax-icon");
-    }
-    else {
-        if (isThreeD) {
-            cssClass.push("three-d-icon");
-        } else {
-            cssClass.push("standard-icon");
-        }
+    var icons = new Array();
+
+    if (isThreeD) {
+        icons.push("<span class='three-d-icon'></span>");
+    } else {
     }
 
-    if (cssClass.length > 0) {
-        return "<span class='" + cssClass[0] + "'></span>";
+    if (screenType.toString().toLowerCase() == "gc") {
+        icons.push("<span class='goldclass-icon'></span>");
+    }
+    else if (screenType.toString().toLowerCase() == "vmax") {
+        icons.push("<span class='vmax-icon'></span>");
+    }
+
+
+    if (attributes != null) {
+        $.each(attributes.split(/[\s,]+/), function (i, a){
+            icons.push("<span class='" + a.toLowerCase() + "-icon'></span>");
+        });
+    }
+    if (icons.length > 0) {
+        return icons.join("");
     }
     return "";
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.search);
+    if (results == null)
+        return "";
+    else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 var delay = (function () {
@@ -881,11 +1019,11 @@ var delay = (function () {
     };
 })();
 
-function MovieFilterSuccess(movieIdsToShow) {
-    
-}
 
 function MovieFilter() {
+    if ($("#movie-filter").length == 0) {
+        return true;
+    }
     var cinemaFilters = new Array();
     $("#movie-filter #cinema-filters span.active div").each(function () {
         var cinema = $(this).attr("value");
@@ -897,8 +1035,7 @@ function MovieFilter() {
     $("#movie-filter #experience-filters span.active div").each(function () {
         experienceFilters.push($(this).attr("value"));
     });
-    
-    var $moviesContainer = $("#movie-overview-thumb");
+
 
     var keyword = $("#movie-filter input#movieKeywordTextbox").val().trim();
 
@@ -907,10 +1044,21 @@ function MovieFilter() {
         genreFilters.push($(this).text());
     });
 
-    var $movies = $("li", $moviesContainer);
+    var $movies = [];
+    var isListView = false;
+    var $moviesContainer;
+    if ($("#movie-overview-thumb").length > 0) {
+        $moviesContainer = $("#movie-overview-thumb");
+        $movies = $(".movie-list-item", $moviesContainer);
+    }
+    else {
+        $moviesContainer = $("#movie-overview-list");
+        $movies = $(".movie-list-item", $moviesContainer);
+        isListView = true;
+    }
+
     $movies.hide();
-
-
+    $("div.block", $moviesContainer).hide();
     var moviesToShow = new Array();
 
     $movies.each(function () {
@@ -919,7 +1067,7 @@ function MovieFilter() {
         var genres = $movie.data("genres").toString().split(/[\s,]+/);
         var inCinema = false;
         if (cinemaFilters.length > 0) {
-            cinemaFilters.forEach(function (cinema) {
+            $.each(cinemaFilters, function (i, cinema) {
                 inCinema = inCinema || ($.inArray(cinema, cinemas) >= 0);
             });
         }
@@ -929,7 +1077,7 @@ function MovieFilter() {
 
         var hasGenre = false;
         if (genreFilters.length > 0) {
-            genreFilters.forEach(function (genre) {
+            $.each(genreFilters, function (i, genre) {
                 hasGenre = hasGenre || ($.inArray(genre, genres) >= 0);
             });
         }
@@ -939,7 +1087,7 @@ function MovieFilter() {
 
         var hasExperienceFilter = false;
         if (experienceFilters.length > 0) {
-            experienceFilters.forEach(function (experience) {
+            $.each(experienceFilters, function (i, experience) {
                 hasExperienceFilter = hasExperienceFilter || $movie.data(experience).toLowerCase() == "true";
             });
         }
@@ -954,78 +1102,247 @@ function MovieFilter() {
             hasKeywordFilter = ("p.title", $movie).text().toLowerCase().indexOf(keyword) >= 0;
         }
 
-        console.log($("p.title", $movie).text() + " inCinema: " + inCinema + ", hasGenre: " + hasGenre + ", hasExperience: " + hasExperienceFilter + ", hasKeyword: " + hasKeywordFilter);
+        console.log($movie.data("id") + " " + $(".title", $movie).text() + " inCinema: " + inCinema + ", hasGenre: " + hasGenre + ", hasExperience: " + hasExperienceFilter + ", hasKeyword: " + hasKeywordFilter);
 
         if (inCinema && hasGenre && hasExperienceFilter && hasKeywordFilter) {
             moviesToShow.push(this);
         }
+        
     });
-
 
     if (cinemaFilters.length > 0 && experienceFilters.length > 0) {
         $.ajax({
             url: '/SSW/MovieList/FilterNowShowing',
-            data: { cinemaId: cinemaFilters, screenTypes: experienceFilters, has3D: false },
+            data: { cinemaId: cinemaFilters, screenTypes: experienceFilters, has3D: experienceFilters.indexOf("three-d") >= 0 },
             traditional: true,
-            success: function (results) { MovieFilterSuccess(results); }
+            success: function (results) {
+                var a = new Array();
+                $.each(moviesToShow, function(i, m) {
+                    if ($.inArray($(m).data("id"), results) >= 0) {
+                        a.push(m);
+                    }
+                });
+                
+                FadeInMovies(a);
+                
+                if (isListView) {
+                    RefreshSessions();
+                }
+            }
         });
     } else {
         FadeInMovies(moviesToShow);
+        if (isListView) {
+            RefreshSessions();
+        }
     }
 
+    // Hide dates
+}
 
-   
+
+function RefreshSessions() {
+    var $movies = $("div.movie-list-item:visible");
+    var $cinemas = $("#cinema-filters span.active");
+    var cinemaData = new Array();
+    $cinemas.each(function () {
+        var name = $("div", this).attr("value");
+        var id = getCinemaId(name);
+        cinemaData.push({ Id: id, Name: name });
+    });
+    $movies.each(function () {
+        var $sessionWidget = $("div.quick-times-select-widget", this);
+        $(".cinema-row", $sessionWidget).remove();
+        $("#cinemaRowLoading-template").tmpl(cinemaData).appendTo($sessionWidget);
+        var movieId = $(this).data("id");
+
+        var attributes = getAttributeCodes();
+        var screenTypes = getScreenTypes();
+        var has3d = getHas3d();
+        var startDate = Date.parse($(".dates li.active", $sessionWidget).data("value"));
+        var endDate = startDate.clone().clearTime().addDays(1);
+        $.each(cinemaData, function (i, cinema) {
+            getSessionTimes([cinema.Id], movieId,
+                startDate.toString("yyyy-MM-dd HH:mm"),
+                endDate.toString("yyyy-MM-dd HH:mm"),
+                attributes, screenTypes, has3d,  $sessionWidget, renderRow, null);
+        });
+    });
+}
+
+function getHas3d() {
+    return $("#experience-filters span.active div[value='three-d']").length > 0;
+}
+
+function getScreenTypes() {
+    var screenTypeCodes = new Array();
+    var $selectedScreens = $("#experience-filters span.active div");
+    if ($selectedScreens.length > 0) {
+        $selectedScreens.each(function () {
+            if ($(this).data("type") == "screen") {
+                screenTypeCodes.push($(this).attr("value"));
+            }
+        });
+    }
+    return screenTypeCodes;
+}
+
+function getAttributeCodes() {
+    var attributeCodes = new Array();
+    var $selectedScreens = $("#experience-filters span.active div");
+    if ($selectedScreens.length > 0) {
+        $selectedScreens.each(function () {
+            if ($(this).data("type") == "attribute") {
+                attributeCodes.push($(this).attr("value"));
+            }
+        });
+    }
+    return attributeCodes;
     
 }
 
-function FadeInMovies(moviesToShow) {
-    moviesToShow.forEach(function (m) { $(m).fadeIn(); });
+function renderRow(sessions, cinemaIds, $sessionWidget) {
+    var cinemaId = cinemaIds[0];
+    var $cinemaRow = $(".cinema-row[id='" + cinemaId + "']", $sessionWidget);
+    var $datesRow = $(".width-wrap", $cinemaRow);
+    $datesRow.html("");
+    if (sessions.length == 0) {
+        $datesRow.html("No available sessions");
+    }
+    else {
+        $("#sessiontime-template").tmpl(sessions).appendTo($datesRow);
+    }
 
-    var $headings = $("span.strip label", $("#movie-overview-thumb"));
+    if ($datesRow.width() > $(".cinema-row-wrapper", $cinemaRow).width()) {
+        $(".reveal-more", $cinemaRow).show();
+        $(".shadow-right", $cinemaRow).show();
+    }
+
+    $(".reveal-more", $cinemaRow).hover(function () {
+        $(this).siblings(".reveal-less").show();
+        var reveal_more = $(this);
+        var wrap = $(this).siblings(".cinema-row-wrapper");
+        var dates = $(".dates-row", wrap);
+        $(".shadow-left", wrap).show();
+        var parentEl = $(this).parent().parent().parent();
+        dateScroller = setInterval(function () { scrollDatesLeft(parentEl, dates, reveal_more); }, 5);
+    }, function () {
+        clearInterval(dateScroller);
+    });
+
+    // The reveal less button scrolls the dates to the right.
+    $(".reveal-less", $cinemaRow).hover(function () {
+        var reveal_less = $(this);
+        $(this).siblings(".reveal-more").show();
+        var wrap = $(this).siblings(".cinema-row-wrapper");
+        var dates = $(".dates-row", wrap);
+        dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
+    }, function () {
+        clearInterval(dateScroller);
+    });
+
+}
+
+function getSessionTimes(cinemaIds, movieId, startTime, endTime, attributeCodes, screenTypeCodes, has3d, $sessionWidget, callback, error) {
+    var data = {
+        cinemaIds: cinemaIds,
+        movieId: movieId,
+        startDate: startTime,
+        endDate: endTime,
+        attributeCodes: attributeCodes,
+        screenTypeCodes: screenTypeCodes,
+        has3d: has3d
+    };
+    $.ajax({
+        url: '/SSW/SessionFilter/FindTimesAndBook',
+        data: data,
+        traditional: true,
+        success: function (sessions) {
+            callback(sessions, cinemaIds, $sessionWidget);
+        },
+        error: function () {
+            error($sessionWidget);
+        }
+    });
+}
+
+
+function FadeInMovies(moviesToShow) {
+    $.each(moviesToShow, function (i,m) { $(m).fadeIn(); });
     delay(function () {
-        $headings.each(function () {
-            $(this).text($(this).parent().parent().parent().next().children(":visible").length);
+        $("div.block").each(function () {
+            if ($(this).siblings("ul").length > 0) {
+                var $nextElm = $(this).next();
+                if ($nextElm.children(".movie-list-item:visible").length == 0) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            }
+            else {
+                if ($(this).nextUntil(".block", ":visible").length == 0)
+                    $(this).hide();
+                else
+                    $(this).show();
+            }
         });
-    }, 500
+    }, 400
     );
 }
 
 
 function FilterCinemas() {
-    var $filters = $(".filter-element span.active div");
+    var keyword = $("#cinemaKeywordFilter").val().trim();
+    var brandFilter = new Array();
+    var experienceFilter = new Array();
 
-    var filterString = "";
-    $filters.each(function () {
-        if (filterString.length == 0) {
-            filterString = "span." + $(this).attr("value");
-        } else {
-            filterString += ", span." + $(this).attr("value");
-        }
+    $("#brand-filters span.active div").each(function() {
+        brandFilter.push($(this).attr("value"));
     });
 
-    var cinemas = $("div.cinema-list-item .block");
+    $("#experience-filters span.active div").each(function () {
+        experienceFilter.push($(this).attr("value"));
+    });
 
-    var $matchedCinemas;
-    if (filterString.length > 0) {
-        $("div.content .cinemaItem", cinemas).hide();
-        $matchedCinemas = $(filterString, cinemas);
-    } else {
-        $matchedCinemas = $("div.content .cinemaItem", cinemas);
-    }
+    var $cinemas = $(".cinemaItem");
+    var matchedCinemas = new Array();
+    
+    $cinemas.each(function () {
+        var $cinema = $(this);
+        var hasKeywordFilter = false;
+        var hasBrandFilter = false;
+        var hasExperienceFilter = false;
+        
+        if (brandFilter.length > 0) {
+            hasBrandFilter = $.inArray($cinema.data("brand").toString(), brandFilter) >= 0;
+        } else {
+            hasBrandFilter = true;
+        }
 
-    $("div.content .cinemaItem", cinemas).hide();
-    var searchText = $("#cinemaKeywordFilter").val().trim();
-    if (searchText.length == 0) {
-        $matchedCinemas.fadeIn();
-    }
-    else {
-        $matchedCinemas.each(function () {
-            if ($($(this).children()[0]).text().toString().toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-                $(this).fadeIn();
-            }
-        });
-    }
-    delay(function () { updateCinemaCount(); }, 500);    
+        if (keyword.length > 0) {
+            hasKeywordFilter = $cinema.children().text().toLowerCase().indexOf(keyword.toLowerCase()) >= 0;
+        } else {
+            hasKeywordFilter = true;
+        }
+
+        if (experienceFilter.length > 0) {
+            $.each(experienceFilter, function(i, experience) {
+                if ($cinema.data(experience).toLowerCase() == "true") {
+                    hasExperienceFilter = hasExperienceFilter || true;
+                }
+            });
+        } else {
+            hasExperienceFilter = true;
+        }
+
+        if (hasKeywordFilter && hasExperienceFilter && hasBrandFilter) {
+            matchedCinemas.push(this);
+        }
+    });
+    $cinemas.hide();
+    $(matchedCinemas).fadeIn();
+    delay(function () { updateCinemaCount(); }, 500);
 }
 
 function updateCinemaCount() {
@@ -1086,16 +1403,15 @@ function NowShowingSortBy(sortType) {
             var cinemaName = $(cinemas[0]).children("div").attr("value");
             cinemaId = $(".where-blowout div.checkbox[value='" + cinemaName + "']").attr("id");
         }
-        
-        if (nowShowingPopularity.length == 0) {
 
+        if (nowShowingPopularity.length == 0) {
             $.ajax({
                 url: '/SSW/MovieList/GetMoviesByPopularity',
                 data: { PreviousHours: 24, ShowTop: 1000, CinemaId: cinemaId },
                 dataType: "json",
                 traditional: true,
                 cache: true,
-                success: function(movies) {
+                success: function (movies) {
                     nowShowingOrderByPopularity(movies);
                     nowShowingPopularity = movies;
                 }
@@ -1105,12 +1421,63 @@ function NowShowingSortBy(sortType) {
         }
     }
 }
-
+function sortBy(type, $movieContainer) {
+    if (type == "release") {
+        if ($movieContainer.data("release") != null) {
+            $movieContainer.data("alphabetical", $movieContainer.html());
+            $movieContainer.html($movieContainer.data("release"));
+        }
+    }
+    else {
+        if ($movieContainer.data("alphabetical") != null) {
+            $movieContainer.data("release", $movieContainer.html());
+            $movieContainer.html($movieContainer.data("alphabetical"));
+        }
+        else {
+            $movieContainer.data("release", $movieContainer.html());
+            if ($movieContainer.attr("id") == "movie-overview-thumb") {
+                $("p.month").remove();
+                var movies = $("li", $movieContainer).get();
+                movies.sort(function (a, b) {
+                    var compA = $("p.title", a).text().toLowerCase();
+                    var compB = $("p.title", b).text().toLowerCase();
+                    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+                });
+                var $ul = $("ul", $movieContainer).first();
+                $.each(movies, function (idx, item) {
+                    $ul.append(item);
+                });
+            }
+            else {
+                $("p.month").remove();
+                var movies = $("div.movie-list-item", $movieContainer).get();
+                movies.sort(function (a, b) {
+                    var compA = $("p.title", a).text().toLowerCase();
+                    var compB = $("p.title", b).text().toLowerCase();
+                    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+                });
+                $.each(movies, function (idx, item) {
+                    $movieContainer.append(item);
+                });
+            }
+        }
+    }
+    MovieFilter();
+}
 function nowShowingOrderByPopularity(movies) {
-    var $movieContainer = $("#movie-overview-thumb ul.movie-overview");
-    var $movies = $("li", $movieContainer);
+    var $movies = null;
+    var $movieContainer = null;
+    if ($("#movie-overview-thumb").length > 0) {
+        $movieContainer = $("#movie-overview-thumb ul.movie-overview");
+        $movies = $(".movie-list-item", $movieContainer);
+    }
+    else {
+        $movieContainer = $("#movie-overview-list");
+        $movies = $(".movie-list-item", $movieContainer);
+    }
+    
     $movieContainer.html("");
-
+    
     for (var i = 0; i < movies.length; i++) {
         var $movie = $movies.filter("[data-id='" + movies[i].Id + "']");
         if ($movie.length == 1) {
@@ -1121,6 +1488,61 @@ function nowShowingOrderByPopularity(movies) {
     if ($movies.length > 0) {
         $movieContainer.append($movies);
     }
+}
+
+function BuildFilterQueryString() {
+    var qs = "";
+    var $movieFilter = $("#movie-filter");
+
+    var keyword = $("#movieKeywordTextbox", $movieFilter).val().trim();
+    if (keyword.length > 0) {
+        qs = "keyword=" + encodeURIComponent(keyword);
+    }
+
+    var $cinemas = $("#cinema-filters span.active", $movieFilter);
+    if ($cinemas.length > 0) {
+        var cinemas = new Array();
+        $cinemas.each(function () {
+            var id = getCinemaId($(this).children("div").attr("value"));
+            cinemas.push(id);
+        });
+        if (qs.length > 0) {
+            qs += "&";
+        }
+        qs += "cinemas=" + cinemas.join(",");
+    }
+
+    var $experience = $("#experience-filters span.active", $movieFilter);
+    if ($experience.length > 0) {
+        var experience = new Array();
+        $experience.each(function () {
+            var id = $(this).children("div").attr("value");
+            experience.push(id);
+        });
+        if (qs.length > 0) {
+            qs += "&";
+        }
+        qs += "experience=" + experience.join(",");
+    }
+
+    var $genres = $("#MovieGenreFilter span.active", $movieFilter);
+    if ($genres.length > 0) {
+        var genres = new Array();
+        $genres.each(function () {
+            var id = $(this).children("div").attr("value");
+            genres.push(id);
+        });
+        if (qs.length > 0) {
+            qs += "&";
+        }
+        qs += "genres=" + genres.join(",");
+    }
+
+    return qs;
+}
+
+function getCinemaId(cinemaName) {
+    return $(".where-blowout div[value='" + cinemaName + "']").attr("id");
 }
 
 (function ($) {
@@ -1160,4 +1582,36 @@ function nowShowingOrderByPopularity(movies) {
         }
         return null;
     };
+    
+    baseCdnUrl = $("#cdnUrl").attr("path");
 })(jQuery);
+
+function showShareButtons(title, actionLink, description, imageUrl) {
+    var act = new gigya.socialize.UserAction();
+    act.setTitle(title);
+    act.setLinkBack(actionLink);
+    if (description != null && description.length > 0) {
+        act.setDescription(description);
+    }
+    
+    if (imageUrl != null && imageUrl.length > 0) {
+        act.addMediaItem(
+            {
+                type: 'image',
+                src: imageUrl,
+                href: actionLink
+            });
+    }
+    var showShareBarUI_params = { containerID: 'divButtons', shareButtons: 'Facebook-Like,Twitter-Tweet', userAction: act };
+    gigya.socialize.showShareBarUI(showShareBarUI_params);
+}
+
+
+function ShowModal(heading, body, footer, callbackFunction, closeFunction) {
+    var $modal = $("#modal");
+    $(".modal-header h3", $modal).text(heading);
+    $(".modal-body", $modal).html(body);
+    $(".modal-footer").html(footer);
+    callbackFunction($modal);
+    $modal.one("hidden", function() { closeFunction($modal); });
+}

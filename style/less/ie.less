@@ -12,9 +12,14 @@
 		zoom: 1;
 
 	}	
+
+	.btn.yellow {
 	
-	
-		
+		padding-top: 7px;
+		//padding-bottom: 11px;
+		zoom: 1;
+	}
+			
 	.btn.grey {
 	
 		padding-top: 7px;
@@ -30,137 +35,91 @@
 	.btn.blue {
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cc8f2, endColorstr=#e2f4fd);
 		padding-bottom: 8px;
+		border-radius: 0px;
 		&:hover {
-			
+			border-radius: 0px !important;
 			background: darken(#e2f4fd,10%);
 			filter: none;
 		}
 	}
-	.nav ul li a {
-	
-			text-indent: -9999px;
-			background: url(../../img/nav_sprite.png) no-repeat 0px 0px;
-			display: block;
-			height: 19px;
-			margin-bottom: 8px;
-	
+	.main.member-programs.dashboard .right .strip .popcorn {
+		z-index: 8000;
+		position: relative;
 	}
-	.nav {
-		li.movies_li {
+	.ticketing .right .strip {
+	
+		height: 40px;
 		
-			a {
-				width: 75px;
+		h4 {
 			
-			} 
-			&.active a {
-			
-				background-position: 0px -20px;
-			}
-	
-	
-		}	
-	
-		li.alternate_li {
-		
-			a {
-				background-position: -83px 0px;
-				width: 175px;
-			
-			} 
-			&.active a {
-			
-				background-position: -82px -20px;
-			}
-	
-	
-		}	
-		li.cinemas_li {
-		
-			a {
-				background-position: -271px 0px;
-				width: 80px;
-			
-			} 
-			&.active a {
-			
-				background-position: -271px -20px;
-			}
-	
-	
-		}	
-		li.advanced-tickets_li {
-		
-			a {
-				background-position: -360px 0px;
-				width: 168px;
-			
-			} 
-			&.active a {
-			
-				background-position: -360px -20px;
-			}
-	
-	
-		}	
-		li.premium_li {
-		
-			a {
-				background-position: -536px 0px;
-				width: 168px;
-			
-			} 
-			&.active a {
-			
-				background-position: -536px -20px;
-			}
-	
-	
-		}	
-		li.promos_li {
-		
-			a {
-				background-position: -715px 0px;
-				width: 200px;
-			
-			} 
-			&.active a {
-			
-				background-position: -715px -20px;
-			}
-	
-	
-		}	
-		li.member_programs_li {
-		
-			a {
-				background-position: -925px 0px;
-				width: 200px;
-				height: 25px;
-			
-			} 
-			&.active a {
-			
-				background-position: -925px -25px;
-			}
-	
-	
-		}	
+			font-size: 17px;
+		}
 	}
+	.seat-selection .seats ul.row li {
+	
+		filter: none;
+		background-color: lighten(grey,40%);
+		
+		&:hover {
+			background-color: lighten(grey,60%);
+
+		}
+		&:first-child {
+			
+			background-color: @dark-grey;
+		}	
+		&.spacer {
+			background-color: black;
+			
+			&:hover {
+				background-color: black;
+			}
+			
+		}
+	}
+	
+
 }
 
-.ie8 #background-wrap,
-.ie7 #background-wrap { 
+.ie8, .ie7 {
+	
+	#background-wrap {
+	
+		display: none;
+	}
+	#bck-img {
+		z-index:-1;
+		min-height: 100%;
+		min-width: 1024px;
+		
+		width: 100%;
+		height: auto;
+		
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 
-	background-position: top center;
-}
+	.hurry {
+	
+		left: 0px;
+		
+		p {
+			padding: 2px 2px;
+		}
+	}
+	.subnav li {
+	
+		margin-right: 10px;
+	}
+} 
+
 .ie9 {
-
-	#ticket-bar .ticket-img {
-		
+	.ticketing .top li {
+		padding-left: 25px;
 	}
-	
-	
-	.main.movies ul.movie-overview li {
+
+	.main .movies ul.movie-overview li {
 	
 		margin-right: 5px;
 	}
@@ -192,7 +151,7 @@
 	
 		display: block;
 	}
-	.main .movies .movie-overview-thumb {
+	.main .movies #movie-overview-thumb {
 		
 		display: none;
 	}
@@ -201,58 +160,156 @@
 
 .ie8 {
 
+	.premium-cinema-call-to-action .background-arrows { top: 270px; }
+	.home-items 		{ top: 480px; }
+	.footer-home		{ top: 730px; }
+	.movie-detail-items,
+	.gallery-items		 { top: 550px; height: 250px; }
+	.call-to-action		{ top: 150px; }
 
-	#ticket-bar 		{ 
-		width: 860px; 
-		span { 
-			width: 185px;
-			margin-right:25px; 
-			label {
-				
-			}
-		}
-		a.btn {
-		
-			right: 8px;
-		}
-	}
-	
-	#cine-buzz { 
-	
-		left: 870px; 
-		width: 130px;
-		p {
-			
-			display: none;
-			
-		}
-	}
-
-	.home {
-		.home-items	 	{ width: 1000px;top: 550px; }
-		#slider 		{ width: 670px; margin-right: 5px; a { margin-right: 8px; }}
-		.ad.full		{ width: 240px; }
-		.ad.half		{ width: 240px; }
-	}
-	#wrapper,header {
-		
-		width: 1000px;
-
-	}
-	.call-to-action {
-	
-		right: 20px;
-		top: 160px;
-	}
-	.when-blowout 		{ left: 430px;  }
-	.what-blowout 		{ left: 220px; }
-	#trailer			{ width: 1000px; margin-left: -500px; video { width: 795px; }}
-	footer 			{ top: 850px; }
 
 }
 .ie7 {
+	.seat-selection .seats ul.row {
+	
+		margin: 0px !important;
+		height: 23px;
+	}
+	.seat-selection .seats .front {
+	
+		zoom: 1;
+		width: 700px;
+	}
+	.ticketing .top li {
+		padding-left: 23px;
+		//background: none;
+		z-index: 1000;
+		border: 1px solid @dark-grey;
+		span.inner {
+			display: none;
+		}
+		span.outer {
+			display: none;
+		}
+	}
+	.ticketing .movie-overview-list .see-other-movies {
+		clear: both;
+		zoom: 1;
+	}
+	.btn.gold {
+		zoom: 1;	
+	}
 
-	.ie7 header {
+
+	.form-block.last span {
+		clear: both;
+	}
+	.form-block .title {
+	
+		clear: both;
+		margin-top: 10px;
+	}
+
+	.main.member-programs.dashboard .right .strip .popcorn {
+	
+		margin-top: 4px;
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box.recommended .strip h2 {
+		
+		padding: 2px;
+	
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box.preferred .set-preferred-cinemas {
+		clear: both;
+		display: block;
+	
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box.preferred .content {
+	
+		position: relative;
+		
+		.btn.set-preferred-cinemas {
+		
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box.half.points .progress-bar .progress p {
+	
+		width: 40px;
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box.half.points .strip.tabs {
+	
+		padding-bottom: 15px;
+	}
+	.main.member-programs.dashboard .wrap .dashboard-box {
+	
+		clear: both;
+		
+		&.half {
+			height: 200px;		
+			clear: none;
+		}
+	}
+
+	.results {
+	
+		display: block;
+		height: 20px;
+		width: 100%;
+	}
+	.movies ul.movie-overview li span img {
+		width: 100%;
+		height: auto;
+	}
+	.main.cinemas .right .item {
+	
+		clear: both;
+		margin-bottom: 10px;
+	}
+	.quick-times-select-widget .cinema-row a.btn {
+		zoom: 1; 
+		float: left;
+		text-align: left;
+		display: inline !important;
+		span {
+			
+			margin-top: -15px;
+			
+			&.three-d-icon {
+				
+				margin-top: -12px;
+			}
+		}
+	} 
+
+	header ul.movie-overview  {
+		
+		position: relative;
+	
+	}
+	.main.cinemas .block h2 {
+		
+		padding: 5px 0px 10px 0px;	
+		span {
+			position: absolute;
+			top: 8px;
+			right: 0px;
+		}
+	
+	}
+	.main.cinemas .block.preferred .set-preferred-cinemas {
+		clear: both;
+		display: block;
+	}
+	#cover {
+		z-index: 2000;
+	}
+	.overlay {
+		z-index: 9999;
+	}
+	header {
 		z-index: 9999;
 	}
 	.where-blowout .bottom {
@@ -277,14 +334,6 @@
 
 	#ticket-bar 		{ 
 		background-color: red;
-		width: 860px; 
-		span { 
-			width: 185px;
-			margin-right:25px; 
-			label {
-				
-			}
-		}
 		a.btn {
 		
 			right: 8px;
@@ -293,34 +342,23 @@
 	
 	#cine-buzz { 
 		background-color: red;
-		left: 870px; 
-		width: 130px;
-		p {
-			
-			display: none;
-			
-		}
-	}
-	#background-wrap	{z-index: -1;}
-	.home {
-		.home-items	 	{ width: 1000px;top: 550px; }
-		#slider 		{ width: 670px; margin-right: 5px; a { margin-right: 8px; }}
-		.ad.full		{ width: 240px; }
-		.ad.half		{ width: 240px; }
-	}
-	#wrapper,header {
-		
-		width: 1000px;
-
 	}
 	.call-to-action {
 	
 		right: 20px;
 		top: 160px;
 	}
-	.when-blowout 		{ left: 430px;  }
-	.what-blowout 		{ left: 220px; }
+	.premium-cinema-call-to-action .call-to-action {
+	
+		right: 80px;
+		
+	}
 	#trailer			{ width: 1000px; margin-left: -500px; video { width: 795px; }}
-	footer 			{ top: 850px; }
+	.premium-cinema-call-to-action .background-arrows { top: 270px; }
+	.home-items 		{ top: 480px; }
+	.footer-home		{ top: 730px; }
+	.movie-detail-items,
+	.gallery-items		 { top: 550px;height: 250px; }
+	.call-to-action		{ top: 150px; }
 
 }

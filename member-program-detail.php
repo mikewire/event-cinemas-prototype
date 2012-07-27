@@ -15,13 +15,6 @@
 				
 		</div>
 				 
-		<div class="overlay">
-			<a class="close-small">x</a>
-			
-			<p>Gold Class is Australia’s ultimate movie-going experience. Each auditorium boasts just 26-60 luxurious electronic recliners, a wall-to-wall mega screen, crisp digital surround sound and has access to a private lounge and bar with a stunning menu, cocktail and wine list. Waiter service is available before, after and during the event, direct to your seat. Gold Class is your unique and impressive solution to corporate entertaining, whether it be for a presentation, workshop, meeting or your own exclusive movie night.</p>
-		
-		
-		</div>		 
 		<div class="movie-detail-items">
 			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
 			<div class="image-promo-box"><img src="img/member-program-promo.png" alt="member-program-promo" /></div>
@@ -41,4 +34,12 @@
 <!-- <img id="takeover-promo" style="float:right; margin-top: 10px;" src="img/hp_bck/americanpie-promo.jpg" alt="americanpie-promo" width="271" height="165" /> -->
 			
 		</div>	
+		<div class="overlay">
+			<a class="close-small">x</a>
+			
+			<p>Gold Class is Australia’s ultimate movie-going experience. Each auditorium boasts just 26-60 luxurious electronic recliners, a wall-to-wall mega screen, crisp digital surround sound and has access to a private lounge and bar with a stunning menu, cocktail and wine list. Waiter service is available before, after and during the event, direct to your seat. Gold Class is your unique and impressive solution to corporate entertaining, whether it be for a presentation, workshop, meeting or your own exclusive movie night.</p>
+		
+		
+		</div>		 
+		
 <? include("includes/footer.php") ?>

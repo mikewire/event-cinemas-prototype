@@ -107,7 +107,7 @@
 		
 		.front {
 		
-			width: 100%;
+			//width: 100%;
 			display: block;
 			.gradient(lighten(grey,40%), lighten(grey,20%));
 			padding: 5px;
@@ -138,10 +138,10 @@
 				cursor: pointer;
 				
 				&:hover {
-				
 					.gradient(lighten(grey,30%), lighten(grey,10%));
 				}
 				&:first-child {
+					cursor: default;
 					.gradient(@dark-grey, lighten(@dark-grey,20%));
 					padding: 2px 5px 8px 5px;
 					height: 10px;
@@ -150,12 +150,12 @@
 				}
 				
 				&:last-child {
-				
 					margin-right:0px;
 				}
 				&.spacer {
-				
-					margin-right: 20px;
+					cursor: default;
+					.gradient(black, black);
+					//margin-right: 20px;
 				}
 				&.taken {
 					cursor: default;

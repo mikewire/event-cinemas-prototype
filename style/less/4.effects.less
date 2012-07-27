@@ -95,6 +95,10 @@
 }
 .opaque(@level) {
 
+  @ieOpacity: @level * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})"; // IE 8
+   filter: ~"alpha(opacity=@{ieOpacity})"; // IE 5-7
+
   /* Netscape */
   -moz-opacity: @level;
 
@@ -105,25 +109,18 @@
   opacity: @level;
 
 
-  @opacityPercentage: @level * 100;
-  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{opacityPercentage}))"; 
-  filter: ~"alpha(opacity = (@{opacityPercentage}))";  
 }
 
 .gradient(@start, @end) {
-	/* IE10 */ 
+
+	//background-color: @start;
 	background-image: -ms-linear-gradient(bottom, @start 0%, @end 100%);
-	/* Mozilla Firefox */ 
 	background-image: -moz-linear-gradient(bottom, @start 0%, @end 100%);
-	/* Opera */ 
 	background-image: -o-linear-gradient(bottom, @start 0%, @end 100%);
-	/* Webkit (Safari/Chrome 10) */ 
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @end));
-	/* Webkit (Chrome 11+) */ 
 	background-image: -webkit-linear-gradient(bottom, @start 0%, @end 100%);
-	/* Proposed W3C Markup */ 
 	background-image: linear-gradient(bottom, @start 0%, @end 100%);
-	
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorStr="@start~", EndColorStr="@end~")";
 }
 
 

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
@@ -12,7 +11,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="initial-scale=1.0;" />
   <link rel="stylesheet" href="style/css/0.style.css">
-
+  <script src="js/libs/respond.min.js"></script>
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body class="lights ticketing">
@@ -29,8 +28,8 @@
 			<div class="left">
 			
 				<ul class="top">
-					<li class="active">1. Choose Session<span class="inner"></span><span class="outer"></span></li>
-					<li>2. Tickets<span class="inner"></span><span class="outer"></span></li>
+					<li>1. Choose Session<span class="inner"></span><span class="outer"></span></li>
+					<li class="active">2. Tickets<span class="inner"></span><span class="outer"></span></li>
 					<li>3. Seat Selection<span class="inner"></span><span class="outer"></span></li>
 					<li>4. Payment<span class="inner"></span><span class="outer"></span></li>
 					<li>5. Confirmation</li>
@@ -38,7 +37,7 @@
 				</ul>
 				<div class="clearfix"></div>
 				<span class="strip">
-					<h2>Please select your preferred session time</h2>
+					<h2>Please select your tickets</h2>
 				</span>
 					
 				<div class="movie-overview-list">
@@ -331,11 +330,26 @@
 				
 				</span>
 				<span class="strip">
-					<h4>Your cinema selection</h4>
+					<h4>Your selection</h4>
 				</span>
-				<div class="wrap" id="cinema-filters">
-					<a class="add set-preferred-cinemas">add / change</a>				
+				<div class="wrap" id="recap">
+					<img src="img/movie5.png" alt="movie1" />
+					<strong>Movie</strong>	
+					<p>Mission Impossible 4</p>			
+					<strong>Session</strong>	
+					<p>Tuesday, 6 March at 13:10</p>			
+					<strong>Location</strong>	
+					<p>Bondi Junction<br />Level 7,8 Westfield shopping town, 500 Oxford Street, Bondi Junction<br />T: 39468736</p>			
 				</div>
+				
+				<span class="strip">
+					<h4>How about seeing this movie in Gold Class?</h4>
+				</span>
+				<div class="wrap">
+					<img src="img/gold-class-promo.jpg" alt="gold-class-promo" width="186" height="130" />
+				
+				</div>
+				
 
 			</div>
 	
@@ -344,397 +358,6 @@
 		<div style="height: 100px"></div>
 	</div><!-- end of wrapper -->
 	 
-	<!-- quick view seats mouse over --> 
-	  <div id="quick-view-seats">
-	  
-	  	<div class="outer-arrow"></div>
-	  	<div class="inner-arrow"></div>
-	  	<div class="hidden-area"></div>
-	  	<div class="content">
-	  	
-	  		<a class="quick-view">Quick view available seats</a>
-			<a class="attribute" title="Movie Marathon">MM</a>
-			<a class="attribute" title="Bollywood movie">BOLL</a>
-			<a class="attribute" title="Screening for Seniors Online Club">SNRS</a>
-	  	
-	  	</div>
-	  
-	  </div>
-	<!-- end quick view seats mouse over -->
-	
-	<!-- seat plan lightbox -->
-
-	<div class="seat-selection" id="onpop">
-	  	<a class="close"></a>
-		<div class="quick-view-info">
-			<strong>Quick view of seats for session:</strong>
-			<p>Mission Impossible 4 at George Street Cinema on 4:30pm Tomorrow</p>
-			<a class="btn blue">Book tickets</a>
-		</div>
-		<hr />
-		<div class="legend">
-			
-			<div class="available">
-				<span></span>
-				<p>Available</p>
-			</div>
-			<div class="reserved">
-				<span></span>
-				<p>Reserved</p>
-			</div>
-			<div class="couple-seat">
-				<span><img src="img/love-seat.png" alt="love-seat" width="14" height="14" /></span>
-				<p>Couple seat</p>
-			</div>
-			<div class="wheel-chair">
-				<span><img src="img/wheelchair.png" alt="wheelchair" width="14" height="14" /></span>
-				<p>Wheelchair</p>
-			</div>
-		
-		</div>
-		<div class="seats">
-		
-			<span class="front">Front of cinema</span>
-			
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="wheel-chair"><img src="img/wheelchair.png" alt="wheelchair" width="14" height="14" /></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="couple-seat"><img src="img/love-seat.png" alt="love-seat" width="14" height="14" /></li>
-				<li class="couple-seat"><img src="img/love-seat.png" alt="love-seat" width="14" height="14" /></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="couple-seat"><img src="img/love-seat.png" alt="love-seat" width="14" height="14" /></li>
-				<li class="couple-seat"><img src="img/love-seat.png" alt="love-seat" width="14" height="14" /></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="taken"></li>
-				<li class="taken"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li></li>
-			</ul>						
-			<ul class="row">
-				<li>A</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="spacer"></li>
-				<li></li>
-				<li></li>							
-				<li class="taken"></li>
-			</ul>						
-			
-			
-			<span class="rear">Rear of cinema</span>
-			
-		
-		</div>
-	</div>
-  	
-  	<div id="cover"></div>
-	
-	
-	
-	<!-- end seat plan lightbox -->
-
-
 
     <script>var currentMovie = "";</script>
 	<script>var ie = false;</script>
@@ -766,5 +389,10 @@
   <script src="js/premium-cinemas.js"></script>  
   <script src="js/cinebuzz.js"></script>  
   <script src="js/booking-engine.js"></script>  
+
+  <!--[if lt IE 8]>
+	  <script src="js/ie.js"></script>  
+  <![endif]-->
+
 </body>
 </html>

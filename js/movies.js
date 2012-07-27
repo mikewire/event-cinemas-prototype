@@ -1,7 +1,79 @@
 $(function () {
+    $("#movie-overview-list img").error(function () {
+        $(this).attr("src", $("#cdnUrl").attr("path") + "img/unavailable_poster105x50.jpg");
+    });
+    $("#movie-overview-thumb img").error(function () {
+        $(this).attr("src", $("#cdnUrl").attr("path") + "img/unavailable_poster105x50.jpg");
+    });
+
     //========================================================================================================//
     //============================================ MOVIES LIST ======================================//
     //========================================================================================================//
+    $("a.list").click(function () {
+        var url = location.origin + location.pathname + "?viewMode=list&";
+        url += BuildFilterQueryString();
+        window.location = url;
+    });
+    $("a.thumb").click(function () {
+        var url = location.origin + location.pathname + "?viewMode=thumb&";
+        url += BuildFilterQueryString();
+        window.location = url;
+    });
+
+    $("#advanced-sort").change(function () {
+        if ($("#movie-overview-list").length == 1) {
+            sortBy($("option:selected", this).val(), $("#movie-overview-list"));
+        } else {
+            sortBy($("option:selected", this).val(), $("#movie-overview-thumb"));
+
+        }
+    });
+
+    if (preferred_cinemas.length == 0) {
+        $("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
+    }
+
+    for (var i = 0; i < preferred_cinemas.length; i++) {
+        $(".where-blowout").find(".checkbox[value='" + preferred_cinemas[i] + "']").parent().addClass("active");
+        if ($("#cinema-filters").length > 0) {
+            if (preferred_cinemas[i] != "") {
+                $("#cinema-filters").prepend("<span class='active'><div class='checkbox' value='" + preferred_cinemas[i] + "'></div> <label for='" + preferred_cinemas[i] + "filter'>" + preferred_cinemas[i] + "</label></span>");
+            }
+        }
+    }
+
+    var cinemas = $("#cinema-filters span");
+    cinemas.sort(function (a, b) {
+        var compA = $("div", a).attr("value").toLowerCase();
+        var compB = $("div", b).attr("value").toLowerCase();
+        return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+    });
+    $.each(cinemas, function (idx, item) { $("#cinema-filters a").before(item); });
+
+    var experiences = getParameterByName("experience");
+    if (experiences != null && experiences.length > 0) {
+        $.each(experiences.split(/[\s,]+/), function (i,experience) {
+            var $exp = $("#experience-filters div[value='" + experience + "']");
+            if ($exp.length > 0) {
+                $exp.parent().addClass("active");
+            }
+        });
+    }
+    var genres = getParameterByName("genres");
+    if (genres != null && genres.length > 0) {
+        $.each(genres.split(/[\s,]+/), function (i, genre) {
+            var $g = $("#MovieGenreFilter div[value='" + genre + "']");
+            if ($g.length > 0) {
+                $g.parent().addClass("active");
+            }
+        });
+
+    }
+
+    var keyword = getParameterByName("keyword");
+    if (keyword != null && keyword.length > 0) {
+        $("#movieKeywordTextbox").val(keyword);
+    }
 
     $("#movie-filter").on("filter-clicked", ".filter-element span", function () {
         MovieFilter();
@@ -16,11 +88,11 @@ $(function () {
         }, 500);
     });
 
-    $("#now-showing-tools select").change(function() {
+    $("#now-showing-tools select").change(function () {
         NowShowingSortBy($(this).val());
     });
 
-    $(".where-blowout").on("set-cinema", "span", function() {
+    $(".where-blowout").on("set-cinema", "span", function () {
         // check if we're adding or removing
         var cinema = $("div", this).attr('value');
         if ($(this).hasClass("active")) {
@@ -30,18 +102,21 @@ $(function () {
         }
 
         var cinemas = $("#cinema-filters span").get();
-        cinemas.sort(function(a, b) {
+        cinemas.sort(function (a, b) {
             var compA = $("div", a).attr("value").toLowerCase();
             var compB = $("div", b).attr("value").toLowerCase();
             return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
         });
-        $.each(cinemas, function(idx, item) {
+        $.each(cinemas, function (idx, item) {
             $("#cinema-filters a").before(item);
         });
-        
+
 
         MovieFilter();
     });
+
+
+   
     //========================================================================================================//
     //============================================ MOVIES OVERVIEW PAGE ======================================//
     //========================================================================================================//
@@ -78,14 +153,14 @@ $(function () {
             if (movieId != null) {
                 var $movie = $("#movie-overview-thumb li[data-id='" + movieId + "']");
                 var availableCinemas = $movie.data("cinemas").toString().split(/[\s,]+/);
-                $(".where-blowout div.checkbox").each(function() {
+                $(".where-blowout div.checkbox").each(function () {
                     if ($.inArray($(this).attr('id'), availableCinemas) == -1) {
                         $(this).parent().hide();
                     } else {
                         $(this).parent().show();
                     }
                 });
-                
+
             }
         }
     });
@@ -93,30 +168,29 @@ $(function () {
 
     // Thumb & Listview switch
 
-    $(".thumb").click(function () {
-        $(".quick-times-select-widget").hide();
-        $(".movie-overview-list").hide();
-        $("#movie-overview-thumb").show();
-        $(".tools").find(".active").removeClass("active");
-        $(this).addClass("active");
-    });
+    //$(".thumb").click(function () {
+    //    $(".quick-times-select-widget").hide();
+    //    $(".movie-overview-list").hide();
+    //    $("#movie-overview-thumb").show();
+    //    $(".tools").find(".active").removeClass("active");
+    //    $(this).addClass("active");
+    //});
 
-    $(".list").click(function () {
-        $(".movie-overview-list .quick-times-select-widget").show();
-        $("#movie-overview-thumb").hide();
-        $(".movie-overview-list").show();
-        determineDatesScrolling();
-        $(".tools").find(".active").removeClass("active");
-        $(this).addClass("active");
-    });
+    //$(".list").click(function () {
+    //    $(".movie-overview-list .quick-times-select-widget").show();
+    //    $("#movie-overview-thumb").hide();
+    //    $(".movie-overview-list").show();
+    //    determineDatesScrolling();
+    //    $(".tools").find(".active").removeClass("active");
+    //    $(this).addClass("active");
+    //});
 
 
     // In thumbview we open the quick times widget upon mouseover, with a bit of delay, using hoverIntent
-
     var config = {
         over: showQuickTimesWidget,
-        interval: 500,
-        out: delay(emptyFunction, 500)
+        timeout: 500,
+        out: emptyFunction
     };
 
     $(".find-times-and-book").hoverIntent(config);
@@ -145,65 +219,50 @@ $(function () {
     $(".main .movies .image-wrapper img").click(function () {
         var link = $(this).parent().find(".details-link");
         window.location.href = $(link).attr("href");
-    });	
+    });
     $(".main .movies .image-wrapper .title").click(function () {
         var link = $(this).siblings(".details-link");
         window.location.href = $(link).attr("href");
     });
 
-    // In the quick times widget, this will throw an AJAX event to change the times for that day
-    $("ul#cinemaNowShowingDates li").click(function () {
-        $(this).parent().find(".active").removeClass("active");
-        $(this).addClass("active");
-        $("div.movie-list-item:visible").hide();
-        FilterCinemaNowShowing();
-    });
+   
 
     // In the quick times widget, this will throw an AJAX event to change the times for that day
     $(".quick-times-select-widget").on("click", ".dates li", function () {
         $(this).parent().find(".active").removeClass("active");
         $(this).addClass("active");
         var startDate = $(this).data("value");
-        var movieId = $(".quick-times-select-widget").data("movieId");
-        showSessionTime(movieId, startDate);
+        var $sessionWidget = $(this).parents(".quick-times-select-widget");
+        var movieId = $sessionWidget.data("movieid");
+
+        var cinemas = new Array();
+        if ($("#cinema-filters").length == 1) {
+            $("#cinema-filters span.active").each(function () {
+                var cinemaName = $("div", this).attr("value");
+                cinemas.push({ Id: getCinemaId(cinemaName), Name: cinemaName });
+            });
+        } else {
+            $.each(preferred_cinemas, function (i, cinemaName) {
+                cinemas.push({ Id: getCinemaId(cinemaName), Name: cinemaName });
+            });
+        }
+
+        showSessionTime(movieId, startDate, cinemas, renderSessions2, $sessionWidget);
     });
 
     // If the quick times widget was opened by mouseover, get rid of it again upon mouseleave
     $(".quick-times-select-widget").mouseleave(function () {
         if (!$(this).parent().hasClass("movie-list-item")) {
             $(".quick-times-select-widget").hide();
+
+            if ($(".home-items #slider").length > 0) {
+                clearInterval(timer);
+                timer = setInterval(function () { animatedSlider(true); }, slide_interval);
+            }
         }
     });
 
-    // Upon hover of the reveal more arrow for the date buttons, the row slides left to reveal more dates
-    $(".cinema-row").on("hover", "div.reveal-more", function (e) {
-        if (e.type == "mouseenter") {
-			$(this).siblings(".reveal-less").show();
-			var reveal_more = $(this);
-			var wrap = $(this).siblings(".cinema-row-wrapper");
-			var dates = $(".dates-row", wrap);
-			$(".shadow-left", wrap).show();		
-			var limit = $(this).siblings(".cinema-row-wrapper").width() - $(this).siblings(".cinema-row-wrapper").find(".width-wrap").width();
-			dateScroller = setInterval(function() { scrollDatesLeft(dates,reveal_more, limit); }, 5);
-
-        } else {
-            clearInterval(dateScroller);
-        }
-    });
-
-    // The reveal less button scrolls the dates to the right.
-    $(".cinema-row").on("hover", "div.reveal-less", function (e) {
-        if (e.type == "mouseenter") {
-            var reveal_less = $(this);
-            $(this).siblings(".reveal-more").show();
-            var wrap = $(this).siblings(".cinema-row-wrapper");
-            var dates = $(".dates-row", wrap);
-            dateScroller = setInterval(function () { scrollDatesRight(dates, reveal_less); }, 5);
-        } else {
-            clearInterval(dateScroller);
-
-        }
-    });
+   // bindRevealScrollers();
 
     //========================================================================================================//
     //============================================ MOVIE DETAIL ==============================================//
@@ -212,7 +271,10 @@ $(function () {
     if ($("#slider.static").length > 0 && $("#slider.static").is(":visible")) {
         initStaticSlider();
     }
-   
+    
+    if ($("#movie-filter").length > 0) {
+        MovieFilter();
+    }
 });
 
 var counter;

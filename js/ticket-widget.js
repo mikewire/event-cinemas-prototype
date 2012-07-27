@@ -30,32 +30,11 @@ $(function() {
 	
 	} else if (preferred_cinemas.length == 0) {
 	
-		$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
+		//$("#cinema-filters").html("<a class='set-preferred-cinemas'>Set your preferred cinemas</a>");
 		$(".find-times-and-book").addClass("set-preferred-cinemas");
 	}
-	
-	for ( var i=0; i < preferred_cinemas.length; i++ ) { 
-		
-		$(".where-blowout").find(".checkbox[value='"+preferred_cinemas[i]+"']").parent().addClass("active");
-		
-		if ($("#cinema-filters").length > 0) {
-			if (preferred_cinemas[i] != "") {
-				$("#cinema-filters").prepend("<span class='active'><div class='checkbox' value='"+preferred_cinemas[i]+"'></div> <label for='"+preferred_cinemas[i]+"filter'>"+preferred_cinemas[i]+"</label></span>");
-			}
-		}
-	}
-    
-	var cinemas = $("#cinema-filters span");
-	cinemas.sort(function (a, b) {
-	    var compA = $("div", a).attr("value").toLowerCase();
-	    var compB = $("div", b).attr("value").toLowerCase();
-	    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
-	});
-	$.each(cinemas, function (idx, item) { $("#cinema-filters a").before(item); });
-    
-	if (cinemas.length > 0) {
-        MovieFilter();
-    }
+
+	$("#where").trigger("cinemas-ready");
 
 	if (currentMovie != "") {
 	
@@ -140,9 +119,7 @@ $(function() {
 		FilterMovies();
 	    FilterRotatorByCinema();
 	    $("#top-ticketing-cinemas").val(preferred_cinemas);
-
-	    console.log("set cinema");
-	    $(this).trigger("set-cinema");
+        $(this).trigger("set-cinema");
 	});
 	$(".where-blowout .done").click(function() {
 	    hideAllTicketBarBlowouts();

@@ -102,5 +102,10 @@
   <script src="js/premium-cinemas.js"></script>  
   <script src="js/cinebuzz.js"></script>  
   <script src="js/booking-engine.js"></script>  
+  
+  <!--[if lt IE 8]>
+	  <script src="js/ie.js"></script>  
+  <![endif]-->
+  
 </body>
 </html>

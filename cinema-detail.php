@@ -116,12 +116,12 @@
 								<span class="cinema-row-wrapper">
 									<div class="dates-row">
 										<span class="width-wrap">
+											<a class="btn chicks-btn">18:00am<span class="chicks-icon"></span></a>
 											<a class="btn grey">10:00am</a>
 											<a class="btn vmax-btn">12:00am<span class="vmax-icon"></span></a>
 											<a class="btn grey">12:00am</a>
 											<a class="btn goldclass-btn">14:00am<span class="goldclass-icon"></span></a>
 											<a class="btn grey">15:00am</a>
-											<a class="btn chicks-btn">18:00am<span class="chicks-icon"></span></a>
 											<a class="btn grey">18:00am</a>
 											<a class="btn grey">19:00am</a>
 											<a class="btn three-d-btn">20:00am<span class="three-d-icon"></span></a>

@@ -34,7 +34,7 @@
 			</span>		
 			<span>
 				<strong>Synopsis</strong>
-				<p>Nick Fury of S.H.I.E.L.D. brings together a team of super humans to form The Avengers to help save the Earth from Loki and his army. <a target="_blank" href="http://www.imdb.com/title/tt0848228/">View more details on IMDB</a></p>
+				<p>Nick Fury of S.H.I.E.L.D. brings together a team of super humans to form The Avengers to help save the Earth from Loki and his army. <a target="_blank" href="http://www.imdb.com/title/tt0848228/">View more details on IMDB </a></p>
 			</span>		
 			<div class="share-tools"></div>
 			

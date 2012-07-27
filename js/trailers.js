@@ -6,24 +6,15 @@ $(function() {
 
 	// Trailer lightbox will open upon click off all links / buttons with this class
 	$(".poptrailer").click(function() {
-		//LoadTrailer($(".call-to-action .poptrailer").attr("movieId"));	
-	    $("#cover").show();
-	    $("#trailer").show();
+		LoadTrailer($(this).attr("movieId"));	
 	});
 
-	function RenderTrailer(trailer) {
-
-	    var $moviesList = $("div.#trailer");
-	    $moviesList.html("");
-
-	    $("#trailer-template").tmpl(trailer).appendTo($moviesList);
-
-	    $("#cover").show();
-	    $("#trailer").show();
-	}
+	$("#trailer").on("click", ".items a", function () {
+	    showTrailer($(this));
+	});
 
 	// These two events cause the trailer lightbox to close
-	$("#trailer .close").click(function() {
+	$("#trailer").on("click", ".close", function () {
 		closeTrailer();
 	});
 	$("#cover").click(function() {
