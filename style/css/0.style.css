@@ -4102,6 +4102,345 @@ footer .right ul li a {
 footer .right ul li:hover {
   background: #2a2728;
 }
+body.print-ticket {
+  background: white;
+}
+body.print-ticket .ticket {
+  width: 521px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  position: relative;
+}
+body.print-ticket .ticket header {
+  height: 100px;
+  background: black;
+  width: 100%;
+}
+body.print-ticket .ticket header .ec-logo {
+  margin: 10px;
+  width: 150px;
+  height: auto;
+  float: left;
+}
+body.print-ticket .ticket header .express-pass-logo {
+  margin: 25px 10px 0px 0px;
+  float: right;
+}
+body.print-ticket .ticket .body {
+  color: black;
+  padding: 10px;
+}
+body.print-ticket .ticket .body .barcode {
+  text-align: center;
+}
+body.print-ticket .ticket .body strong,
+body.print-ticket .ticket .body span {
+  font-size: 16px;
+  float: left;
+}
+body.print-ticket .ticket .body strong {
+  clear: left;
+  display: block;
+  width: 160px;
+}
+body.print-ticket .ticket .body span {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  width: 60%;
+  margin-bottom: 5px;
+}
+body.print-ticket .ticket .body .next-steps {
+  margin: 10px 0px 10px 0px;
+}
+body.print-ticket .ticket .body .next-steps strong {
+  width: auto;
+  float: none;
+}
+body.print-ticket .ticket .body .next-steps p {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
+body.print-ticket .ticket .body .next-steps.small strong,
+body.print-ticket .ticket .body .next-steps.small * {
+  font-size: 12px;
+}
+.left-float {
+  float: left;
+}
+.right-float {
+  float: right;
+}
+.back-proceed {
+  clear: both;
+  margin-top: 20px;
+}
+.back-proceed * {
+  text-transform: uppercase;
+}
+#scoop-alley {
+  background: black;
+  width: 900px;
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -480px;
+  z-index: 9999;
+  border: 1px solid #dfdfdf;
+}
+#scoop-alley .back-proceed {
+  padding: 0px 10px;
+  margin: 5px 0px 20px 0px;
+}
+#scoop-alley .back-proceed a {
+  margin-left: 10px;
+}
+#scoop-alley .close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  z-index: 8000;
+}
+#scoop-alley .intro {
+  display: block;
+  background: red;
+  border-bottom: 1px solid #fff;
+  height: 30px;
+  position: relative;
+  padding: 10px;
+}
+#scoop-alley .intro p {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin-top: 4px;
+}
+#scoop-alley .intro img {
+  position: absolute;
+  right: 0px;
+  bottom: -19px;
+}
+#scoop-alley .scoop-alley-items {
+  padding: 10px;
+}
+#scoop-alley .scoop-alley-items .total-cost {
+  margin: 10px 0px 0px 0px;
+}
+#scoop-alley .scoop-alley-items .row {
+  clear: both;
+  background-image: -ms-linear-gradient(bottom, #000000 0%, #323333 100%);
+  background-image: -moz-linear-gradient(bottom, #000000 0%, #323333 100%);
+  background-image: -o-linear-gradient(bottom, #000000 0%, #323333 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #000000), color-stop(1, #323333));
+  background-image: -webkit-linear-gradient(bottom, #000000 0%, #323333 100%);
+  background-image: linear-gradient(bottom, #000000 0%, #323333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #000000 , EndColorStr= #323333 );
+}
+#scoop-alley .scoop-alley-items .row.head {
+  background-image: -ms-linear-gradient(bottom, #000000 0%, #000000 100%);
+  background-image: -moz-linear-gradient(bottom, #000000 0%, #000000 100%);
+  background-image: -o-linear-gradient(bottom, #000000 0%, #000000 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #000000), color-stop(1, #000000));
+  background-image: -webkit-linear-gradient(bottom, #000000 0%, #000000 100%);
+  background-image: linear-gradient(bottom, #000000 0%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #000000 , EndColorStr= #000000 );
+}
+#scoop-alley .scoop-alley-items .row.head span {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+}
+#scoop-alley .scoop-alley-items .row.head span.first {
+  padding-top: 20px;
+}
+#scoop-alley .scoop-alley-items .row.express-pass {
+  background-image: -ms-linear-gradient(bottom, #ffd344 0%, #323333 100%);
+  background-image: -moz-linear-gradient(bottom, #ffd344 0%, #323333 100%);
+  background-image: -o-linear-gradient(bottom, #ffd344 0%, #323333 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffd344), color-stop(1, #323333));
+  background-image: -webkit-linear-gradient(bottom, #ffd344 0%, #323333 100%);
+  background-image: linear-gradient(bottom, #ffd344 0%, #323333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #ffd344 , EndColorStr= #323333 );
+}
+#scoop-alley .scoop-alley-items .row span {
+  display: block;
+  float: left;
+  width: 15%;
+  padding: 20px 0px 5px 0px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
+#scoop-alley .scoop-alley-items .row span.first {
+  width: 50%;
+  padding-top: 0px;
+}
+#scoop-alley .scoop-alley-items .row span.first p {
+  float: left;
+  margin: 10px;
+}
+#scoop-alley .scoop-alley-items .row span.first p img {
+  display: block;
+  float: none;
+}
+#scoop-alley .scoop-alley-items .row span.last {
+  text-align: right;
+}
+#scoop-alley .scoop-alley-items .row span img {
+  float: left;
+}
+.total-cost {
+  background-color: #cc0000;
+  width: 100%;
+  position: relative;
+}
+.total-cost p {
+  padding: 7px 10px;
+  font-size: 18px;
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+}
+.total-cost p.right-float {
+  margin-right: 27px;
+}
+.total-cost .arrow {
+  position: absolute;
+  right: -18px;
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid #cc0000;
+  top: 0px;
+}
+.select-tickets {
+  width: 80%;
+  padding: 10px;
+}
+.select-tickets .confirmation .message {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.select-tickets .confirmation strong,
+.select-tickets .confirmation span {
+  font-size: 16px;
+  float: left;
+}
+.select-tickets .confirmation strong {
+  clear: left;
+  display: block;
+  width: 200px;
+}
+.select-tickets .confirmation span {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+  width: 60%;
+  margin-bottom: 5px;
+}
+.select-tickets .confirmation .next-steps {
+  margin: 10px 0px 25px 0px;
+}
+.select-tickets .confirmation .next-steps strong {
+  float: none;
+}
+.select-tickets .confirmation .next-steps p {
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
+.select-tickets .confirmation img {
+  display: block;
+  margin-top: 10px;
+}
+.select-tickets .payment {
+  padding: 10px;
+}
+.select-tickets .payment p {
+  margin-bottom: 10px;
+}
+.select-tickets .payment input[type=text] {
+  width: 60%;
+  float: left;
+  margin-bottom: 10px;
+}
+.select-tickets .payment select {
+  float: left;
+}
+.select-tickets .payment label {
+  clear: left;
+  float: left;
+  display: block;
+  width: 150px;
+}
+.select-tickets .gift-cards {
+  padding: 10px;
+  border: 1px solid #333333;
+  position: relative;
+}
+.select-tickets .gift-cards img {
+  margin-right: 5px;
+}
+.select-tickets .gift-cards form {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+.select-tickets .gift-cards input[type=text] {
+  width: 200px;
+}
+.select-tickets .gift-cards .btn {
+  padding: 4px;
+}
+.select-tickets .item-table {
+  width: 100%;
+  margin-top: 10px;
+}
+.select-tickets .item-table span {
+  display: block;
+  float: left;
+  width: 20%;
+  padding-bottom: 5px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
+.select-tickets .item-table span.thead {
+  font-family: 'BentonSansMedium', Helvetica, Arial, sans-serif;
+}
+.select-tickets .item-table hr {
+  clear: both;
+  border-top: 1px solid #fff;
+  margin: 2px 0px 5px 0px;
+}
+.select-tickets .item-table .first {
+  width: 40%;
+  clear: both;
+}
+.select-tickets .item-table .last {
+  text-align: right;
+  width: 15%;
+}
+.select-tickets .enter-cb-number {
+  clear: both;
+  position: relative;
+  margin: 10px 0px;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #333333;
+}
+.select-tickets .enter-cb-number form {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+.select-tickets .enter-cb-number input[type=text] {
+  width: 200px;
+}
+.select-tickets .enter-cb-number img {
+  width: 160px;
+  height: auto;
+  margin-right: 10px;
+}
+.select-tickets .enter-cb-number .btn {
+  padding: 4px;
+}
+.select-tickets .enter-cb-number p {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  font-size: 12px;
+  font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
+}
 .seat-selection {
   margin: 50px;
 }
@@ -4116,7 +4455,7 @@ footer .right ul li:hover {
   margin-top: 0px;
   margin-left: -480px;
   z-index: 9999;
-  border: 1px solid #333333;
+  border: 1px solid #dfdfdf;
 }
 .seat-selection#onpop .seats ul.row li {
   cursor: default;
@@ -4459,6 +4798,10 @@ footer .right ul li:hover {
   font-family: 'GillSansLight', Helvetica, Arial, sans-serif;
   margin-bottom: 10px;
 }
+.ticketing .right .wrap#confirm-promos img {
+  width: 100%;
+  height: auto;
+}
 .ticketing .main {
   margin-bottom: 30px;
 }
@@ -4468,6 +4811,7 @@ footer .right ul li:hover {
   margin: 0px;
   position: static;
   overflow: hidden;
+  background-color: grey;
 }
 .ticketing .top li {
   padding: 7px 84px 7px 30px;
@@ -4883,6 +5227,16 @@ footer .right ul li:hover {
 .ie7 .seat-selection .seats ul.row li.spacer:hover {
   background-color: black;
 }
+.ie9 .ticketing .top,
+.ie8 .ticketing .top,
+.ie7 .ticketing .top {
+  filter: none !important;
+}
+.ie9 .select-tickets .btn,
+.ie8 .select-tickets .btn,
+.ie7 .select-tickets .btn {
+  padding: 3px !important;
+}
 .ie8 #background-wrap,
 .ie7 #background-wrap {
   display: none;
@@ -4958,6 +5312,15 @@ footer .right ul li:hover {
 }
 .ie8 .call-to-action {
   top: 150px;
+}
+.ie7 .ticketing .left .strip {
+  margin-top: -19px;
+}
+.ie7 .select-tickets .payment select {
+  float: none;
+  zoom: 1;
+  display: block;
+  width: 200px;
 }
 .ie7 .seat-selection .seats ul.row {
   margin: 0px !important;
@@ -5213,6 +5576,34 @@ footer .right ul li:hover {
 }
 */
 @media all and (min-width: 480px) and (max-width: 1260px) {
+  .select-tickets .enter-cb-number label {
+    position: absolute;
+    top: 10px;
+    left: 190px;
+  }
+  .select-tickets .enter-cb-number form {
+    right: 25px;
+    top: 30px;
+  }
+  .select-tickets .enter-cb-number form input[type=text] {
+    width: 295px;
+  }
+  .select-tickets .enter-cb-number p {
+    top: 62px;
+    right: 25px;
+  }
+  .select-tickets .gift-cards label {
+    position: absolute;
+    top: 10px;
+    left: 190px;
+  }
+  .select-tickets .gift-cards form {
+    right: 25px;
+    top: 30px;
+  }
+  .select-tickets .gift-cards form input[type=text] {
+    width: 295px;
+  }
   .ticketing .left {
     width: 730px;
   }
@@ -5223,7 +5614,7 @@ footer .right ul li:hover {
     font-size: 14px;
   }
   .ticketing .top li {
-    padding-right: 20px;
+    padding-right: 14px;
   }
   .ticketing .movie-list-item .quick-times-select-widget {
     width: 550px;
@@ -5398,6 +5789,22 @@ footer .right ul li:hover {
   }
 }
 @media all and (min-width: 1260px) and (max-width: 1400px) {
+  .select-tickets .enter-cb-number label {
+    width: 250px;
+    display: inline-block;
+    zoom: 1;
+  }
+  .select-tickets .enter-cb-number form {
+    top: 15px;
+  }
+  .select-tickets .gift-cards label {
+    width: 250px;
+    display: inline-block;
+    zoom: 1;
+  }
+  .select-tickets .gift-cards form {
+    top: 15px;
+  }
   .ticketing .left {
     width: 930px;
   }
@@ -5408,7 +5815,7 @@ footer .right ul li:hover {
     font-size: 14px;
   }
   .ticketing .top li {
-    padding-right: 60px;
+    padding-right: 55px;
   }
   .ticketing .movie-list-item .quick-times-select-widget {
     width: 750px;
@@ -5488,7 +5895,7 @@ footer .right ul li:hover {
     width: 313px;
   }
   .ticketing .top li {
-    padding-right: 84px;
+    padding-right: 80px;
   }
   .ticketing .movie-list-item .quick-times-select-widget {
     width: 850px;

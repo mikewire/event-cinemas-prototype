@@ -1,0 +1,216 @@
+<!doctype html>
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Event Cinemas</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1.0;" />
+  <link rel="stylesheet" href="style/css/0.style.css">
+  <script src="js/libs/respond.min.js"></script>
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body class="lights ticketing">
+
+	<header>
+		<img class="logo" src="img/ec-logo.png" />
+		<a class="return-home" href="/">Return home</a>
+		<div class="clearfix"></div>
+	</header>
+
+	<div id="wrapper">
+		<div class="main">
+	
+			<div class="left">
+			
+				<ul class="top">
+					<li>1. Choose Session<span class="inner"></span><span class="outer"></span></li>
+					<li>2. Tickets<span class="inner"></span><span class="outer"></span></li>
+					<li>3. Seat Selection<span class="inner"></span><span class="outer"></span></li>
+					<li class="active">4. Payment<span class="inner"></span><span class="outer"></span></li>
+					<li>5. Confirmation</li>
+				
+				</ul>
+				<div class="clearfix"></div>
+				<span class="strip">
+					<h2>Payment</h2>
+				</span>
+				
+				<div class="select-tickets">
+				
+					<div class="total-cost">
+					
+						<p class="left-float">Total transaction cost</p>
+						<p class="right-float">$23.50</p>
+						<span class="arrow"></span>
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="payment">
+						<p>Please enter your details below and select a payment method</p>
+						<label>Email address</label>
+						<input type="text" />
+						<label>Name</label>
+						<input type="text" />
+						<label>Choose a payment method</label>
+						<select><option>Select</option><option>AMEX</option></select>	
+						<div class="clearfix"></div>				
+					</div>
+
+					
+
+					<div class="back-proceed">
+						<a class="left-float btn grey">Back</a>
+						<a class="right-float btn blue"  id="openScoopAlley">Proceed</a>
+					</div>
+				</div>
+			
+			</div><!-- end of left -->
+			
+			<div class="right">
+				<span class="top">
+				
+					<p class="time-remaining">Time remaining to complete booking: <span>10:00</span></p>
+				
+				</span>
+				<span class="strip">
+					<h4>Your selection</h4>
+				</span>
+				<div class="wrap" id="recap">
+					<img src="img/movie5.png" alt="movie1" />
+					<strong>Movie</strong>	
+					<p>Mission Impossible 4</p>			
+					<strong>Session</strong>	
+					<p>Tuesday, 6 March at 13:10</p>			
+					<strong>Location</strong>	
+					<p>Bondi Junction<br />Level 7,8 Westfield shopping town, 500 Oxford Street, Bondi Junction<br />T: 39468736</p>			
+					<strong>Number of tickets (<a href="#">Change</a>)</strong>	
+					<p>1 x Adult</p>			
+					<strong>Extras (<a href="#">Change</a>)</strong>	
+					<p>1 x 3D Glasses</p>		
+					<strong>Seats (<a href="#">Change</a>)</strong>	
+					<p>H9 and H10</p>		
+					
+						
+				</div>				
+				
+
+			</div>
+	
+			<div class="clearfix"></div>
+		</div><!-- end of main -->
+		<div style="height: 100px"></div>
+	</div><!-- end of wrapper -->
+	
+	
+	<!-- start scoop alley lightbox -->
+	<div id="scoop-alley">
+	  	<a class="close"></a>
+	
+		<span class="intro">
+			<p>Snack time! Enhance your movie experience by pre-ordering your snacks</p>
+			<img src="img/scoop-alley.png" alt="scoop-alley" width="293" height="51">
+		</span>
+		
+		<div class="scoop-alley-items">
+			<div class="row head">
+				<span class="first">Items</span>
+				<span>Quantity</span>
+				<span>Price</span>
+				<span class="last">Subtotal</span>
+			</div>
+			<div class="row">
+				<span class="first">
+					<img src="img/popcorn-scoopalley.png" alt="popcorn-scoopalley" width="78" height="74">
+					<p>Small web combo<br />Includes: 1 small popcorn, 1 large coke</p>
+				</span>
+				<span>
+					<select><option>1</option></select>
+				</span>
+				<span>$48.00</span>
+				<span class="last">$0.00</span>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row">
+				<span class="first">
+					<img src="img/popcorn-scoopalley.png" alt="popcorn-scoopalley" width="78" height="74">
+					<p>Small web combo<br />Includes: 1 small popcorn, 1 large coke</p>
+				</span>
+				<span>
+					<select><option>1</option></select>
+				</span>
+				<span>$48.00</span>
+				<span class="last">$0.00</span>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row express-pass">
+				<span class="first">
+					<img src="img/popcorn-scoopalley.png" alt="popcorn-scoopalley" width="78" height="74">
+					<p><img src="img/express-pass.png" alt="express-pass" width="165" height="36"> Express Pass Combo includes: 1 small popcorn, 1 large coke</p>
+				</span>
+				<span>
+					<select><option>1</option></select>
+				</span>
+				<span>$48.00</span>
+				<span class="last">$0.00</span>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div class="total-cost">
+			
+				<p class="left-float">Total cost</p>
+				<p class="right-float">$23.50</p>
+				<div class="clearfix"></div>
+			</div>
+			
+		</div>
+		<div class="back-proceed">
+			<a class="right-float btn blue">Proceed</a>
+			<a class="right-float btn grey">No thanks</a>
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+  	<div id="cover"></div>
+
+    <script>var currentMovie = "";</script>
+	<script>var ie = false;</script>
+
+
+
+  <!--[if IE ]>
+	<script>ie = true;</script>
+  <![endif]-->
+
+
+  <!-- load libs and plugins -->
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <script src="js/libs/jquery.tooltip.min.js"></script>
+  <script src="js/libs/hoverIntent.js"></script>    
+  <script src="js/libs/jquery.cookie.js"></script>
+  <script src="js/libs/jquery.cycle.js"></script>
+  <script src="js/libs/selectivizr-min.js"></script>
+  <script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=3_Xx36uDGryegaVqYj0xv4tDB8un6RQjCUNF37_XKEXsn5NK9ienhFHxuAoH98Pccr"></script>
+  
+  <!-- load functions and events js -->
+  <script src="js/functions.js"></script>
+  <script src="js/ticket-widget.js"></script>
+  <script src="js/home.js"></script>  
+  <script src="js/trailers.js"></script>
+  <script src="js/movies.js"></script>
+  <script src="js/cinemas.js"></script>
+  <script src="js/others.js"></script>  
+  <script src="js/premium-cinemas.js"></script>  
+  <script src="js/cinebuzz.js"></script>  
+  <script src="js/booking-engine.js"></script>  
+
+  <!--[if lt IE 8]>
+	  <script src="js/ie.js"></script>  
+  <![endif]-->
+
+</body>
+</html>

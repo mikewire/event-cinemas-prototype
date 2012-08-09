@@ -1,3 +1,403 @@
+body.print-ticket {
+	
+	background: white;
+	
+	.ticket {
+		
+		width: 521px;
+		margin: 20px auto;
+		border: 2px solid #000;
+		position: relative;
+		
+		header {
+			height: 100px;
+			background: black;
+			width: 100%;
+			.ec-logo {
+			margin: 10px;
+				width: 150px;
+				height: auto;
+				float: left;
+			}
+			.express-pass-logo {
+				margin: 25px 10px 0px 0px;
+				float: right;
+			}
+			
+			
+		}
+		.body {
+			.barcode {
+				text-align: center;
+			}			
+			color: black;
+			padding: 10px;
+		strong, span {
+			
+			font-size: 16px;
+			float: left;
+		}
+		strong {
+			
+			clear: left;
+			display: block;
+			width: 160px;
+		}
+		span {
+			font-family: @thin-font;
+			width: 60%;
+			margin-bottom: 5px;
+			
+		}
+		.next-steps {
+			margin: 10px 0px 10px 0px;
+			strong {
+				width: auto;
+				float: none;
+			}
+			p {
+				
+			font-family: @thin-font;
+				
+			}
+			&.small {
+				strong, * {
+					font-size: 12px;
+				}
+			}
+		}
+
+		}
+	}
+}
+
+.left-float { float: left; }
+.right-float { float: right; }
+.back-proceed {
+	
+	clear:both;
+	margin-top: 20px;
+	* {
+		text-transform: uppercase;
+	}
+	
+}
+#scoop-alley {
+	
+	background: black;
+	width: 900px;
+	display: none;
+	position: fixed;
+	top: 50px;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -480px;
+	z-index: 9999;
+	border: 1px solid @light-grey;
+	.back-proceed {
+		
+		padding: 0px 10px;
+		margin: 5px 0px 20px 0px;
+		a {
+			margin-left: 10px;
+		}
+	}
+	.close {
+		position: absolute;
+		top: -12px;
+		right: -12px;
+		z-index: 8000;
+	}
+	.intro {
+		display: block;
+		background: red;
+		border-bottom: 1px solid #fff;
+		height: 30px;
+		position: relative;
+		padding: 10px;
+		p {
+			font-family: @thin-font;
+			font-size: 18px;
+			margin-top:4px;
+		}
+		img {
+			
+			position: absolute;
+			right: 0px;
+			bottom: -19px;
+		}
+		
+	}	
+	.scoop-alley-items {
+		padding: 10px;
+		.total-cost {
+			
+			margin: 10px 0px 0px 0px;
+		}
+		
+		.row {
+			
+			clear: both;
+			.gradient(darken(#2a2728,30%), darken(#7d7f81,30%));
+
+			&.head {
+				.gradient(black,black);
+
+				span {
+					font-family: @bold-font;
+					&.first {
+						
+						padding-top: 20px;
+					}
+
+				}
+			}			
+			&.express-pass {
+				
+				.gradient(darken(@yellow,10%), darken(#7d7f81,30%))
+			}
+
+			span {	
+				display: block;
+				float: left;
+				width: 15%;
+				padding: 20px 0px 5px 0px;
+				font-family: @thin-font;
+
+				&.first {
+					
+					width: 50%;
+					padding-top: 0px;
+					p {
+						float: left;
+						margin: 10px;
+						img {
+							display: block;
+							float: none;
+							
+						}
+					}
+					
+				}
+				&.last {
+					
+					text-align: right;
+				}
+				img {
+					
+					float: left;
+				}
+
+			}
+
+		}
+	}
+}
+.total-cost {
+	
+	background-color: darken(red,10%);
+	width: 100%;
+	position: relative;
+	p {
+		padding: 7px 10px;
+		font-size: 18px;
+		font-family: @bold-font;
+		
+		&.right-float {
+			
+			margin-right: 27px;
+			
+		}
+	}
+	
+	.arrow {
+		
+		position: absolute;
+		right: -18px;
+		.arrow-right(18px,darken(red,10%));
+		top: 0px;
+		
+	}
+}
+
+.select-tickets {
+	
+	width: 80%;
+	padding: 10px;
+	
+	.confirmation {
+		
+		.message {
+			font-family: @thin-font;
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+		strong, span {
+			
+			font-size: 16px;
+			float: left;
+		}
+		strong {
+			
+			clear: left;
+			display: block;
+			width: 200px;
+		}
+		span {
+			font-family: @thin-font;
+			width: 60%;
+			margin-bottom: 5px;
+			
+		}
+		.next-steps {
+			margin: 10px 0px 25px 0px;
+			strong {
+				
+				float: none;
+			}
+			p {
+				
+			font-family: @thin-font;
+				
+			}
+		}
+		img {
+			
+			display: block;
+			margin-top: 10px;
+		}
+		
+	}
+	.payment {
+		padding: 10px;
+		p {
+			margin-bottom: 10px;
+		}		
+		input[type=text] {
+			
+			width: 60%;
+			float: left;
+			margin-bottom: 10px;		}
+		select {
+			float: left;
+			
+		}
+		label {
+			
+			clear: left;
+			float: left;
+			display: block;
+			width: 150px;
+
+		}
+	}
+	.gift-cards {
+		padding: 10px;
+		border: 1px solid @dark-grey;
+		position: relative;
+		img {
+			
+			margin-right: 5px;
+			
+		}
+		form {
+			
+			position: absolute;
+			right:10px;
+			top: 25px;
+		}
+
+		input[type=text] {
+			
+			width: 200px;
+			
+		}
+		.btn {
+			
+			padding: 4px;
+			
+		}
+		
+	}
+	.item-table {
+		width: 100%;
+		margin-top: 10px;
+		span {	
+			display: block;
+			float: left;
+			width: 20%;
+			padding-bottom: 5px;
+			font-family: @thin-font;
+			&.thead {
+				
+				font-family: @bold-font;
+				
+			}
+		}
+		hr {
+			clear: both;
+			border-top: 1px solid #fff;
+			margin: 2px 0px 5px 0px;
+			
+		}
+		.first {
+			
+			width: 40%;
+			clear: both;
+			
+		}
+		.last {
+			
+			text-align: right;
+			width: 15%;
+		}
+		
+	}
+	.enter-cb-number {
+		
+		clear: both;
+		position: relative;
+		margin: 10px 0px;
+		height: 60px;
+		
+		padding: 10px;
+		border: 1px solid @dark-grey;
+		form {
+			
+			position: absolute;
+			right:10px;
+			top: 18px;
+		}
+		input[type=text] {
+			
+			width: 200px;
+			
+		}
+		img {
+			
+			width: 160px;
+			height: auto;
+			margin-right: 10px;
+		}
+		.btn {
+			
+			padding: 4px;
+			
+		}
+		p {
+			
+			position: absolute;
+			top: 55px;
+			right: 10px;
+			font-size: 12px;
+			font-family: @thin-font;
+			
+		}
+		
+	}
+		
+}
+
 .seat-selection {
 	margin: 50px;
 	&#onpop {
@@ -12,7 +412,7 @@
 		margin-top: 0px;
 		margin-left: -480px;
 		z-index: 9999;
-		border: 1px solid @dark-grey;
+		border: 1px solid @light-grey;
 		
 		.seats ul.row li {
 		
@@ -106,7 +506,7 @@
 		width: 588px;
 		
 		.front {
-		
+			
 			//width: 100%;
 			display: block;
 			.gradient(lighten(grey,40%), lighten(grey,20%));
@@ -336,6 +736,14 @@
 			}
 			
 		}
+		.wrap#confirm-promos {
+			
+			img {
+				
+				width: 100%;
+				height: auto;
+			}
+		}
 		
 	}
 	.main {
@@ -348,6 +756,7 @@
 		margin: 0px;
 		position: static;
 		overflow: hidden;	
+		background-color: grey;
 		li {
 			padding: 7px 84px 7px 30px;
 			background-color: grey;

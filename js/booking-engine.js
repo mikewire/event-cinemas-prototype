@@ -17,6 +17,19 @@ function nothing() {
 
 $(function() {
 
+	$("#openScoopAlley").click(function() {
+	
+    	$("#cover").show();
+    	$("#scoop-alley").show();
+	
+	});
+    $("#scoop-alley .close").click(function() {
+
+    	$("#cover").hide();
+    	$("#scoop-alley").hide();
+    
+	});
+	
 	$("a.attribute").tooltip({ 
 	    track: true, 
 	    delay: 0, 
@@ -45,6 +58,7 @@ $(function() {
     $("#cover").click(function() {
     	$(this).hide();
     	$(".seat-selection#onpop").hide();
+    	$("#scoop-alley").hide();
     });
     
     $(".seat-selection#onpop .close").click(function() {
